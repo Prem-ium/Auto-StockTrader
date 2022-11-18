@@ -1,21 +1,45 @@
+import sys
 import os
+import traceback
+from time import sleep
 from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from time import sleep
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
+
+if (len(sys.argv) < 3):
+    print("Please provide commands in the following order and retry: \n1. 'buy' or 'sell' \n2. 'Stock Ticker' \nExample(1): python main.py buy AAPL\nExample(2): python main.py sell AAPL\nAddionally, you can add two commands at the end to slow the purchase time between accounts.\nExample 3 (wait 30 seconds in-between): python main.py buy APPL slow 30")
+    sys.exit(1)
+else:
+    if ("buy" in sys.argv[1].lower()):
+        TYPE = 'buy'
+    elif("sell" in sys.argv[1].lower()):
+        TYPE = 'sell'
+    STOCK = sys.argv[2].upper()
+
+    if(len(sys.argv) < 4):
+        if ("slow" in sys.argv[3].lower()):
+            try:
+                SLEEP_TIMER = int(sys.argv[4])
+            except:
+                SLEEP_TIMER = 15
+        SLOW = int(sys.argv[3])
 
 # Load ENV
 load_dotenv()
 
 ACCOUNT_NAMES = os.getenv('ACCOUNT_NAMES').split(',')
 
-SOFI_EMAIL = os.getenv('SOFI_EMAIL')
-SOFI_PASSWORD = os.getenv('SOFI_PASSWORD')
+SOFI_LOGIN = os.getenv('SOFI_LOGIN')
+
+colonIndex = SOFI_LOGIN.index(":")+1
+EMAIL = SOFI_LOGIN[0:colonIndex-1]
+PASSWORD = SOFI_LOGIN[colonIndex:len(SOFI_LOGIN)]
+URL = f'https://www.sofi.com/wealth/app/stock/{STOCK}/${TYPE}'
 
 def getDriver():
     chrome_options = Options()
@@ -34,30 +58,43 @@ def getDriver():
     driver.maximize_window()
     return driver
 
-driver = getDriver()
-Ticker = input("Enter Stock TIKR: ")
+def login(driver):
+    sleep(3)
+    driver.find_element(By.XPATH, '//*[@id="username"]').send_keys(EMAIL)
+    driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(PASSWORD)
+    driver.find_element(By.XPATH, '//*[@id="widget_block"]/main/section/div/div/div/form/div[2]/button').click()
 
-# For testing:
-#TIKR = 'SNES'
+    driver.find_element(By.XPATH, '//*[@id="code"]').send_keys(input('Enter code: '))
+    driver.find_element(By.XPATH, '//*[@id="verifyCode"]').click()
+    sleep(5)
+    
+def order(driver):
+    for account in ACCOUNT_NAMES:
+        try:
+            print(f'Purchasing {STOCK} for account: {account}')
+            accounts = Select(driver.find_element(By.ID, 'dropdown-1'))
+            accounts.select_by_visible_text(account)
+            driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
 
-driver.get(f'https://www.sofi.com/wealth/app/stock/{Ticker}/buy')
-sleep(3)
-driver.find_element(By.XPATH, '//*[@id="username"]').send_keys(SOFI_EMAIL)
-driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(SOFI_PASSWORD)
-driver.find_element(By.XPATH, '//*[@id="widget_block"]/main/section/div/div/div/form/div[2]/button').click()
+            driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
+            if SLEEP_TIMER:
+                sleep(SLEEP_TIMER)
+            else:
+                sleep(5)
+            driver.find_element(By.XPATH, value='//*[@id="mainContent"]/div/div[4]/button[1]').click()
+            print(f'Purchased {STOCK} for account: {account}')
+            driver.get(URL)
+        except Exception as e:
+            print(traceback.format_exc())
+            print(f'\n\n\nFailed to purchase {STOCK} for account: {account}. Attempting to continue with next account.')
+            driver.get(URL)
 
-driver.find_element(By.XPATH, '//*[@id="code"]').send_keys(input('Enter code: '))
-driver.find_element(By.XPATH, '//*[@id="verifyCode"]').click()
-sleep(5)
+def main():
+    driver = getDriver()
+    driver.get(URL)
+    login(driver)
 
-for account in ACCOUNT_NAMES:
-    print(f'Purchasing {Ticker} for account: {account}')
-    accounts = Select(driver.find_element(By.ID, 'dropdown-1'))
-    accounts.select_by_visible_text(account)
-    driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
+    order(driver)
 
-    driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
-    sleep(1000)
-    driver.find_element(By.XPATH, value='//*[@id="mainContent"]/div/div[4]/button[1]').click()
-
-    driver.get(f'https://www.sofi.com/wealth/app/stock/{Ticker}/buy')
+if __name__ == '__main__':
+    main()

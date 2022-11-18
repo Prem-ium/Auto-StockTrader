@@ -6,6 +6,4 @@ A work-in progress script solution to automate the purchase of a Stock Ticker ac
 
 `ACCOUNT_NAMES` = A string of names of investment accounts, seperated by commas.
 
-`SOFI_EMAIL` = Email of Sofi Invest account.
-
-`SOFI_PASSWORD` = Password of Sofi Invest account.
+`SOFI_LOGIN` = Login credentials of SOFI, seperated by ':'
