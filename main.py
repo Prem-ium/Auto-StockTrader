@@ -34,6 +34,7 @@ else:
 load_dotenv()
 
 ACCOUNT_NAMES = os.getenv('ACCOUNT_NAMES').split(',')
+EXCLUDE_ACCOUNTS = os.getenv('EXCLUDE_ACCOUNTS').split(',')
 
 SOFI_LOGIN = os.getenv('SOFI_LOGIN')
 
@@ -71,6 +72,8 @@ def login(driver):
     
 def order(driver):
     for account in ACCOUNT_NAMES:
+        if account in EXCLUDE_ACCOUNTS:
+            continue
         try:
             driver.get(URL)
             print(f'Purchasing {STOCK} for account: {account}')
@@ -116,7 +119,7 @@ def main():
     driver = getDriver()
     driver.get(URL)
     login(driver)
-
+    
     order(driver)
 
 if __name__ == '__main__':

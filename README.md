@@ -14,6 +14,8 @@ To run this project, you will need to add the following environment variables to
 
 `SOFI_LOGIN` = Login credentials of SOFI, seperated by ':'
 
+`EXCLUDE_ACCOUNTS` = Remove accounts in ACCOUNT_NAMES for testing, debugging, or excluding the purchase of the stock from the account. Seperated by commas.
+
 ## Features
 
 - Automation of purchase of stock across multiple accounts
