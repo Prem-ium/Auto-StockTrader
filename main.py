@@ -11,6 +11,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
 
+SLEEP_TIMER = None
 if (len(sys.argv) < 3):
     print("Please provide commands in the following order and retry: \n1. 'buy' or 'sell' \n2. 'Stock Ticker' \nExample(1): python main.py buy AAPL\nExample(2): python main.py sell AAPL\nAddionally, you can add two commands at the end to slow the purchase time between accounts.\nExample 3 (wait 30 seconds in-between): python main.py buy APPL slow 30")
     sys.exit(1)
@@ -21,7 +22,7 @@ else:
         TYPE = 'sell'
     STOCK = sys.argv[2].upper()
 
-    if(len(sys.argv) < 4):
+    if(len(sys.argv) > 4):
         if ("slow" in sys.argv[3].lower()):
             try:
                 SLEEP_TIMER = int(sys.argv[4])
@@ -39,7 +40,7 @@ SOFI_LOGIN = os.getenv('SOFI_LOGIN')
 colonIndex = SOFI_LOGIN.index(":")+1
 EMAIL = SOFI_LOGIN[0:colonIndex-1]
 PASSWORD = SOFI_LOGIN[colonIndex:len(SOFI_LOGIN)]
-URL = f'https://www.sofi.com/wealth/app/stock/{STOCK}/${TYPE}'
+URL = f'https://www.sofi.com/wealth/app/stock/{STOCK}/{TYPE}'
 
 def getDriver():
     chrome_options = Options()
@@ -71,19 +72,41 @@ def login(driver):
 def order(driver):
     for account in ACCOUNT_NAMES:
         try:
+            driver.get(URL)
             print(f'Purchasing {STOCK} for account: {account}')
-            accounts = Select(driver.find_element(By.ID, 'dropdown-1'))
+            sleep(10)
+            try:
+                accounts = Select(driver.find_element(By.ID, 'dropdown-1'))
+            except:
+                try:
+                    accounts = Select(driver.find_element(By.XPATH, value = '//*[@id="dropdown-1"]'))
+                except:
+                    accounts = Select(driver.find_element(By.XPATH, value = '/html/body/div/main/div/div[1]/select'))
             accounts.select_by_visible_text(account)
             driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
-
-            driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
+            sleep(5)
+            try:
+                driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
+            except:
+                driver.find_element(By.XPATH, value = "//button[contains(.,'Review')]").click()
             if SLEEP_TIMER:
                 sleep(SLEEP_TIMER)
             else:
-                sleep(5)
-            driver.find_element(By.XPATH, value='//*[@id="mainContent"]/div/div[4]/button[1]').click()
+                sleep(15)
+            try:
+                driver.find_element(By.XPATH, value='//*[@id="mainContent"]/div/div[4]/button[1]').click()
+            except:
+                try:
+                    try:
+                        driver.find_element(By.XPATH, value = f"//button[contains(.,'Buy')]").click()
+                    except:
+                        driver.find_element(By.XPATH, value = f"//button[contains(.,'Sell')]").click()
+                except:  
+                    driver.find_element(By.XPATH, value = f"/html/body/div[1]/main/div/div[4]/button[1]").click()
+
+
             print(f'Purchased {STOCK} for account: {account}')
-            driver.get(URL)
+            sleep(10)
         except Exception as e:
             print(traceback.format_exc())
             print(f'\n\n\nFailed to purchase {STOCK} for account: {account}. Attempting to continue with next account.')
