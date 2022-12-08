@@ -1,7 +1,7 @@
 
-# Sofi AutoTrade
+# Auto Stock Trader
 
-A short and sweet python script to help automate the purchase or sale of a stock across multiple accounts on Sofi Invest.
+A short and sweet python script to help automate the purchase or sale of a stock across multiple accounts on Sofi, Chase, (and more) Invest.
 
 
 
@@ -27,8 +27,8 @@ To run this project, you will need to add the following environment variables to
 Clone the repository
 
 ```bash
-  git clone https://github.com/Prem-ium/Sofi-AutoTrade.git
-  cd Sofi-AutoTrade
+  git clone https://github.com/Prem-ium/Auto-StockTrader
+  cd Auto-StockTrader
 ```
 
 Specifiy commands in the following order within a terminal:
