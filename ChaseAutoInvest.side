@@ -1,11 +1,11 @@
 {
   "id": "722a3e9f-4dca-4a42-b845-5d66e72ad896",
   "version": "2.0",
-  "name": "chase",
+  "name": "Prem-ium's Chase Auto Investment",
   "url": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=select-account;sym=",
   "tests": [{
     "id": "75907887-ba9d-4dee-bb52-282bdd7b2e40",
-    "name": "new",
+    "name": "Chase_Invest",
     "commands": [{
       "id": "3fed3ab7-1dd3-4b36-aa04-c8757d622901",
       "comment": "",
@@ -31,7 +31,7 @@
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"BIMI\"",
+      "target": "return \"ENTER_STOCK_TICKER_HERE\"",
       "targets": [],
       "value": "TICKER"
     }, {
