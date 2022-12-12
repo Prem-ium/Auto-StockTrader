@@ -76,7 +76,7 @@ def order(driver):
             continue
         try:
             driver.get(URL)
-            print(f'Purchasing {STOCK} for account: {account}')
+            print(f'Purchasing {STOCK} for account:\t\t{account}')
             sleep(10)
             try:
                 accounts = Select(driver.find_element(By.ID, 'dropdown-1'))
@@ -85,9 +85,20 @@ def order(driver):
                     accounts = Select(driver.find_element(By.XPATH, value = '//*[@id="dropdown-1"]'))
                 except:
                     accounts = Select(driver.find_element(By.XPATH, value = '/html/body/div/main/div/div[1]/select'))
-            accounts.select_by_visible_text(account)
-            driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
+            try:
+                accounts.select_by_value(account)
+            except:
+                accounts.select_by_visible_text(account)
             sleep(5)
+            try:
+                driver.find_element(By.XPATH, value = f"//button[contains(.,'Shares')]").click()
+            except:
+                driver.find_element(By.XPATH, value = f'//*[@id="shares"]').click()
+            sleep(5)
+            try:
+                driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
+            except:
+                driver.find_element(By.XPATH, value = '//*[@id="input-8"]').send_keys('1')
             try:
                 driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
             except:
@@ -100,15 +111,15 @@ def order(driver):
                 driver.find_element(By.XPATH, value='//*[@id="mainContent"]/div/div[4]/button[1]').click()
             except:
                 try:
-                    try:
+                    if TYPE == 'buy':
                         driver.find_element(By.XPATH, value = f"//button[contains(.,'Buy')]").click()
-                    except:
+                    elif TYPE == 'sell':
                         driver.find_element(By.XPATH, value = f"//button[contains(.,'Sell')]").click()
                 except:  
                     driver.find_element(By.XPATH, value = f"/html/body/div[1]/main/div/div[4]/button[1]").click()
 
 
-            print(f'Purchased {STOCK} for account: {account}')
+            print(f'Purchased {STOCK} for account:\t\t{account}\n\n')
             sleep(10)
         except Exception as e:
             print(traceback.format_exc())
@@ -121,6 +132,7 @@ def main():
     login(driver)
     
     order(driver)
+    print('Program sucessfully completed')
 
 if __name__ == '__main__':
     main()
