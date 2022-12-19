@@ -57,7 +57,7 @@ def getDriver():
         except Exception as ek:
             print(f'Attempted to use webdriver manager, but failed.')
 
-    driver.maximize_window()
+    #driver.maximize_window()
     return driver
 
 def login(driver):
@@ -91,9 +91,12 @@ def order(driver):
                 accounts.select_by_visible_text(account)
             sleep(5)
             try:
-                driver.find_element(By.XPATH, value = f"//button[contains(.,'Shares')]").click()
+                try:
+                    driver.find_element(By.XPATH, value = f"//button[contains(.,'Shares')]").click()
+                except:
+                    driver.find_element(By.XPATH, value = f'//*[@id="shares"]').click()
             except:
-                driver.find_element(By.XPATH, value = f'//*[@id="shares"]').click()
+                pass
             sleep(5)
             try:
                 driver.find_element(By.XPATH, '//*[@id="input-4"]').send_keys('1')
