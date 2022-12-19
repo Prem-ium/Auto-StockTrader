@@ -1,7 +1,7 @@
 {
   "id": "722a3e9f-4dca-4a42-b845-5d66e72ad896",
   "version": "2.0",
-  "name": "Prem-ium's Chase Incest (ENV)",
+  "name": "Prem-ium's Chase Invest",
   "url": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=select-account;sym=",
   "tests": [{
     "id": "75907887-ba9d-4dee-bb52-282bdd7b2e40",
@@ -66,7 +66,7 @@
       "id": "c128fb51-3b6d-4aac-ba29-b7a5545d9a70",
       "comment": "",
       "command": "pause",
-      "target": "4000",
+      "target": "4800",
       "targets": [],
       "value": ""
     }, {
@@ -194,7 +194,7 @@
       "id": "bf5a64d1-ffcd-4ed1-b749-cb1b69bb77b5",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "3900",
       "targets": [],
       "value": ""
     }, {
@@ -221,7 +221,7 @@
       "id": "0de0d19d-d0fe-44e4-8b98-5be8fb75812b",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "3500",
       "targets": [],
       "value": ""
     }, {
@@ -295,7 +295,7 @@
       "id": "550c850e-7822-4c6f-b672-335c90783502",
       "comment": "",
       "command": "pause",
-      "target": "4000",
+      "target": "4800",
       "targets": [],
       "value": ""
     }, {
@@ -339,34 +339,6 @@
         ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "12b75fc9-a945-4f0d-b978-a5db9f84d299",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "eddbf21e-ca61-4321-860d-0728a1656a54",
-      "comment": "",
-      "command": "type",
-      "target": "id=tradeQuantity-text-input-field",
-      "targets": [
-        ["id=tradeQuantity-text-input-field", "id"],
-        ["name=tradeQuantity", "name"],
-        ["css=#tradeQuantity-text-input-field", "css:finder"],
-        ["xpath=//input[@id='tradeQuantity-text-input-field']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": "1"
-    }, {
-      "id": "dd28811f-3c0d-4cbd-a848-7cd257f7aa06",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
       "value": ""
     }, {
       "id": "a998aae5-b14f-4748-857a-84eb5773d613",
@@ -423,7 +395,7 @@
       "id": "dbf449ab-7d6a-486e-b0ee-c93bd3f0e104",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "3900",
       "targets": [],
       "value": ""
     }, {
@@ -450,7 +422,7 @@
       "id": "b0a21a4f-3f02-4d1a-9017-13baa306a6c0",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "3500",
       "targets": [],
       "value": ""
     }, {
@@ -470,6 +442,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://secure07ea.chase.com/", "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=select-account;sym=", "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry", "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=935751590;sym=UPH"],
+  "urls": ["https://secure07ea.chase.com/", "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=select-account;sym=", "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry"],
   "plugins": []
 }
