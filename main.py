@@ -103,6 +103,12 @@ def order(driver):
             except:
                 driver.find_element(By.XPATH, value = '//*[@id="input-8"]').send_keys('1')
             try:
+                if TYPE == 'sell' and "hold shares" in driver.find_element(By.XPATH, value = '//*[@id="input-4"]').text.lower():
+                    print(f'No shares to sell, skipping account:\t{account}.')
+                    continue
+            except:
+                pass
+            try:
                 driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
             except:
                 driver.find_element(By.XPATH, value = "//button[contains(.,'Review')]").click()
@@ -122,11 +128,11 @@ def order(driver):
                     driver.find_element(By.XPATH, value = f"/html/body/div[1]/main/div/div[4]/button[1]").click()
 
 
-            print(f'Purchased {STOCK} for account:\t\t{account}\n\n')
+            print(f'Successful {TYPE} {STOCK} for account:\t\t{account}\n\n')
             sleep(10)
         except Exception as e:
             print(traceback.format_exc())
-            print(f'\n\n\nFailed to purchase {STOCK} for account: {account}. Attempting to continue with next account.')
+            print(f'\n\n\nFailed to {TYPE} {STOCK} for account: {account}. Attempting to continue with next account.')
             driver.get(URL)
 
 def main():
