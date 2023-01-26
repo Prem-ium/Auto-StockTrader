@@ -3,9 +3,11 @@
 
 A short and sweet python script to help automate the purchase or sale of a stock across multiple accounts on Sofi, Chase, (and more) Invest.
 
+# Chase & Schwab Automation
+Download Selenium IDE on your browser and open the relevant .side file. Input AI for Chase (found on URL of Chase Trade Page). Enter Stock Ticker into ${TICKER} variable and run test automation after signing into Chase or Schwab dashboard on browser.
 
 
-
+# Sofi Invest Automation
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -39,9 +41,9 @@ Specifiy commands in the following order within a terminal:
 4. sleep timer value
 
 ```bash
-  python main.py buy APPL
+  python sofi_main.py buy APPL
 ```
 or, to wait 30 seconds in-between each account
 ```bash
-  python main.py buy APPL slow 30
+  python sofi_main.py buy APPL slow 30
 ```
