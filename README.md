@@ -12,6 +12,8 @@ Automating orders for Chase JPMorgan Brokerage can be done using the `ChaseAutoI
 2. Log in to your brokerage account on your browser.
 3. Retrieve your AI within the URL of the trade stock webpage for each account. 
    (Example: `https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai={YOUR_AI_HERE};sym=`)
+   ![image](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)
+
 4. Copy the AI for each account and replace the return statement on all test cases (Buy/Sell Test in Selenium IDE) returning the list:
    `return ['54658965', 'YOUR', 'AI', 'GOES', 'HERE']`
 5. Input the Stock Ticker as a return statement and click the start button to start automating.
