@@ -71,6 +71,7 @@ def login(driver):
     sleep(5)
     
 def order(driver):
+    fail = ''
     for account in ACCOUNT_NAMES:
         if account in EXCLUDE_ACCOUNTS:
             continue
@@ -112,6 +113,10 @@ def order(driver):
                 driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/div[6]/button').click()
             except:
                 driver.find_element(By.XPATH, value = "//button[contains(.,'Review')]").click()
+            try:
+                driver.find_element(By.XPATH, value = "/html/body/div[2]/div/div/div[3]/button[1]").click()
+            except:
+                pass
             if SLEEP_TIMER:
                 sleep(SLEEP_TIMER)
             else:
@@ -133,7 +138,10 @@ def order(driver):
         except Exception as e:
             print(traceback.format_exc())
             print(f'\n\n\nFailed to {TYPE} {STOCK} for account: {account}. Attempting to continue with next account.')
+            fail += f'{account},'
             driver.get(URL)
+    print(f'Failed to {TYPE} {STOCK} for accounts:\n{fail}\n\n')
+
 
 def main():
     driver = getDriver()

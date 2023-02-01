@@ -1,36 +1,54 @@
-
 # Auto Stock Trader
 
-A short and sweet python script to help automate the purchase or sale of a stock across multiple accounts on Sofi, Chase, (and more) Invest.
+A repository containing scripts and projects for automating stock orders across multiple brokerages.
 
-# Chase & Schwab Automation
-Download Selenium IDE on your browser and open the relevant .side file. Input AI for Chase (found on URL of Chase Trade Page). Enter Stock Ticker into ${TICKER} variable and run test automation after signing into Chase or Schwab dashboard on browser.
+# Chase Automation
 
+Automating orders for Chase JPMorgan Brokerage can be done using the `ChaseAutoInvest.side` file & Selenium IDE Extension.
+
+### Chase Set-Up
+
+1. Download the Selenium IDE Extension from your browser's extension store and open the `ChaseAutoInvest.side` project file
+2. Log in to your brokerage account on your browser.
+3. Retrieve your AI within the URL of the trade stock webpage for each account. 
+   (Example: `https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai={YOUR_AI_HERE};sym=`)
+4. Copy the AI for each account and replace the return statement on all test cases (Buy/Sell Test in Selenium IDE) returning the list:
+   `return ['54658965', 'YOUR', 'AI', 'GOES', 'HERE']`
+5. Input the Stock Ticker as a return statement and click the start button to start automating.
+   `return "STOCK_TICKER"`
+
+# Schwab Automation
+
+Automating orders for Schwab Brokerage can be done using the `Schwab.side` file & Selenium IDE Extension.
+
+### Schwab Set-Up
+
+1. Download the Selenium IDE Extension from your browser's extension store and open the `Schwab.side` project file
+2. Log in to your brokerage account on your browser.
+3. Adjust the array of numbers depending on how many accounts you have. (n-1)
+4. Input the Stock Ticker in the desired test (Schwab_Buy or Schwab_Sell) and start the test.
 
 # Sofi Invest Automation
-## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+Automating orders for Sofi Invest can be done through the `sofi_main.py` Python script.
 
-`ACCOUNT_NAMES` = A string of names of investment accounts, seperated by commas.
+### Sofi Environment Variables
 
-`SOFI_LOGIN` = Login credentials of SOFI, seperated by ':'
+To run this project, you will need to add the following environment variables to your .env file:
 
-`EXCLUDE_ACCOUNTS` = Remove accounts in ACCOUNT_NAMES for testing, debugging, or excluding the purchase of the stock from the account. Seperated by commas.
+`ACCOUNT_NAMES` = A string of names of investment accounts, separated by commas.
 
-## Features
+`SOFI_LOGIN` = Login credentials of SOFI, separated by ':'
 
-- Automation of purchase of stock across multiple accounts
-- Timer (Pass in how many seconds the program should wait between accounts)
+`EXCLUDE_ACCOUNTS` = Remove accounts in ACCOUNT_NAMES for testing, debugging, or excluding the purchase of the stock from the account. Separated by commas.
 
+### Sofi Installation
 
-## Installation
-
-Clone the repository
+Clone the repository:
 
 ```bash
-  git clone https://github.com/Prem-ium/Auto-StockTrader
-  cd Auto-StockTrader
+git clone https://github.com/Prem-ium/Auto-StockTrader
+cd Auto-StockTrader
 ```
 
 Specifiy commands in the following order within a terminal:
