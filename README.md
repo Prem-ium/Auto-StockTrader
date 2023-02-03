@@ -4,7 +4,7 @@ A repository containing scripts and projects for automating stock orders across 
 
 <a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-For a majority of these projects, you will need to download the ![Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) for your browser. 
+For a majority of these projects, you will need to download the [Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) for your browser. 
 
 # Chase Automation
 
