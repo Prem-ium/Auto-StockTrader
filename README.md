@@ -4,13 +4,12 @@ A repository containing scripts and projects for automating stock orders across 
 
 <a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-For a majority of these projects, you will need to download the ![Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) for your browser. 
+For a majority of these projects, you will need to download the [Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) for your browser. 
 
 # Chase Automation
 
 Automating orders for Chase JPMorgan Brokerage can be done using the `ChaseAutoInvest.side` file & Selenium IDE Extension.
 
-### Chase Set-Up
 
 1. Download the Selenium IDE Extension from your browser's extension store and open the `ChaseAutoInvest.side` project file
 2. Log in to your brokerage account on your browser.
@@ -24,13 +23,13 @@ Automating orders for Chase JPMorgan Brokerage can be done using the `ChaseAutoI
 5. Input the Stock Ticker as a return statement and click the start button to start automating.
    `return "STOCK_TICKER"`
 
-# Vanguard & FirstTrade Automation
+# Vanguard & Firstrade Automation
 Automating orders for Vanguard Brokerage can be done using the `Vanguard_Automation.side` & Selenium IDE Extension.. 
 
-Automating orders for FirstTrade Brokerage can be done using the`FirstTrade_Automation` file & Selenium IDE Extension.
+Automating orders for Firstrade Brokerage can be done using the`Firstrade_Automation.side` file & Selenium IDE Extension.
 
 1. Download the Selenium IDE Extension from your browser's extension store and open the `Vanguard_Automation.side` project file
-2. Log in to Vanguard or FirstTrade on your browser.
+2. Log in to Vanguard or Firstrade on your browser.
 3. Retrieve the list of your account number(s) and place them in the return execute script on the buy and sell test(s). 
 `return ["54566343", "34546546", "54566546"]`
 
