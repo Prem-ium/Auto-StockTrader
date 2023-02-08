@@ -239,7 +239,7 @@
       "id": "f09ac65d-bd9b-4a6c-b90b-34c2319263e0",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['ACCOUNTS',\"GO',\"HERE']",
+      "target": "return ['ACCOUNTS','GO',HERE']",
       "targets": [],
       "value": "ACCOUNTS"
     }, {
