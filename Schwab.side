@@ -24,7 +24,7 @@
       "id": "ef5e2053-5a48-4478-8936-4ced84e838f7",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10']",
+      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10','11','12','13']",
       "targets": [],
       "value": "numb"
     }, {
@@ -34,6 +34,13 @@
       "target": "numb",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "e8e96b0c-d6df-44aa-b098-5fac5a7f0bdd",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
     }, {
       "id": "38860c40-d5e6-4410-a850-e5cd4bd6cd74",
       "comment": "",
@@ -48,7 +55,7 @@
       ],
       "value": ""
     }, {
-      "id": "e8e96b0c-d6df-44aa-b098-5fac5a7f0bdd",
+      "id": "1e06900f-8da5-43c0-b674-b7856d5c57f5",
       "comment": "",
       "command": "pause",
       "target": "1500",
@@ -237,7 +244,7 @@
       "id": "c5dda49f-8168-4957-a5e4-f3be2a10ea2f",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10']",
+      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10','11','12','13']",
       "targets": [],
       "value": "numb"
     }, {
@@ -247,6 +254,13 @@
       "target": "numb",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "c4c53565-41fd-44f0-9f2e-ec5bfdabdea0",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
     }, {
       "id": "24ce14cc-52f7-4f19-a18a-a8126459a838",
       "comment": "",
@@ -300,7 +314,7 @@
       ],
       "value": "${TICKER}"
     }, {
-      "id": "c4c53565-41fd-44f0-9f2e-ec5bfdabdea0",
+      "id": "814e0938-d4fa-4baf-bfc0-56cdf65a1a25",
       "comment": "",
       "command": "pause",
       "target": "1500",
@@ -385,7 +399,7 @@
       "id": "766ed655-343c-4d67-9253-0914dbcfb990",
       "comment": "",
       "command": "pause",
-      "target": "1500",
+      "target": "1250",
       "targets": [],
       "value": ""
     }, {
