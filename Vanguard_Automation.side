@@ -60,7 +60,8 @@
         ["id=accountListOption{AI_HERE}", "id"],
         ["css=#accountListOption{AI_HERE}", "css:finder"],
         ["xpath=//tds-list-option[@id='accountListOption{AI_HERE}']", "xpath:attributes"],
-        ["xpath=//tds-list-option", "xpath:position"]      ],
+        ["xpath=//tds-list-option", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "959e0654-43e4-4e81-bd24-24afe6b902c3",
@@ -87,7 +88,7 @@
       ],
       "value": ""
     }, {
-      "id": "0ed9a6c3-0436-49eb-8be9-c3498213cdf3",
+      "id": "055da4b1-a001-4f70-84c9-e06574636d53",
       "comment": "",
       "command": "type",
       "target": "id=symbol",
@@ -140,6 +141,13 @@
       "target": "2000",
       "targets": [],
       "value": ""
+    }, {
+      "id": "0ed9a6c3-0436-49eb-8be9-c3498213cdf3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=symbol",
+      "targets": [],
+      "value": "${KEY_ENTER}"
     }, {
       "id": "5a807f47-2e3b-44c9-8595-a618932be343",
       "comment": "",
@@ -282,7 +290,8 @@
         ["id=accountListOption{AI_HERE}", "id"],
         ["css=#accountListOption{AI_HERE}", "css:finder"],
         ["xpath=//tds-list-option[@id='accountListOption{AI_HERE}']", "xpath:attributes"],
-        ["xpath=//tds-list-option", "xpath:position"]      ],
+        ["xpath=//tds-list-option", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "96d47c70-e26a-4640-b109-cd2c7f857f10",
@@ -309,7 +318,7 @@
       ],
       "value": ""
     }, {
-      "id": "332e667e-572f-4c72-930a-a13342432c62",
+      "id": "0828ef3e-4109-42cc-8e1a-123baa36cdbd",
       "comment": "",
       "command": "type",
       "target": "id=symbol",
@@ -362,6 +371,13 @@
       "target": "2000",
       "targets": [],
       "value": ""
+    }, {
+      "id": "332e667e-572f-4c72-930a-a13342432c62",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=symbol",
+      "targets": [],
+      "value": "${KEY_ENTER}"
     }, {
       "id": "de855236-1d22-4adb-adf8-b5b7c2fdf1dc",
       "comment": "",
