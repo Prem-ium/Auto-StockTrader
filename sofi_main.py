@@ -21,14 +21,17 @@ else:
     elif("sell" in sys.argv[1].lower()):
         TYPE = 'sell'
     STOCK = sys.argv[2].upper()
-
-    if(len(sys.argv) > 4):
-        if ("slow" in sys.argv[3].lower()):
-            try:
-                SLEEP_TIMER = int(sys.argv[4])
-            except:
-                SLEEP_TIMER = 15
-        SLOW = int(sys.argv[3])
+    try:
+        LIMIT = sys.argv[3]
+        if (len(sys.argv) >= 4):
+            if ("slow" in sys.argv[4].lower()):
+                try:
+                    SLEEP_TIMER = int(sys.argv[5])
+                except:
+                    SLEEP_TIMER = 15
+            SLOW = int(sys.argv[5])
+    except:
+        pass
 
 # Load ENV
 load_dotenv()
@@ -72,6 +75,7 @@ def login(driver):
     
 def order(driver):
     fail = ''
+    success = ''
     for account in ACCOUNT_NAMES:
         if account in EXCLUDE_ACCOUNTS:
             continue
@@ -104,6 +108,10 @@ def order(driver):
             except:
                 driver.find_element(By.XPATH, value = '//*[@id="input-8"]').send_keys('1')
             try:
+                driver.find_element(By.XPATH, value = '//*[@id="input-8"]').send_keys(LIMIT)
+            except:
+                pass
+            try:
                 if TYPE == 'sell' and "hold shares" in driver.find_element(By.XPATH, value = '//*[@id="input-4"]').text.lower():
                     print(f'No shares to sell, skipping account:\t{account}.')
                     continue
@@ -134,13 +142,14 @@ def order(driver):
 
 
             print(f'Successful {TYPE} {STOCK} for account:\t\t{account}\n\n')
+            success += f'{account},'
             sleep(10)
         except Exception as e:
             print(traceback.format_exc())
             print(f'\n\n\nFailed to {TYPE} {STOCK} for account: {account}. Attempting to continue with next account.')
             fail += f'{account},'
             driver.get(URL)
-    print(f'Failed to {TYPE} {STOCK} for accounts:\n{fail}\n\n')
+    print(f'Failed to {TYPE} {STOCK} for accounts:\n{fail}\n\nSuccessfully {TYPE} {STOCK} for accounts:\n{success}')
 
 
 def main():

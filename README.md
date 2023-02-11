@@ -86,3 +86,7 @@ or, to wait 30 seconds in-between each account
 ```bash
   python sofi_main.py buy APPL slow 30
 ```
+or, to place limit (on certain stocks)
+```bash
+  python sofi_main.py buy GNUS 0.50 slow 30
+```
