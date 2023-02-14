@@ -11,27 +11,49 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
 
-SLEEP_TIMER = None
-if (len(sys.argv) < 3):
-    print("Please provide commands in the following order and retry: \n1. 'buy' or 'sell' \n2. 'Stock Ticker' \nExample(1): python main.py buy AAPL\nExample(2): python main.py sell AAPL\nAddionally, you can add two commands at the end to slow the purchase time between accounts.\nExample 3 (wait 30 seconds in-between): python main.py buy APPL slow 30")
+import sys
+
+if len(sys.argv) < 3:
+    print("Please provide the following arguments in order:")
+    print("1. 'buy' or 'sell'")
+    print("2. Stock Ticker (e.g. AAPL)")
+    print("Optional: 'slow' and the wait time in seconds (e.g. slow 30)")
+    print("\nExamples:")
+    print("python main.py buy AAPL")
+    print("python main.py sell AAPL")
+    print("python main.py buy AAPL 100.54 slow 30")
     sys.exit(1)
+
+TYPE = sys.argv[1].lower()
+if 'buy' in TYPE:
+    TYPE = 'buy'
+elif 'sell' in TYPE:
+    TYPE = 'sell'
 else:
-    if ("buy" in sys.argv[1].lower()):
-        TYPE = 'buy'
-    elif("sell" in sys.argv[1].lower()):
-        TYPE = 'sell'
-    STOCK = sys.argv[2].upper()
-    try:
+    print(f"Error: Invalid command '{sys.argv[1]}'")
+    sys.exit(1)
+
+STOCK = sys.argv[2].upper()
+
+SLEEP_TIMER = False
+try:
+    if len(sys.argv) >= 3:
         LIMIT = sys.argv[3]
-        if (len(sys.argv) >= 4):
-            if ("slow" in sys.argv[4].lower()):
-                try:
-                    SLEEP_TIMER = int(sys.argv[5])
-                except:
-                    SLEEP_TIMER = 15
-            SLOW = int(sys.argv[5])
-    except:
-        pass
+    print("TYPE:", TYPE)
+    print("STOCK:", STOCK)
+    print("LIMIT:$", LIMIT)
+except:
+    pass
+try:
+    if sys.argv[4].lower() == 'slow':
+        try:
+            SLEEP_TIMER = int(sys.argv[5])
+        except:
+            SLEEP_TIMER = 5
+    print("SLEEP_TIMER:", SLEEP_TIMER)
+except:
+    print('Sleep timer not set.')
+
 
 # Load ENV
 load_dotenv()
@@ -59,8 +81,6 @@ def getDriver():
             driver = webdriver.Chrome(options=chrome_options)
         except Exception as ek:
             print(f'Attempted to use webdriver manager, but failed.')
-
-    #driver.maximize_window()
     return driver
 
 def login(driver):

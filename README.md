@@ -70,6 +70,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/Prem-ium/Auto-StockTrader
 cd Auto-StockTrader
+pip install -r requirements.txt
 ```
 
 Specifiy commands in the following order within a terminal:
@@ -84,7 +85,7 @@ Specifiy commands in the following order within a terminal:
 ```
 or, to wait 30 seconds in-between each account
 ```bash
-  python sofi_main.py buy APPL slow 30
+  python sofi_main.py buy APPL 100.54 slow 30
 ```
 or, to place limit (on certain stocks)
 ```bash
