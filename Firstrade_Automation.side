@@ -7,19 +7,19 @@
     "id": "c4367fd5-3ea6-4cac-ae91-509defb9d7c9",
     "name": "Buy_FirstTrade",
     "commands": [{
-      "id": "0158ffb3-1dcf-4c14-8727-77ae21435138",
-      "comment": "",
-      "command": "open",
-      "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "30dfd5f1-3abb-4b9c-bd14-9e537847415a",
       "comment": "",
       "command": "store",
       "target": "TICKER_GOES_HERE",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "0158ffb3-1dcf-4c14-8727-77ae21435138",
+      "comment": "",
+      "command": "open",
+      "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
+      "targets": [],
+      "value": ""
     }, {
       "id": "dfeb4796-7aa7-48ff-ab6f-8328acc32aaa",
       "comment": "",
@@ -28,10 +28,17 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
+      "id": "e3d9e076-85a1-429e-9c89-977c05592d26",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "targets": [],
+      "value": "splice_array"
+    }, {
       "id": "8c9dc35a-76b8-4428-a554-848f848b2b0d",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['ACCOUNTS',\"GO',\"HERE']",
+      "target": "let list = ['YOUR','ACCOUNTS','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "ACCOUNTS"
     }, {
@@ -215,19 +222,19 @@
     "id": "d80ed11d-4769-4605-854f-f35cd9e2ee7a",
     "name": "Sell_FirstTrade",
     "commands": [{
-      "id": "cbe48972-6e20-441d-b460-013bd14acc6c",
-      "comment": "",
-      "command": "open",
-      "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "1579385c-554b-4c4b-9223-66ca239ee28a",
       "comment": "",
       "command": "store",
       "target": "TICKER_GOES_HERE",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "cbe48972-6e20-441d-b460-013bd14acc6c",
+      "comment": "",
+      "command": "open",
+      "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
+      "targets": [],
+      "value": ""
     }, {
       "id": "25d6ddd9-75ba-450d-8fb5-45e591beb9d3",
       "comment": "",
@@ -236,10 +243,17 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
+      "id": "2d3346bb-e9da-4ba8-90c6-aac73f1525fd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "targets": [],
+      "value": "splice_array"
+    }, {
       "id": "f09ac65d-bd9b-4a6c-b90b-34c2319263e0",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['ACCOUNTS',\"GO',\"HERE']",
+      "target": "let list = ['YOUR','ACCOUNTS','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "ACCOUNTS"
     }, {
