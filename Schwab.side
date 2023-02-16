@@ -7,13 +7,6 @@
     "id": "195c0bb0-9dae-4a3f-9e7e-1fa8140ca568",
     "name": "Sell_Schwab",
     "commands": [{
-      "id": "67edfc68-7fc0-4d43-864b-5bf8957241f1",
-      "comment": "",
-      "command": "open",
-      "target": "https://client.schwab.com/app/trade/tom/#/trade",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "fbf089d0-8f92-47f7-8178-3a2f6366d967",
       "comment": "",
       "command": "store",
@@ -21,10 +14,24 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "67edfc68-7fc0-4d43-864b-5bf8957241f1",
+      "comment": "",
+      "command": "open",
+      "target": "https://client.schwab.com/app/trade/tom/#/trade",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4be79429-5ebf-4146-864a-7de2913c93ca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "ef5e2053-5a48-4478-8936-4ced84e838f7",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10','11','12','13']",
+      "target": "let list = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\",\"10\",\"11\",\"12\",\"13\"]; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
     }, {
@@ -227,13 +234,6 @@
     "id": "00fe9fca-2260-4ca5-beee-945eb08cc90c",
     "name": "Buy_Schwab",
     "commands": [{
-      "id": "6e8d053a-4fc4-4fdb-a70b-153dc04752be",
-      "comment": "",
-      "command": "open",
-      "target": "https://client.schwab.com/app/trade/tom/#/trade",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
       "comment": "",
       "command": "store",
@@ -241,10 +241,24 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "6e8d053a-4fc4-4fdb-a70b-153dc04752be",
+      "comment": "",
+      "command": "open",
+      "target": "https://client.schwab.com/app/trade/tom/#/trade",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4956efa5-c445-44f1-9771-90e6c188c228",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "c5dda49f-8168-4957-a5e4-f3be2a10ea2f",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['0','1','2','3','4','5','6','7','8', '9','10','11','12','13']",
+      "target": "let list = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\",\"10\",\"11\",\"12\",\"13\"]; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
     }, {
