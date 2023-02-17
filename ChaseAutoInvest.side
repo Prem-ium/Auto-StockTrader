@@ -7,19 +7,19 @@
     "id": "75907887-ba9d-4dee-bb52-282bdd7b2e40",
     "name": "Chase_Buy",
     "commands": [{
-      "id": "3fed3ab7-1dd3-4b36-aa04-c8757d622901",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
       "command": "executeScript",
       "target": "return \"STOCK_TICKER\"",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "3fed3ab7-1dd3-4b36-aa04-c8757d622901",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
+      "targets": [],
+      "value": ""
     }, {
       "id": "d8803e9d-5e84-4540-895b-e94a17059415",
       "comment": "",
@@ -31,16 +31,30 @@
       "id": "324b00e7-00c6-4499-bc95-8dfc7cb55014",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"Buy\"",
+      "target": "return \"Buy\";",
       "targets": [],
       "value": "FORMAT"
+    }, {
+      "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "splice_array"
     }, {
       "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"YOUR_AI_HERE\"",
+      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "AI_ARRAY"
+    }, {
+      "id": "b5069a9a-7cbb-4b3c-9b6a-9a15d48a843d",
+      "comment": "",
+      "command": "echo",
+      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "e7de3e0d-8814-41ea-8159-0b882221a58f",
       "comment": "",
@@ -236,19 +250,19 @@
     "id": "d7bde928-89ba-4368-97f5-032492d419dc",
     "name": "Chase_Sell",
     "commands": [{
-      "id": "0f50d7b5-56ba-4dc3-a840-e80890d48df7",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "0a5de3ff-2bf1-45d0-a453-52ad81e4273a",
       "comment": "",
       "command": "executeScript",
       "target": "return \"STOCK_TICKER\"",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "0f50d7b5-56ba-4dc3-a840-e80890d48df7",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
+      "targets": [],
+      "value": ""
     }, {
       "id": "7f8829cb-3568-4bf2-a88e-d02af92f9d14",
       "comment": "",
@@ -264,12 +278,26 @@
       "targets": [],
       "value": "FORMAT"
     }, {
+      "id": "95aaf752-49fa-4a09-a6f5-61beae67e6f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "splice_array"
+    }, {
       "id": "507dc7c1-72c9-422d-805b-784d7a2cc49e",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"YOUR_AI_HERE\"",
+      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "AI_ARRAY"
+    }, {
+      "id": "2f94da8a-1dae-43a6-853e-6cdcecc8692a",
+      "comment": "",
+      "command": "echo",
+      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "e11b9f9f-1559-4922-9167-4c1ed3cc3daf",
       "comment": "",
@@ -437,19 +465,19 @@
     "id": "864b6b86-3905-4314-a74a-54d86677d0a3",
     "name": "PreMarket_Sell",
     "commands": [{
-      "id": "9172e75b-0782-4be3-b47b-680a0e3e25da",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "72274ac8-8f4b-4022-a86d-9cbd6b66ad43",
       "comment": "",
       "command": "executeScript",
       "target": "return \"STOCK_TICKER\"",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "9172e75b-0782-4be3-b47b-680a0e3e25da",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
+      "targets": [],
+      "value": ""
     }, {
       "id": "fd072937-fd05-4126-922a-c0ca4e3dd516",
       "comment": "",
@@ -465,12 +493,26 @@
       "targets": [],
       "value": "FORMAT"
     }, {
+      "id": "c5aeb472-372c-4965-914d-3ff656e5cc14",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "splice_array"
+    }, {
       "id": "5ea83e4b-9a0c-424a-9369-2e535f2f8eef",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"YOUR_AI_HERE\"",
+      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "AI_ARRAY"
+    }, {
+      "id": "1a4c5762-41ab-4d44-8b80-846c517a29a1",
+      "comment": "",
+      "command": "echo",
+      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "878cef79-3f1b-4ad4-a92a-87321f7df009",
       "comment": "",
@@ -658,19 +700,19 @@
     "id": "fe1ab38d-ab36-4352-a144-5e409ecb92a5",
     "name": "Premarket_Buy",
     "commands": [{
-      "id": "cbc198e1-fdf8-43d7-b1b0-0468e7ee3af5",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "bc3822a0-b7c4-4e7c-a398-196c43e23908",
       "comment": "",
       "command": "executeScript",
       "target": "return \"STOCK_TICKER\"",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "cbc198e1-fdf8-43d7-b1b0-0468e7ee3af5",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
+      "targets": [],
+      "value": ""
     }, {
       "id": "bb0243cc-09a4-4a74-9807-fbbd65951870",
       "comment": "",
@@ -686,12 +728,26 @@
       "targets": [],
       "value": "FORMAT"
     }, {
+      "id": "ab329939-c353-4925-b4ab-dbdd6995a29e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "splice_array"
+    }, {
       "id": "70d4a82e-caa7-4bc0-81ad-42d22595b284",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"YOUR_AI_HERE\"",
+      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
       "targets": [],
       "value": "AI_ARRAY"
+    }, {
+      "id": "44765db9-95dc-4db8-a103-ed043f4089a4",
+      "comment": "",
+      "command": "echo",
+      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "7da53d12-e38a-45f4-95d9-71c4b48e6320",
       "comment": "",
