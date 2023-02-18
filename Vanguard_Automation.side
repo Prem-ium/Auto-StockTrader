@@ -7,6 +7,13 @@
     "id": "1c92f668-6e66-48b0-b082-bdf45cc007c2",
     "name": "Vanguard_Buy",
     "commands": [{
+      "id": "5d537d93-9d32-40d6-be14-73ca41d646c3",
+      "comment": "",
+      "command": "store",
+      "target": "TICKERHERE",
+      "targets": [],
+      "value": "TICKER"
+    }, {
       "id": "26009254-3190-4799-b16a-640f36b07bf3",
       "comment": "",
       "command": "open",
@@ -21,17 +28,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5d537d93-9d32-40d6-be14-73ca41d646c3",
+      "id": "d24df519-1c36-407a-a251-59e0253ba2a6",
       "comment": "",
-      "command": "store",
-      "target": "TICKERHERE",
+      "command": "executeScript",
+      "target": "return \"SLICE_ACCOUNT\";",
       "targets": [],
-      "value": "TICKER"
+      "value": "target"
     }, {
       "id": "43cef369-ab0e-46e1-a20c-ea2ca342f143",
       "comment": "",
       "command": "executeScript",
-      "target": "return [\"YOUR\",\"ACCOUNT\",\"NUMBERS\",\"HERE\"]",
+      "target": "let list = [\"YOUR\",\"ACCOUNTS\",\"HERE\"];                                   list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "ACCOUNTS"
     }, {
@@ -138,7 +145,7 @@
       "id": "1e15dfba-bc51-472b-9299-d509324bb759",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2000",
       "targets": [],
       "value": ""
     }, {
@@ -237,6 +244,13 @@
     "id": "cdd81a02-1a64-467b-9a6e-d45a9570c254",
     "name": "Vanguard_Sell",
     "commands": [{
+      "id": "b38c9f84-1523-4497-a731-c6cc4e27d681",
+      "comment": "",
+      "command": "store",
+      "target": "TICKERHERE",
+      "targets": [],
+      "value": "TICKER"
+    }, {
       "id": "757d2543-9ebd-48d0-8194-c1ab3f96bdd2",
       "comment": "",
       "command": "open",
@@ -251,17 +265,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "b38c9f84-1523-4497-a731-c6cc4e27d681",
+      "id": "3149a90a-36aa-4b7a-b98c-4f40d64c54cb",
       "comment": "",
-      "command": "store",
-      "target": "TICKERHERE",
+      "command": "executeScript",
+      "target": "return \"SLICE_ACCOUNT\";",
       "targets": [],
-      "value": "TICKER"
+      "value": "target"
     }, {
       "id": "e2c4f3f8-b997-47fb-bc08-2c2053462a67",
       "comment": "",
       "command": "executeScript",
-      "target": "return [\"YOUR\",\"ACCOUNT\",\"NUMBERS\",\"HERE\"]",
+      "target": "let list = [\"YOUR\",\"ACCOUNTS\",\"HERE\"];                                   list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "ACCOUNTS"
     }, {
@@ -368,7 +382,7 @@
       "id": "84b4c294-2cfc-404e-8003-146b16e97936",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2000",
       "targets": [],
       "value": ""
     }, {
