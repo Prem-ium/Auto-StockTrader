@@ -233,6 +233,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "4b23d069-7144-4772-941c-d458a1c32c1f",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} finished buying",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "d7d80404-0250-4492-a1e6-7e6b98b69bec",
       "comment": "",
       "command": "end",
@@ -467,6 +474,13 @@
       "comment": "",
       "command": "open",
       "target": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ee18550-715e-4ace-9787-027eaf94ff9e",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} finished selling",
       "targets": [],
       "value": ""
     }, {
