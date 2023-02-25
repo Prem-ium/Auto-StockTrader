@@ -1,0 +1,393 @@
+{
+  "id": "a249f397-d556-4703-83ee-4aca00e2495d",
+  "version": "2.0",
+  "name": "Ally",
+  "url": "https://live.invest.ally.com",
+  "tests": [{
+    "id": "24549c69-892a-4b1a-8caa-c9fd62a77ebf",
+    "name": "Buy",
+    "commands": [{
+      "id": "34438ce8-07eb-4e60-bc44-91fe755b49e5",
+      "comment": "",
+      "command": "store",
+      "target": "TICKERHERE",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "7e9dd287-d442-4d67-90d2-32852442a90b",
+      "comment": "",
+      "command": "open",
+      "target": "/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "646d9f0a-fa7c-47a5-9405-2e85cc72578c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "ac1a3f26-99ed-42f6-bd7b-246f06bba360",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let list = ['YOUR','ACCOUNTS','HERE']; list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "d375394a-81dd-40d3-85e3-abb777d9aa23",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "370578e4-e2c6-4779-a4f6-d2943b9ed025",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-select-account",
+      "targets": [
+        ["id=modal-select-account", "id"],
+        ["css=#modal-select-account", "css:finder"],
+        ["xpath=//select[@id='modal-select-account']", "xpath:attributes"],
+        ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d092694-37e4-482c-9dac-eb0790cbbc17",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "894x908",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78d90259-381f-4fd8-8af3-db59ebcb2874",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-select-account",
+      "targets": [
+        ["id=modal-select-account", "id"],
+        ["css=#modal-select-account", "css:finder"],
+        ["xpath=//select[@id='modal-select-account']", "xpath:attributes"],
+        ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "587270ef-75af-4168-b1ff-51198fd1ff62",
+      "comment": "",
+      "command": "select",
+      "target": "id=modal-select-account",
+      "targets": [],
+      "value": "label=${account}"
+    }, {
+      "id": "dbc96919-3f64-4260-ba8a-57fc1a88ce78",
+      "comment": "",
+      "command": "click",
+      "target": "css=ally-button:nth-child(5) > .primary",
+      "targets": [
+        ["css=ally-button:nth-child(5) > .primary", "css:finder"],
+        ["xpath=//div[@id='modal']/div[2]/ally-button/button", "xpath:idRelative"],
+        ["xpath=//ally-modal/div/div/div/div[2]/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61b35ee3-72c1-4af7-9103-c1952cc5095c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.styled-input",
+      "targets": [
+        ["css=.styled-input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/ally-card/section/section-company/div/symbol-search/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9be15ab5-5efa-47a1-929c-5514f77ff8dd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.styled-input",
+      "targets": [],
+      "value": "${TICKER}"
+    }, {
+      "id": "0b475c0f-1b83-426c-bd5d-358092b6f1f3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.styled-input",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "497550b5-a067-4e16-8437-aad3dd8cd74a",
+      "comment": "",
+      "command": "pause",
+      "target": "3250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3826b364-ff0f-40ec-b40e-551f51d77a15",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Buy')]",
+      "targets": [
+        ["css=#stock-sell > span", "css:finder"],
+        ["xpath=//div[@id='stock-sell']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sell')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e27fae5-077f-494b-a8ee-dcb93d166a0f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Preview Order')]",
+      "targets": [
+        ["css=.col-xs-12 .primary", "css:finder"],
+        ["xpath=//div[@id='content']/div/div[3]/ally-card/section/div/section-order-summary/div[2]/div/div/ally-button/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17310545-cd8f-4aa8-b6d9-6e01474d5e18",
+      "comment": "",
+      "command": "pause",
+      "target": "3500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "790a1337-ae97-49ad-9619-2fc0e3ab43b1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Place Order')]",
+      "targets": [
+        ["css=.col-xs-12 .primary", "css:finder"],
+        ["xpath=//div[@id='content']/div/div[3]/ally-card/section/div/section-order-summary/div[2]/div/div/ally-button/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "569e51e6-5b25-41d7-9e02-628e161b9df6",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6f230e6-27d4-44a7-b132-0099e4285bc7",
+      "comment": "",
+      "command": "open",
+      "target": "/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14fdf288-6b65-4f92-91e3-5bbe67b8412b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e0b28894-e4e4-4292-8e4e-bbfd95e5114c",
+    "name": "Sell",
+    "commands": [{
+      "id": "5bd0b0b4-7758-4976-a514-1adba2647a66",
+      "comment": "",
+      "command": "store",
+      "target": "TICKERHERE",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "26a77bc4-1273-4cd5-b6bb-9d75a87d493d",
+      "comment": "",
+      "command": "open",
+      "target": "/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ac80986-d348-4247-92b9-54360b73d64f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "9d2699f4-0258-4fc1-8891-949b017a5569",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let list = ['YOUR','ACCOUNTS','HERE']; list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "12772b8b-ddd3-4c46-aa3e-1daac7fc01c0",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "8f219729-82b8-4bd1-b865-d02553903c18",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-select-account",
+      "targets": [
+        ["id=modal-select-account", "id"],
+        ["css=#modal-select-account", "css:finder"],
+        ["xpath=//select[@id='modal-select-account']", "xpath:attributes"],
+        ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "457ccc79-90e1-48d4-a251-2b15457a6d2b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "894x908",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cc63989-349c-4d7a-915e-0bbf276398b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=modal-select-account",
+      "targets": [
+        ["id=modal-select-account", "id"],
+        ["css=#modal-select-account", "css:finder"],
+        ["xpath=//select[@id='modal-select-account']", "xpath:attributes"],
+        ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29abad16-b822-4259-9ec8-99e84a389225",
+      "comment": "",
+      "command": "select",
+      "target": "id=modal-select-account",
+      "targets": [],
+      "value": "label=${account}"
+    }, {
+      "id": "5efa23c1-eaa7-4b8e-a264-618d4bd1bbe3",
+      "comment": "",
+      "command": "click",
+      "target": "css=ally-button:nth-child(5) > .primary",
+      "targets": [
+        ["css=ally-button:nth-child(5) > .primary", "css:finder"],
+        ["xpath=//div[@id='modal']/div[2]/ally-button/button", "xpath:idRelative"],
+        ["xpath=//ally-modal/div/div/div/div[2]/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0eb7d18-234e-4907-9f10-1ecdba517e85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.styled-input",
+      "targets": [
+        ["css=.styled-input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/ally-card/section/section-company/div/symbol-search/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6576b843-fba6-4c3e-80e7-a93e8bace3cd",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.styled-input",
+      "targets": [],
+      "value": "${TICKER}"
+    }, {
+      "id": "874addb5-5545-4175-85d4-ed2fc82d5f2c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.styled-input",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bf431079-fc92-4371-a0c6-82605f88136c",
+      "comment": "",
+      "command": "pause",
+      "target": "3250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67c839e3-b198-4a47-a328-bb04a9dd0427",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Sell')]",
+      "targets": [
+        ["css=#stock-sell > span", "css:finder"],
+        ["xpath=//div[@id='stock-sell']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sell')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a5c5f0-af69-4f55-a939-ff20826e0f8c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Preview Order')]",
+      "targets": [
+        ["css=.col-xs-12 .primary", "css:finder"],
+        ["xpath=//div[@id='content']/div/div[3]/ally-card/section/div/section-order-summary/div[2]/div/div/ally-button/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da99e152-fb1c-4e7c-9be2-63ced7734fc2",
+      "comment": "",
+      "command": "pause",
+      "target": "3500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd894f03-936f-4f1d-b05e-662c4678f43f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Place Order')]",
+      "targets": [
+        ["css=.col-xs-12 .primary", "css:finder"],
+        ["xpath=//div[@id='content']/div/div[3]/ally-card/section/div/section-order-summary/div[2]/div/div/ally-button/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/ally-button/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bbd2915-b2d5-4ddc-a303-9b11772b6263",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18a4d8dc-d8ba-43a1-95f8-653f2642501e",
+      "comment": "",
+      "command": "open",
+      "target": "/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a05ba60a-7a75-4574-87a0-4726307fd1b5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2076ccc1-f9b5-4a8f-a8b7-45c11df5b928",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://live.invest.ally.com/"],
+  "plugins": []
+}
