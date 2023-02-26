@@ -23,13 +23,15 @@ Automating orders for Chase JPMorgan Brokerage can be done using the `ChaseAutoI
 5. Input the Stock Ticker as a return statement and click the start button to start automating.
    `return "STOCK_TICKER"`
 
-# Vanguard & Firstrade Automation
+# Vanguard, Firstrade, & Ally Automation
 Automating orders for Vanguard Brokerage can be done using the `Vanguard_Automation.side` & Selenium IDE Extension.. 
 
 Automating orders for Firstrade Brokerage can be done using the`Firstrade_Automation.side` file & Selenium IDE Extension.
 
+Automating orders for Firstrade Brokerage can be done using the `Ally.side` file & Selenium IDE Extension. You will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
+
 1. Download the Selenium IDE Extension from your browser's extension store and open the `Vanguard_Automation.side` project file
-2. Log in to Vanguard or Firstrade on your browser.
+2. Log in to Vanguard, Firstrade, or Ally on your browser.
 3. Retrieve the list of your account number(s) and place them in the return execute script on the buy and sell test(s). 
 `return ["54566343", "34546546", "54566546"]`
 
