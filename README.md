@@ -28,7 +28,7 @@ Automating orders for Vanguard Brokerage can be done using the `Vanguard_Automat
 
 Automating orders for Firstrade Brokerage can be done using the`Firstrade_Automation.side` file & Selenium IDE Extension.
 
-Automating orders for Firstrade Brokerage can be done using the `Ally.side` file & Selenium IDE Extension. You will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
+Automating orders for Firstrade Brokerage can be done using the `Ally.side` file & Selenium IDE Extension. You will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1. The Ally link to Site Settings is at https://live.invest.ally.com/settings
 
 1. Download the Selenium IDE Extension from your browser's extension store and open the `Vanguard_Automation.side` project file
 2. Log in to Vanguard, Firstrade, or Ally on your browser.
