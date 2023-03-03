@@ -58,7 +58,7 @@ except:
 # Load ENV
 load_dotenv()
 
-ACCOUNT_NAMES = os.getenv('ACCOUNT_NAMES').split(',')
+ACCOUNT_NAMES = os.getenv('SOFI_ACCOUNT_NAMES').split(',')
 EXCLUDE_ACCOUNTS = os.getenv('EXCLUDE_ACCOUNTS').split(',')
 
 SOFI_LOGIN = os.getenv('SOFI_LOGIN')
@@ -182,3 +182,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+    # Q: True or False: To execute a Switch Spoofing attack the intruder makes use of the  VLAN Registration protocol AND the Dynamic Trunking protocol AND must be in the same network.
+    

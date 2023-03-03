@@ -1,11 +1,11 @@
 {
   "id": "9c9b281d-e9b3-4172-8e46-be01813d4437",
   "version": "2.0",
-  "name": "FirstTrade",
+  "name": "Firstrade",
   "url": "https://invest.firstrade.com",
   "tests": [{
     "id": "c4367fd5-3ea6-4cac-ae91-509defb9d7c9",
-    "name": "Buy_FirstTrade",
+    "name": "Buy_Firstrade",
     "commands": [{
       "id": "30dfd5f1-3abb-4b9c-bd14-9e537847415a",
       "comment": "",
@@ -14,12 +14,33 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "e3d9e076-85a1-429e-9c89-977c05592d26",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE'];",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "0c21e4cd-cee0-4c9a-902d-711bd51ff73f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "0158ffb3-1dcf-4c14-8727-77ae21435138",
       "comment": "",
       "command": "open",
       "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
       "targets": [],
       "value": ""
+    }, {
+      "id": "8c9dc35a-76b8-4428-a554-848f848b2b0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
     }, {
       "id": "dfeb4796-7aa7-48ff-ab6f-8328acc32aaa",
       "comment": "",
@@ -28,24 +49,10 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
-      "id": "e3d9e076-85a1-429e-9c89-977c05592d26",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
-      "targets": [],
-      "value": "splice_array"
-    }, {
-      "id": "8c9dc35a-76b8-4428-a554-848f848b2b0d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let list = ['YOUR','ACCOUNTS','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
-      "targets": [],
-      "value": "ACCOUNTS"
-    }, {
       "id": "3ae8e293-1951-4fd4-b8a4-cf544b316a66",
       "comment": "",
       "command": "forEach",
-      "target": "ACCOUNTS",
+      "target": "list",
       "targets": [],
       "value": "account"
     }, {
@@ -219,52 +226,59 @@
       "value": ""
     }]
   }, {
-    "id": "d80ed11d-4769-4605-854f-f35cd9e2ee7a",
-    "name": "Sell_FirstTrade",
+    "id": "79f621d4-a532-4e4a-bb70-680c3f88d074",
+    "name": "Sell_Firstrade",
     "commands": [{
-      "id": "1579385c-554b-4c4b-9223-66ca239ee28a",
+      "id": "79813301-6cc4-48d2-9e86-2a68ce307317",
       "comment": "",
       "command": "store",
       "target": "TICKER_GOES_HERE",
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "cbe48972-6e20-441d-b460-013bd14acc6c",
+      "id": "fb05d9fc-0aa5-402d-b194-965639ebbf4d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE'];",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "e2e95a20-d305-49d8-a243-44c1465daa0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "ef7683ac-2b3d-4c60-986c-0f9d96209cd7",
       "comment": "",
       "command": "open",
       "target": "https://invest.firstrade.com/cgi-bin/main#/cgi-bin/stock_order",
       "targets": [],
       "value": ""
     }, {
-      "id": "25d6ddd9-75ba-450d-8fb5-45e591beb9d3",
+      "id": "020ab8b9-c9f0-4eab-9e44-288650372ddb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "8d8dfa67-b38b-4e55-b738-a243b01786a4",
       "comment": "",
       "command": "store",
       "target": "",
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
-      "id": "2d3346bb-e9da-4ba8-90c6-aac73f1525fd",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
-      "targets": [],
-      "value": "splice_array"
-    }, {
-      "id": "f09ac65d-bd9b-4a6c-b90b-34c2319263e0",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let list = ['YOUR','ACCOUNTS','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
-      "targets": [],
-      "value": "ACCOUNTS"
-    }, {
-      "id": "f0f255eb-ea50-4ab4-821a-037376a68e47",
+      "id": "27db9827-d53a-4aeb-9bcc-05baa93646f5",
       "comment": "",
       "command": "forEach",
-      "target": "ACCOUNTS",
+      "target": "list",
       "targets": [],
       "value": "account"
     }, {
-      "id": "d9e865a6-7f0b-4cd7-b347-f96785320358",
+      "id": "a5157059-1c70-4cb1-afe6-06221777f529",
       "comment": "",
       "command": "click",
       "target": "id=accountId1",
@@ -278,21 +292,21 @@
       ],
       "value": ""
     }, {
-      "id": "f085ea19-9f25-456c-8378-db64c81a1a65",
+      "id": "6114101b-8cce-4a7d-9a96-0dbc3d2d880e",
       "comment": "",
       "command": "select",
       "target": "id=accountId1",
       "targets": [],
       "value": "label=${account}"
     }, {
-      "id": "0d0f532d-d849-4727-8bf5-e522f4ebdc83",
+      "id": "82772a8c-cdcb-429e-b31a-6c51bebe3a8b",
       "comment": "",
       "command": "pause",
       "target": "1200",
       "targets": [],
       "value": ""
     }, {
-      "id": "87e4c163-2918-493f-bebd-a46fc5d14bda",
+      "id": "fc79f397-eb52-4b86-800c-1dd3ab78e5b2",
       "comment": "",
       "command": "click",
       "target": "id=transactionType_Sell1",
@@ -305,7 +319,7 @@
       ],
       "value": ""
     }, {
-      "id": "51cb87ab-ad5c-4b64-861c-bd8cca4e4ef6",
+      "id": "4aa9980f-e7f4-4982-aade-8918d0f3f0df",
       "comment": "",
       "command": "click",
       "target": "id=quantity1",
@@ -319,7 +333,7 @@
       ],
       "value": ""
     }, {
-      "id": "36533786-ae35-4f04-be61-b10f24f28b6c",
+      "id": "6bb0c3d7-5028-40f1-bb77-1b4787e4eea8",
       "comment": "",
       "command": "type",
       "target": "id=quantity1",
@@ -333,7 +347,7 @@
       ],
       "value": "1"
     }, {
-      "id": "d453e823-daaf-420b-9cca-9d816bbdf20c",
+      "id": "1593ca70-cbeb-4702-9fae-bb680f82c944",
       "comment": "",
       "command": "click",
       "target": "id=symbol1",
@@ -347,14 +361,14 @@
       ],
       "value": ""
     }, {
-      "id": "3e7c475f-39e0-4320-8b8a-3f6aca4a2168",
+      "id": "e6b32b42-fcc3-416c-a72d-17cc91213917",
       "comment": "",
       "command": "sendKeys",
       "target": "id=symbol1",
       "targets": [],
       "value": "${TICKER}"
     }, {
-      "id": "d8d7ccab-f748-498d-ad78-2b663f387d38",
+      "id": "6fe1eb40-8d80-416e-8ced-1822b9bb823a",
       "comment": "",
       "command": "click",
       "target": "id=limitPrice1",
@@ -368,14 +382,14 @@
       ],
       "value": ""
     }, {
-      "id": "dce7b68c-d19f-404f-bc06-665961f21ef9",
+      "id": "3f2184bb-97cd-45c3-a533-aba32a3a5c40",
       "comment": "",
       "command": "sendKeys",
       "target": "id=limitPrice1",
       "targets": [],
       "value": "${LIMIT_PRICE}"
     }, {
-      "id": "489ec470-70ba-4371-84ba-a5eaf0ba78fb",
+      "id": "a85e7308-a330-4659-aff2-710f6a6da999",
       "comment": "",
       "command": "click",
       "target": "id=submitOrder1",
@@ -391,7 +405,7 @@
       ],
       "value": ""
     }, {
-      "id": "32a6c33f-3ad9-4207-81ae-4493eecadfc9",
+      "id": "6dc565f0-de36-4d76-975e-f94cd0a989c9",
       "comment": "",
       "command": "click",
       "target": "css=.submitted_placeorder_bnt",
@@ -404,7 +418,7 @@
       ],
       "value": ""
     }, {
-      "id": "aad38794-38e1-4906-9564-9d5dcda60c19",
+      "id": "03e659e9-ac44-482e-a104-53453a17cfd4",
       "comment": "",
       "command": "mouseOver",
       "target": "id=acctlink_pos",
@@ -418,14 +432,14 @@
       ],
       "value": ""
     }, {
-      "id": "fb3c3e8d-599c-4c48-ab61-87d1310f259b",
+      "id": "6e05b1af-2bba-4e80-803a-d798b472ed64",
       "comment": "",
       "command": "echo",
       "target": "${account} bought ${TICKER}",
       "targets": [],
       "value": ""
     }, {
-      "id": "4d05510f-1c40-4716-9d0e-88f30606571b",
+      "id": "ce6c5a73-42ed-47d6-a6ee-80477080972e",
       "comment": "",
       "command": "end",
       "target": "",

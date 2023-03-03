@@ -1,0 +1,306 @@
+{
+  "id": "a249f397-d556-4703-83ee-4aca00e2495d",
+  "version": "2.0",
+  "name": "Fidelity",
+  "url": "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry",
+  "tests": [{
+    "id": "685c8f77-8fe3-45fc-8e13-51b6c4fea30c",
+    "name": "Buy",
+    "commands": [{
+      "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
+      "comment": "",
+      "command": "store",
+      "target": "AREB",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNT',\"NUMBERS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "51277964-fd77-466b-9595-0617964dbc41",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return .26",
+      "targets": [],
+      "value": "LIMIT_PRICE"
+    }, {
+      "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
+    }, {
+      "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "25adc79e-a66b-4881-8326-2ac24f570ae0",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
+      "comment": "",
+      "command": "open",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6324823-db4b-4bf3-8a97-c2bf60761025",
+      "comment": "",
+      "command": "click",
+      "target": "css=#action-buy s-assigned-wrapper",
+      "targets": [
+        ["css=#action-buy s-assigned-wrapper", "css:finder"],
+        ["xpath=//pvd3-segment[@id='action-buy']/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:idRelative"],
+        ["xpath=//label/s-slot/s-assigned-wrapper", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8fd4168-033f-47e4-89ca-62c6ce227559",
+      "comment": "",
+      "command": "click",
+      "target": "css=#market-no s-slot",
+      "targets": [
+        ["css=#market-no s-slot", "css:finder"],
+        ["xpath=//pvd3-segment[@id='market-no']/s-root/div/label/s-slot", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13b8b5e7-1c2b-4706-a079-18195551e0b1",
+      "comment": "",
+      "command": "pause",
+      "target": "2300",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b675ccd-8948-44e3-9adb-12924e894929",
+      "comment": "",
+      "command": "click",
+      "target": "id=eqt-ordsel-limit-price-label",
+      "targets": [
+        ["id=eqt-ordsel-limit-price-label", "id"],
+        ["css=#eqt-ordsel-limit-price-label", "css:finder"],
+        ["xpath=//label[@id='eqt-ordsel-limit-price-label']", "xpath:attributes"],
+        ["xpath=//div[@id='limit-price']/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Limit price')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "701ecd44-f7f9-4934-bec1-50d862519112",
+      "comment": "",
+      "command": "pause",
+      "target": "2300",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
+      "comment": "",
+      "command": "type",
+      "target": "id=eqt-ordsel-limit-price-field",
+      "targets": [],
+      "value": "${LIMIT_PRICE}"
+    }, {
+      "id": "86a77a53-d144-4161-8b7b-395dfad3757f",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=eqt-ordsel-limit-price-field",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=eqt-ordsel-limit-price-field",
+      "targets": [],
+      "value": "${LIMIT_PRICE}"
+    }, {
+      "id": "0c8a010b-b60a-4819-b4c3-ccdd36af561c",
+      "comment": "",
+      "command": "pause",
+      "target": "2300",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5422b4f3-049c-4241-9e92-c3907b96b935",
+      "comment": "",
+      "command": "click",
+      "target": "css=#previewOrderBtn .pvd3-button-root",
+      "targets": [
+        ["css=#previewOrderBtn .pvd3-button-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/pvd3-button/s-root/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed5e6df8-2812-4466-8c41-e1c0fcc7f471",
+      "comment": "",
+      "command": "click",
+      "target": "id=placeOrderBtn",
+      "targets": [
+        ["id=placeOrderBtn", "id"],
+        ["css=#placeOrderBtn", "css:finder"],
+        ["xpath=//button[@id='placeOrderBtn']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f663fda9-612d-411f-b6de-8ea9ce568d08",
+      "comment": "",
+      "command": "echo",
+      "target": "${account}: Purchasing ${TICKER} Test Completed.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46a53dd0-e413-4d4d-a94f-bd0db92a57a6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "663b8ae4-3df7-4c2a-b3b1-7b57fe8e7162",
+    "name": "Sell",
+    "commands": [{
+      "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
+      "comment": "",
+      "command": "store",
+      "target": "AREB",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNT',\"NUMBERS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "85bea692-3a09-4056-9921-27fd1c96586a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
+    }, {
+      "id": "1d1a0857-f802-40c7-80ac-099c5827362c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "8d934b3c-351c-4168-a9db-b174671377b3",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
+      "comment": "",
+      "command": "open",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d904aa2-ef1b-47e3-94cd-923438578869",
+      "comment": "",
+      "command": "click",
+      "target": "css=#market-yes s-slot",
+      "targets": [
+        ["css=#market-yes s-slot", "css:finder"],
+        ["xpath=//pvd3-segment[@id='market-yes']/s-root/div/label/s-slot", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3116c469-34c3-426a-ac9f-b2985cb09d2a",
+      "comment": "",
+      "command": "pause",
+      "target": "2300",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ef49e21-0681-497d-9b98-dc7cade3af4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#previewOrderBtn .pvd3-button-root",
+      "targets": [
+        ["css=#previewOrderBtn .pvd3-button-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/pvd3-button/s-root/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Preview order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41b9ccab-907c-4c18-86d5-52be7dd29524",
+      "comment": "",
+      "command": "click",
+      "target": "id=placeOrderBtn",
+      "targets": [
+        ["id=placeOrderBtn", "id"],
+        ["css=#placeOrderBtn", "css:finder"],
+        ["xpath=//button[@id='placeOrderBtn']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[3]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Place order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bc781af-0a4b-4fe9-8fbb-3c91c4d14f67",
+      "comment": "",
+      "command": "echo",
+      "target": "${account}: Selling ${TICKER} Test Completed.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7a9bc6f-039a-41e4-86f6-685b6aefcd0b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2076ccc1-f9b5-4a8f-a8b7-45c11df5b928",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://live.invest.ally.com/", "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry"],
+  "plugins": []
+}

@@ -14,6 +14,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "40ce5ee8-288f-4b5d-b53e-b483def82b76",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "3fed3ab7-1dd3-4b36-aa04-c8757d622901",
       "comment": "",
       "command": "open",
@@ -35,17 +49,10 @@
       "targets": [],
       "value": "FORMAT"
     }, {
-      "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
-      "targets": [],
-      "value": "splice_array"
-    }, {
       "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -257,6 +264,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "78ef785f-b208-4ac3-8119-1a37ae74bcaa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "3e85cc91-9356-4773-afb6-8f47c46b3801",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "0f50d7b5-56ba-4dc3-a840-e80890d48df7",
       "comment": "",
       "command": "open",
@@ -278,17 +299,10 @@
       "targets": [],
       "value": "FORMAT"
     }, {
-      "id": "95aaf752-49fa-4a09-a6f5-61beae67e6f2",
+      "id": "22217338-eff5-47d9-8058-e67b0026b82b",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
-      "targets": [],
-      "value": "splice_array"
-    }, {
-      "id": "507dc7c1-72c9-422d-805b-784d7a2cc49e",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -472,6 +486,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "3b7ee4d7-649d-46cf-a21a-daee979a9535",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "f43f4e61-df22-45b1-95ef-11f956ce5348",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "9172e75b-0782-4be3-b47b-680a0e3e25da",
       "comment": "",
       "command": "open",
@@ -493,17 +521,10 @@
       "targets": [],
       "value": "FORMAT"
     }, {
-      "id": "c5aeb472-372c-4965-914d-3ff656e5cc14",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
-      "targets": [],
-      "value": "splice_array"
-    }, {
       "id": "5ea83e4b-9a0c-424a-9369-2e535f2f8eef",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -707,6 +728,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "79e6d892-51ea-4a0c-ab61-7b0dc7cbb057",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "b076f9e7-2155-4548-b4cc-667d73fec3ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SPLIT_TARGET\";",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "cbc198e1-fdf8-43d7-b1b0-0468e7ee3af5",
       "comment": "",
       "command": "open",
@@ -728,17 +763,10 @@
       "targets": [],
       "value": "FORMAT"
     }, {
-      "id": "ab329939-c353-4925-b4ab-dbdd6995a29e",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
-      "targets": [],
-      "value": "splice_array"
-    }, {
       "id": "70d4a82e-caa7-4bc0-81ad-42d22595b284",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = ['YOUR','AI','GOES','HERE'];                  list = list.slice(list.indexOf(${splice_array}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {

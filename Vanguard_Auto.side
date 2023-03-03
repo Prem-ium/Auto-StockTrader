@@ -14,6 +14,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "93a6719a-b584-461a-828e-bebfddb7c7fc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "d24df519-1c36-407a-a251-59e0253ba2a6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_ACCOUNT\";",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "26009254-3190-4799-b16a-640f36b07bf3",
       "comment": "",
       "command": "open",
@@ -28,24 +42,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d24df519-1c36-407a-a251-59e0253ba2a6",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SLICE_ACCOUNT\";",
-      "targets": [],
-      "value": "target"
-    }, {
       "id": "43cef369-ab0e-46e1-a20c-ea2ca342f143",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = [\"YOUR\",\"ACCOUNTS\",\"HERE\"];                                   list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
-      "value": "ACCOUNTS"
+      "value": "list"
     }, {
       "id": "0b09b61f-a94b-48d9-bcd6-9d97652b0bf8",
       "comment": "",
       "command": "forEach",
-      "target": "ACCOUNTS",
+      "target": "list",
       "targets": [],
       "value": "account"
     }, {
@@ -248,52 +255,59 @@
       "value": ""
     }]
   }, {
-    "id": "cdd81a02-1a64-467b-9a6e-d45a9570c254",
+    "id": "dfe19316-5695-4ba8-a2af-ee7dde2236a8",
     "name": "Vanguard_Sell",
     "commands": [{
-      "id": "b38c9f84-1523-4497-a731-c6cc4e27d681",
+      "id": "73bed0a3-7e10-4d9f-8613-6389606896db",
       "comment": "",
       "command": "store",
       "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "757d2543-9ebd-48d0-8194-c1ab3f96bdd2",
+      "id": "fc6bd7f5-3d49-48b9-86e5-cc23f29e1687",
       "comment": "",
-      "command": "open",
-      "target": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade/ticket?token=",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
       "targets": [],
-      "value": ""
+      "value": "accounts"
     }, {
-      "id": "4753c674-0db6-4e25-84bb-25fb453452d7",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "876x820",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3149a90a-36aa-4b7a-b98c-4f40d64c54cb",
+      "id": "c7699507-efe3-411a-927b-a7d5b94bb188",
       "comment": "",
       "command": "executeScript",
       "target": "return \"SLICE_ACCOUNT\";",
       "targets": [],
       "value": "target"
     }, {
-      "id": "e2c4f3f8-b997-47fb-bc08-2c2053462a67",
+      "id": "423071da-6ba1-467b-989a-ce6640b5a3a3",
+      "comment": "",
+      "command": "open",
+      "target": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade/ticket?token=",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16166601-0f81-406e-8fd7-5166d956d1d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "876x820",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a38ce32b-6bf2-4801-b638-a4558db48f31",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = [\"YOUR\",\"ACCOUNTS\",\"HERE\"];                                   list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
-      "value": "ACCOUNTS"
+      "value": "list"
     }, {
-      "id": "ab4fdd9f-d414-42da-9136-1e46294b6325",
+      "id": "cf372010-f6b3-4d45-ba0d-d87b53aed1c0",
       "comment": "",
       "command": "forEach",
-      "target": "ACCOUNTS",
+      "target": "list",
       "targets": [],
       "value": "account"
     }, {
-      "id": "fc16ab54-955a-4814-84ec-bcc6c321bcc1",
+      "id": "1bcad541-ae6d-4305-85bf-2d1a814ba722",
       "comment": "",
       "command": "click",
       "target": "css=.account-select-trigger__content > .ng-star-inserted",
@@ -303,7 +317,7 @@
       ],
       "value": ""
     }, {
-      "id": "1818a794-881e-41bd-b9c8-f48d1537bc53",
+      "id": "9e45f93a-62d6-406a-9b94-38bc5499cdc7",
       "comment": "",
       "command": "click",
       "target": "id=accountListOption${account}",
@@ -315,7 +329,7 @@
       ],
       "value": ""
     }, {
-      "id": "96d47c70-e26a-4640-b109-cd2c7f857f10",
+      "id": "c4e3f3a1-020d-4e9c-b22c-c129ee5b81a8",
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Sell')]",
@@ -326,7 +340,7 @@
       ],
       "value": ""
     }, {
-      "id": "95af0402-75b5-4e59-9eea-d14cc93f16b3",
+      "id": "2e47e824-323a-4bd9-8cab-52ea67a08167",
       "comment": "",
       "command": "click",
       "target": "id=symbol",
@@ -339,7 +353,7 @@
       ],
       "value": ""
     }, {
-      "id": "0828ef3e-4109-42cc-8e1a-123baa36cdbd",
+      "id": "894a2426-abc3-40d7-a0b7-7c4a8824673e",
       "comment": "",
       "command": "type",
       "target": "id=symbol",
@@ -352,7 +366,7 @@
       ],
       "value": "${TICKER}"
     }, {
-      "id": "98becc79-3c48-4b8c-8c45-7a19bee06cae",
+      "id": "61c0feac-9ad6-4046-afc3-eea8b6a9d884",
       "comment": "",
       "command": "click",
       "target": "css=.col-lg-4 .guidelet-flex-container",
@@ -362,7 +376,7 @@
       ],
       "value": ""
     }, {
-      "id": "105bb0fe-a771-44b8-9ab3-d2325bea0ea4",
+      "id": "f51b6a35-20c7-4a0c-8526-fc1a5a787bf3",
       "comment": "",
       "command": "click",
       "target": "id=amount",
@@ -374,7 +388,7 @@
       ],
       "value": ""
     }, {
-      "id": "10d8495a-9c59-4b17-994a-aff8aea3c24a",
+      "id": "a235d652-3ef1-46ed-88f3-8260192a9305",
       "comment": "",
       "command": "type",
       "target": "id=amount",
@@ -386,35 +400,35 @@
       ],
       "value": "1"
     }, {
-      "id": "84b4c294-2cfc-404e-8003-146b16e97936",
+      "id": "0020ef12-27bf-442d-b3cf-984fcc180a63",
       "comment": "",
       "command": "pause",
       "target": "2000",
       "targets": [],
       "value": ""
     }, {
-      "id": "332e667e-572f-4c72-930a-a13342432c62",
+      "id": "e6e2da9b-41ee-457f-a804-0091819b6e1e",
       "comment": "",
       "command": "sendKeys",
       "target": "id=symbol",
       "targets": [],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "de855236-1d22-4adb-adf8-b5b7c2fdf1dc",
+      "id": "a7ea3607-b9d9-4ee1-a5e6-14cceec79a43",
       "comment": "",
       "command": "sendKeys",
       "target": "id=amount",
       "targets": [],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "1894275d-b258-4ec4-9a74-a1e027ab51e1",
+      "id": "4e064dbe-3860-47ee-891b-5cfeca1a28c0",
       "comment": "",
       "command": "pause",
       "target": "3500",
       "targets": [],
       "value": ""
     }, {
-      "id": "d43444f0-4f55-4998-8ae4-0ac2523e92ea",
+      "id": "78468f6e-e605-4c7c-8596-f0802c507ff0",
       "comment": "",
       "command": "click",
       "target": "css=.d-none .tds-button-group > .c11n-text-md:nth-child(2)",
@@ -425,14 +439,14 @@
       ],
       "value": ""
     }, {
-      "id": "131fe58a-9698-4241-a94d-a3caf4ea1be2",
+      "id": "b0763c52-29cc-4f3b-9d65-c969f5b8469b",
       "comment": "",
       "command": "pause",
       "target": "3500",
       "targets": [],
       "value": ""
     }, {
-      "id": "37a6ea47-976d-402e-9d7b-0ab242565791",
+      "id": "6bec9081-3d2d-4fac-9d80-191cb34e49a7",
       "comment": "",
       "command": "click",
       "target": "css=.d-block .twe-flex-button-wrap__button:nth-child(2)",
@@ -444,14 +458,14 @@
       ],
       "value": ""
     }, {
-      "id": "24365121-66cb-49f5-8c90-a573200de9db",
+      "id": "e3acdd35-dca3-4253-b587-ab64ac73f962",
       "comment": "",
       "command": "pause",
       "target": "3500",
       "targets": [],
       "value": ""
     }, {
-      "id": "6f911c9a-ada5-4eb7-acea-d7ba3f702b0e",
+      "id": "5352381c-f68b-47a9-ae75-45a262f5241a",
       "comment": "",
       "command": "click",
       "target": "css=.twe-flex-button-wrap__button:nth-child(2)",
@@ -463,28 +477,28 @@
       ],
       "value": ""
     }, {
-      "id": "cf3c98ab-b7b3-4311-8743-2ece217d412d",
+      "id": "1f6cce03-6cba-4284-869b-aae0619d6452",
       "comment": "",
       "command": "pause",
       "target": "3500",
       "targets": [],
       "value": ""
     }, {
-      "id": "e228d680-6687-4928-bceb-8bcaad225b2a",
+      "id": "a2f1a764-7b2c-4886-a573-03307a63399e",
       "comment": "",
       "command": "open",
       "target": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade",
       "targets": [],
       "value": ""
     }, {
-      "id": "5ee18550-715e-4ace-9787-027eaf94ff9e",
+      "id": "7593d041-512f-4909-b705-396e46fcf48e",
       "comment": "",
       "command": "echo",
       "target": "${account} finished selling",
       "targets": [],
       "value": ""
     }, {
-      "id": "bff5f2a7-765b-4692-b153-83778ac5d5ab",
+      "id": "11b43d46-2cf4-4f4c-a12d-bab46d776d8c",
       "comment": "",
       "command": "end",
       "target": "",
