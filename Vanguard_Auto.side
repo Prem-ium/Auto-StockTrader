@@ -163,6 +163,18 @@
       "targets": [],
       "value": "${KEY_ENTER}"
     }, {
+      "id": "ac1d0e90-86ae-4de1-9717-0498e058e886",
+      "comment": "",
+      "command": "type",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//div[3]/tds-text-input/div/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
       "id": "5a807f47-2e3b-44c9-8595-a618932be343",
       "comment": "",
       "command": "sendKeys",
@@ -413,6 +425,18 @@
       "target": "id=symbol",
       "targets": [],
       "value": "${KEY_ENTER}"
+    }, {
+      "id": "5991cf28-f157-4b9f-90c2-4c0c9ac4dcb4",
+      "comment": "",
+      "command": "type",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//div[3]/tds-text-input/div/div/input", "xpath:position"]
+      ],
+      "value": "1"
     }, {
       "id": "a7ea3607-b9d9-4ee1-a5e6-14cceec79a43",
       "comment": "",
