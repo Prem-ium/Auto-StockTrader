@@ -78,8 +78,10 @@ Open the `Vanguard_Auto.side` , `Firstrade_Auto.side`, `Fidelity_Auto.side`, or 
 
 In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
 
-1. Download the Selenium IDE Extension from your browser's extension store and open the desired .side project file
-2. Log in to Vanguard, Firstrade, Fidelity, or Ally on your browser.
+Automating orders for Firstrade Brokerage can be done using the `Ally.side` file & Selenium IDE Extension. You will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
+
+1. Download the Selenium IDE Extension from your browser's extension store and open the `Vanguard_Automation.side` project file
+2. Log in to Vanguard, Firstrade, or Ally on your browser.
 3. Retrieve the list of your account number(s) and place them in the return execute script on the buy and sell test(s). 
 `return ["54566343", "34546546", "54566546"]`
 
