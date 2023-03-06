@@ -3,7 +3,11 @@
 A repository containing scripts and projects for automating stock orders across multiple brokerages.
 
 
-For a majority of these projects, you will need to download the [Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) for your browser. 
+For a majority of these projects, on your browser of choice, you will need to download the [Selenium IDE browser extension.](https://github.com/SeleniumHQ/selenium-ide)  <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
+rel="noreferrer"> <img
+src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg"
+alt="selenium" width="40" height="40" /></a>
+
 
 
 ## Quick-Start Enviornmental Variables {#Quick-ENV}

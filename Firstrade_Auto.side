@@ -368,26 +368,26 @@
       "targets": [],
       "value": "${TICKER}"
     }, {
-      "id": "6fe1eb40-8d80-416e-8ced-1822b9bb823a",
+      "id": "48240df5-1a51-4c57-bba1-c05034762ad4",
       "comment": "",
       "command": "click",
-      "target": "id=limitPrice1",
+      "target": "id=priceType1",
       "targets": [
-        ["id=limitPrice1", "id"],
-        ["name=limitPrice", "name"],
-        ["css=#limitPrice1", "css:finder"],
-        ["xpath=//input[@id='limitPrice1']", "xpath:attributes"],
-        ["xpath=//div[@id='colorbox']/div/div/ul[5]/li[2]/input", "xpath:idRelative"],
-        ["xpath=//ul[5]/li[2]/input", "xpath:position"]
+        ["id=priceType1", "id"],
+        ["name=priceType", "name"],
+        ["css=#priceType1", "css:finder"],
+        ["xpath=//select[@id='priceType1']", "xpath:attributes"],
+        ["xpath=//div[@id='colorbox']/div/div/ul[4]/li[2]/select", "xpath:idRelative"],
+        ["xpath=//li[2]/select", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "3f2184bb-97cd-45c3-a533-aba32a3a5c40",
+      "id": "6148f171-bcd7-4d28-aeaa-31dfe0acce62",
       "comment": "",
-      "command": "sendKeys",
-      "target": "id=limitPrice1",
+      "command": "select",
+      "target": "id=priceType1",
       "targets": [],
-      "value": "${LIMIT_PRICE}"
+      "value": "label=Market"
     }, {
       "id": "a85e7308-a330-4659-aff2-710f6a6da999",
       "comment": "",
