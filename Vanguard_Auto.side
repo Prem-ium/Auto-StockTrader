@@ -207,15 +207,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1ea3204e-7bae-4613-8c5b-723ca2d14715",
+      "id": "98fffad8-f45c-493f-970a-ec15644ffa90",
       "comment": "",
       "command": "click",
-      "target": "css=.d-block .twe-flex-button-wrap__button:nth-child(2)",
+      "target": "css=.twe-flex-button-wrap:nth-child(3) > .twe-flex-button-wrap__button:nth-child(2)",
       "targets": [
-        ["css=.d-block .twe-flex-button-wrap__button:nth-child(2)", "css:finder"],
-        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
-        ["xpath=//div[3]/button[2]", "xpath:position"],
-        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+        ["css=.twe-flex-button-wrap:nth-child(3) > .twe-flex-button-wrap__button:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[33]", "xpath:attributes"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -470,15 +469,14 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6bec9081-3d2d-4fac-9d80-191cb34e49a7",
+      "id": "4d98daff-857e-44bd-83ab-886c8405d918",
       "comment": "",
       "command": "click",
-      "target": "css=.d-block .twe-flex-button-wrap__button:nth-child(2)",
+      "target": "css=.twe-flex-button-wrap:nth-child(3) > .twe-flex-button-wrap__button:nth-child(2)",
       "targets": [
-        ["css=.d-block .twe-flex-button-wrap__button:nth-child(2)", "css:finder"],
-        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
-        ["xpath=//div[3]/button[2]", "xpath:position"],
-        ["xpath=//button[contains(.,'Preview Order')]", "xpath:innerText"]
+        ["css=.twe-flex-button-wrap:nth-child(3) > .twe-flex-button-wrap__button:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[33]", "xpath:attributes"],
+        ["xpath=//div[2]/button[2]", "xpath:position"]
       ],
       "value": ""
     }, {
