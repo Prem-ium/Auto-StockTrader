@@ -536,7 +536,7 @@
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
       "command": "store",
-      "target": "RKDA",
+      "target": "AREB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -931,7 +931,7 @@
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
       "command": "store",
-      "target": "AMST",
+      "target": "AREB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1057,7 +1057,7 @@
       "id": "650eb6a4-fca7-4338-8a19-23e8a8424569",
       "comment": "",
       "command": "click",
-      "target": "xpath=//td[contains(.,'Sell')]",
+      "target": "id=baseForm:transactionTypeSelectOne:2",
       "targets": [
         ["id=baseForm:transactionTypeSelectOne:2", "id"],
         ["css=#baseForm\\3AtransactionTypeSelectOne\\3A 2", "css:finder"],
