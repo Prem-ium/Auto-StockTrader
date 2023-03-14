@@ -550,7 +550,7 @@
       "id": "97461af7-5218-4ea8-9308-386f2426f9b5",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"13\";",
+      "target": "return \"SPLICE-HERE\";",
       "targets": [],
       "value": "target"
     }, {
@@ -931,7 +931,7 @@
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
       "command": "store",
-      "target": "RKDA",
+      "target": "AMST",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -945,7 +945,7 @@
       "id": "a9addb2b-d88c-4f6e-89f9-fdf551c52380",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"13\";",
+      "target": "return \"SPLICE-HERE\";",
       "targets": [],
       "value": "target"
     }, {
