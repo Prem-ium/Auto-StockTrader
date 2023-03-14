@@ -400,7 +400,7 @@
       "id": "c7010fb5-97b3-438d-bcad-fccab99abb19",
       "comment": "",
       "command": "store",
-      "target": "RKDA",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -660,7 +660,7 @@
       "id": "d12a6826-7a16-4b65-a87a-edba0a33d818",
       "comment": "",
       "command": "store",
-      "target": "RKDA",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
