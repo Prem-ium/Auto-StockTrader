@@ -265,6 +265,48 @@
       ],
       "value": ""
     }, {
+      "id": "1a9e06ca-1718-43cc-bfbb-80a4d34dbfed",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d76441d-159d-48fd-a10f-33ffdb7c51a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath = '//pvd3-modal[3]/s-root/div/div[2]/div/div/s-slot/s-assigned-wrapper/h2'; const element = document.evaluate(xpath,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;  return (element &&(element.textContent === \"Error\" || element.textContent.includes(\"error\")));",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "3754a671-72f1-4825-85f3-dc2efea6d2b3",
+      "comment": "",
+      "command": "echo",
+      "target": "${result}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18875430-cb78-4906-866c-9649a5a253f3",
+      "comment": "",
+      "command": "if",
+      "target": "${result} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "180cd9f0-411b-4c3d-a854-293b9100e734",
+      "comment": "",
+      "command": "echo",
+      "target": "${account}: Selling ${TICKER} Failed. Security not in account",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01eed2cc-76bd-4ae9-b284-43683a8a68a4",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "41b9ccab-907c-4c18-86d5-52be7dd29524",
       "comment": "",
       "command": "click",
@@ -285,6 +327,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e0b4c386-d7b7-4599-b351-4df562a47c10",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "a7a9bc6f-039a-41e4-86f6-685b6aefcd0b",
       "comment": "",
       "command": "end",
@@ -301,6 +350,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://live.invest.ally.com/", "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry"],
+  "urls": ["https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry"],
   "plugins": []
 }
