@@ -275,16 +275,9 @@
       "id": "1d76441d-159d-48fd-a10f-33ffdb7c51a4",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = '//pvd3-modal[3]/s-root/div/div[2]/div/div/s-slot/s-assigned-wrapper/h2'; const element = document.evaluate(xpath,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;  return (element &&(element.textContent === \"Error\" || element.textContent.includes(\"error\")));",
+      "target": "const xpath = '//pvd3-modal[3]/s-root/div/div[2]/div/div/s-slot/s-assigned-wrapper/h2'; const element = document.evaluate(xpath,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; const xpath2 = '/html/body/div[5]/ap122489-ett-component/div/pvd3-modal[3]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; const xpath3 = '/html/body/div[3]/ap122489-ett-component/div/pvd3-modal[3]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element3 = document.evaluate(xpath3,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return ((element && (element.textContent === \"Error\" || element.textContent.includes(\"error\"))) && ((element2 && (element2.textContent.includes(\"do not have enough shares\")) || (element3 && (element3.textContent.includes(\"do not have enough\") || (element3.textContent.includes(\"was not found\") || element3.textContent.includes(\"you will need to modify your order\")))))));",
       "targets": [],
       "value": "result"
-    }, {
-      "id": "3754a671-72f1-4825-85f3-dc2efea6d2b3",
-      "comment": "",
-      "command": "echo",
-      "target": "${result}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "18875430-cb78-4906-866c-9649a5a253f3",
       "comment": "",
