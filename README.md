@@ -151,8 +151,8 @@ You can donate by clicking on the following button:
 
 - The script is provided "as is" and without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
 
-- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, and internet connectivity issues.
+- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, internet connectivity issues, & more.
 
-- The user agrees to indemnify and hold you harmless from any and all claims, damages, or losses arising from their use of the script.
+- The user agrees to indemnify and hold the developer(s) harmless from any and all claims, damages, or losses arising from their use of the script.
 
 Thank you for your support!
