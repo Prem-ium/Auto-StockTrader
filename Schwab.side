@@ -57,7 +57,6 @@
         ["id=mcAccountSelector", "id"],
         ["css=#mcAccountSelector", "css:finder"],
         ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
-        ["xpath=//mc-trade-account-selector[@id='mctaccountselfb67414e']/div/div/button", "xpath:idRelative"],
         ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
       ],
       "value": ""
@@ -284,7 +283,6 @@
         ["id=mcAccountSelector", "id"],
         ["css=#mcAccountSelector", "css:finder"],
         ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
-        ["xpath=//mc-trade-account-selector[@id='mctaccountselfb67414e']/div/div/button", "xpath:idRelative"],
         ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
       ],
       "value": ""

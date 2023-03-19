@@ -9,7 +9,6 @@ src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af9941
 alt="selenium" width="40" height="40" /></a>
 
 
-
 ## Quick-Start Enviornmental Variables {#Quick-ENV}
 
 To use this project, you will need to set the following environment variables in your .env file:
@@ -57,6 +56,11 @@ Check [Running_Sofi](#Running_Sofi) for sofi instructions, otherwise, continue f
 Configure [Quick Start Enviornmental Variables](#Quick-ENV) and run the script.
 ```
   python quickstart-ide.py
+```
+
+Passing an argument will quickly update the stock orders in all .side projects.
+```
+  python quickstart-ide.py APPL
 ```
 
 
@@ -136,5 +140,19 @@ If you find my project helpful and would like to support its development, please
 You can donate by clicking on the following button:
 
 <a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+# Disclaimer
+
+⚠️ **DISCLAIMER:** _You're using these automation scripts at your own risk, I am not responsible for any financial or account loss or damage that may occur._
+
+## Important Information
+
+- This script is provided for informational purposes only and does not constitute financial or investment advice. The user is solely responsible for any investment decisions made based on the information provided by the script.
+
+- The script is provided "as is" and without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
+
+- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, and internet connectivity issues.
+
+- The user agrees to indemnify and hold you harmless from any and all claims, damages, or losses arising from their use of the script.
 
 Thank you for your support!

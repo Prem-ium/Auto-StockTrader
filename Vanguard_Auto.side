@@ -5,7 +5,7 @@
   "url": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade",
   "tests": [{
     "id": "1c92f668-6e66-48b0-b082-bdf45cc007c2",
-    "name": "Buy_Vanguard",
+    "name": "X_Vanguard_Buy",
     "commands": [{
       "id": "5d537d93-9d32-40d6-be14-73ca41d646c3",
       "comment": "",
@@ -17,7 +17,7 @@
       "id": "93a6719a-b584-461a-828e-bebfddb7c7fc",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [\"YOUR\",\"ACCOUNT'];",
       "targets": [],
       "value": "accounts"
     }, {
@@ -268,7 +268,7 @@
     }]
   }, {
     "id": "dfe19316-5695-4ba8-a2af-ee7dde2236a8",
-    "name": "Sell_Vanguard",
+    "name": "X_Vanguard_Sell",
     "commands": [{
       "id": "73bed0a3-7e10-4d9f-8613-6389606896db",
       "comment": "",
@@ -280,7 +280,7 @@
       "id": "fc6bd7f5-3d49-48b9-86e5-cc23f29e1687",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [\"YOUR\",\"ACCOUNT'];",
       "targets": [],
       "value": "accounts"
     }, {
@@ -531,7 +531,7 @@
     }]
   }, {
     "id": "170b3536-4002-495a-901b-76046b2ae305",
-    "name": "Buy_Vanguard_Old",
+    "name": "Buy_Vanguard",
     "commands": [{
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
@@ -636,8 +636,8 @@
         ["css=#baseForm\\3A accountSelectOne\\3A 15", "css:finder"],
         ["xpath=//td[@id='baseForm:accountSelectOne:15']", "xpath:attributes"],
         ["xpath=//div[@id='scroll-baseForm:accountSelectOne']/table/tbody/tr[16]/td", "xpath:idRelative"],
-        ["xpath=//tr[16]/td", "xpath:position"],
-         ],
+        ["xpath=//tr[16]/td", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "8a1f0bc5-425f-47f9-9c30-20e8d96e8763",
@@ -810,7 +810,7 @@
         ["css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)", "css:finder"],
         ["xpath=//table[@id='baseForm:costBasisMethodTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
         ["xpath=//span[9]/div/span/table/tbody/tr[2]/td[2]", "xpath:position"],
-        ["xpath=//td[contains(.,'Cost basis reporting methods  ')]", "xpath:innerText"]
+        ["xpath=//td[contains(.,'Cost basis reporting methodsÂ Â ')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -925,7 +925,7 @@
     }]
   }, {
     "id": "5d285f40-efe8-4198-b0da-221c7a37f7d3",
-    "name": "Sell_Vanguard_Old",
+    "name": "Sell_Vanguard",
     "commands": [{
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
@@ -1030,8 +1030,8 @@
         ["css=#baseForm\\3A accountSelectOne\\3A 15", "css:finder"],
         ["xpath=//td[@id='baseForm:accountSelectOne:15']", "xpath:attributes"],
         ["xpath=//div[@id='scroll-baseForm:accountSelectOne']/table/tbody/tr[16]/td", "xpath:idRelative"],
-        ["xpath=//tr[16]/td", "xpath:position"],
-        ],
+        ["xpath=//tr[16]/td", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "de3f39a2-cd7a-4807-9362-6654c9b42aff",
@@ -1204,7 +1204,7 @@
         ["css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)", "css:finder"],
         ["xpath=//table[@id='baseForm:costBasisMethodTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
         ["xpath=//span[9]/div/span/table/tbody/tr[2]/td[2]", "xpath:position"],
-        ["xpath=//td[contains(.,'Cost basis reporting methods  ')]", "xpath:innerText"]
+        ["xpath=//td[contains(.,'Cost basis reporting methodsÂ Â ')]", "xpath:innerText"]
       ],
       "value": ""
     }, {

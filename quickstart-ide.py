@@ -1,8 +1,12 @@
-import os
-import json
-from dotenv import load_dotenv
+import os, json, sys
+from dotenv             import load_dotenv
 
 load_dotenv()
+if len(sys.argv) == 2:
+    TICKER = sys.argv[1].lower()
+    print(f"Ticker: {TICKER}")
+else:
+    TICKER = None
 
 FILE_TASK_MAP = {
     "CHASE_AI": {"file": "Chase_Auto.side", "task": ""},
@@ -40,6 +44,8 @@ def main():
                 if command['command'] == 'executeScript' and command['value'] == 'accounts':
                     # Update the target with the new value
                     command['target'] = f"return {task}"
+                elif TICKER is not None and command['command'] == 'executeScript' and command['value'] == 'TICKER':
+                    command['target'] = f"return '{TICKER}'"
 
         if CUSTOM_DIR:
             filePath = f'{CUSTOM_DIR}/{filePath}'
