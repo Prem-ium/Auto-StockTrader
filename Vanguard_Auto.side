@@ -637,8 +637,7 @@
         ["xpath=//td[@id='baseForm:accountSelectOne:15']", "xpath:attributes"],
         ["xpath=//div[@id='scroll-baseForm:accountSelectOne']/table/tbody/tr[16]/td", "xpath:idRelative"],
         ["xpath=//tr[16]/td", "xpath:position"],
-        ["xpath=//td[contains(.,'Prem Patel—Brokerage Account—40223392')]", "xpath:innerText"]
-      ],
+         ],
       "value": ""
     }, {
       "id": "8a1f0bc5-425f-47f9-9c30-20e8d96e8763",
@@ -1032,8 +1031,7 @@
         ["xpath=//td[@id='baseForm:accountSelectOne:15']", "xpath:attributes"],
         ["xpath=//div[@id='scroll-baseForm:accountSelectOne']/table/tbody/tr[16]/td", "xpath:idRelative"],
         ["xpath=//tr[16]/td", "xpath:position"],
-        ["xpath=//td[contains(.,'Prem Patel—Brokerage Account—40223392')]", "xpath:innerText"]
-      ],
+        ],
       "value": ""
     }, {
       "id": "de3f39a2-cd7a-4807-9362-6654c9b42aff",
