@@ -5,7 +5,7 @@
   "url": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade",
   "tests": [{
     "id": "1c92f668-6e66-48b0-b082-bdf45cc007c2",
-    "name": "X_Vanguard_Buy",
+    "name": "Buy_Vanguard",
     "commands": [{
       "id": "5d537d93-9d32-40d6-be14-73ca41d646c3",
       "comment": "",
@@ -268,7 +268,7 @@
     }]
   }, {
     "id": "dfe19316-5695-4ba8-a2af-ee7dde2236a8",
-    "name": "X_Vanguard_Sell",
+    "name": "Sell_Vanguard",
     "commands": [{
       "id": "73bed0a3-7e10-4d9f-8613-6389606896db",
       "comment": "",
@@ -531,7 +531,7 @@
     }]
   }, {
     "id": "170b3536-4002-495a-901b-76046b2ae305",
-    "name": "Buy_Vanguard",
+    "name": "Buy_Vanguard_Old",
     "commands": [{
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
@@ -925,7 +925,7 @@
     }]
   }, {
     "id": "5d285f40-efe8-4198-b0da-221c7a37f7d3",
-    "name": "Sell_Vanguard",
+    "name": "Sell_Vanguard_Old",
     "commands": [{
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
