@@ -9,15 +9,15 @@ src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af9941
 alt="selenium" width="40" height="40" /></a>
 
 ## Features & Supported Brokerages
-- Chase / JPMorgan Investment Brokerage
+- Chase/JP Morgan Invest
 - Charles Schwab 
 - Firstrade
 - Vanguard
 - Fidelity
 - Ally Invest
-- Sofi (Archived)
+- Sofi Invest (Archived)
 
-## Quick-Start Enviornmental Variables {#Quick-ENV}
+## Enviornmental Variables {#Quick-ENV}
 
 To use this project, you will need to set the following environment variables in your .env file:
 
@@ -25,7 +25,7 @@ To use this project, you will need to set the following environment variables in
 
 `FIDELITY_AI` = A stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
 
-`ALLY_AI` = A stringified JSON array containing your Ally Investment account numbers, separated by commas.
+`ALLY_AI` = A stringified JSON array containing your Ally Investment account name + numbers, separated by commas.
 
 `FIRSTRADE_AI` = A stringified JSON array containing your FirstTrade Investment account numbers, separated by commas.
 
@@ -51,15 +51,17 @@ cd Auto-StockTrader
 pip install -r requirements.txt
 ```
 
-Configure [Quick Start Enviornmental Variables](#Quick-ENV) and run the script.
+Configure [Enviornmental Variables](#Quick-ENV) and run the script.
 ```
-  python quickstart-ide.py
+  python main.py
 ```
 
 Passing an argument will quickly update the stock orders in all .side projects.
 ```
-  python quickstart-ide.py APPL
+  python main.py APPL
 ```
+
+Once you've generated your .side projects, login to your brokerages on your browser and utilize the [Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) to open & run your stock order automation(s).
 
 # Chase Automation
 
@@ -112,6 +114,7 @@ Automating orders for Schwab Brokerage can be done using the `Schwab.side` file 
 Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script. 
 Sofi is very unpredictable and unstable, and has been archived with no plans for further development.
 You can still attempt to use it, however the chances of every order going through are slim as Sofi Invest has weird order landing pages that contain different requirements & order layout for different stock tickers.
+[Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD)
 
 ## Donations
 If you find my project helpful and would like to support its development, please consider making a donation. Every little bit helps and is greatly appreciated!
@@ -134,4 +137,7 @@ You can donate by clicking on the following button:
 
 - The user agrees to indemnify and hold the developer(s) harmless from any and all claims, damages, or losses arising from their use of the script(s)/.side project/repository.
 
-Thank you for your support!
+## Final Remarks
+
+Thank you for your interest in this repository. 
+Please consider leaving a :star2: if you found this project to be cool!
