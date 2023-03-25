@@ -9,11 +9,11 @@ else:
     TICKER = None
 
 FILE_TASK_MAP = {
-    "CHASE_AI": {"file": "src\Chase_Auto.side", "task": ""},
-    "ALLY_AI": {"file": "src\Ally_Auto.side", "task": ""},
-    "FIRSTRADE_AI": {"file": "src\Firstrade_Auto.side", "task": ""},
-    "VANGUARD_AI": {"file": "src\Vanguard_Auto.side", "task": ""},
-    "FIDELITY_AI": {"file": "src\Fidelity_Auto.side", "task": ""}
+    "CHASE_AI": {"file": "src\Selenium_IDE\Chase_Auto.side", "task": ""},
+    "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
+    "FIRSTRADE_AI": {"file": "src\Selenium_IDE\Firstrade_Auto.side", "task": ""},
+    "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
+    "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""}
 }
 
 CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
@@ -46,7 +46,7 @@ def main():
                     command['target'] = f"return {task}"
                 elif TICKER is not None and command['command'] == 'executeScript' and command['value'] == 'TICKER':
                     command['target'] = f"return '{TICKER}'"
-        filePath = filePath.replace("src\\", "")
+        filePath = filePath.replace("src\\Selenium_IDE\\", "")
         if CUSTOM_DIR:
             filePath = f'{CUSTOM_DIR}/{filePath}'
         else:

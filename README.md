@@ -8,6 +8,14 @@ rel="noreferrer"> <img
 src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg"
 alt="selenium" width="40" height="40" /></a>
 
+## Features & Supported Brokerages
+- Chase / JPMorgan Investment Brokerage
+- Charles Schwab 
+- Firstrade
+- Vanguard
+- Fidelity
+- Ally Invest
+- Sofi (Archived)
 
 ## Quick-Start Enviornmental Variables {#Quick-ENV}
 
@@ -32,15 +40,6 @@ ALLY_AI="['Individual-A123456789','Individual-B098765432']";
 FIRSTRADE_AI="['111111','222222']";
 VANGUARD_AI="['54554326','54678936']";
 ```
-### Sofi Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file:
-
-`ACCOUNT_NAMES` = A string of names of investment accounts, separated by commas.
-
-`SOFI_LOGIN` = Login credentials of SOFI, separated by ':'
-
-`EXCLUDE_ACCOUNTS` = Remove accounts in ACCOUNT_NAMES for testing, debugging, or excluding the purchase of the stock from the account. Separated by commas.
 
 ### Installation
 
@@ -51,7 +50,6 @@ git clone https://github.com/Prem-ium/Auto-StockTrader
 cd Auto-StockTrader
 pip install -r requirements.txt
 ```
-Check [Running_Sofi](#Running_Sofi) for sofi instructions, otherwise, continue for Quick-Start.
 
 Configure [Quick Start Enviornmental Variables](#Quick-ENV) and run the script.
 ```
@@ -62,7 +60,6 @@ Passing an argument will quickly update the stock orders in all .side projects.
 ```
   python quickstart-ide.py APPL
 ```
-
 
 # Chase Automation
 
@@ -112,31 +109,10 @@ Automating orders for Schwab Brokerage can be done using the `Schwab.side` file 
 
 # Sofi Invest Automation
 
-Automating orders for Sofi Invest can be done through the `sofi_main.py` Python script.
+Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script. 
+Sofi is very unpredictable and unstable, and has been archived with no plans for further development.
+You can still attempt to use it, however the chances of every order going through are slim as Sofi Invest has weird order landing pages that contain different requirements & order layout for different stock tickers.
 
-### Running Sofi {#Running_Sofi}
-
-Specifiy commands in the following order within a terminal:
-
-1. Whether to 'buy' or 'sell'
-2. Stock Ticker's symbol
-3. (Optional) 'slow' if you wish to pass in a sleep timer
-4. sleep timer value
-
-```bash
-  cd src
-  python sofi_main.py buy APPL
-```
-or, to wait 30 seconds in-between each account
-```bash
-  cd src
-  python sofi_main.py buy APPL 100.54 slow 30
-```
-or, to place limit (on certain stocks)
-```bash
-  cd src
-  python sofi_main.py buy GNUS 0.50 slow 30
-```
 ## Donations
 If you find my project helpful and would like to support its development, please consider making a donation. Every little bit helps and is greatly appreciated!
 
