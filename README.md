@@ -124,14 +124,17 @@ Specifiy commands in the following order within a terminal:
 4. sleep timer value
 
 ```bash
+  cd src
   python sofi_main.py buy APPL
 ```
 or, to wait 30 seconds in-between each account
 ```bash
+  cd src
   python sofi_main.py buy APPL 100.54 slow 30
 ```
 or, to place limit (on certain stocks)
 ```bash
+  cd src
   python sofi_main.py buy GNUS 0.50 slow 30
 ```
 ## Donations
@@ -147,12 +150,12 @@ You can donate by clicking on the following button:
 
 ## Important Information
 
-- This script is provided for informational purposes only and does not constitute financial or investment advice. The user is solely responsible for any investment decisions made based on the information provided by the script.
+- This script is provided for informational purposes only and does not constitute financial or investment advice. The user is solely responsible for any investment decisions made based on the information provided by the script(s)/.side project/repository.
 
 - The script is provided "as is" and without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
 
-- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, and internet connectivity issues.
+- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, internet connectivity issues, & more.
 
-- The user agrees to indemnify and hold you harmless from any and all claims, damages, or losses arising from their use of the script.
+- The user agrees to indemnify and hold the developer(s) harmless from any and all claims, damages, or losses arising from their use of the script(s)/.side project/repository.
 
 Thank you for your support!

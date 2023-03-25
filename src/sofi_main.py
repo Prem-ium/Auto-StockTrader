@@ -182,7 +182,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-    # Q: True or False: To execute a Switch Spoofing attack the intruder makes use of the  VLAN Registration protocol AND the Dynamic Trunking protocol AND must be in the same network.
-    

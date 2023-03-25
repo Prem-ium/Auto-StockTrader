@@ -776,44 +776,6 @@
       ],
       "value": ""
     }, {
-      "id": "170e4197-a136-4467-b665-e18044e95ee6",
-      "comment": "",
-      "command": "click",
-      "target": "id=baseForm:costBasisMethodSelectOne_text",
-      "targets": [
-        ["id=baseForm:costBasisMethodSelectOne_text", "id"],
-        ["css=#baseForm\\3A costBasisMethodSelectOne_text", "css:finder"],
-        ["xpath=//span[@id='baseForm:costBasisMethodSelectOne_text']", "xpath:attributes"],
-        ["xpath=//span[@id='baseForm:costBasisMethodSelectOne_textCont']/span", "xpath:idRelative"],
-        ["xpath=//span[9]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "7c53dcf0-d7b2-435f-b49b-0605d0c5e7fd",
-      "comment": "",
-      "command": "click",
-      "target": "id=baseForm:costBasisMethodSelectOne:2",
-      "targets": [
-        ["id=baseForm:costBasisMethodSelectOne:2", "id"],
-        ["css=#baseForm\\3A costBasisMethodSelectOne\\3A 2", "css:finder"],
-        ["xpath=//td[@id='baseForm:costBasisMethodSelectOne:2']", "xpath:attributes"],
-        ["xpath=//div[@id='scroll-baseForm:costBasisMethodSelectOne']/table/tbody/tr[3]/td", "xpath:idRelative"],
-        ["xpath=//div[8]/div/table/tbody/tr[3]/td", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9480f835-2f29-4079-a3b9-7d3be83f0a24",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)",
-      "targets": [
-        ["css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)", "css:finder"],
-        ["xpath=//table[@id='baseForm:costBasisMethodTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
-        ["xpath=//span[9]/div/span/table/tbody/tr[2]/td[2]", "xpath:position"],
-        ["xpath=//td[contains(.,'Cost basis reporting methodsÂ Â ')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "fc41ede3-2b83-44de-95ad-67a0a90b6efe",
       "comment": "",
       "command": "click",
@@ -891,7 +853,7 @@
       "id": "231e4e31-a842-4cb7-ba4a-459bf9b6f3d3",
       "comment": "",
       "command": "echo",
-      "target": "${account} finished selling",
+      "target": "${account} finished buying",
       "targets": [],
       "value": ""
     }, {
