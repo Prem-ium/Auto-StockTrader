@@ -9,8 +9,8 @@
     "commands": [{
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"STOCK_TICKER\"",
+      "command": "store",
+      "target": "STOCK_TICKER",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -257,10 +257,10 @@
     "id": "d7bde928-89ba-4368-97f5-032492d419dc",
     "name": "Chase_Sell",
     "commands": [{
-      "id": "0a5de3ff-2bf1-45d0-a453-52ad81e4273a",
+      "id": "b3d20f89-16df-4859-aed7-e0e9587395bc",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"STOCK_TICKER\"",
+      "command": "store",
+      "target": "STOCK_TICKER",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -479,10 +479,10 @@
     "id": "864b6b86-3905-4314-a74a-54d86677d0a3",
     "name": "PreMarket_Sell",
     "commands": [{
-      "id": "72274ac8-8f4b-4022-a86d-9cbd6b66ad43",
+      "id": "0e39fb88-ca04-4f9a-8d3f-b3c2ee4b332e",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"STOCK_TICKER\"",
+      "command": "store",
+      "target": "STOCK_TICKER",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -721,10 +721,10 @@
     "id": "fe1ab38d-ab36-4352-a144-5e409ecb92a5",
     "name": "Premarket_Buy",
     "commands": [{
-      "id": "bc3822a0-b7c4-4e7c-a398-196c43e23908",
+      "id": "ff0bba64-29e7-422b-9df9-a2137e875cce",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"STOCK_TICKER\"",
+      "command": "store",
+      "target": "STOCK_TICKER",
       "targets": [],
       "value": "TICKER"
     }, {
