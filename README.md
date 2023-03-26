@@ -21,9 +21,10 @@ alt="selenium" width="40" height="40" /></a>
 
 To use this project, you will need to set the following environment variables in your .env file:
 
+`SCHWAB_AI`=Total number of Schwab accounts.
+
 `CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers 
 [found within the desktop stock order URL](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png), separated by commas.
-
 
 `FIDELITY_AI` = A stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
 
@@ -78,7 +79,7 @@ For more assistance, refer to [archived README](https://github.com/Prem-ium/Auto
 Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script. 
 Sofi is very unpredictable and unstable, and has been archived with no plans for further development.
 You can still attempt to use it, however the chances of every order going through are slim as Sofi Invest has weird order landing pages that contain different requirements & order layout for different stock tickers.
-[Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD)
+[Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD#sofi-invest-automation)
 
 ## Donations
 If you find my project helpful and would like to support its development, please consider making a donation. Every little bit helps and is greatly appreciated!

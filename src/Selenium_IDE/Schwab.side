@@ -21,6 +21,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "cddee6fb-867f-48df-8cd5-65f2ca05d85e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
       "id": "4be79429-5ebf-4146-864a-7de2913c93ca",
       "comment": "",
       "command": "executeScript",
@@ -28,10 +35,10 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "ef5e2053-5a48-4478-8936-4ced84e838f7",
+      "id": "2da4e09f-2654-40ae-a9ed-fff0e6e4303d",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\",\"10\",\"11\",\"12\",\"13\"]; list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "target": "let list = ${accounts}; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
     }, {
@@ -247,6 +254,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
       "id": "4956efa5-c445-44f1-9771-90e6c188c228",
       "comment": "",
       "command": "executeScript",
@@ -257,7 +271,7 @@
       "id": "c5dda49f-8168-4957-a5e4-f3be2a10ea2f",
       "comment": "",
       "command": "executeScript",
-      "target": "let list = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\",\"10\",\"11\",\"12\",\"13\"]; list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "target": "let list = ${accounts}; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
     }, {
