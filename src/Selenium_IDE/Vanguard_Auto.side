@@ -1132,6 +1132,27 @@
       ],
       "value": ""
     }, {
+      "id": "099b1425-37ce-4b6f-beb9-45d4658c7ff2",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//*[@id=\"baseForm:costBasisMethodSelectOne_main\"]",
+      "targets": [],
+      "value": "costBasis"
+    }, {
+      "id": "4a7debb2-cf69-4cda-a92d-3aa9185cd024",
+      "comment": "",
+      "command": "if",
+      "target": "${costBasis} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "476a5825-0737-45f5-9a85-d6fa602890eb",
+      "comment": "",
+      "command": "echo",
+      "target": "costBasisMethod exists",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c5516590-d68a-4ab8-a2a8-509cf06858a4",
       "comment": "",
       "command": "click",
@@ -1166,8 +1187,15 @@
         ["css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)", "css:finder"],
         ["xpath=//table[@id='baseForm:costBasisMethodTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
         ["xpath=//span[9]/div/span/table/tbody/tr[2]/td[2]", "xpath:position"],
-        ["xpath=//td[contains(.,'Cost basis reporting methodsÂ Â ')]", "xpath:innerText"]
+        ["xpath=//td[contains(.,'Cost basis reporting methods ')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "a78cb037-abed-4f89-b554-daf93e63453d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }, {
       "id": "6986a7a3-5362-4a23-a745-0f915401e4bc",
