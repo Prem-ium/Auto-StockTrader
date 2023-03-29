@@ -341,13 +341,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "efb8803d-0b7a-4e65-9f6c-c598598ad9b7",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Sell\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "50f3c670-db5c-40e7-aaac-81677677e201",
       "comment": "",
       "command": "click",
@@ -355,17 +348,59 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "171f11c0-e665-4486-878c-aa46e55f6729",
+      "id": "697b66c3-928c-462c-9c35-dd14cf49d625",
       "comment": "",
-      "command": "end",
-      "target": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//*[@id=\"tradeEquityErrorAlert\"]",
+      "targets": [],
+      "value": "ErrorAlert"
+    }, {
+      "id": "efb8803d-0b7a-4e65-9f6c-c598598ad9b7",
+      "comment": "",
+      "command": "if",
+      "target": "${ErrorAlert} == 1",
       "targets": [],
       "value": ""
     }, {
-      "id": "24acd861-860a-4894-a0c4-c92b72e48439",
+      "id": "901132c6-12ac-4ef4-87e8-19a857b9aada",
+      "comment": "",
+      "command": "echo",
+      "target": "${ErrorAlert}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "475b843b-179a-44b0-88b3-eec6ba0379c2",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "070936ff-cfac-43b1-a8ec-f7e488e857a9",
+      "comment": "",
+      "command": "else",
+      "target": "${ErrorAlert} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81a24d69-661c-4363-857c-68d7cd58ccf5",
       "comment": "",
       "command": "click",
-      "target": "xpath=//label[contains(.,'Market')]",
+      "target": "xpath=//label[contains(.,'Sell all')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abb4248c-8195-4bfb-a4ef-32ed3e282198",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ea7ab14-b150-4fa1-9eb2-08d99542722a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Sell all')]",
       "targets": [],
       "value": ""
     }, {
@@ -381,6 +416,13 @@
         ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "24acd861-860a-4894-a0c4-c92b72e48439",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Market')]",
+      "targets": [],
       "value": ""
     }, {
       "id": "a998aae5-b14f-4748-857a-84eb5773d613",
@@ -469,6 +511,13 @@
       "value": ""
     }, {
       "id": "8a27194d-2ba7-4dde-8c9b-091f31326217",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "110d1227-cc80-480b-a34c-092391bcc909",
       "comment": "",
       "command": "end",
       "target": "",
