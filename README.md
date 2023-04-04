@@ -37,7 +37,7 @@ To use this project, you will need to set the following environment variables in
 
 `VANGUARD_AI` = A stringified JSON array containing your Vanguard Investment account numbers, separated by commas.
 
-`MERRILL_AI` = A stringified JSON array containing the number of accounts, separated by commas.
+`MERRILL_AI` = Total number of Merrill accounts.
 
 `CUSTOM_DIR` = Directory path updated .side files should be located. (Optional)
 
