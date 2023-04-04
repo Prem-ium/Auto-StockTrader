@@ -48,7 +48,6 @@ CHASE_AI="['1234567890','0987654321']";
 ALLY_AI="['Individual-A123456789','Individual-B098765432']";
 FIRSTRADE_AI="['111111','222222']";
 VANGUARD_AI="['54554326','54678936']";
-MERRILL_AI="['1','2','3']
 ```
 Refer to `.env.example` for more clarity. 
 
