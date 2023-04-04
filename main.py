@@ -15,6 +15,7 @@ FILE_TASK_MAP = {
     "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
     "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
     "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab.side", "task": ""},
+    "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill_Auto.side", "task": ""}
 }
 
 CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
