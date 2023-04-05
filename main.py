@@ -15,6 +15,7 @@ FILE_TASK_MAP = {
     "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
     "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
     "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab.side", "task": ""},
+    "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill.side", "task": ""},
 }
 
 CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
@@ -25,8 +26,10 @@ def main():
         if os.environ.get(var_name):
             FILES.append(info["file"])
             print(f"{var_name} is enabled.")
-            if var_name == "SCHWAB_AI":
+            if var_name == "SCHWAB_AI" or var_name == "MERRILL_AI":
                 info["task"] = list(range(int(os.environ[var_name].replace(" ", "").replace(",", ", "))))
+                if var_name == "MERRILL_AI":
+                    info["task"].remove(0)
             else:
                 info["task"] = os.environ[var_name].replace(" ", "")
         else:

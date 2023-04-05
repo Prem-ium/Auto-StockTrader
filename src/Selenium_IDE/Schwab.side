@@ -24,14 +24,14 @@
       "id": "cddee6fb-867f-48df-8cd5-65f2ca05d85e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [0,1,2]",
       "targets": [],
       "value": "accounts"
     }, {
       "id": "4be79429-5ebf-4146-864a-7de2913c93ca",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SLICE_TARGET\"",
+      "target": "return -1",
       "targets": [],
       "value": "target"
     }, {
@@ -225,7 +225,7 @@
       "id": "b427add3-f9cd-4b2e-8ec3-85d2b1f1e67c",
       "comment": "",
       "command": "echo",
-      "target": "${account} Selling ${TICKER} Successful!",
+      "target": "${account} Selling ${TICKER} Test Successful!",
       "targets": [],
       "value": ""
     }, {
@@ -257,14 +257,14 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [0,1,2]",
       "targets": [],
       "value": "accounts"
     }, {
       "id": "4956efa5-c445-44f1-9771-90e6c188c228",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SLICE_TARGET\"",
+      "target": "return -1",
       "targets": [],
       "value": "target"
     }, {
@@ -458,7 +458,7 @@
       "id": "886b65cc-c82c-4e20-8325-e26183aafe30",
       "comment": "",
       "command": "echo",
-      "target": "${account} Buying ${TICKER} Successful!",
+      "target": "${account} Buying ${TICKER} Test Successful!",
       "targets": [],
       "value": ""
     }, {

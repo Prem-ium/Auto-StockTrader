@@ -550,7 +550,7 @@
       "id": "97461af7-5218-4ea8-9308-386f2426f9b5",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SPLICE-HERE\";",
+      "target": "return -1;",
       "targets": [],
       "value": "target"
     }, {
@@ -906,7 +906,7 @@
       "id": "a9addb2b-d88c-4f6e-89f9-fdf551c52380",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SPLICE-HERE\";",
+      "target": "return -1;",
       "targets": [],
       "value": "target"
     }, {
