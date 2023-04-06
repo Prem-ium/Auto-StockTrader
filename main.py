@@ -1,4 +1,4 @@
-import os, json, sys
+import os, json, sys, shutil
 from dotenv             import load_dotenv
 
 load_dotenv()
@@ -68,7 +68,12 @@ def main():
 
     if CUSTOM_DIR:
         os.startfile(CUSTOM_DIR)
-    
+
+    # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
+    if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
+        shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+        print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+
     print(f"\n\nProgram successfully completed! Thanks for using Prem-ium\'s Automated Stock Trading project!\nPlease leave a star or drop a follow if you found this project cool!\nhttps://github.com/Prem-ium/Auto-StockTrader\n")
 
 if __name__ == "__main__":
