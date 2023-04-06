@@ -26,10 +26,10 @@ def main():
         if os.environ.get(var_name):
             FILES.append(info["file"])
             print(f"{var_name} is enabled.")
-            if var_name == "SCHWAB_AI" or var_name == "MERRILL_AI":
+            if var_name == "SCHWAB_AI":
                 info["task"] = list(range(int(os.environ[var_name].replace(" ", "").replace(",", ", "))))
-                if var_name == "MERRILL_AI":
-                    info["task"].remove(0)
+            elif var_name == "MERRILL_AI":
+                info["task"] = [i + 1 for i in range(int(os.environ[var_name].replace(" ", "").replace(",", ", ")))]
             else:
                 info["task"] = os.environ[var_name].replace(" ", "")
         else:
