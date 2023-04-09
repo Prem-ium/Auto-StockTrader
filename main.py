@@ -10,11 +10,11 @@ else:
 
 FILE_TASK_MAP = {
     "CHASE_AI": {"file": "src\Selenium_IDE\Chase_Auto.side", "task": ""},
-    "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
     "FIRSTRADE_AI": {"file": "src\Selenium_IDE\Firstrade_Auto.side", "task": ""},
     "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
     "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
     "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab.side", "task": ""},
+    "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
     "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill.side", "task": ""},
 }
 
@@ -48,13 +48,14 @@ def main():
 
         for test in data['tests']:
             for command in test['commands']:
+                # Update Ticker, if provided
+                if TICKER is not None and command['value'] == 'TICKER':
+                    command['target'] = f"return '{TICKER}'" if command['command'] == 'executeScript' else TICKER
+                # Update the account number(s) and break to next test
                 if command['command'] == 'executeScript' and command['value'] == 'accounts':
-                    # Update the target with the new value
                     command['target'] = f"return {task}"
-                elif TICKER is not None and command['command'] == 'executeScript' and command['value'] == 'TICKER':
-                    command['target'] = f"return '{TICKER}'"
-                elif TICKER is not None and command['command'] == 'store' and command['value'] == 'TICKER':
-                    command['target'] = TICKER
+                    break
+
 
         filePath = filePath.replace("src\\Selenium_IDE\\", "")
 
