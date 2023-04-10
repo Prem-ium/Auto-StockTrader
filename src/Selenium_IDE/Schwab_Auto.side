@@ -24,7 +24,7 @@
       "id": "cddee6fb-867f-48df-8cd5-65f2ca05d85e",
       "comment": "",
       "command": "executeScript",
-      "target": "return [0,1,2]",
+      "target": "return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
       "targets": [],
       "value": "accounts"
     }, {
@@ -257,7 +257,7 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return [0,1,2]",
+      "target": "return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
       "targets": [],
       "value": "accounts"
     }, {

@@ -1,5 +1,9 @@
-import os, json, sys, shutil
-from dotenv             import load_dotenv
+import  os
+import  json
+import  sys
+import  shutil
+
+from    dotenv             import load_dotenv
 
 load_dotenv()
 if len(sys.argv) == 2:
@@ -13,7 +17,7 @@ FILE_TASK_MAP = {
     "FIRSTRADE_AI": {"file": "src\Selenium_IDE\Firstrade_Auto.side", "task": ""},
     "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
     "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
-    "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab.side", "task": ""},
+    "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab_Auto.side", "task": ""},
     "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
     "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill.side", "task": ""},
 }
