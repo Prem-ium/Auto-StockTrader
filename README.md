@@ -83,6 +83,8 @@ For more assistance, refer to [archived README](https://github.com/Prem-ium/Auto
 Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script. 
 Sofi is very unpredictable and unstable, and has been archived with no plans for further development.
 You can still attempt to use it, however the chances of every order going through are slim as Sofi Invest has weird order landing pages that contain different requirements & order layout for different stock tickers.
+
+You can also attempt to use 'Sofi Invest.side` to loop through your accounts and *manually* place orders. While not automated, it is a nice feature to have to help place orders on multiple accounts. Simpily replace the array with your account numbers, change 'Buy' or 'Sell' accordingly to get the correct order page.
 [Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD#sofi-invest-automation)
 
 ## Donations
