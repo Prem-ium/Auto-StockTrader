@@ -18,6 +18,7 @@ FILE_TASK_MAP = {
     "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
     "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
     "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab_Auto.side", "task": ""},
+    "SOFI_AI": {"file": "src\X_Archive\Sofi Helper.side", "task": ""},
     "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
     "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill.side", "task": ""},
 }
@@ -62,6 +63,7 @@ def main():
 
 
         filePath = filePath.replace("src\\Selenium_IDE\\", "")
+        filePath = filePath.replace("src\\X_Archive\\", "")
 
         filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
 

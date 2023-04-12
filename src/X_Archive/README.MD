@@ -54,6 +54,11 @@ You can still attempt to use it, however the chances of every order going throug
 
 ### Sofi Environment Variables
 
+If you plan to use the Selenium IDE Helper file:
+`SOFI_AI`= List of account numbers in an array, can be retrieved by using the JavaScript code in `\src\X_Archive\SoFi_Account_Array.js` of the repository. Sign into your account, head to Invest homepage, and paste the code into the browser console.
+
+Otherwise:
+
 To run this project, you will need to add the following environment variables to your .env file:
 
 `ACCOUNT_NAMES` = A string of names of investment accounts, separated by commas.
@@ -61,6 +66,8 @@ To run this project, you will need to add the following environment variables to
 `SOFI_LOGIN` = Login credentials of SOFI, separated by ':'
 
 `EXCLUDE_ACCOUNTS` = Remove accounts in ACCOUNT_NAMES for testing, debugging, or excluding the purchase of the stock from the account. Separated by commas.
+
+
 
 ### Running Sofi {#Running_Sofi}
 
