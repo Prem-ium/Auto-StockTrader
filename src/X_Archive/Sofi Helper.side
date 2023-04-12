@@ -1,8 +1,8 @@
 {
   "id": "3754741b-c246-46fd-a4b9-61df42906362",
   "version": "2.0",
-  "name": "Sofi Test",
-  "url": "https://client.schwab.com/app/trade/tom/#/trade",
+  "name": "Sofi Helper",
+  "url": "https://www.sofi.com/wealth/",
   "tests": [{
     "id": "00fe9fca-2260-4ca5-beee-945eb08cc90c",
     "name": "Sofi",
@@ -17,16 +17,23 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNT','NUMBERS','HERE'];",
+      "target": "return ['YOUR_ACCOUNTS','HERE'];",
       "targets": [],
       "value": "accounts"
     }, {
       "id": "4956efa5-c445-44f1-9771-90e6c188c228",
       "comment": "",
       "command": "executeScript",
-      "target": "return -1",
+      "target": "return \"AK\";",
       "targets": [],
       "value": "target"
+    }, {
+      "id": "bd5bd04d-d462-4410-ab73-b95013e7b1b8",
+      "comment": "",
+      "command": "store",
+      "target": "0.13",
+      "targets": [],
+      "value": "LIMIT"
     }, {
       "id": "7918963f-8a4d-4d44-bd16-9f6b38a6e7d2",
       "comment": "",
@@ -56,10 +63,59 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "f464bd97-5ca1-4278-9e3c-0aaa296bde79",
+      "comment": "",
+      "command": "click",
+      "target": "id=input-4",
+      "targets": [
+        ["id=input-4", "id"],
+        ["name=shares", "name"],
+        ["css=#input-4", "css:finder"],
+        ["xpath=//input[@id='input-4']", "xpath:attributes"],
+        ["xpath=//div[@id='input-wrapper-5']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7410051f-d7d2-408c-9b08-2b18789573e2",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-4",
+      "targets": [
+        ["id=input-4", "id"],
+        ["name=shares", "name"],
+        ["css=#input-4", "css:finder"],
+        ["xpath=//input[@id='input-4']", "xpath:attributes"],
+        ["xpath=//div[@id='input-wrapper-5']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "521619f8-7941-4889-b3e4-be56306e2ac9",
+      "comment": "",
+      "command": "click",
+      "target": "id=input-1",
+      "targets": [
+        ["id=input-1", "id"],
+        ["name=value", "name"],
+        ["css=#input-1", "css:finder"],
+        ["xpath=//input[@id='input-1']", "xpath:attributes"],
+        ["xpath=//main[@id='mainContent']/div/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67a46219-b580-4986-84a2-ccadf12bdbd4",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-1",
+      "targets": [],
+      "value": "${LIMIT}"
+    }, {
       "id": "c4c53565-41fd-44f0-9f2e-ec5bfdabdea0",
       "comment": "",
       "command": "pause",
-      "target": "3250",
+      "target": "6250",
       "targets": [],
       "value": ""
     }, {
@@ -86,6 +142,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://client.schwab.com/", "https://client.schwab.com/app/trade/tom/#/trade"],
+  "urls": ["https://www.sofi.com/wealth/"],
   "plugins": []
 }
