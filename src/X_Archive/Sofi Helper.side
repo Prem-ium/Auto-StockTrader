@@ -119,6 +119,48 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "0be328ba-62fb-4aa1-a491-e47dedb5f783",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const helper2 = document.getElementById(\"helper-2\"); if (helper2 && helper2.textContent.trim() === \"Choose your account\") {   return true; }  const wizardContainer = document.querySelector(\".WizardContainer-esGHbX\"); if (wizardContainer && wizardContainer.querySelector(\"h1\").textContent.includes(\"Review\")) {   return true; }",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "5dd5e797-3f53-4770-bca7-6c9a545683e0",
+      "comment": "",
+      "command": "while",
+      "target": "${result} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "880ba778-0fdd-4a33-997d-198df963c4f4",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} order has not been placed. Pausing for extra time.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f45bc24e-268a-4a2c-bede-c2535a5d740e",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41616688-a5f4-4d75-97a8-a6d5f9de1765",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const helper2 = document.getElementById(\"helper-2\"); if (helper2 && helper2.textContent.trim() === \"Choose your account\") {   return true; }  const wizardContainer = document.querySelector(\".WizardContainer-esGHbX\"); if (wizardContainer && wizardContainer.querySelector(\"h1\").textContent.includes(\"Review\")) {   return true; }",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "407d2451-b83b-4feb-b5ea-f4d0ddc39f68",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "886b65cc-c82c-4e20-8325-e26183aafe30",
       "comment": "",
       "command": "echo",
