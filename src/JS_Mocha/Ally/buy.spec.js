@@ -27,7 +27,7 @@ describe('Buy', function() {
       await driver.findElement(By.id("modal-select-account")).click()
       {
         const dropdown = await driver.findElement(By.id("modal-select-account"))
-        await dropdown.findElement(By.xpath("//option[. = 'vars[\"account\"]']")).click()
+        await dropdown.findElement(By.xpath("//option[. = 'vars["account"]']")).click()
       }
       await driver.findElement(By.css("ally-button:nth-child(5) > .primary")).click()
       await driver.findElement(By.css(".styled-input")).click()
@@ -38,7 +38,7 @@ describe('Buy', function() {
       await driver.findElement(By.xpath("//button[contains(.,\'Preview Order\')]")).click()
       await driver.sleep(3500)
       await driver.findElement(By.xpath("//button[contains(.,\'Place Order\')]")).click()
-      console.log('vars["account"] Sell ${TICKER} Test Ran Successfully!')
+      console.log(vars["account"] Sell ${TICKER} Test Ran Successfully!)
       await driver.get("https://live.invest.ally.com/trading-full/stocks")
     }
   })

@@ -15,8 +15,8 @@ describe('Buy_Vanguard', function() {
   })
   it('Buy_Vanguard', async function() {
     vars["TICKER"] = "AREB"
-    vars["numAccounts"] = await driver.executeScript("return [\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\']")
-    vars["target"] = await driver.executeScript("return \"SPLICE-HERE\";")
+    vars["numAccounts"] = await driver.executeScript("return Array.from({length: 50}, (_, i) => i + 1);")
+    vars["target"] = await driver.executeScript("return -1;")
     await driver.get("https://personal.vanguard.com/us/TradeTicket?investmentType=EQUITY")
     await driver.manage().window().setRect({ width: 876, height: 820 })
     vars["list"] = await driver.executeScript("return arguments[0].slice(arguments[0].indexOf(arguments[1]) + 1);", vars["numAccounts"],vars["target"])
@@ -28,7 +28,7 @@ describe('Buy_Vanguard', function() {
         await driver.findElement(By.id("okButtonInput")).click()
       }
       await driver.findElement(By.xpath("//table[@id=\'baseForm:accountSelectOne-border\']/tbody/tr/td[2]")).click()
-      await driver.findElement(By.id("baseForm:accountSelectOne:vars[\"account\"]")).click()
+      await driver.findElement(By.id("baseForm:accountSelectOne:vars["account"]")).click()
       await driver.sleep(1000)
       await driver.findElement(By.xpath("//table[@id=\'baseForm:transactionTypeSelectOne-border\']/tbody/tr/td[2]")).click()
       await driver.findElement(By.id("baseForm:transactionTypeSelectOne:1")).click()
@@ -47,19 +47,15 @@ describe('Buy_Vanguard', function() {
         const element = await driver.findElement(By.CSS_SELECTOR, "body")
         await driver.actions({ bridge: true }).moveToElement(element, 0, 0).perform()
       }
-      await driver.findElement(By.id("baseForm:costBasisMethodSelectOne_text")).click()
-      await driver.findElement(By.id("baseForm:costBasisMethodSelectOne:2")).click()
-      {
-        const element = await driver.findElement(By.css("#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)"))
-        await driver.actions({ bridge: true }).moveToElement(element).perform()
-      }
       await driver.findElement(By.id("baseForm:reviewButtonInput")).click()
       await driver.sleep(500)
       vars["result"] = await driver.executeScript("const xpath = \'//*[@id=\"orderCaptureErrorLayerForm:_id3\"]/dl/dd/span\'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && (element.textContent === \"This order cannot be accepted because the quantity you entered exceeds the number of shares held in this account.\" || element.textContent.includes(\"cannot be accepted\")))")
       if (!!await driver.executeScript("return (arguments[0] == true)", vars["result"])) {
         await driver.findElement(By.id("orderCaptureErrorLayerForm:okButtonInput")).click()
+        console.log(vars["account"] lacks quantity to complete order.)
       } else {
         await driver.findElement(By.id("baseForm:submitButtonInput")).click()
+        console.log(vars["account"] finished buying)
       }
       await driver.sleep(1000)
       await driver.get("https://personal.vanguard.com/us/TradeTicket?investmentType=EQUITY")

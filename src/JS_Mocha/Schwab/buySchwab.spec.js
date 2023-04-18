@@ -14,17 +14,18 @@ describe('Buy_Schwab', function() {
     await driver.quit();
   })
   it('Buy_Schwab', async function() {
-    vars["TICKER"] = "TICKERHERE"
+    vars["TICKER"] = "VERB"
     await driver.get("https://client.schwab.com/app/trade/tom/#/trade")
-    vars["target"] = await driver.executeScript("return \"SLICE_TARGET\"")
-    vars["numb"] = await driver.executeScript("let list = [\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\",\"10\",\"11\",\"12\",\"13\"]; list = list.slice(list.indexOf(arguments[0]) + 1); return list;", vars["target"])
+    vars["accounts"] = await driver.executeScript("return Array.from({length: 50}, (_, i) => i + 1);")
+    vars["target"] = await driver.executeScript("return -1")
+    vars["numb"] = await driver.executeScript("let list = arguments[0]; list = list.slice(list.indexOf(arguments[1]) + 1); return list;", vars["accounts"],vars["target"])
     const collection = vars["numb"]
     for (let i = 0; i < collection.length - 1; i++) {
       vars["account"] = vars["numb"][i]
       await driver.sleep(1250)
       await driver.findElement(By.id("mcAccountSelector")).click()
       await driver.sleep(1500)
-      await driver.findElement(By.xpath("//a[@id=\'brokerage-acc-vars[\"account\"]\']/span")).click()
+      await driver.findElement(By.xpath("//a[@id=\'brokerage-acc-vars["account"]\']/span")).click()
       await driver.sleep(2500)
       await driver.findElement(By.id("_txtSymbol")).sendKeys(vars["TICKER"])
       await driver.sleep(1500)
@@ -44,6 +45,7 @@ describe('Buy_Schwab', function() {
       await driver.sleep(1250)
       await driver.findElement(By.id("mtt-place-button")).click()
       await driver.findElement(By.css(".mcaio--mcaio-cta-buttons-anothertrade")).click()
+      console.log(vars["account"] Buying ${TICKER} Test Successful!)
     }
   })
 })

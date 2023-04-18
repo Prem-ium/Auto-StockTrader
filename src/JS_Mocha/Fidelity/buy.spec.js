@@ -23,7 +23,7 @@ describe('Buy', function() {
     const collection = vars["list"]
     for (let i = 0; i < collection.length - 1; i++) {
       vars["account"] = vars["list"][i]
-      await driver.get("https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=vars[\"account\"]&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N")
+      await driver.get("https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=vars["account"]&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N")
       await driver.findElement(By.css("#action-buy s-assigned-wrapper")).click()
       await driver.findElement(By.css("#market-no s-slot")).click()
       await driver.sleep(2300)
@@ -35,6 +35,7 @@ describe('Buy', function() {
       await driver.sleep(2300)
       await driver.findElement(By.css("#previewOrderBtn .pvd3-button-root")).click()
       await driver.findElement(By.id("placeOrderBtn")).click()
+      console.log(vars["account"]: Purchasing ${TICKER} Test Completed.)
     }
   })
 })

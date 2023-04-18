@@ -14,17 +14,18 @@ describe('Chase_Sell', function() {
     await driver.quit();
   })
   it('Chase_Sell', async function() {
-    vars["TICKER"] = await driver.executeScript("return \"STOCK_TICKER\"")
+    vars["TICKER"] = "STOCK_TICKER"
     vars["accounts"] = await driver.executeScript("return [\'YOUR\',\'ACCOUNTS\',\'HERE\']")
     vars["target"] = await driver.executeScript("return \"STRIP_AI_HERE\";")
     await driver.get("https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry")
     await driver.executeScript("window.scrollTo(0,0)")
     vars["FORMAT"] = await driver.executeScript("return \"Sell\"")
     vars["AI_ARRAY"] = await driver.executeScript("return arguments[0].slice(arguments[0].indexOf(arguments[1]) + 1);", vars["accounts"],vars["target"])
+    console.log(vars["FORMAT"]ing ${TICKER} with ${AI_ARRAY})
     const collection = vars["AI_ARRAY"]
     for (let i = 0; i < collection.length - 1; i++) {
       vars["AI"] = vars["AI_ARRAY"][i]
-      await driver.get("https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=vars[\"AI\"];sym=${TICKER}")
+      await driver.get("https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=vars["AI"];sym=${TICKER}")
       await driver.sleep(4800)
       if (!!await driver.executeScript("return (arguments[0] = \"Sell\")", vars["FORMAT"])) {
         await driver.findElement(By.xpath("//label[contains(.,\'Sell all\')]")).click()
@@ -37,6 +38,7 @@ describe('Chase_Sell', function() {
       await driver.findElement(By.xpath("//mds-button[@id=\'previewOrder\']")).click()
       await driver.sleep(3900)
       await driver.findElement(By.xpath("//mds-button[@id=\'submitOrder\']")).click()
+      console.log(vars["AI"] ${FORMAT} ${TICKER} Successful!)
       await driver.sleep(3500)
     }
   })
