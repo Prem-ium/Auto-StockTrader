@@ -10,7 +10,7 @@
       "id": "fbf089d0-8f92-47f7-8178-3a2f6366d967",
       "comment": "",
       "command": "store",
-      "target": "TICKERHERE",
+      "target": "VERB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -24,7 +24,7 @@
       "id": "cddee6fb-867f-48df-8cd5-65f2ca05d85e",
       "comment": "",
       "command": "executeScript",
-      "target": "return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -243,7 +243,7 @@
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
       "comment": "",
       "command": "store",
-      "target": "TICKERHERE",
+      "target": "VERB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -257,7 +257,7 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -463,6 +463,287 @@
       "value": ""
     }, {
       "id": "b3e5927c-02b5-42e6-a8eb-e080169a914c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "278a5235-11b5-4572-b268-6bcad7ad7f01",
+    "name": "Z_LimitBuy_Schwab",
+    "commands": [{
+      "id": "63bcd43e-8e59-49a0-8df7-5b90bd6bdbc8",
+      "comment": "",
+      "command": "store",
+      "target": "ASNS",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "a3c8ae3a-ea55-4b00-ae71-c5f4c8ab78c6",
+      "comment": "",
+      "command": "store",
+      "target": "1.00",
+      "targets": [],
+      "value": "LIMIT"
+    }, {
+      "id": "9462ee3e-06e3-418e-b941-572efa16348e",
+      "comment": "",
+      "command": "open",
+      "target": "https://client.schwab.com/app/trade/tom/#/trade",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faea0380-ed7c-4300-b2e5-cdf12cd367a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "d99a12c6-d486-4783-a7b3-cd7b3ddda542",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return -1",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "ab9e7485-565b-44d5-a0d2-32c67c3196e3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let list = ${accounts}; list = list.slice(list.indexOf(${target}) + 1); return list;",
+      "targets": [],
+      "value": "numb"
+    }, {
+      "id": "54b6b21a-e226-4e8d-b517-66840fb41654",
+      "comment": "",
+      "command": "forEach",
+      "target": "numb",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "9042ebd6-b85b-4cf0-980f-ac3fc68f91d1",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1060a4d2-1f68-426e-9f23-7dc92ece1f89",
+      "comment": "",
+      "command": "click",
+      "target": "id=mcAccountSelector",
+      "targets": [
+        ["id=mcAccountSelector", "id"],
+        ["css=#mcAccountSelector", "css:finder"],
+        ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
+        ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02c1d3bd-3788-4ca8-88f5-7d549c017778",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6969589b-dfaa-4ffa-ad66-b38e6d0efb59",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
+      "targets": [
+        ["css=#brokerage-acc-8 > .sdps-account-selector__left-col", "css:finder"],
+        ["xpath=//a[@id='brokerage-acc-8']/span", "xpath:idRelative"],
+        ["xpath=//li[9]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51acf5bc-e4b4-4a7a-8f8c-b7d568c60a9d",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86cb864b-277e-4c10-b6e4-515d60119ead",
+      "comment": "",
+      "command": "type",
+      "target": "id=_txtSymbol",
+      "targets": [
+        ["id=_txtSymbol", "id"],
+        ["name=symbol", "name"],
+        ["css=#\\_txtSymbol", "css:finder"],
+        ["xpath=//input[@id='_txtSymbol']", "xpath:attributes"],
+        ["xpath=//mc-trade-symbol[@id='mctsymbolaa9bf0b8']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//mc-trade-symbol/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${TICKER}"
+    }, {
+      "id": "08cd4dad-a191-40ec-b3ad-602d5c9ae1e3",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e81854f-4c4c-44de-bc2e-05fef2945b1c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=_txtSymbol",
+      "targets": [
+        ["id=_txtSymbol", "id"],
+        ["name=symbol", "name"],
+        ["css=#\\_txtSymbol", "css:finder"],
+        ["xpath=//input[@id='_txtSymbol']", "xpath:attributes"],
+        ["xpath=//mc-trade-symbol[@id='mctsymbolaa9bf0b8']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//mc-trade-symbol/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c462441e-66e6-4e77-9bee-84e02c537e98",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef9fcf8a-81f6-4c21-9300-e85e47c38fdd",
+      "comment": "",
+      "command": "click",
+      "target": "id=_action",
+      "targets": [
+        ["id=_action", "id"],
+        ["name=action", "name"],
+        ["css=#\\_action", "css:finder"],
+        ["xpath=//select[@id='_action']", "xpath:attributes"],
+        ["xpath=//mc-trade-order-leg[@id='mctordleg424668ec']/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//mc-trade-order-leg/div/div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e600ed8-9d3c-4957-91f7-7a0a22c12c78",
+      "comment": "",
+      "command": "select",
+      "target": "id=_action",
+      "targets": [],
+      "value": "label=Buy"
+    }, {
+      "id": "b3439d2b-903a-4e02-9c94-77036addda48",
+      "comment": "",
+      "command": "click",
+      "target": "id=order-type",
+      "targets": [
+        ["id=order-type", "id"],
+        ["css=#order-type", "css:finder"],
+        ["xpath=//select[@id='order-type']", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00bd9183-f30b-4c13-ba2c-661b557b6dbf",
+      "comment": "",
+      "command": "select",
+      "target": "id=order-type",
+      "targets": [],
+      "value": "label=Limit"
+    }, {
+      "id": "31c90be9-1133-42ff-9708-90a6a74befba",
+      "comment": "",
+      "command": "click",
+      "target": "id=_txtLimitPrice",
+      "targets": [
+        ["id=_txtLimitPrice", "id"],
+        ["name=limitPrice", "name"],
+        ["css=#\\_txtLimitPrice", "css:finder"],
+        ["xpath=//input[@id='_txtLimitPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-LimitPriceContainer']/div/div/input", "xpath:idRelative"],
+        ["xpath=//mc-trade-order-control/div/div/div[7]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4590cfd8-33ec-4936-83f8-6e3f752004b6",
+      "comment": "",
+      "command": "type",
+      "target": "id=_txtLimitPrice",
+      "targets": [
+        ["id=_txtLimitPrice", "id"],
+        ["name=limitPrice", "name"],
+        ["css=#\\_txtLimitPrice", "css:finder"],
+        ["xpath=//input[@id='_txtLimitPrice']", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-LimitPriceContainer']/div/div/input", "xpath:idRelative"],
+        ["xpath=//mc-trade-order-control/div/div/div[7]/div/div/input", "xpath:position"]
+      ],
+      "value": "${LIMIT}"
+    }, {
+      "id": "04d3f056-f2d8-47a1-aec3-052f576494eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mcaio-order--reviewbtn",
+      "targets": [
+        ["css=.mcaio-order--reviewbtn", "css:finder"],
+        ["xpath=(//button[@type='button'])[39]", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-footer']/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Review Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e574cb43-214e-4966-a8a3-5498e2749880",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "257ed78d-872d-422d-85f1-738319bd4cab",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='orderMessages']/ul/li/input",
+      "targets": [
+        ["id=mctorderdetailca3fe490CHECKBOX_0", "id"],
+        ["css=#mctorderdetailca3fe490CHECKBOX_0", "css:finder"],
+        ["xpath=//input[@id='mctorderdetailca3fe490CHECKBOX_0']", "xpath:attributes"],
+        ["xpath=//div[@id='orderMessages']/ul/li/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b33e8a1-3f2f-4f88-b2cc-203788504afe",
+      "comment": "",
+      "command": "click",
+      "target": "id=mtt-place-button",
+      "targets": [
+        ["id=mtt-place-button", "id"],
+        ["css=#mtt-place-button", "css:finder"],
+        ["xpath=//button[@id='mtt-place-button']", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-footer']/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c91270ac-a499-40a0-a1d1-0e972cedfa78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mcaio--mcaio-cta-buttons-anothertrade",
+      "targets": [
+        ["css=.mcaio--mcaio-cta-buttons-anothertrade", "css:finder"],
+        ["xpath=//button[@onclick='mcttrade62f278b1.handlePlaceAnother()']", "xpath:attributes"],
+        ["xpath=//div[@id='mcaio-footer']/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Place Another Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63f8abec-531a-43c8-ac27-1075f6c734ac",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} Buying ${TICKER} Test Successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5cded49-3ad1-49ba-b97e-40e83d4d9bcf",
       "comment": "",
       "command": "end",
       "target": "",

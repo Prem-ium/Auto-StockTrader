@@ -22,8 +22,6 @@ alt="selenium" width="40" height="40" /></a>
 
 To use this project, you will need to set the following environment variables in your .env file:
 
-`SCHWAB_AI` = Total number of Schwab accounts.
-
 `MERRILL_AI` = Total number of Merrill accounts.
 
 `CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers 
