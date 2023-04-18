@@ -435,7 +435,7 @@
       "id": "6e05b1af-2bba-4e80-803a-d798b472ed64",
       "comment": "",
       "command": "echo",
-      "target": "${account} bought ${TICKER}",
+      "target": "${account} sold ${TICKER}",
       "targets": [],
       "value": ""
     }, {
