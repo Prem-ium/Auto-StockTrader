@@ -22,6 +22,8 @@ alt="selenium" width="40" height="40" /></a>
 
 To use this project, you will need to set the following environment variables in your .env file:
 
+`SCHWAB_AI` = Total number of SCHWAB accounts.
+
 `MERRILL_AI` = Total number of Merrill accounts.
 
 `CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers 
@@ -36,7 +38,6 @@ To use this project, you will need to set the following environment variables in
 `FIRSTRADE_AI` = A stringified JSON array containing your FirstTrade Investment account numbers, separated by commas.
 
 `VANGUARD_AI` = A stringified JSON array containing your Vanguard Investment account numbers, separated by commas. (Only for old Outdated Test Cases)
-
 
 `CUSTOM_DIR` = Directory path updated .side files should be located. (Optional)
 

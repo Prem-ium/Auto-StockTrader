@@ -24,7 +24,7 @@
       "id": "cddee6fb-867f-48df-8cd5-65f2ca05d85e",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 50}, (_, i) => i);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -257,7 +257,7 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 50}, (_, i) => i);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -497,7 +497,7 @@
       "id": "faea0380-ed7c-4300-b2e5-cdf12cd367a4",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 50}, (_, i) => i);",
       "targets": [],
       "value": "accounts"
     }, {
