@@ -180,7 +180,7 @@
       "id": "569e51e6-5b25-41d7-9e02-628e161b9df6",
       "comment": "",
       "command": "echo",
-      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "target": "${account} Buy ${TICKER} Test Ran Successfully!",
       "targets": [],
       "value": ""
     }, {
@@ -635,7 +635,7 @@
       "id": "30c92b12-6d98-4c6c-ba93-7665a98c21d5",
       "comment": "",
       "command": "echo",
-      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "target": "${account} Buy ${TICKER} Test Ran Successfully!",
       "targets": [],
       "value": ""
     }, {
