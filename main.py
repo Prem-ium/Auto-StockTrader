@@ -32,7 +32,7 @@ def main():
             FILES.append(info["file"])
             print(f"{var_name} is enabled.")
             if var_name == "SCHWAB_AI":
-                info["task"] = list(range(int(os.environ[var_name].replace(" ", "").replace(",", ", "))))
+                info["task"] = "return Array.from({length: " + os.environ[var_name] + "}, (_, i) => i);"
             elif var_name == "MERRILL_AI":
                 info["task"] = [i + 1 for i in range(int(os.environ[var_name].replace(" ", "").replace(",", ", ")))]
             else:
