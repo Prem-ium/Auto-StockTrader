@@ -14,6 +14,13 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "a9efebcd-6b04-46fe-8622-0ecb5642d9bd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "e3d9e076-85a1-429e-9c89-977c05592d26",
       "comment": "",
       "command": "executeScript",
@@ -49,12 +56,19 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
-      "id": "3ae8e293-1951-4fd4-b8a4-cf544b316a66",
+      "id": "26c7e8ca-3189-43e2-8746-9112dfd983dc",
       "comment": "",
       "command": "forEach",
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "3ae8e293-1951-4fd4-b8a4-cf544b316a66",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "9192133d-cc72-47d1-9f2c-50c7aace0192",
       "comment": "",
@@ -145,7 +159,7 @@
       "command": "sendKeys",
       "target": "id=symbol1",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "11e94034-27a2-4279-89f4-6380a0353ab8",
       "comment": "",
@@ -214,7 +228,14 @@
       "id": "f935c532-19df-4c6d-b272-80aa592cd716",
       "comment": "",
       "command": "echo",
-      "target": "${account} bought ${TICKER}",
+      "target": "${account} bought ${TICK}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e820fde7-5e7a-4a5b-91e5-161a47ca455a",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -235,6 +256,13 @@
       "target": "TICKER_GOES_HERE",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "c962cffb-a5b7-4ed7-be34-866dd0101d3c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "fb05d9fc-0aa5-402d-b194-965639ebbf4d",
       "comment": "",
@@ -270,6 +298,13 @@
       "target": "",
       "targets": [],
       "value": "LIMIT_PRICE"
+    }, {
+      "id": "47340326-7154-4297-9d3b-2f7982995398",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "27db9827-d53a-4aeb-9bcc-05baa93646f5",
       "comment": "",
@@ -366,7 +401,7 @@
       "command": "sendKeys",
       "target": "id=symbol1",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "48240df5-1a51-4c57-bba1-c05034762ad4",
       "comment": "",
@@ -435,7 +470,14 @@
       "id": "6e05b1af-2bba-4e80-803a-d798b472ed64",
       "comment": "",
       "command": "echo",
-      "target": "${account} sold ${TICKER}",
+      "target": "${account} sold ${TICK}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a58485e-a776-4058-845f-301a054b9e11",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
