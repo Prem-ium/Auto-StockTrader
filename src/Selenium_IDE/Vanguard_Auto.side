@@ -837,6 +837,34 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a0ede039-352d-4eff-8f25-0726058619c5",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//INPUT[@id='orderCaptureWarningLayerForm:yesButtonInput']",
+      "targets": [],
+      "value": "orderCaptureWarning"
+    }, {
+      "id": "5805998e-0b87-4aef-9c94-ecdc15fc59ac",
+      "comment": "",
+      "command": "if",
+      "target": "${orderCaptureWarning}==1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fd31c97-e457-4c65-a3f6-1c33a50a5397",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//INPUT[@id='orderCaptureWarningLayerForm:yesButtonInput']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c89eb4fc-bf53-45e1-9137-fb707fcca38a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {    
       "id": "a1f78b77-ec4b-456e-b8c1-64e75758a5d8",
       "comment": "",
       "command": "click",
