@@ -14,6 +14,13 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
       "comment": "",
       "command": "executeScript",
@@ -49,17 +56,24 @@
       "targets": [],
       "value": "list"
     }, {
-      "id": "25adc79e-a66b-4881-8326-2ac24f570ae0",
+      "id": "00b0aa03-8311-4925-9d8e-9a96d8392761",
       "comment": "",
       "command": "forEach",
       "target": "list",
       "targets": [],
       "value": "account"
     }, {
+      "id": "25adc79e-a66b-4881-8326-2ac24f570ae0",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
+    }, {
       "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
       "targets": [],
       "value": ""
     }, {
@@ -170,7 +184,14 @@
       "id": "f663fda9-612d-411f-b6de-8ea9ce568d08",
       "comment": "",
       "command": "echo",
-      "target": "${account}: Purchasing ${TICKER} Test Completed.",
+      "target": "${account}: Purchasing ${TICK} Test Completed.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77fa486f-0fe9-4a57-8ad2-b7072275122b",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -191,6 +212,13 @@
       "target": "AREB",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
       "comment": "",
@@ -220,17 +248,24 @@
       "targets": [],
       "value": "list"
     }, {
-      "id": "8d934b3c-351c-4168-a9db-b174671377b3",
+      "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
       "comment": "",
       "command": "forEach",
       "target": "list",
       "targets": [],
       "value": "account"
     }, {
+      "id": "8d934b3c-351c-4168-a9db-b174671377b3",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
+    }, {
       "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICKER}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
       "targets": [],
       "value": ""
     }, {
@@ -289,7 +324,7 @@
       "id": "180cd9f0-411b-4c3d-a854-293b9100e734",
       "comment": "",
       "command": "echo",
-      "target": "${account}: Selling ${TICKER} Failed. Security not in account",
+      "target": "${account}: Selling ${TICK} Failed. Security not in account",
       "targets": [],
       "value": ""
     }, {
@@ -316,7 +351,14 @@
       "id": "7bc781af-0a4b-4fe9-8fbb-3c91c4d14f67",
       "comment": "",
       "command": "echo",
-      "target": "${account}: Selling ${TICKER} Test Completed.",
+      "target": "${account}: Selling ${TICK} Test Completed.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec8bd0b9-0f6a-41a8-be43-55c14ccae549",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
