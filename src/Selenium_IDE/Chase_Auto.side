@@ -313,6 +313,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "3713eb04-efc0-45a1-8530-ff2734346451",
+      "comment": "",
+      "command": "store",
+      "target": "false",
+      "targets": [],
+      "value": "runCheck"
+    }, {
       "id": "7f8829cb-3568-4bf2-a88e-d02af92f9d14",
       "comment": "",
       "command": "runScript",
@@ -430,6 +437,41 @@
       ],
       "value": ""
     }, {
+      "id": "babde2bf-ab7b-4de6-b5be-159f3ee29736",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath =   '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(   xpath,   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue; if (element && element.textContent === \"No position\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "targets": [],
+      "value": "noPosition"
+    }, {
+      "id": "8e41e847-c185-4644-8b99-d71a5687b9eb",
+      "comment": "",
+      "command": "if",
+      "target": "${noPosition} == true && ${runCheck} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd7ef1bc-1a20-44b3-b0e6-3bf2bfda3138",
+      "comment": "",
+      "command": "echo",
+      "target": "${AI} Lacks ${TICK} Position",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d10778-e06d-4679-ab2a-46ad21e50266",
+      "comment": "",
+      "command": "pause",
+      "target": "3500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbda3384-f015-4a5a-85cc-72b0d425c687",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "478531f0-749f-46ef-869f-b7faec485858",
       "comment": "",
       "command": "click",
@@ -503,6 +545,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a75e12ef-8d68-4588-959d-25e63dcc52a1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "587c692d-bb61-4126-a18c-2d24f2f57d53",
       "comment": "",
       "command": "end",
@@ -511,269 +560,6 @@
       "value": ""
     }, {
       "id": "8a27194d-2ba7-4dde-8c9b-091f31326217",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "864b6b86-3905-4314-a74a-54d86677d0a3",
-    "name": "PreMarket_Sell",
-    "commands": [{
-      "id": "0e39fb88-ca04-4f9a-8d3f-b3c2ee4b332e",
-      "comment": "",
-      "command": "store",
-      "target": "STOCK_TICKER",
-      "targets": [],
-      "value": "TICKER"
-    }, {
-      "id": "b7bc7257-556b-4161-846b-84896d8d025d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "3b7ee4d7-649d-46cf-a21a-daee979a9535",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "f43f4e61-df22-45b1-95ef-11f956ce5348",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
-      "targets": [],
-      "value": "target"
-    }, {
-      "id": "9172e75b-0782-4be3-b47b-680a0e3e25da",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fd072937-fd05-4126-922a-c0ca4e3dd516",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e29bc39c-f014-40ad-98f7-64e820ea33c5",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Sell\"",
-      "targets": [],
-      "value": "FORMAT"
-    }, {
-      "id": "5ea83e4b-9a0c-424a-9369-2e535f2f8eef",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "AI_ARRAY"
-    }, {
-      "id": "1a4c5762-41ab-4d44-8b80-846c517a29a1",
-      "comment": "",
-      "command": "echo",
-      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "27b5553a-f353-46c5-86c9-05c0e0276e36",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
-      "id": "878cef79-3f1b-4ad4-a92a-87321f7df009",
-      "comment": "",
-      "command": "forEach",
-      "target": "AI_ARRAY",
-      "targets": [],
-      "value": "AI"
-    }, {
-      "id": "8117f12f-5659-4933-9d3f-f32017ebb0ac",
-      "comment": "",
-      "command": "open",
-      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=${AI};sym=${TICK}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0eb55e04-2ef9-4713-b40d-c3a0919d5151",
-      "comment": "",
-      "command": "executeScript",
-      "target": "window.location.reload();",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e6915af6-0a87-426a-b10b-861bd3a0e21b",
-      "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "01f2ff06-ed38-4017-bd1a-782ec7144d13",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Sell\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7e299c68-f104-4ce9-9bb2-8091e5c4e4bc",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//label[contains(.,'Sell all')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "88cd8184-71b2-4cba-97c9-8d8a49e934f8",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "eed73af4-65d9-4007-af6f-518ceb5e126f",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//label[contains(.,'Market')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7cd8b5a6-2e92-450e-9f2d-fd34970da276",
-      "comment": "",
-      "command": "click",
-      "target": "id=tradeQuantity-text-input-field",
-      "targets": [
-        ["id=tradeQuantity-text-input-field", "id"],
-        ["name=tradeQuantity", "name"],
-        ["css=#tradeQuantity-text-input-field", "css:finder"],
-        ["xpath=//input[@id='tradeQuantity-text-input-field']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d3cf432b-2f6f-452c-a8d5-d0a708d6533f",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//label[contains(.,'Day')]",
-      "targets": [
-        ["css=#tradeExecutionOptions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
-        ["xpath=//div[@id='tradeExecutionOptions-container']/span/label", "xpath:idRelative"],
-        ["xpath=//div[4]/fieldset/div/div/span/label", "xpath:position"],
-        ["xpath=//label[contains(.,'Day')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5b8f85a0-5c94-4a33-8568-2a7a65361578",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "793c38d7-1f28-4d7b-9f7d-7323c2041e46",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9c0d4699-8324-4107-b5a6-930cb3385b7a",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "78ea4bd5-b85a-47e5-a481-99324e867b91",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "01045c75-04d2-4d15-8737-262ea24ef173",
-      "comment": "",
-      "command": "pause",
-      "target": "3900",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dae6e2f6-cf96-4ec7-84a2-b17cdda23b1f",
-      "comment": "",
-      "command": "click",
-      "target": "id=acceptWarnings",
-      "targets": [
-        ["id=acceptWarnings", "id"],
-        ["css=#acceptWarnings", "css:finder"],
-        ["xpath=//mds-button[@id='acceptWarnings']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeWarningButtonsStickyFooter']/div[2]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "368493c5-31a1-4a60-9751-5e7efd17b8e6",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='submitOrder']",
-      "targets": [
-        ["id=submitOrder", "id"],
-        ["css=#submitOrder", "css:finder"],
-        ["xpath=//mds-button[@id='submitOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesPreviewStickyFooter']/div[2]/div[2]/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3cf1ee8c-83df-4914-b8c5-d82ca468f31c",
-      "comment": "",
-      "command": "echo",
-      "target": "${AI} ${FORMAT} ${TICK} Successful!",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d0439487-849d-4ea9-ba5d-abd13eaa38d8",
-      "comment": "",
-      "command": "pause",
-      "target": "3500",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4e8297f8-2bd3-4884-8bce-95e615b637b6",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bca4b089-0ff2-4cb3-a471-cc21cc178a20",
       "comment": "",
       "command": "end",
       "target": "",
@@ -1058,6 +844,311 @@
       "value": ""
     }, {
       "id": "eed448f0-6d1b-4bcf-bc1a-15c6857e651e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d1d806de-facf-40b6-b3de-66cfb39c5594",
+    "name": "Premarket_Sell",
+    "commands": [{
+      "id": "2b05816b-1a0e-4665-87e7-8a56840ccea6",
+      "comment": "",
+      "command": "store",
+      "target": "STOCK_TICKER",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "b82ae3ea-a832-4599-b8c1-be033ccf5216",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
+      "id": "5d5b40a6-3390-46c6-875e-c24136012d7d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "babfd393-9fe7-4a7c-b3cc-af4e4387ecbd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\";",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "21daa83a-f70c-4f2c-accf-5567e910b1b4",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9027ad8-32de-4edd-abbe-11505a2643fc",
+      "comment": "",
+      "command": "store",
+      "target": "false",
+      "targets": [],
+      "value": "runCheck"
+    }, {
+      "id": "eee11326-43c0-4ce8-888d-a0ba2178d632",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "979748f1-52dc-402f-b4c7-60280517aebe",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Sell\"",
+      "targets": [],
+      "value": "FORMAT"
+    }, {
+      "id": "d6d0f8a9-1024-4e0d-943a-dd471c8d770b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "AI_ARRAY"
+    }, {
+      "id": "5fb7633d-baf5-4517-9bfc-08f91d27878b",
+      "comment": "",
+      "command": "echo",
+      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ae132db-4b36-47a8-87c1-7c96888bc5fc",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
+    }, {
+      "id": "f5b9da09-7230-4266-b993-d3327d9e13c9",
+      "comment": "",
+      "command": "forEach",
+      "target": "AI_ARRAY",
+      "targets": [],
+      "value": "AI"
+    }, {
+      "id": "7fe08cd7-cba6-4e70-b5d7-e574cea6b3c7",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=${AI};sym=${TICK}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1a1691a-be3f-4a05-a2d2-702e5eb696c4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.location.reload();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffe565fb-b4d5-44e7-b1e0-1dc746c53b9a",
+      "comment": "",
+      "command": "pause",
+      "target": "4800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8622f9a7-a990-4ad6-9ec3-b2c749a19e8a",
+      "comment": "",
+      "command": "if",
+      "target": "${FORMAT} = \"Sell\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73ff1c71-a9ce-411a-90db-53b9c4f91e4b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Sell all')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3982e2b3-0684-497f-80d5-46da37763c37",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae312b59-72ec-45e6-bae5-06a5ce494eb7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Market')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afc0cb3f-9f5d-4373-94e5-e496a91be68f",
+      "comment": "",
+      "command": "click",
+      "target": "id=tradeQuantity-text-input-field",
+      "targets": [
+        ["id=tradeQuantity-text-input-field", "id"],
+        ["name=tradeQuantity", "name"],
+        ["css=#tradeQuantity-text-input-field", "css:finder"],
+        ["xpath=//input[@id='tradeQuantity-text-input-field']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91da8544-ce2f-41b1-b4dc-85597a762d7b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Day')]",
+      "targets": [
+        ["css=#tradeExecutionOptions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeExecutionOptions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//div[4]/fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Day')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "824b397c-d3cc-49e4-829f-ffc0c4e9b7bb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath =   '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(   xpath,   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue; if (element && element.textContent === \"No position\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "targets": [],
+      "value": "noPosition"
+    }, {
+      "id": "bf94ef86-0659-4d19-a13a-1cc612124418",
+      "comment": "",
+      "command": "if",
+      "target": "${noPosition} == true && ${runCheck} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87f545c0-0372-4954-8454-789095b288dd",
+      "comment": "",
+      "command": "echo",
+      "target": "${AI} Lacks ${TICK} Position",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e1660c9-25ca-4177-be7a-9cc01571ae3e",
+      "comment": "",
+      "command": "pause",
+      "target": "3500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "791c1da9-fe0b-4510-9591-9007f8333f9f",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab96c2b6-e99b-447b-ad83-6f5bd05bf5d8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [
+        ["id=previewOrder", "id"],
+        ["css=#previewOrder", "css:finder"],
+        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
+        ["xpath=//div[2]/mds-button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83d9277c-5664-46d7-91a8-fb139c8b6c95",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [
+        ["id=previewOrder", "id"],
+        ["css=#previewOrder", "css:finder"],
+        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
+        ["xpath=//div[2]/mds-button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b22134d-78fd-44aa-8463-aa3b45da6965",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [
+        ["id=previewOrder", "id"],
+        ["css=#previewOrder", "css:finder"],
+        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
+        ["xpath=//div[2]/mds-button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1dc0a7e-0e19-40ec-8bb6-0e13354583ca",
+      "comment": "",
+      "command": "pause",
+      "target": "3900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "855ae9d6-0990-40f8-89e0-0d507e92175f",
+      "comment": "",
+      "command": "click",
+      "target": "id=acceptWarnings",
+      "targets": [
+        ["id=acceptWarnings", "id"],
+        ["css=#acceptWarnings", "css:finder"],
+        ["xpath=//mds-button[@id='acceptWarnings']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeWarningButtonsStickyFooter']/div[2]/div/div[2]/mds-button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/mds-button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db5c935a-c317-4b27-94c7-41f3f81b7136",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//mds-button[@id='submitOrder']",
+      "targets": [
+        ["id=submitOrder", "id"],
+        ["css=#submitOrder", "css:finder"],
+        ["xpath=//mds-button[@id='submitOrder']", "xpath:attributes"],
+        ["xpath=//div[@id='tradeBalancesPreviewStickyFooter']/div[2]/div[2]/div[2]/mds-button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/mds-button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d89aa690-6ab6-46a3-ab60-07016e45a870",
+      "comment": "",
+      "command": "echo",
+      "target": "${AI} ${FORMAT} ${TICK} Successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58a3fb8c-d345-4ab5-8c8d-5ade9c6b4aab",
+      "comment": "",
+      "command": "pause",
+      "target": "3500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "526938f3-4f45-4221-90ca-2b44d29f87d2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b909152-843d-4cb5-9959-07ed279dfe6e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44fdca05-f6fb-48e8-8bf0-1a6324c51d5b",
       "comment": "",
       "command": "end",
       "target": "",
