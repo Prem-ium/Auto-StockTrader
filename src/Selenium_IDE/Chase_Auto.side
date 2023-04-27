@@ -440,7 +440,7 @@
       "id": "babde2bf-ab7b-4de6-b5be-159f3ee29736",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath =   '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(   xpath,   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue; if (element && element.textContent === \"No position\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "target": "if (${runCheck} == true) {  const xpath = '//*[@id=\"positionsHeader\"]/span';const element = document.evaluate(  xpath,  document,  null,  XPathResult.FIRST_ORDERED_NODE_TYPE,  null).singleNodeValue;if (element && element.textContent === \"No position\") {  console.log(\"The text is 'Incomplete transaction detected'\");  return true;} else {  console.log(\"The text is not 'Incomplete transaction detected'\");  return false;}} else { return false;}",
       "targets": [],
       "value": "noPosition"
     }, {
@@ -1016,7 +1016,7 @@
       "id": "824b397c-d3cc-49e4-829f-ffc0c4e9b7bb",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath =   '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(   xpath,   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue; if (element && element.textContent === \"No position\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "target": "if (${runCheck} == true) {  const xpath = '//*[@id=\"positionsHeader\"]/span';const element = document.evaluate(  xpath,  document,  null,  XPathResult.FIRST_ORDERED_NODE_TYPE,  null).singleNodeValue;if (element && element.textContent === \"No position\") {  console.log(\"The text is 'Incomplete transaction detected'\");  return true;} else {  console.log(\"The text is not 'Incomplete transaction detected'\");  return false;}} else { return false;}",
       "targets": [],
       "value": "noPosition"
     }, {
