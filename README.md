@@ -18,6 +18,12 @@ alt="selenium" width="40" height="40" /></a>
 - Merrill Lynch
 - Sofi Invest (Archived)
 
+## Features
+- Automate Pre-Market & Market Buy/Sell Orders 
+- Multiple Tickers Automation in One Test (Split with ```,```)
+- XPATH Error Checking Functions
+- Quickstart using CLI
+
 ## Enviornmental Variables
 
 To use this project, you will need to set the following environment variables in your .env file:
