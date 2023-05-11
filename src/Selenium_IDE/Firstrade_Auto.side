@@ -63,13 +63,6 @@
       "targets": [],
       "value": "account"
     }, {
-      "id": "3ae8e293-1951-4fd4-b8a4-cf544b316a66",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
       "id": "9192133d-cc72-47d1-9f2c-50c7aace0192",
       "comment": "",
       "command": "click",
@@ -90,6 +83,13 @@
       "target": "id=accountId1",
       "targets": [],
       "value": "label=${account}"
+    }, {
+      "id": "3ae8e293-1951-4fd4-b8a4-cf544b316a66",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "43fefee1-9afb-4306-8432-151c9ec959b0",
       "comment": "",
@@ -299,13 +299,6 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
-      "id": "47340326-7154-4297-9d3b-2f7982995398",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
       "id": "27db9827-d53a-4aeb-9bcc-05baa93646f5",
       "comment": "",
       "command": "forEach",
@@ -333,6 +326,13 @@
       "target": "id=accountId1",
       "targets": [],
       "value": "label=${account}"
+    }, {
+      "id": "47340326-7154-4297-9d3b-2f7982995398",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "82772a8c-cdcb-429e-b31a-6c51bebe3a8b",
       "comment": "",
