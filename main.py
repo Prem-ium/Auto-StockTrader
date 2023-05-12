@@ -72,7 +72,7 @@ def main():
 
         print(f"Created/Updated:\t{filePath}!")
 
-    if CUSTOM_DIR:
+    if CUSTOM_DIR and len(sys.argv) != 2:
         os.startfile(CUSTOM_DIR)
 
     # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
