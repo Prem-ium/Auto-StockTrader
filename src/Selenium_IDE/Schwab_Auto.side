@@ -546,7 +546,7 @@
       "id": "ac022661-a730-43e4-8890-17ff69032309",
       "comment": "",
       "command": "echo",
-      "target": "${account} Buying ${TICK} Test Successful!",
+      "target": "${account} Selling ${TICK} Test Successful!",
       "targets": [],
       "value": ""
     }, {
