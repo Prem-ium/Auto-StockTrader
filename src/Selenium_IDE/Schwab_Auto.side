@@ -338,7 +338,7 @@
     }, {
       "id": "67bb05d0-27bd-43c3-853d-1dfa19681c9e",
       "comment": "",
-      "command": "assertElementPresent",
+      "command": "verifyElementPresent",
       "target": "xpath=//mc-trade-account-selector/div/div/button/span",
       "targets": [],
       "value": ""
@@ -357,13 +357,9 @@
     }, {
       "id": "0091f144-bdcd-4700-9f58-7d60a3037887",
       "comment": "",
-      "command": "verifyElementPresent",
+      "command": "assertElementPresent",
       "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
-      "targets": [
-        ["css=#brokerage-acc-0 > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//a[@id='brokerage-acc-0']/span", "xpath:idRelative"],
-        ["xpath=//div/ul/li/a/span", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "dc465e40-87b6-462a-b2ed-a7db1470028b",
@@ -617,7 +613,7 @@
     }, {
       "id": "550b71a4-3a7b-4a01-8631-d2b9332fea02",
       "comment": "",
-      "command": "assertElementPresent",
+      "command": "verifyElementPresent",
       "target": "xpath=//mc-trade-account-selector/div/div/button/span",
       "targets": [],
       "value": ""
@@ -636,13 +632,9 @@
     }, {
       "id": "848ce45d-f51b-4680-b73f-5e9d8ff659aa",
       "comment": "",
-      "command": "verifyElementPresent",
+      "command": "assertElementPresent",
       "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
-      "targets": [
-        ["css=#brokerage-acc-0 > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//a[@id='brokerage-acc-0']/span", "xpath:idRelative"],
-        ["xpath=//div/ul/li/a/span", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "2dbfa3ce-825f-4efd-b8f1-f0a36d1ffed2",
