@@ -301,7 +301,7 @@
       "targets": [],
       "value": "LIMIT"
     }, {
-      "id": "9462ee3e-06e3-418e-b941-572efa16348e",
+      "id": "6995d2d3-06a5-4754-a099-ccb1c4cb2356",
       "comment": "",
       "command": "open",
       "target": "https://client.schwab.com/app/trade/tom/#/trade",
@@ -504,6 +504,47 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "f34996e3-3d12-4d1c-a44a-a4560ef251a3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath = '/html/body/div[1]/div[3]/div/div[2]/div[1]/div[4]/app-root/app-trade/mc-trade/div[2]/div[2]/div[1]/div[3]/div[1]/p[2]'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; return (element && element.textContent.includes('This security is not currently held in this account.'));",
+      "targets": [],
+      "value": "no_position"
+    }, {
+      "id": "7e0b8f60-dcdf-42d2-802f-69991a0b8f46",
+      "comment": "",
+      "command": "if",
+      "target": "${no_position}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3499621c-0aec-499c-8325-b7dcdaf38903",
+      "comment": "",
+      "command": "echo",
+      "target": "${account} Has No Position With ${TICK} ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4796660c-9be2-43db-9094-4aff1f3a72b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mcaio-cta-buttons > .col-full > .sdps-button--secondary",
+      "targets": [
+        ["css=.mcaio-cta-buttons > .col-full > .sdps-button--secondary", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='page-container']/div[3]/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3719972a-cb58-40c3-8628-fb663634552d",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "ce8480bc-c52c-47fc-9335-c0c8de06544f",
       "comment": "",
       "command": "click",
@@ -534,6 +575,13 @@
       "comment": "",
       "command": "echo",
       "target": "${account} Selling ${TICK} Test Successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f713cbc6-8918-475e-9739-b2b3e7424dc3",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
