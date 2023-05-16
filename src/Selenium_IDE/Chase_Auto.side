@@ -98,12 +98,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c128fb51-3b6d-4aac-ba29-b7a5545d9a70",
+      "id": "db162295-cd90-4a3c-888e-79523f013b61",
       "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
+      "command": "waitForElementPresent",
+      "target": "xpath=//label[contains(.,'Buy')]",
+      "targets": [
+        ["css=#tradeActions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeActions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": "35000"
     }, {
       "id": "d96c2612-6ed5-449c-b975-71facda0bd33",
       "comment": "",
@@ -226,12 +231,12 @@
       ],
       "value": ""
     }, {
-      "id": "bf5a64d1-ffcd-4ed1-b749-cb1b69bb77b5",
+      "id": "c8c5d769-ef78-447a-b71d-fbf2bd8fe050",
       "comment": "",
-      "command": "pause",
-      "target": "3900",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='submitOrder']",
       "targets": [],
-      "value": ""
+      "value": "39000"
     }, {
       "id": "49de0d06-fc93-4ba9-aadf-059649ce317c",
       "comment": "",
@@ -256,7 +261,7 @@
       "id": "0de0d19d-d0fe-44e4-8b98-5be8fb75812b",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -376,12 +381,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "550c850e-7822-4c6f-b672-335c90783502",
+      "id": "945a9c4e-6e5c-429f-9cd6-9aa8b35a4182",
       "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
+      "command": "waitForElementPresent",
+      "target": "xpath=//label[contains(.,'Sell all')]",
+      "targets": [
+        ["css=#tradeActions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeActions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": "35000"
     }, {
       "id": "efb8803d-0b7a-4e65-9f6c-c598598ad9b7",
       "comment": "",
@@ -461,7 +471,7 @@
       "id": "b6d10778-e06d-4679-ab2a-46ad21e50266",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -511,12 +521,12 @@
       ],
       "value": ""
     }, {
-      "id": "dbf449ab-7d6a-486e-b0ee-c93bd3f0e104",
+      "id": "657206b0-8587-4f3d-8335-8b240fb83c07",
       "comment": "",
-      "command": "pause",
-      "target": "3900",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='submitOrder']",
       "targets": [],
-      "value": ""
+      "value": "39000"
     }, {
       "id": "7655eaa3-8da3-43a6-ab56-0e8ebbeaf1a0",
       "comment": "",
@@ -541,7 +551,7 @@
       "id": "b0a21a4f-3f02-4d1a-9017-13baa306a6c0",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -667,6 +677,18 @@
       "target": "4800",
       "targets": [],
       "value": ""
+    }, {
+      "id": "46525abd-f206-4bd2-bc6b-6340a18b2777",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//label[contains(.,'Buy')]",
+      "targets": [
+        ["css=#tradeActions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeActions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": "35000"
     }, {
       "id": "c77c5fc1-99b7-4d0e-ab30-7c993b44d26c",
       "comment": "",
@@ -802,12 +824,12 @@
       ],
       "value": ""
     }, {
-      "id": "bca24f74-2615-4306-9230-fb987907acfd",
+      "id": "615f13da-9178-46e7-80bf-66412ddb63b1",
       "comment": "",
-      "command": "pause",
-      "target": "3900",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='submitOrder']",
       "targets": [],
-      "value": ""
+      "value": "39000"
     }, {
       "id": "5cab07fb-d49f-4ba6-b23e-e80b5fed3b74",
       "comment": "",
@@ -832,7 +854,7 @@
       "id": "501c479b-fd95-4fa3-ae6f-8748d34c43c4",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -952,12 +974,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "ffe565fb-b4d5-44e7-b1e0-1dc746c53b9a",
+      "id": "2ab9b33c-b0d4-4176-9356-e2e43f2a7af5",
       "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
+      "command": "waitForElementPresent",
+      "target": "xpath=//label[contains(.,'Sell all')]",
+      "targets": [
+        ["css=#tradeActions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeActions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": "35000"
     }, {
       "id": "8622f9a7-a990-4ad6-9ec3-b2c749a19e8a",
       "comment": "",
@@ -1094,6 +1121,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "3bd7e430-3095-4b49-93f5-c67921a57480",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=acceptWarnings",
+      "targets": [],
+      "value": "39000"
+    }, {
       "id": "855ae9d6-0990-40f8-89e0-0d507e92175f",
       "comment": "",
       "command": "click",
@@ -1106,6 +1140,13 @@
         ["xpath=//div[2]/div/div[2]/mds-button", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "908cd542-6018-43ee-84b3-e61663822c14",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='submitOrder']",
+      "targets": [],
+      "value": "39000"
     }, {
       "id": "db5c935a-c317-4b27-94c7-41f3f81b7136",
       "comment": "",
@@ -1130,7 +1171,7 @@
       "id": "58a3fb8c-d345-4ab5-8c8d-5ade9c6b4aab",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -1257,12 +1298,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e9cea6fb-998f-4f5f-8411-594a714ad348",
+      "id": "bfc15324-5f2a-4980-b5ad-7ffd7b69b91b",
       "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
+      "command": "waitForElementPresent",
+      "target": "xpath=//label[contains(.,'Buy')]",
+      "targets": [
+        ["css=#tradeActions-container > .input-container:nth-child(1) > .input-label", "css:finder"],
+        ["xpath=//div[@id='tradeActions-container']/span/label", "xpath:idRelative"],
+        ["xpath=//fieldset/div/div/span/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": "35000"
     }, {
       "id": "7aa389e3-2449-4035-ac51-8e61823bf84d",
       "comment": "",
@@ -1426,12 +1472,12 @@
       ],
       "value": ""
     }, {
-      "id": "5e62faf1-dfb7-4b45-9243-c6c668bb0bb4",
+      "id": "37583149-498b-4518-96fe-da1f1c809ac7",
       "comment": "",
-      "command": "pause",
-      "target": "3900",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='submitOrder']",
       "targets": [],
-      "value": ""
+      "value": "39000"
     }, {
       "id": "edb3bcdb-49aa-4a9e-91d7-49bdc25b5e97",
       "comment": "",
@@ -1456,7 +1502,7 @@
       "id": "d550d030-69c8-4493-88da-ec270a9f2623",
       "comment": "",
       "command": "pause",
-      "target": "3500",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
