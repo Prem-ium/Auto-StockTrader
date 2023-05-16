@@ -24,14 +24,14 @@
       "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNT',\"NUMBERS','HERE']",
+      "target": "return ['YOUR_ACCOUNT','NUMBERS_HERE']",
       "targets": [],
       "value": "accounts"
     }, {
       "id": "51277964-fd77-466b-9595-0617964dbc41",
       "comment": "",
       "command": "executeScript",
-      "target": "return .26",
+      "target": "return .46",
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
@@ -99,12 +99,19 @@
       ],
       "value": ""
     }, {
-      "id": "13b8b5e7-1c2b-4706-a079-18195551e0b1",
+      "id": "ac3b1fa5-f2e4-4d2e-be74-c4067667b3be",
       "comment": "",
-      "command": "pause",
-      "target": "2300",
-      "targets": [],
-      "value": ""
+      "command": "waitForElementPresent",
+      "target": "id=eqt-ordsel-limit-price-label",
+      "targets": [
+        ["id=eqt-ordsel-limit-price-label", "id"],
+        ["css=#eqt-ordsel-limit-price-label", "css:finder"],
+        ["xpath=//label[@id='eqt-ordsel-limit-price-label']", "xpath:attributes"],
+        ["xpath=//div[@id='limit-price']/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Limit price')]", "xpath:innerText"]
+      ],
+      "value": "30000"
     }, {
       "id": "5b675ccd-8948-44e3-9adb-12924e894929",
       "comment": "",
@@ -120,12 +127,12 @@
       ],
       "value": ""
     }, {
-      "id": "701ecd44-f7f9-4934-bec1-50d862519112",
+      "id": "9146243c-4f0b-4aee-a6fa-614c7e28a6a5",
       "comment": "",
-      "command": "pause",
-      "target": "2300",
+      "command": "waitForElementEditable",
+      "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
       "comment": "",
@@ -141,17 +148,35 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+      "id": "182c2429-1166-4c4f-902f-4e73c158509b",
       "comment": "",
       "command": "sendKeys",
       "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
       "value": "${LIMIT_PRICE}"
     }, {
+      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=eqt-ordsel-limit-price-field",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "06379a6f-e464-4f57-9c09-ec95f54708d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#action-day s-assigned-wrapper",
+      "targets": [
+        ["css=#action-day s-assigned-wrapper", "css:finder"],
+        ["xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "0c8a010b-b60a-4819-b4c3-ccdd36af561c",
       "comment": "",
       "command": "pause",
-      "target": "2300",
+      "target": "1300",
       "targets": [],
       "value": ""
     }, {
