@@ -14,6 +14,13 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "0a9d7171-c708-45f0-a8e0-2ad2930c06b1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "93a6719a-b584-461a-828e-bebfddb7c7fc",
       "comment": "",
       "command": "executeScript",
@@ -55,6 +62,13 @@
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "87cc6003-75a5-4137-b9e9-001321cd0c31",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "4203529a-5895-4066-878e-e3af32ce5890",
       "comment": "",
@@ -113,7 +127,7 @@
         ["xpath=//input[@id='symbol']", "xpath:attributes"],
         ["xpath=//div[3]/div/tds-text-input/div/div/input", "xpath:position"]
       ],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "7eb1aceb-c091-4845-aaf4-f62363042916",
       "comment": "",
@@ -259,6 +273,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "b390876f-200f-4e68-929e-984c8e7668b9",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "d7d80404-0250-4492-a1e6-7e6b98b69bec",
       "comment": "",
       "command": "end",
@@ -276,6 +297,13 @@
       "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "6bbd3f55-9133-4d99-a7ec-2ea670049d66",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "fc6bd7f5-3d49-48b9-86e5-cc23f29e1687",
       "comment": "",
@@ -318,6 +346,13 @@
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "ae7952cc-d95a-46b2-9bab-7f7a4b4648a9",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "1bcad541-ae6d-4305-85bf-2d1a814ba722",
       "comment": "",
@@ -376,7 +411,7 @@
         ["xpath=//input[@id='symbol']", "xpath:attributes"],
         ["xpath=//div[3]/div/tds-text-input/div/div/input", "xpath:position"]
       ],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "61c0feac-9ad6-4046-afc3-eea8b6a9d884",
       "comment": "",
@@ -522,6 +557,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "c37d3c98-a4e6-401a-ad35-f14e0208bff8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "11b43d46-2cf4-4f4c-a12d-bab46d776d8c",
       "comment": "",
       "command": "end",
@@ -539,6 +581,13 @@
       "target": "AREB",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "0a1eb697-4ed3-4375-b2a0-d6e705d9d22d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "2c57ae98-c312-45c3-812f-1c42dd3f6c82",
       "comment": "",
@@ -581,6 +630,13 @@
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "e51a1ce7-69bf-4253-9b33-78282ced3ea8",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "70d62899-7d5e-4162-8fa9-f6e46e06c8c0",
       "comment": "",
@@ -691,7 +747,7 @@
       "command": "sendKeys",
       "target": "id=baseForm:investmentTextField",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "6a43da2d-3c26-4db9-97e1-d67fa5c525b6",
       "comment": "",
@@ -864,7 +920,7 @@
       "target": "",
       "targets": [],
       "value": ""
-    }, {    
+    }, {
       "id": "a1f78b77-ec4b-456e-b8c1-64e75758a5d8",
       "comment": "",
       "command": "click",
@@ -906,6 +962,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e3b6bb20-2760-4ebd-8877-542aba54c107",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "055bf9c3-a8cf-4abc-a8f9-fbd4e488d02f",
       "comment": "",
       "command": "end",
@@ -923,6 +986,13 @@
       "target": "AREB",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "cf63991b-a469-419e-adc4-8a8bbda4d6c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "397e51c1-398c-4d26-a102-7dd6c7ac4d82",
       "comment": "",
@@ -965,6 +1035,13 @@
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "11b8a8f3-f272-461f-83e3-8a038c257d29",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "fa45bae4-436f-4a1d-bf90-d53af008a9f2",
       "comment": "",
@@ -1075,7 +1152,7 @@
       "command": "sendKeys",
       "target": "id=baseForm:investmentTextField",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "96c786c5-cae0-43f8-a8c7-66a0f5cd6b7a",
       "comment": "",
@@ -1325,6 +1402,13 @@
       "comment": "",
       "command": "open",
       "target": "https://personal.vanguard.com/us/TradeTicket?investmentType=EQUITY",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdc227ab-151c-4019-b2a6-788e8966b1c8",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
