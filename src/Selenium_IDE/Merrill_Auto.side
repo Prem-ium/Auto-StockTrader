@@ -10,14 +10,21 @@
       "id": "08c6f363-95ea-44bc-966b-8ac9a0eb7d63",
       "comment": "",
       "command": "store",
-      "target": "enter_stock_symbol_here",
+      "target": "AREB",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "7dbc8616-7c17-4eef-8a4d-4f8d9b922e85",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "298e02a7-b6be-433e-b848-8228dafc7d12",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['1','2','3']",
+      "target": "return Array.from({length: 5}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -35,12 +42,19 @@
       "targets": [],
       "value": "list"
     }, {
-      "id": "36617664-cb7d-4041-88c5-6f1637e7827b",
+      "id": "d1c252db-f747-4f8b-92d5-8ec9a7a5e94f",
       "comment": "",
       "command": "forEach",
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "36617664-cb7d-4041-88c5-6f1637e7827b",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "ff85a5f6-9671-45d0-a861-441e09867734",
       "comment": "",
@@ -49,12 +63,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c8a60c32-e432-4c5c-81f6-c5fca13081aa",
+      "id": "72af3ab7-f3ca-4898-b7da-7dabe36880f1",
       "comment": "",
-      "command": "pause",
-      "target": "4000",
+      "command": "waitForElementPresent",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "64e36bab-0cb3-47cc-9f82-ffb1bd667350",
       "comment": "",
@@ -117,12 +131,12 @@
       "command": "sendKeys",
       "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "6bfe71a8-d4a8-4e62-8d81-8a8386308d64",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -143,7 +157,7 @@
       "id": "f79d4721-e33e-45f9-9580-caa5bd2edbd5",
       "comment": "",
       "command": "click",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText",
+      "target": "xpath=//div[4]/div[2]/div[2]/div[2]/a/span",
       "targets": [
         ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "id"],
         ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "css:finder"],
@@ -163,7 +177,7 @@
       "id": "e70fd575-0b4e-4f38-9370-eb8083808436",
       "comment": "",
       "command": "click",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2",
+      "target": "xpath=//span[contains(.,'Submit Order')]",
       "targets": [
         ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "id"],
         ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "css:finder"],
@@ -184,7 +198,14 @@
       "id": "d74c19eb-321e-4f2d-89a9-fd893ae143f0",
       "comment": "",
       "command": "echo",
-      "target": "Buy ${TICKER} on acct ${account} successful!",
+      "target": "Buying ${TICK} on acct ${account} test ran!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f684e1ae-3d4c-422a-95e2-86a2b708df7f",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -202,14 +223,21 @@
       "id": "edc50185-b08e-4814-8299-4b98a1cfd2c2",
       "comment": "",
       "command": "store",
-      "target": "PTIX",
+      "target": "AREB",
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "4cba0c7c-1216-44c2-9178-77f78f1e39db",
+      "id": "9b04dfeb-83ed-456b-b6c0-65dd36180f0d",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['1','2','3']",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
+      "id": "9d1d46da-1d46-40de-8fdf-9750f00d6cec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 5}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -233,6 +261,13 @@
       "target": "list",
       "targets": [],
       "value": "account"
+    }, {
+      "id": "e5235dee-3e04-41bd-b247-2e7bfd9f664e",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "b9d96e21-415a-451c-b6ad-e915e7eada4e",
       "comment": "",
@@ -302,7 +337,7 @@
         ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
         ["xpath=//div[2]/div[2]/input", "xpath:position"]
       ],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "e4767833-1389-42cb-8a8b-304f54577d29",
       "comment": "",
@@ -316,7 +351,7 @@
         ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
         ["xpath=//div[2]/div[2]/input", "xpath:position"]
       ],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "b968b49f-2524-49ca-8a5c-716f5c576fd9",
       "comment": "",
@@ -532,7 +567,14 @@
       "id": "1a7b5e24-57de-46e4-820e-1dd00e0dba6b",
       "comment": "",
       "command": "echo",
-      "target": "Sell ${TICKER} on acct ${account} successful!",
+      "target": "Sell ${TICK} on acct ${account} successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30caf639-cf31-4c69-9967-2ac872694b49",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
