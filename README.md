@@ -1,9 +1,10 @@
-# Auto Stock Trader
+<h1 align="center">Auto Stock Trader </h1>
 
-A repository containing scripts and projects for automating stock orders across multiple brokerages.
+<p align="center">An <i>awesome</i> repository containing scripts and projects for automating stock orders across multiple brokerages.</p>
 
+<p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></p>
 
-For a majority of these projects, on your browser of choice, you will need to download the [Selenium IDE browser extension.](https://github.com/SeleniumHQ/selenium-ide)  <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
+For a majority of these projects, on your browser of choice, you will need to download the [Selenium IDE browser extension.](https://github.com/SeleniumHQ/selenium-ide) <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
 rel="noreferrer"> <img
 src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg"
 alt="selenium" width="40" height="40" /></a>
