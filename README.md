@@ -93,11 +93,28 @@ You can also attempt to use 'Sofi Invest.side` to loop through your accounts and
 [Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD#sofi-invest-automation)
 
 ## Donations
-If you find my project helpful and would like to support its development, please consider making a donation. Every little bit helps and is greatly appreciated!
+## Donations
+I've been working on this project for a few months now, and I'm really happy with how it's turned out. It's also been a helpful tool for users to earn some extra money with Bing Rewards. I'm currently working on adding new features to the script and working on other similar programs to generate passive income. I'm also working on making the script more user-friendly and accessible to a wider audience.
 
-You can donate by clicking on the following button:
+I'm accepting donations through BuyMeCoffee or GitHub Sponsors. Any amount you can donate will be greatly appreciated.
 
-<a href="https://www.buymeacoffee.com/prem.ium" target="_blank"><img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
+    <div style="display: grid; justify-content: center;">
+        <span>Buy Me a Coffee:</span>
+        <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">
+            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">
+        </a>
+    </div>
+    <div style="display: grid; justify-content: center;">
+        <span>GitHub Sponsors:</span>
+        <a href="https://github.com/sponsors/Prem-ium" target="_blank">
+            <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">
+        </a>
+    </div>
+</div>
+
+Your donations will help me to cover the costs of hosting the project, developing new features, and marketing the project to a wider audience.
+Thank you for your support!
 
 # Disclaimer
 
