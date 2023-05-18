@@ -1,4 +1,4 @@
-<h1 align="center">Auto Stock Trader </h1>
+<h1 align="center"> ⚙️ Auto Stock Trader 💵 </h1>
 
 <p align="center">An <i>awesome</i> repository containing scripts and projects for automating stock orders across multiple brokerages.</p>
 
