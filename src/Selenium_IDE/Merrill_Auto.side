@@ -24,7 +24,7 @@
       "id": "298e02a7-b6be-433e-b848-8228dafc7d12",
       "comment": "",
       "command": "executeScript",
-      "target": "return [1, 2, 3, 4]",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -237,7 +237,7 @@
       "id": "9d1d46da-1d46-40de-8fdf-9750f00d6cec",
       "comment": "",
       "command": "executeScript",
-      "target": "return [1, 2, 3, 4]",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
