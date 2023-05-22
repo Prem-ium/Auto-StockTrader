@@ -34,7 +34,7 @@ def main():
             if var_name == "SCHWAB_AI":
                 info["task"] = "Array.from({length: " + os.environ[var_name] + "}, (_, i) => i);"
             elif var_name == "MERRILL_AI":
-                info["task"] = [i + 1 for i in range(int(os.environ[var_name].replace(" ", "").replace(",", ", ")))]
+                info["task"] = "Array.from({length: " +os.environ[var_name] + "}, (_, i) => i + 1);"
             else:
                 info["task"] = os.environ[var_name].replace(" ", "")
         else:
