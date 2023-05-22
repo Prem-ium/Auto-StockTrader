@@ -4,219 +4,6 @@
   "name": "Merrill Lynch",
   "url": "https://olui2.fs.ml.com",
   "tests": [{
-    "id": "07b834ba-01dd-4234-b76b-c9a38d838aeb",
-    "name": "Buy ML",
-    "commands": [{
-      "id": "08c6f363-95ea-44bc-966b-8ac9a0eb7d63",
-      "comment": "",
-      "command": "store",
-      "target": "AREB",
-      "targets": [],
-      "value": "TICKER"
-    }, {
-      "id": "7dbc8616-7c17-4eef-8a4d-4f8d9b922e85",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "298e02a7-b6be-433e-b848-8228dafc7d12",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "8bc55a89-4d65-41eb-abd1-ffe9a40cec04",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SLICE_TARGET\"",
-      "targets": [],
-      "value": "target"
-    }, {
-      "id": "9e0432ce-00b8-446d-9397-f0a8384a978e",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "list"
-    }, {
-      "id": "d1c252db-f747-4f8b-92d5-8ec9a7a5e94f",
-      "comment": "",
-      "command": "forEach",
-      "target": "list",
-      "targets": [],
-      "value": "account"
-    }, {
-      "id": "36617664-cb7d-4041-88c5-6f1637e7827b",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
-      "id": "ff85a5f6-9671-45d0-a861-441e09867734",
-      "comment": "",
-      "command": "open",
-      "target": "/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "72af3ab7-f3ca-4898-b7da-7dabe36880f1",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
-      "targets": [],
-      "value": "30000"
-    }, {
-      "id": "64e36bab-0cb3-47cc-9f82-ffb1bd667350",
-      "comment": "",
-      "command": "click",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
-      "targets": [
-        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType", "id"],
-        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$ddlOrderType", "name"],
-        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType", "css:finder"],
-        ["xpath=//select[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType']", "xpath:attributes"],
-        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div/select", "xpath:idRelative"],
-        ["xpath=//select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a65570cb-088d-41b2-891e-2bf302cca567",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1cd629bc-d888-4c9e-8ca8-e0ae587d80e9",
-      "comment": "",
-      "command": "select",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
-      "targets": [],
-      "value": "label=Buy"
-    }, {
-      "id": "ea2755cf-87f6-4566-90c0-696eeb116a12",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e754d788-9961-45cc-8a25-79f8ec6cea8a",
-      "comment": "",
-      "command": "click",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
-      "targets": [
-        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "id"],
-        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtSymbol", "name"],
-        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "css:finder"],
-        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol']", "xpath:attributes"],
-        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e59de11f-dc0a-4777-a3e3-d684799fe91e",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d26bfc6c-0cad-4e70-83df-7ec971c6ae97",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
-      "targets": [],
-      "value": "${TICK}"
-    }, {
-      "id": "6bfe71a8-d4a8-4e62-8d81-8a8386308d64",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2bb488e5-ebe6-4dec-a2f6-fbfd1e11b33f",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
-      "targets": [],
-      "value": "${KEY_ENTER}"
-    }, {
-      "id": "3d5cdcab-a1e0-4c03-b240-1ff2edd6d102",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f79d4721-e33e-45f9-9580-caa5bd2edbd5",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//div[4]/div[2]/div[2]/div[2]/a/span",
-      "targets": [
-        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "id"],
-        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "css:finder"],
-        ["xpath=//span[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText']", "xpath:attributes"],
-        ["xpath=//a[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_btnReviewOrder']/span", "xpath:idRelative"],
-        ["xpath=//div[4]/div[2]/div[2]/div[2]/a/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a9024e45-08b7-43fa-8049-4eb713ff2168",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e70fd575-0b4e-4f38-9370-eb8083808436",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//span[contains(.,'Submit Order')]",
-      "targets": [
-        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "id"],
-        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "css:finder"],
-        ["xpath=//span[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2']", "xpath:attributes"],
-        ["xpath=//a[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_btnSubmit']/span", "xpath:idRelative"],
-        ["xpath=//div[12]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Submit Order')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ffa00066-e692-4035-b83e-957f8ba4abfa",
-      "comment": "",
-      "command": "pause",
-      "target": "5000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d74c19eb-321e-4f2d-89a9-fd893ae143f0",
-      "comment": "",
-      "command": "echo",
-      "target": "Buying ${TICK} on acct ${account} test ran!",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f684e1ae-3d4c-422a-95e2-86a2b708df7f",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e33477e7-87c5-4c73-9290-59f4cdc2c867",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
     "id": "abeb29df-f535-4ffd-815a-1b73fdc45d16",
     "name": "Sell ML",
     "commands": [{
@@ -471,6 +258,261 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "7fa891f3-a2b2-41a2-b7c7-9455fc84b406",
+    "name": "Buy ML",
+    "commands": [{
+      "id": "4cfdd1e8-0442-43be-a6db-70dad509de0a",
+      "comment": "",
+      "command": "store",
+      "target": "AREB",
+      "targets": [],
+      "value": "TICKER"
+    }, {
+      "id": "d7df3ac9-fbd1-43a6-8e18-03d9504f3c0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
+      "id": "3e9dfae0-50f4-468c-8619-f1828c348c16",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "24167be7-92be-47af-84c6-7267455f378e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"-1\"",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "5254f316-d823-4577-b35b-5862454074d5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "5a28f883-1e5a-43fa-bd77-ca47f293d8cb",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "account"
+    }, {
+      "id": "f158e1e8-b03a-4aeb-9d81-e529da96fc49",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
+    }, {
+      "id": "aae8c119-bd63-43d9-9f4b-5fdf98e797f8",
+      "comment": "",
+      "command": "open",
+      "target": "/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2294195a-37dd-49a9-bcaa-8da31f0b8c01",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3380d0d8-3b1a-4c8e-aa8c-5ed8489e37f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$ddlOrderType", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType", "css:finder"],
+        ["xpath=//select[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType']", "xpath:attributes"],
+        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3730e554-c629-4236-ae70-115750d2296b",
+      "comment": "",
+      "command": "select",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
+      "targets": [],
+      "value": "label=Buy"
+    }, {
+      "id": "1143338c-25e9-4b1c-a8f0-ed32b7b92181",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a56d201f-f2b9-4c02-96b5-076ddbdb3bcc",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtSymbol", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "css:finder"],
+        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol']", "xpath:attributes"],
+        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebcfddc2-0312-4deb-b74e-5413105e1bc6",
+      "comment": "",
+      "command": "type",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtSymbol", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "css:finder"],
+        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol']", "xpath:attributes"],
+        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "${TICK}"
+    }, {
+      "id": "530391ab-e258-473b-a653-a3ea32f7db08",
+      "comment": "",
+      "command": "type",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtSymbol", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol", "css:finder"],
+        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol']", "xpath:attributes"],
+        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trSecondSection']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "${TICK}"
+    }, {
+      "id": "d8fc6592-4773-4d89-84a1-62c29ec10e2c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "528946c6-65a3-4153-b21a-010146abf616",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d206ce64-eea7-41fa-9429-ed863509638f",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtQuantity", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity", "css:finder"],
+        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='SellAmtPanel']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea6a1473-27f0-46e6-9883-58795025c961",
+      "comment": "",
+      "command": "type",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$txtQuantity", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity", "css:finder"],
+        ["xpath=//input[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity']", "xpath:attributes"],
+        ["xpath=//div[@id='SellAmtPanel']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "912ae8cf-c4de-42d3-b886-31c1042ef5df",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75e2c59a-371a-4560-8ae6-74f83ae8a36b",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddPriceType",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddPriceType", "id"],
+        ["name=ctl00$ctl00$ctl01$cphSiteMst$cphNestedPage$cphStage$view1$ddPriceType", "name"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddPriceType", "css:finder"],
+        ["xpath=//select[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddPriceType']", "xpath:attributes"],
+        ["xpath=//div[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_trThirdSection']/div/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5897ecbb-ad3a-4402-84b1-fd91c52c0f69",
+      "comment": "",
+      "command": "select",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddPriceType",
+      "targets": [],
+      "value": "label=Market"
+    }, {
+      "id": "ed062a3e-2f65-437e-b558-4450382fdf38",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_btnReviewOrder']/span",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "id"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText", "css:finder"],
+        ["xpath=//span[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_resxlblOrderPreviewText']", "xpath:attributes"],
+        ["xpath=//a[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_btnReviewOrder']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div[2]/div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccd24e58-cdf9-4524-9299-af8e5e0b3ec0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Submit Order')]",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "id"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2", "css:finder"],
+        ["xpath=//span[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_EquitiesResourceLabel2']", "xpath:attributes"],
+        ["xpath=//a[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_PilotPreviewConfirmPage_btnSubmit']/span", "xpath:idRelative"],
+        ["xpath=//div[12]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Submit Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26ad3c67-c5f2-4557-859b-a50d9be47a90",
+      "comment": "",
+      "command": "echo",
+      "target": "Sell ${TICK} on acct ${account} successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80e0d839-ebdb-4891-b90f-8d4d8701ac48",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0100f05-e7e4-4cca-8f30-07e5f0273b43",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "4ff56a1d-cd48-4efc-81d2-0a22ba307ee3",
@@ -478,7 +520,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["07b834ba-01dd-4234-b76b-c9a38d838aeb"]
+    "tests": []
   }],
   "urls": ["https://olui2.fs.ml.com/"],
   "plugins": []
