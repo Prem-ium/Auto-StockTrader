@@ -110,24 +110,10 @@
       ],
       "value": "35000"
     }, {
-      "id": "d96c2612-6ed5-449c-b975-71facda0bd33",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "f7a398a9-3a88-4c41-8214-111aac63cf88",
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Buy')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f452ad45-6fc6-4178-88ac-734317ae90df",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -393,24 +379,10 @@
       ],
       "value": "35000"
     }, {
-      "id": "efb8803d-0b7a-4e65-9f6c-c598598ad9b7",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Sell\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "50f3c670-db5c-40e7-aaac-81677677e201",
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Sell all')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "171f11c0-e665-4486-878c-aa46e55f6729",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -690,24 +662,10 @@
       ],
       "value": "35000"
     }, {
-      "id": "c77c5fc1-99b7-4d0e-ab30-7c993b44d26c",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "dd6f2410-4b74-4f4c-96ce-3ec0478c3a06",
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Buy')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5e262e7b-004c-444d-8bd0-d085bafc85f3",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -986,24 +944,10 @@
       ],
       "value": "35000"
     }, {
-      "id": "8622f9a7-a990-4ad6-9ec3-b2c749a19e8a",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Sell\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "73ff1c71-a9ce-411a-90db-53b9c4f91e4b",
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Sell all')]",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3982e2b3-0684-497f-80d5-46da37763c37",
-      "comment": "",
-      "command": "end",
-      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -1198,7 +1142,7 @@
     }]
   }, {
     "id": "5b211ca2-e94e-49d6-bf4b-d304a7cb59e6",
-    "name": "X_LimitBuy",
+    "name": "X_Limit_Order",
     "commands": [{
       "id": "29630226-877a-4845-861d-02f7531ce27c",
       "comment": "",
@@ -1213,6 +1157,13 @@
       "target": "return ${TICKER}.split(\",\");",
       "targets": [],
       "value": "TICKERS"
+    }, {
+      "id": "e74d640b-de64-40e9-8d9a-1e8e1607a677",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"Buy\";",
+      "targets": [],
+      "value": "FORMAT"
     }, {
       "id": "26507314-cfed-4a3e-80ae-4e7dc82fd219",
       "comment": "",
@@ -1248,13 +1199,6 @@
       "target": "window.scrollTo(0,0)",
       "targets": [],
       "value": ""
-    }, {
-      "id": "e74d640b-de64-40e9-8d9a-1e8e1607a677",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Buy\";",
-      "targets": [],
-      "value": "FORMAT"
     }, {
       "id": "42656073-e998-4f7e-9411-aa1087b71597",
       "comment": "",
@@ -1313,7 +1257,7 @@
       "id": "7aa389e3-2449-4035-ac51-8e61823bf84d",
       "comment": "",
       "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
+      "target": "${FORMAT} == \"Buy\"",
       "targets": [],
       "value": ""
     }, {
@@ -1321,6 +1265,20 @@
       "comment": "",
       "command": "click",
       "target": "xpath=//label[contains(.,'Buy')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4d45a6f-1628-48fc-a808-39f073bf4516",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad2d04fb-db01-4d13-92d7-f0cdea4c4292",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[contains(.,'Sell all')]",
       "targets": [],
       "value": ""
     }, {
@@ -1350,13 +1308,6 @@
         ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "602a12b9-6305-496e-b678-5c781d77d13f",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
       "value": ""
     }, {
       "id": "2b22655a-6031-4960-98a5-1e56eaf3d6b9",
@@ -1412,13 +1363,6 @@
         ["xpath=//div[@id='formItems']/div[3]/div/div[2]", "xpath:idRelative"],
         ["xpath=//div[2]/div[3]/div/div[2]", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "77f59f7a-c94d-4290-aacc-503d272dc656",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
       "value": ""
     }, {
       "id": "50656974-7b13-4eb8-9cab-87a6ddaaadd2",
