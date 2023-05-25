@@ -10,20 +10,25 @@ src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af9941
 alt="selenium" width="40" height="40" /></a>
 
 ## Supported Brokerages
-- Charles Schwab 
+
+- Charles Schwab
 - Firstrade
 - Vanguard
 - Fidelity
 - Chase / JP Morgan Invest
 - Ally Invest
 - Merrill Lynch
-- Sofi Invest (Archived)
+- Sofi Invest (Archived, Order Helper Script)
 
 ## Features
-- Automate Pre-Market & Market Buy/Sell Orders 
-- Multiple Tickers Automation in One Test (Split with ```,```)
-- XPATH Error Checking Functions
-- Quickstart using CLI
+
+- Pre-Market, Market, and After-Market Support
+- Multiple Ticker(s) Automation (Seperated by `,`)
+- Quickstart Shortcut .bat Script
+- Quickstart Script for .side file edits
+- XPATH Error Handling
+- Limit Orders Available on Certain Brokerages
+- Account Helper Scripts
 
 ## Enviornmental Variables
 
@@ -33,14 +38,14 @@ To use this project, you will need to set the following environment variables in
 
 `MERRILL_AI` = Total number of Merrill accounts.
 
-`CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers 
+`CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers
 [found within the desktop stock order URL](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png), separated by commas.
 
 `FIDELITY_AI` = A stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
 
 `ALLY_AI` = A stringified JSON array containing your Ally Investment account name + numbers, separated by commas.
 
-   - In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
+- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
 
 `FIRSTRADE_AI` = A stringified JSON array containing your FirstTrade Investment account numbers, separated by commas.
 
@@ -56,7 +61,8 @@ ALLY_AI="['Individual-A123456789','Individual-B098765432']";
 FIRSTRADE_AI="['111111','222222']";
 VANGUARD_AI="['54554326','54678936']";
 ```
-Refer to `.env.example` for more clarity. 
+
+Refer to `.env.example` for more clarity.
 
 ### Installation
 
@@ -69,15 +75,19 @@ pip install -r requirements.txt
 ```
 
 Configure [Enviornmental Variables](https://github.com/Prem-ium/Auto-StockTrader#enviornmental-variables) and run the script.
+
 ```
   python main.py
 ```
 
 Passing an argument will quickly update the stock orders in all .side projects.
+
 ```
   python main.py APPL
 ```
+
 ## Selenium IDE
+
 Automating Chase, Fidelity, Firstrade, Schwab, Vanguard, & Ally Invest, run `main.py` after configurating your `.env`.
 
 Once you've generated your .side projects, login to your brokerage accounts on your browser and utilize the [Selenium IDE browser extension](https://github.com/SeleniumHQ/selenium-ide) to open the `.side` projects generated & run your desired stock order automation(s).
@@ -86,34 +96,32 @@ For more assistance, refer to [archived README](https://github.com/Prem-ium/Auto
 
 # Archived Sofi Invest
 
-Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script. 
+Automating orders for Sofi Invest can be attempted through the now archived `sofi_main.py` Python script.
 Sofi is very unpredictable and unstable, and has been archived with no plans for further development.
 You can still attempt to use it, however the chances of every order going through are slim as Sofi Invest has weird order landing pages that contain different requirements & order layout for different stock tickers.
 
-You can also attempt to use 'Sofi Invest.side` to loop through your accounts and *manually* place orders. While not automated, it is a nice feature to have to help place orders on multiple accounts. Simpily replace the array with your account numbers, change 'Buy' or 'Sell' accordingly to get the correct order page.
+You can also attempt to use 'Sofi Invest.side` to loop through your accounts and _manually_ place orders. While not automated, it is a nice feature to have to help place orders on multiple accounts. Simpily replace the array with your account numbers, change 'Buy' or 'Sell' accordingly to get the correct order page.
 [Find more information here](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD#sofi-invest-automation)
 
 ## Donations
-I've been working on this project for a few months now, and I'm really happy with how it's turned out. It's also been a helpful tool for users to earn some extra money with Bing Rewards. I'm currently working on adding new features to the script and working on other similar programs to generate passive income. I'm also working on making the script more user-friendly and accessible to a wider audience.
+
+I've been working on this project for a few months now, and I'm really happy with how it's turned out. It's also been a helpful tool for users looking to run automated trading across multiple brokerage accounts at once. I'm currently working on adding new features to the script and working on other similar programs to generate passive income. I'm also working on making the script more user-friendly and accessible to a wider audience.
 
 I'm accepting donations through BuyMeCoffee or GitHub Sponsors. Any amount you can donate will be greatly appreciated.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
-    <div style="display: grid; justify-content: center;">
-        <span>Buy Me a Coffee:</span>
-        <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">
-            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">
+    <b>Buy Me a Coffee:</b>
+    <a href="https://www.buymeacoffee.com/prem.ium" target="_blank" style="text-decoration: none;">
+            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);"></a>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
+    <b>GitHub Sponsors:</b>
+        <a href="https://github.com/sponsors/Prem-ium" target="_blank" style="text-decoration: none;">
+            <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);">
         </a>
-    </div>
-    <div style="display: grid; justify-content: center;">
-        <span>GitHub Sponsors:</span>
-        <a href="https://github.com/sponsors/Prem-ium" target="_blank">
-            <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" style="height: 41px !important; width: 174px !important; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important; -webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;">
-        </a>
-    </div>
 </div>
 
-Your donations will help me to cover the costs of hosting the project, developing new features, and marketing the project to a wider audience.
+Your donations will help me to cover the costs of developing new features and marketing the project to a wider audience.
 Thank you for your support!
 
 # Disclaimer
@@ -132,5 +140,5 @@ Thank you for your support!
 
 ## Final Remarks
 
-Thank you for your interest in this repository. 
+Thank you for your interest in this repository.
 Please consider leaving a :star2: if you found this project to be cool!
