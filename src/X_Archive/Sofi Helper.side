@@ -24,7 +24,7 @@
       "id": "4956efa5-c445-44f1-9771-90e6c188c228",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"AK\";",
+      "target": "return \"UR_ACCT_HERE\";",
       "targets": [],
       "value": "target"
     }, {
@@ -89,7 +89,7 @@
         ["xpath=//div[@id='input-wrapper-5']/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${LIMIT}"
     }, {
       "id": "521619f8-7941-4889-b3e4-be56306e2ac9",
       "comment": "",
@@ -110,13 +110,32 @@
       "command": "type",
       "target": "id=input-1",
       "targets": [],
-      "value": "${LIMIT}"
+      "value": "1"
     }, {
-      "id": "c4c53565-41fd-44f0-9f2e-ec5bfdabdea0",
+      "id": "6bab2c58-7aa2-44ae-b6a9-954d2e4c121a",
       "comment": "",
-      "command": "pause",
-      "target": "6250",
-      "targets": [],
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Review')]",
+      "targets": [
+        ["css=.sc-hmjpVf", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//main[@id='mainContent']/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Review')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb20f7d-b271-48dd-ac68-68e8642b9315",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Buy ${TICKER}')]",
+      "targets": [
+        ["css=.sc-hmjpVf", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//main[@id='mainContent']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy TRKA')]", "xpath:innerText"]
+      ],
       "value": ""
     }, {
       "id": "0be328ba-62fb-4aa1-a491-e47dedb5f783",
