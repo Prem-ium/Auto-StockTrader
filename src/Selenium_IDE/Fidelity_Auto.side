@@ -70,6 +70,13 @@
       "targets": [],
       "value": "TICK"
     }, {
+      "id": "5c8539cb-a215-423a-b583-c70ab71dd04d",
+      "comment": "",
+      "command": "echo",
+      "target": "STARTING: ${account} BUY Order for ${TICK}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
       "comment": "",
       "command": "open",
@@ -209,7 +216,7 @@
       "id": "f663fda9-612d-411f-b6de-8ea9ce568d08",
       "comment": "",
       "command": "echo",
-      "target": "${account}: Purchasing ${TICK} Test Completed.",
+      "target": "COMPLETED: ${account} Ordered ${TICK}",
       "targets": [],
       "value": ""
     }, {
@@ -286,6 +293,13 @@
       "target": "TICKERS",
       "targets": [],
       "value": "TICK"
+    }, {
+      "id": "e981fb93-7a4f-41a6-9931-a7d4169dfb48",
+      "comment": "",
+      "command": "echo",
+      "target": "STARTING: ${account} SELL Order for ${TICK}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
       "comment": "",
@@ -373,10 +387,10 @@
       ],
       "value": ""
     }, {
-      "id": "7bc781af-0a4b-4fe9-8fbb-3c91c4d14f67",
+      "id": "728a334b-52c5-4778-8cf0-2a6d4f78b570",
       "comment": "",
       "command": "echo",
-      "target": "${account}: Selling ${TICK} Test Completed.",
+      "target": "COMPLETED: ${account} SOLD ${TICK}",
       "targets": [],
       "value": ""
     }, {
