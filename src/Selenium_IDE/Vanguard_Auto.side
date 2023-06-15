@@ -683,6 +683,13 @@
       ],
       "value": ""
     }, {
+      "id": "c7bad4a4-aaf7-456b-bc7c-dc1bd01c4183",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=baseForm:accountSelectOne:${account}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "43085b6e-a689-4350-914f-22c7ef9abccf",
       "comment": "",
       "command": "click",
@@ -1086,6 +1093,13 @@
         ["xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
         ["xpath=//a/table/tbody/tr/td[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "7fcfa4db-d978-4d7f-8b8b-af59d24ecbda",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=baseForm:accountSelectOne:${account}",
+      "targets": [],
       "value": ""
     }, {
       "id": "812622fb-2992-49ee-9640-1be29a5d1334",
