@@ -38,7 +38,7 @@
       "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SLICE_TARGET\"",
+      "target": "return \"SLICE_TARGET\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -262,7 +262,7 @@
       "id": "85bea692-3a09-4056-9921-27fd1c96586a",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SLICE_TARGET\"",
+      "target": "return \"SLICE_TARGET\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -349,7 +349,7 @@
       "id": "1d76441d-159d-48fd-a10f-33ffdb7c51a4",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = '//pvd3-modal[3]/s-root/div/div[2]/div/div/s-slot/s-assigned-wrapper/h2'; const element = document.evaluate(xpath,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; const xpath2 = '/html/body/div[5]/ap122489-ett-component/div/pvd3-modal[3]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; const xpath3 = '/html/body/div[3]/ap122489-ett-component/div/pvd3-modal[3]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element3 = document.evaluate(xpath3,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return ((element && (element.textContent === \"Error\" || element.textContent.includes(\"error\"))) && ((element2 && (element2.textContent.includes(\"do not have enough shares\")) || (element3 && (element3.textContent.includes(\"do not have enough\") || (element3.textContent.includes(\"was not found\") || element3.textContent.includes(\"you will need to modify your order\")))))));",
+      "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/pvd3-modal[1]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"do not have enough shares\") || element2.textContent.includes(\"was not found\")))));",
       "targets": [],
       "value": "result"
     }, {

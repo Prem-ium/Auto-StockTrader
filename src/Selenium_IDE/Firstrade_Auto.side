@@ -31,7 +31,7 @@
       "id": "0c21e4cd-cee0-4c9a-902d-711bd51ff73f",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -274,7 +274,7 @@
       "id": "e2e95a20-d305-49d8-a243-44c1465daa0c",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\"",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {

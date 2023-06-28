@@ -31,7 +31,7 @@
       "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
+      "target": "return \"STRIP_AI_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -300,7 +300,7 @@
       "id": "3e85cc91-9356-4773-afb6-8f47c46b3801",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
+      "target": "return \"STRIP_AI_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -590,7 +590,7 @@
       "id": "b076f9e7-2155-4548-b4cc-667d73fec3ac",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"SPLIT_TARGET\";",
+      "target": "return \"SPLIT_TARGET\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -879,7 +879,7 @@
       "id": "babfd393-9fe7-4a7c-b3cc-af4e4387ecbd",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
+      "target": "return \"STRIP_AI_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {
@@ -1210,7 +1210,7 @@
       "id": "112bff61-20b5-4f46-9657-ca60c91e6fa2",
       "comment": "",
       "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\";",
+      "target": "return \"STRIP_AI_HERE\".trim();",
       "targets": [],
       "value": "target"
     }, {
