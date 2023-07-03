@@ -513,6 +513,24 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "f5052143-1096-43df-9348-77756d35ce51",
+    "name": "0-Login",
+    "commands": [{
+      "id": "06844a9e-ccc4-4aaf-b22c-f7a0c48738cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://olui2.fs.ml.com/login/signin.aspx?sgt=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
+      "comment": "",
+      "command": "echo",
+      "target": "Login Landing Page Open",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "4ff56a1d-cd48-4efc-81d2-0a22ba307ee3",

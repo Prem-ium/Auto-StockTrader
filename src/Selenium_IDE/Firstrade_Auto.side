@@ -488,6 +488,24 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "24b2fe7d-03f7-4b18-b846-77fae0f90f87",
+    "name": "0-Login",
+    "commands": [{
+      "id": "550a267d-aa4e-423f-b611-90458a1759ac",
+      "comment": "",
+      "command": "open",
+      "target": "https://invest.firstrade.com/cgi-bin/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
+      "comment": "",
+      "command": "echo",
+      "target": "Login Landing Page Open",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "34398528-d8e1-448a-9801-cbe828f27800",

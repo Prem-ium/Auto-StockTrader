@@ -902,6 +902,24 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "b9eea497-2592-4c70-bba1-36c1f66168c8",
+    "name": "0-Login",
+    "commands": [{
+      "id": "0fa645fa-5c44-4eef-b72f-6a3441c6bd9e",
+      "comment": "",
+      "command": "open",
+      "target": "https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14fddac9-8c36-439b-a284-452670484ab4",
+      "comment": "",
+      "command": "echo",
+      "target": "Login Landing Page Opened",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "5c03e64a-0f9b-422a-b416-65be8986bacd",

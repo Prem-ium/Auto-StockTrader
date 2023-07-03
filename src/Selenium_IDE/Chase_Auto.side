@@ -1499,6 +1499,24 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "2d99eb36-148b-4193-a48c-4bbb53ff95f5",
+    "name": "0-Login",
+    "commands": [{
+      "id": "0b1cac16-125a-4ea3-af0a-3c8ee8c8a0b4",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/overviewAccounts/overview/index",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "852e2221-fc13-4197-9c06-76a77ec40ea0",
+      "comment": "",
+      "command": "echo",
+      "target": "Login Landing Page Open.",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "e95a4baa-de2a-4ef5-a5bd-77d1075defb2",
