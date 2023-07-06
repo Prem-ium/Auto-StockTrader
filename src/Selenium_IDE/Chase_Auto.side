@@ -1510,10 +1510,103 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "852e2221-fc13-4197-9c06-76a77ec40ea0",
+      "id": "cb083caa-9089-4a9b-a9a2-c1b848142ab7",
       "comment": "",
       "command": "echo",
-      "target": "Login Landing Page Open.",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02f801a6-ca09-4b90-90bc-68c1d023b056",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "CHASE_LOGIN"
+    }, {
+      "id": "43004f91-1452-4400-93b5-c7f851d9eb55",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${CHASE_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "858cbcf4-764d-432b-a19d-2587d01c3395",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b1ec4b-bfc5-4334-90bf-7947bd52feaa",
+      "comment": "",
+      "command": "pause",
+      "target": "1200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61ee2de5-30e7-415f-9710-90cecd6f501c",
+      "comment": "",
+      "command": "click",
+      "target": "id=userId-text-input-field",
+      "targets": [
+        ["id=userId-text-input-field", "id"],
+        ["name=userId", "name"],
+        ["css=#userId-text-input-field", "css:finder"],
+        ["xpath=//input[@id='userId-text-input-field']", "xpath:attributes"],
+        ["xpath=//div[@id='userId-text']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3705d181-681f-4c49-8a3b-20379f0edc13",
+      "comment": "",
+      "command": "type",
+      "target": "id=userId-text-input-field",
+      "targets": [
+        ["id=userId-text-input-field", "id"],
+        ["name=userId", "name"],
+        ["css=#userId-text-input-field", "css:finder"],
+        ["xpath=//input[@id='userId-text-input-field']", "xpath:attributes"],
+        ["xpath=//div[@id='userId-text']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "312a7309-d2d1-4224-858a-227db4675c84",
+      "comment": "",
+      "command": "click",
+      "target": "id=password-text-input-field",
+      "targets": [
+        ["id=password-text-input-field", "id"],
+        ["name=password", "name"],
+        ["css=#password-text-input-field", "css:finder"],
+        ["xpath=//input[@id='password-text-input-field']", "xpath:attributes"],
+        ["xpath=//div[@id='password-text']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fdbbd46-28cf-4456-9ed2-553030305f60",
+      "comment": "",
+      "command": "type",
+      "target": "id=password-text-input-field",
+      "targets": [
+        ["id=password-text-input-field", "id"],
+        ["name=password", "name"],
+        ["css=#password-text-input-field", "css:finder"],
+        ["xpath=//input[@id='password-text-input-field']", "xpath:attributes"],
+        ["xpath=//div[@id='password-text']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "f8300922-3715-433e-9c3f-ace439d6148c",
+      "comment": "",
+      "command": "echo",
+      "target": "Chase has never allowed a login to be automated through Selenium IDE, however hopefully this saves you the extra hastle of manually inputting details if you have not saved credentials into your browser.",
       "targets": [],
       "value": ""
     }]
