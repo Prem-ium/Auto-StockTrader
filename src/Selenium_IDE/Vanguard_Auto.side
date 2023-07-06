@@ -1433,6 +1433,119 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "fc14f86b-7526-4124-b1c1-776cf0b13d0f",
+    "name": "0-Login",
+    "commands": [{
+      "id": "95ae2867-85b3-4569-978e-a3214ccf56ef",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca2cf219-8d97-4990-a975-74bad45e7c97",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "VANGUARD_LOGIN"
+    }, {
+      "id": "c7374ff3-b38c-4e38-b54b-b05c4a08030a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${VANGUARD_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "8351cece-64ad-4210-a03d-62b5b4d66675",
+      "comment": "",
+      "command": "click",
+      "target": "id=USER",
+      "targets": [
+        ["id=USER", "id"],
+        ["name=USER", "name"],
+        ["css=#USER", "css:finder"],
+        ["xpath=//input[@id='USER']", "xpath:attributes"],
+        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebcae294-059d-4d07-9cb0-846005c64095",
+      "comment": "",
+      "command": "type",
+      "target": "id=USER",
+      "targets": [
+        ["id=USER", "id"],
+        ["name=USER", "name"],
+        ["css=#USER", "css:finder"],
+        ["xpath=//input[@id='USER']", "xpath:attributes"],
+        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "fd026491-b6a6-41d6-895f-bf6d20d7200e",
+      "comment": "",
+      "command": "click",
+      "target": "id=PASSWORD-blocked",
+      "targets": [
+        ["id=PASSWORD-blocked", "id"],
+        ["css=#PASSWORD-blocked", "css:finder"],
+        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
+        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8833593e-1f78-4458-bce2-88aa4751785c",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "225680e5-490c-4f3b-bd69-1642a62825dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=PASSWORD-blocked",
+      "targets": [
+        ["id=PASSWORD-blocked", "id"],
+        ["css=#PASSWORD-blocked", "css:finder"],
+        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
+        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "2308bf41-8214-4af2-993d-3e969d53cf43",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-password-form",
+      "targets": [
+        ["id=username-password-form", "id"],
+        ["name=username-password-form", "name"],
+        ["css=#username-password-form", "css:finder"],
+        ["xpath=//form[@id='username-password-form']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed98d22b-072e-497f-8c19-67d69438c798",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c11n-button__label",
+      "targets": [
+        ["css=.c11n-button__label", "css:finder"],
+        ["xpath=//button[@id='username-password-submit-btn']/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "7728ec07-4d6b-4211-842b-bac7f8f7081b",

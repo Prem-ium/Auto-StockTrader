@@ -29,6 +29,7 @@ alt="selenium" width="40" height="40" /></a>
 - XPATH Error Handling
 - Limit Orders Available on Certain Brokerages
 - Account Helper Scripts
+- Semi-Automated Login Scripts
 
 ## Enviornmental Variables
 
@@ -45,7 +46,7 @@ To use this project, you will need to set the following environment variables in
 
 `ALLY_AI` = A stringified JSON array containing your Ally Investment account name + numbers, separated by commas.
 
-- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1.
+- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1. Otherwise, running the automation script will buy 100 shares by default or whatever number you've previously entered into Ally default order settings.
 
 `FIRSTRADE_AI` = A stringified JSON array containing your FirstTrade Investment account numbers, separated by commas.
 
@@ -61,6 +62,19 @@ ALLY_AI="['Individual-A123456789','Individual-B098765432']";
 FIRSTRADE_AI="['111111','222222']";
 VANGUARD_AI="['54554326','54678936']";
 ```
+
+**Account Credentials Separated by ':'**
+
+To attempt to enter credentials or login where possible, you can set the following environment variables:
+
+- `CHASE_LOGIN`: "USERNAME:PASSWORD" for Chase.
+- `FIDELITY_LOGIN`: "USERNAME:PASSWORD" for Fidelity.
+- `FIRSTRADE_LOGIN`: "USERNAME:PASSWORD" for FirstTrade.
+- `MERRILL_LOGIN`: "USERNAME:PASSWORD" for Merrill.
+- `SCHWAB_LOGIN`: "USERNAME:PASSWORD" for Schwab.
+- `ALLY_LOGIN`: "USERNAME:PASSWORD" for Ally.
+- `VANGUARD_LOGIN`: "USERNAME:PASSWORD" for Vanguard.
+
 
 Refer to `.env.example` for more clarity.
 
@@ -107,13 +121,8 @@ You can also attempt to use 'Sofi Invest.side` to loop through your accounts and
 
 I've been working on this project for a few months now, and I'm really happy with how it's turned out. It's also been a helpful tool for users looking to run automated trading across multiple brokerage accounts at once. I'm currently working on adding new features to the script and working on other similar programs to generate passive income. I'm also working on making the script more user-friendly and accessible to a wider audience.
 
-I'm accepting donations through BuyMeCoffee or GitHub Sponsors. Any amount you can donate will be greatly appreciated.
+I'm accepting donations through GitHub Sponsors (No Fees!) or BuyMeCoffee. Any amount you can donate will be greatly appreciated.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
-    <b>Buy Me a Coffee:</b>
-    <a href="https://www.buymeacoffee.com/prem.ium" target="_blank" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);"></a>
-</div>
 <div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
     <b>GitHub Sponsors:</b>
         <a href="https://github.com/sponsors/Prem-ium" target="_blank" style="text-decoration: none;">
@@ -121,24 +130,20 @@ I'm accepting donations through BuyMeCoffee or GitHub Sponsors. Any amount you c
         </a>
 </div>
 
-Your donations will help me to cover the costs of developing new features and marketing the project to a wider audience.
-Thank you for your support!
+<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
+    <b>Buy Me a Coffee:</b>
+    <a href="https://www.buymeacoffee.com/prem.ium" target="_blank" style="text-decoration: none;">
+            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);"></a>
+</div>
+
+Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your unwavering support!
 
 # Disclaimer
 
-⚠️ **DISCLAIMER:** _You're using these automation scripts at your own risk, I am not responsible for any financial or account loss or damage that may occur._
+⚠️ **DISCLAIMER:** You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
 
-## Important Information
+## Acknowledgments & Final Remarks
+A special thanks to all <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donor(s), </a>tester(s), and<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> contributor(s).</a>
 
-- This script is provided for informational purposes only and does not constitute financial or investment advice. The user is solely responsible for any investment decisions made based on the information provided by the script(s)/.side project/repository.
-
-- The script is provided "as is" and without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
-
-- The user understands that the script's performance may be affected by factors beyond developer's control, such as market volatility, technical issues with the trading platform, internet connectivity issues, & more.
-
-- The user agrees to indemnify and hold the developer(s) harmless from any and all claims, damages, or losses arising from their use of the script(s)/.side project/repository.
-
-## Final Remarks
-
-Thank you for your interest in this repository.
+Thank you so much for your interest in this repository.
 Please consider leaving a :star2: if you found this project to be cool!

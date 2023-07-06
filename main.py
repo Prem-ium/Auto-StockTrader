@@ -25,18 +25,25 @@ FILE_TASK_MAP = {
 
 CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
 FILES = []
+LOGINS = []
 
 def main():
     for var_name, info in FILE_TASK_MAP.items():
         if os.environ.get(var_name):
             FILES.append(info["file"])
             print(f"{var_name} is enabled.")
+
             if var_name == "SCHWAB_AI":
                 info["task"] = "Array.from({length: " + os.environ[var_name] + "}, (_, i) => i);"
             elif var_name == "MERRILL_AI":
                 info["task"] = "Array.from({length: " +os.environ[var_name] + "}, (_, i) => i + 1);"
             else:
                 info["task"] = os.environ[var_name].replace(" ", "")
+
+            try:
+                LOGINS.append(os.environ[var_name.split("_")[0] + "_LOGIN"])
+            except:
+                LOGINS.append("USERNAME:PASSWORD")
         else:
             print(f"{var_name} is disabled. Skipping...")
     print('\n\n')
@@ -53,6 +60,9 @@ def main():
 
         for test in data['tests']:
             for command in test['commands']:
+                if command['command'] == 'store' and 'LOGIN' in command['value']:
+                    command['target'] = LOGINS.pop(0)
+
                 # Update Ticker, if provided
                 if TICKER is not None and command['value'] == 'TICKER':
                     command['target'] = f"return '{TICKER}'" if command['command'] == 'executeScript' else TICKER
