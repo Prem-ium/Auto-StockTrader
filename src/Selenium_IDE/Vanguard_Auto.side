@@ -42,13 +42,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "086b7bf2-ee4b-4a8c-8fdc-3b93100ae099",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "876x820",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "43cef369-ab0e-46e1-a20c-ea2ca342f143",
       "comment": "",
       "command": "executeScript",
@@ -326,13 +319,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "16166601-0f81-406e-8fd7-5166d956d1d6",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "876x820",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a38ce32b-6bf2-4801-b638-a4558db48f31",
       "comment": "",
       "command": "executeScript",
@@ -607,13 +593,6 @@
       "comment": "",
       "command": "open",
       "target": "https://personal.vanguard.com/us/TradeTicket?investmentType=EQUITY",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "87f130b4-9df2-4149-9f08-00988ec2bf27",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "876x820",
       "targets": [],
       "value": ""
     }, {
@@ -1019,13 +998,6 @@
       "comment": "",
       "command": "open",
       "target": "https://personal.vanguard.com/us/TradeTicket?investmentType=EQUITY",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f7f11c25-ac8b-46cb-925c-f2f2a4739815",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "876x820",
       "targets": [],
       "value": ""
     }, {
@@ -1458,7 +1430,7 @@
       "targets": [],
       "value": "LOGIN"
     }, {
-      "id": "8351cece-64ad-4210-a03d-62b5b4d66675",
+      "id": "71ef1e0f-cb53-4886-b398-3576e54e0bc2",
       "comment": "",
       "command": "click",
       "target": "id=USER",
@@ -1486,7 +1458,7 @@
       ],
       "value": "${LOGIN[0]}"
     }, {
-      "id": "fd026491-b6a6-41d6-895f-bf6d20d7200e",
+      "id": "ad143007-8014-4124-9818-b439e08d0761",
       "comment": "",
       "command": "click",
       "target": "id=PASSWORD-blocked",

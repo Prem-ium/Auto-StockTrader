@@ -60,6 +60,7 @@ def main():
 
         for test in data['tests']:
             for command in test['commands']:
+                # Store Login information, if provided
                 if command['command'] == 'store' and 'LOGIN' in command['value']:
                     command['target'] = LOGINS.pop(0)
 
