@@ -524,13 +524,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
-      "comment": "",
-      "command": "echo",
-      "target": "Login Landing Page Open",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3f4a83a7-d9c1-4ab7-be05-29db93bc9880",
       "comment": "",
       "command": "store",
@@ -538,12 +531,33 @@
       "targets": [],
       "value": "MERRILL_LOGIN"
     }, {
-      "id": "86d5cc88-251f-46ed-b19e-49c88baedfca",
+      "id": "548274e2-0661-4d2d-a4ef-41fc72a57791",
       "comment": "",
       "command": "executeScript",
       "target": "return ${MERRILL_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "86d5cc88-251f-46ed-b19e-49c88baedfca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${MERRILL_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "081b7e85-5ee5-4fea-aa38-436ac0fcaf7b",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
     }, {
       "id": "77c6365b-f3b4-4a6e-a003-12c527d2301b",
       "comment": "",
@@ -643,6 +657,13 @@
         ["xpath=//div[@id='ContentPH01']/a", "xpath:idRelative"],
         ["xpath=//div[3]/div/span/div/div[2]/a", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "d78c5455-4a58-4c4e-a437-82ac0cab5955",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],

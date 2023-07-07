@@ -1423,12 +1423,26 @@
       "targets": [],
       "value": "VANGUARD_LOGIN"
     }, {
-      "id": "c7374ff3-b38c-4e38-b54b-b05c4a08030a",
+      "id": "f38bd345-75b8-49d8-97ed-97d9904b8b47",
       "comment": "",
       "command": "executeScript",
       "target": "return ${VANGUARD_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "c7374ff3-b38c-4e38-b54b-b05c4a08030a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${VANGUARD_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "6b0a4de6-b632-487f-96d3-3adc53d4eb75",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "71ef1e0f-cb53-4886-b398-3576e54e0bc2",
       "comment": "",
@@ -1516,6 +1530,13 @@
         ["xpath=//button[@id='username-password-submit-btn']/span/span", "xpath:idRelative"],
         ["xpath=//span/span", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "886b306f-f72b-403a-a8d5-f7dd24151b9e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],

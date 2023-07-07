@@ -1510,13 +1510,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "cb083caa-9089-4a9b-a9a2-c1b848142ab7",
-      "comment": "",
-      "command": "echo",
-      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "02f801a6-ca09-4b90-90bc-68c1d023b056",
       "comment": "",
       "command": "store",
@@ -1524,12 +1517,40 @@
       "targets": [],
       "value": "CHASE_LOGIN"
     }, {
-      "id": "43004f91-1452-4400-93b5-c7f851d9eb55",
+      "id": "843f21c0-02ad-4b12-897f-627f57b7bb9a",
       "comment": "",
       "command": "executeScript",
       "target": "return ${CHASE_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "43004f91-1452-4400-93b5-c7f851d9eb55",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${CHASE_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "70ef1285-7ad2-4895-9eca-ab6d25048e4f",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11ba7bad-ad33-4d92-9ee7-8d13799dc1bb",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb083caa-9089-4a9b-a9a2-c1b848142ab7",
+      "comment": "",
+      "command": "echo",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "858cbcf4-764d-432b-a19d-2587d01c3395",
       "comment": "",
@@ -1607,6 +1628,13 @@
       "comment": "",
       "command": "echo",
       "target": "Chase has never allowed a login to be automated through Selenium IDE, however hopefully this saves you the extra hastle of manually inputting details if you have not saved credentials into your browser.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8ded206-3b85-4861-8d5c-a983ec1120e1",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }]

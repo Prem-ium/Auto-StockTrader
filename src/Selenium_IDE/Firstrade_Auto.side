@@ -499,26 +499,40 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
-      "comment": "",
-      "command": "echo",
-      "target": "Login Landing Page Open",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3835fe1f-7ddc-473b-a3a4-55361aa6f6f3",
       "comment": "",
       "command": "store",
-      "target": "USER:PASS",
+      "target": "LOGIN:HERE",
       "targets": [],
       "value": "FIRSTRADE_LOGIN"
     }, {
-      "id": "836d2a91-161b-459a-bebb-3f6390bbf6b4",
+      "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
       "comment": "",
       "command": "executeScript",
       "target": "return ${FIRSTRADE_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "836d2a91-161b-459a-bebb-3f6390bbf6b4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${FIRSTRADE_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
     }, {
       "id": "90786ca9-c88b-4cda-aa8d-3f03163fe619",
       "comment": "",
@@ -587,6 +601,13 @@
         ["xpath=//form[@id='loginForm']/input[4]", "xpath:idRelative"],
         ["xpath=//input[4]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "c3657f82-8f80-4a86-84a9-947474233276",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],

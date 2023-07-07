@@ -927,12 +927,26 @@
       "targets": [],
       "value": "SCHWAB_LOGIN"
     }, {
-      "id": "709c42ea-4584-4cd8-898a-b6276bb28f1d",
+      "id": "b1af578a-9b98-48ea-9128-7d8e3e457864",
       "comment": "",
       "command": "executeScript",
       "target": "return ${SCHWAB_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "709c42ea-4584-4cd8-898a-b6276bb28f1d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${SCHWAB_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "186feb56-385a-4e83-bcbb-1386e6f90ad2",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
     }, {
       "id": "aca88a4a-352f-4e57-97f1-f6307002c44f",
       "comment": "",
@@ -1006,6 +1020,13 @@
         ["xpath=//div[@id='button-container']/button", "xpath:idRelative"],
         ["xpath=//button", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "0438c0af-6e9a-4707-b421-05fee2e0e374",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
