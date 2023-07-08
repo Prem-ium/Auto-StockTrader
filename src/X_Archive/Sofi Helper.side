@@ -4,7 +4,7 @@
   "name": "Sofi Helper",
   "url": "https://www.sofi.com/wealth/",
   "tests": [{
-    "id": "00fe9fca-2260-4ca5-beee-945eb08cc90c",
+    "id": "00fe9fca-2260-4ca5-beee-945eb08cc90k",
     "name": "Sofi",
     "commands": [{
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
