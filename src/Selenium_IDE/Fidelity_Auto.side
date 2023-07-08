@@ -80,7 +80,7 @@
       "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
       "targets": [],
       "value": ""
     }, {
@@ -304,7 +304,7 @@
       "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=N",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
       "targets": [],
       "value": ""
     }, {
