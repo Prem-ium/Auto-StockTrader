@@ -415,6 +415,127 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "2db8e529-1771-4461-b300-3e5027c85693",
+    "name": "0-Login",
+    "commands": [{
+      "id": "615f1a28-8146-4313-85a7-5693201d753e",
+      "comment": "",
+      "command": "open",
+      "target": "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3835fe1f-7ddc-473b-a3a4-55361aa6f6f3",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "FIDELITY_LOGIN"
+    }, {
+      "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${FIDELITY_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "836d2a91-161b-459a-bebb-3f6390bbf6b4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${FIDELITY_LOGIN} != \"LOGIN:HERE\";",
+      "targets": [],
+      "value": "use_login"
+    }, {
+      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
+      "comment": "",
+      "command": "if",
+      "target": "${use_login}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d243563e-d248-4edd-ad29-e0f1bfba02e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=userId-input",
+      "targets": [
+        ["id=userId-input", "id"],
+        ["css=#userId-input", "css:finder"],
+        ["xpath=//input[@id='userId-input']", "xpath:attributes"],
+        ["xpath=//div[@id='fs-username-div']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "220cfd2d-ddf6-4b3e-afc7-2e5b744eab80",
+      "comment": "",
+      "command": "type",
+      "target": "id=userId-input",
+      "targets": [
+        ["id=userId-input", "id"],
+        ["css=#userId-input", "css:finder"],
+        ["xpath=//input[@id='userId-input']", "xpath:attributes"],
+        ["xpath=//div[@id='fs-username-div']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "bc48fe54-c65a-4ed1-8f31-da30def0db3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=PIN", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='fs-password-div']/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2abc9cff-361a-4f93-b54f-17ea3d9b066a",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=PIN", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='fs-password-div']/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "8b783b4f-a64f-4e05-9e19-f2639b7267e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=fs-login-button",
+      "targets": [
+        ["id=fs-login-button", "id"],
+        ["css=#fs-login-button", "css:finder"],
+        ["xpath=//button[@id='fs-login-button']", "xpath:attributes"],
+        ["xpath=//div[@id='fs-submit-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Log In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3657f82-8f80-4a86-84a9-947474233276",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "2076ccc1-f9b5-4a8f-a8b7-45c11df5b928",
