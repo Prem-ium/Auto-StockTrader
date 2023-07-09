@@ -2,9 +2,10 @@
 
 <p align="center">An <i>awesome</i> repository containing scripts and projects for automating stock orders across multiple brokerages.</p>
 
-<p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/></p>
+<p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
+        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
 
-For a majority of these projects, on your browser of choice, you will need to download the [Selenium IDE browser extension.](https://github.com/SeleniumHQ/selenium-ide) <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
+You'll need to download the [Selenium IDE browser extension.](https://www.selenium.dev/selenium-ide/) on Chrome, Edge, or Brave. <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
 rel="noreferrer"> <img
 src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg"
 alt="selenium" width="40" height="40" /></a>
@@ -121,22 +122,17 @@ You can also attempt to use 'Sofi Invest.side` to loop through your accounts and
 
 I've been working on this project for a few months now, and I'm really happy with how it's turned out. It's also been a helpful tool for users looking to run automated trading across multiple brokerage accounts at once. I'm currently working on adding new features to the script and working on other similar programs to generate passive income. I'm also working on making the script more user-friendly and accessible to a wider audience.
 
-I'm accepting donations through GitHub Sponsors (No Fees!) or BuyMeCoffee. Any amount you can donate will be greatly appreciated.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
-    <b>GitHub Sponsors:</b>
-        <a href="https://github.com/sponsors/Prem-ium" target="_blank" style="text-decoration: none;">
-            <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);">
-        </a>
-</div>
+I'm accepting donations through <a href="https://github.com/sponsors/Prem-ium">GitHub Sponsors (No Fees!)</a> or <a href="https://www.buymeacoffee.com/prem.ium">Buy-Me-Coffee</a>. Any amount you can donate will be greatly appreciated.
+  
+<a href="https://github.com/sponsors/Prem-ium" target="_blank">
+        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" img width="15%">
+</a>
+<a href="https://www.buymeacoffee.com/prem.ium" target="_blank">
+        <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" img width="15%">
+</a>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; gap: 10px;">
-    <b>Buy Me a Coffee:</b>
-    <a href="https://www.buymeacoffee.com/prem.ium" target="_blank" style="text-decoration: none;">
-            <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" style="height: 80px; width: 320px; box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5);"></a>
-</div>
-
-Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your unwavering support!
+Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Top contributors may get access to early builds and features of this project. Thank you for your unwavering support!
 
 # Disclaimer
 
