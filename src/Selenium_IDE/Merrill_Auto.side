@@ -59,7 +59,7 @@
       "id": "b9d96e21-415a-451c-b6ad-e915e7eada4e",
       "comment": "",
       "command": "open",
-      "target": "/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
+      "target": "https://olui2.fs.ml.com/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
       "targets": [],
       "value": ""
     }, {
@@ -314,7 +314,7 @@
       "id": "aae8c119-bd63-43d9-9f4b-5fdf98e797f8",
       "comment": "",
       "command": "open",
-      "target": "/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
+      "target": "https://olui2.fs.ml.com/Equities/OrderEntry.aspx?as_cd=1.1.1.${account}",
       "targets": [],
       "value": ""
     }, {
