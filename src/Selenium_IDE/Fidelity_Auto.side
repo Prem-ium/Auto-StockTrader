@@ -10,7 +10,7 @@
       "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "SHMP",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -241,7 +241,7 @@
       "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "SHMP",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -322,7 +322,7 @@
       "id": "3116c469-34c3-426a-ac9f-b2985cb09d2a",
       "comment": "",
       "command": "pause",
-      "target": "2300",
+      "target": "1800",
       "targets": [],
       "value": ""
     }, {
@@ -342,7 +342,7 @@
       "id": "1a9e06ca-1718-43cc-bfbb-80a4d34dbfed",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "1000",
       "targets": [],
       "value": ""
     }, {
