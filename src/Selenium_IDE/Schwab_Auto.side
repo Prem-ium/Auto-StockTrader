@@ -192,11 +192,9 @@
       "id": "91ec5382-16e5-4331-bd14-18f8e163648e",
       "comment": "",
       "command": "click",
-      "target": "id=order-type",
+      "target": "css=.mtt-dropdown__select",
       "targets": [
-        ["id=order-type", "id"],
-        ["css=#order-type", "css:finder"],
-        ["xpath=//select[@id='order-type']", "xpath:attributes"],
+        ["css=.mtt-dropdown__select", "css:finder"],
         ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
         ["xpath=//div[5]/div/div/div/select", "xpath:position"]
       ],
@@ -205,8 +203,12 @@
       "id": "3e8fe5e2-59e0-46e9-9bcc-e690b6d784cb",
       "comment": "",
       "command": "select",
-      "target": "id=order-type",
-      "targets": [],
+      "target": "css=.mtt-dropdown__select",
+      "targets": [
+        ["css=.mtt-dropdown__select", "css:finder"],
+        ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/select", "xpath:position"]
+      ],
       "value": "label=Market"
     }, {
       "id": "02d4999e-b847-4329-9681-8cc24219eb5f",
@@ -467,11 +469,9 @@
       "id": "c2047331-6e50-4467-a9c5-246fca096703",
       "comment": "",
       "command": "click",
-      "target": "id=order-type",
+      "target": "css=.mtt-dropdown__select",
       "targets": [
-        ["id=order-type", "id"],
-        ["css=#order-type", "css:finder"],
-        ["xpath=//select[@id='order-type']", "xpath:attributes"],
+        ["css=.mtt-dropdown__select", "css:finder"],
         ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
         ["xpath=//div[5]/div/div/div/select", "xpath:position"]
       ],
@@ -480,8 +480,12 @@
       "id": "c97ee7f9-72eb-4009-af14-cdf8ff397962",
       "comment": "",
       "command": "select",
-      "target": "id=order-type",
-      "targets": [],
+      "target": "css=.mtt-dropdown__select",
+      "targets": [
+        ["css=.mtt-dropdown__select", "css:finder"],
+        ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/select", "xpath:position"]
+      ],
       "value": "label=Market"
     }, {
       "id": "6ecd1f39-a0fa-41c4-bee4-15b990d9834b",
@@ -790,11 +794,9 @@
       "id": "b70662fe-d7e5-4914-96bc-d00b4f724f4c",
       "comment": "",
       "command": "click",
-      "target": "id=order-type",
+      "target": "css=.mtt-dropdown__select",
       "targets": [
-        ["id=order-type", "id"],
-        ["css=#order-type", "css:finder"],
-        ["xpath=//select[@id='order-type']", "xpath:attributes"],
+        ["css=.mtt-dropdown__select", "css:finder"],
         ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
         ["xpath=//div[5]/div/div/div/select", "xpath:position"]
       ],
@@ -803,8 +805,12 @@
       "id": "705f12d4-ca81-459b-bd78-660638c5c5cf",
       "comment": "",
       "command": "select",
-      "target": "id=order-type",
-      "targets": [],
+      "target": "css=.mtt-dropdown__select",
+      "targets": [
+        ["css=.mtt-dropdown__select", "css:finder"],
+        ["xpath=//div[@id='mcaio-orderType-container']/div/div/div/select", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/select", "xpath:position"]
+      ],
       "value": "label=Limit"
     }, {
       "id": "2ec1df95-424c-47fa-96af-bf807a10f9dd",
