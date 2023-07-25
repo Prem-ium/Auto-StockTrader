@@ -18,8 +18,8 @@ alt="selenium" width="40" height="40" /></a>
 - Fidelity
 - Chase / JP Morgan Invest
 - Ally Invest
-- Merrill Lynch
-- Sofi Invest (Archived, Order Helper Script)
+- Merrill Edge Lynch
+- Sofi Invest (Archived)
 
 ## Features
 
@@ -132,7 +132,7 @@ I'm accepting donations through <a href="https://github.com/sponsors/Prem-ium">G
         <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" img width="15%">
 </a>
 
-Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Top contributors may get access to early builds and features of this project. Thank you for your unwavering support!
+Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Top contributors may get access to early builds and features of this project such as dynamic account handling, master `.side` files with all automations in one file, etc. Thank you for your unwavering support!
 
 # Disclaimer
 
