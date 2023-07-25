@@ -43,7 +43,7 @@ def main():
             try:
                 LOGINS.append(os.environ[var_name.split("_")[0] + "_LOGIN"])
             except:
-                LOGINS.append("USERNAME:PASSWORD")
+                LOGINS.append("LOGIN:HERE")
         else:
             print(f"{var_name} is disabled. Skipping...")
     print('\n\n')
