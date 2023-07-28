@@ -142,6 +142,8 @@ Thank you for your unwavering support!
 
 ⚠️ **DISCLAIMER:** You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
 
+## License
+This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
 
 ## Potential Brokerages
 
