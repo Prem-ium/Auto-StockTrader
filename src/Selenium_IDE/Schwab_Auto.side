@@ -5,7 +5,7 @@
   "url": "https://client.schwab.com/app/trade/tom/#/trade",
   "tests": [{
     "id": "00fe9fca-2260-4ca5-beee-945eb08cc90c",
-    "name": "Buy_Schwab",
+    "name": "Buy Schwab",
     "commands": [{
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
       "comment": "",
@@ -280,7 +280,7 @@
     }]
   }, {
     "id": "a76629fc-6faf-44c5-a5d0-9fe8941ce312",
-    "name": "Sell_Schwab",
+    "name": "Sell Schwab",
     "commands": [{
       "id": "2d7949a3-7a85-49d4-8cf4-55796866d0e1",
       "comment": "",
@@ -605,7 +605,7 @@
     }]
   }, {
     "id": "41be4d96-884b-4213-94db-b47b55cc8e79",
-    "name": "x_LimitBuy_Schwab",
+    "name": "X Limit Buy Schwab",
     "commands": [{
       "id": "23961c54-6cc6-499b-8151-7aa05c166d8f",
       "comment": "",
@@ -910,7 +910,7 @@
     }]
   }, {
     "id": "b9eea497-2592-4c70-bba1-36c1f66168c8",
-    "name": "0-Login",
+    "name": "0 Login Schwab",
     "commands": [{
       "id": "0fa645fa-5c44-4eef-b72f-6a3441c6bd9e",
       "comment": "",

@@ -5,7 +5,7 @@
   "url": "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry",
   "tests": [{
     "id": "685c8f77-8fe3-45fc-8e13-51b6c4fea30c",
-    "name": "Buy",
+    "name": "Fido Buy",
     "commands": [{
       "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
       "comment": "",
@@ -236,7 +236,7 @@
     }]
   }, {
     "id": "663b8ae4-3df7-4c2a-b3b1-7b57fe8e7162",
-    "name": "Sell",
+    "name": "Fido Sell",
     "commands": [{
       "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
       "comment": "",
@@ -417,7 +417,7 @@
     }]
   }, {
     "id": "2db8e529-1771-4461-b300-3e5027c85693",
-    "name": "0-Login",
+    "name": "0 Fido Login",
     "commands": [{
       "id": "615f1a28-8146-4313-85a7-5693201d753e",
       "comment": "",

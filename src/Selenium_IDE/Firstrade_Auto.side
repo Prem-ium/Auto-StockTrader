@@ -490,7 +490,7 @@
     }]
   }, {
     "id": "24b2fe7d-03f7-4b18-b846-77fae0f90f87",
-    "name": "0-Login",
+    "name": "0-Firstrade_Login",
     "commands": [{
       "id": "550a267d-aa4e-423f-b611-90458a1759ac",
       "comment": "",
