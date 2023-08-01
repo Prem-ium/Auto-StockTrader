@@ -43,10 +43,10 @@ To use this project, you will need to set the following environment variables in
 
 `MERRILL_AI` = Total number of Merrill accounts.
 
-`CHASE_AI` = A stringified JSON array containing your Chase Investment AI numbers
+`CHASE_AI` = A list of stringified JSON array containing your Chase Investment AI numbers
 [found within the desktop stock order URL](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png), separated by commas.
 
-`FIDELITY_AI` = A stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
+`FIDELITY_AI` = A list of stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
 
 `ALLY_AI` = A stringified JSON array containing your Ally Investment account name + numbers, separated by commas.
 
