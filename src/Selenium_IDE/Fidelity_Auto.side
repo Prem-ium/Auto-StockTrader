@@ -24,9 +24,16 @@
       "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR_ACCOUNT','NUMBERS_HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "c7c4bd38-5b25-46d0-8159-aab47e646616",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "51277964-fd77-466b-9595-0617964dbc41",
       "comment": "",
@@ -52,7 +59,7 @@
       "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
     }, {
@@ -255,9 +262,16 @@
       "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNT',\"NUMBERS','HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "e82678ad-daf4-46fa-bead-4524120f90cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "85bea692-3a09-4056-9921-27fd1c96586a",
       "comment": "",
@@ -276,7 +290,7 @@
       "id": "1d1a0857-f802-40c7-80ac-099c5827362c",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
     }, {
