@@ -21,12 +21,19 @@
       "targets": [],
       "value": "TICKERS"
     }, {
+      "id": "819a009c-6ad5-4fc8-bc15-6322b525a9cd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
+      "targets": [],
+      "value": "accounts"
+    }, {
       "id": "40ce5ee8-288f-4b5d-b53e-b483def82b76",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return 0;",
       "targets": [],
-      "value": "accounts"
+      "value": "index"
     }, {
       "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
       "comment": "",
@@ -59,7 +66,7 @@
       "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -290,12 +297,19 @@
       "targets": [],
       "value": "TICKERS"
     }, {
-      "id": "78ef785f-b208-4ac3-8119-1a37ae74bcaa",
+      "id": "587efa9a-1f3a-4e84-81a6-b0111625c27e",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "98fd1e42-6faf-479b-ae25-138bc956401c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "3e85cc91-9356-4773-afb6-8f47c46b3801",
       "comment": "",
@@ -335,7 +349,7 @@
       "id": "22217338-eff5-47d9-8058-e67b0026b82b",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -580,12 +594,19 @@
       "targets": [],
       "value": "TICKERS"
     }, {
-      "id": "79e6d892-51ea-4a0c-ab61-7b0dc7cbb057",
+      "id": "b253f619-c030-47db-934d-70d9577e7d74",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "bb16819c-3094-4d03-8a0f-48bf9999359c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "b076f9e7-2155-4548-b4cc-667d73fec3ac",
       "comment": "",
@@ -618,7 +639,7 @@
       "id": "70d4a82e-caa7-4bc0-81ad-42d22595b284",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -869,12 +890,19 @@
       "targets": [],
       "value": "TICKERS"
     }, {
-      "id": "5d5b40a6-3390-46c6-875e-c24136012d7d",
+      "id": "0bb6a379-69fc-44ae-8355-8451eff244fe",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "136c26cc-4473-41e2-92a4-5ad5bb18df07",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "babfd393-9fe7-4a7c-b3cc-af4e4387ecbd",
       "comment": "",
@@ -914,7 +942,7 @@
       "id": "d6d0f8a9-1024-4e0d-943a-dd471c8d770b",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
@@ -1200,12 +1228,19 @@
       "targets": [],
       "value": "LIMIT"
     }, {
-      "id": "54ca319f-6b13-49c5-9ad0-18c816392389",
+      "id": "ad4ee934-509c-4eb8-aae9-c0c100f5bdc4",
       "comment": "",
       "command": "executeScript",
-      "target": "return ['YOUR','ACCOUNTS','HERE']",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
+    }, {
+      "id": "8a7e915b-7e94-46fc-b889-f07ccea59d88",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "112bff61-20b5-4f46-9657-ca60c91e6fa2",
       "comment": "",
@@ -1231,7 +1266,7 @@
       "id": "42656073-e998-4f7e-9411-aa1087b71597",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
     }, {
