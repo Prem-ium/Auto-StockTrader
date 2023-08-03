@@ -49,6 +49,13 @@
       "targets": [],
       "value": "numb"
     }, {
+      "id": "838a87a1-c35a-4848-a32a-865cd10c740d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1;",
+      "targets": [],
+      "value": "QUANT"
+    }, {
       "id": "260a9e1a-a82b-4d45-98dc-b9ca0fcf4860",
       "comment": "",
       "command": "forEach",
@@ -189,6 +196,46 @@
       "targets": [],
       "value": "label=Buy"
     }, {
+      "id": "ab706b3b-e39e-4367-81e9-e27612508ad0",
+      "comment": "",
+      "command": "if",
+      "target": "${QUANT} != 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e40a201b-3a15-4b61-b2ae-ab93f231ce33",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='inputqtyundefined-stepper-input']",
+      "targets": [
+        ["id=inputqtyundefined-stepper-input", "id"],
+        ["css=#inputqtyundefined-stepper-input", "css:finder"],
+        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
+        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5939647-ab72-4f4e-8f25-8034c573eea8",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//sdps-stepper/div/div/div/input",
+      "targets": [
+        ["id=inputqtyundefined-stepper-input", "id"],
+        ["css=#inputqtyundefined-stepper-input", "css:finder"],
+        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
+        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${QUANT}"
+    }, {
+      "id": "6fc4462e-641e-40bd-80b2-1a51a1667fe3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "91ec5382-16e5-4331-bd14-18f8e163648e",
       "comment": "",
       "command": "click",
@@ -227,7 +274,7 @@
       "id": "766ed655-343c-4d67-9253-0914dbcfb990",
       "comment": "",
       "command": "pause",
-      "target": "1250",
+      "target": "1500",
       "targets": [],
       "value": ""
     }, {
@@ -323,6 +370,13 @@
       "target": "return -1",
       "targets": [],
       "value": "target"
+    }, {
+      "id": "00a04993-7948-4972-b01c-3ba0ff92e23d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1;",
+      "targets": [],
+      "value": "QUANT"
     }, {
       "id": "d431321c-5e85-4371-8b89-01baa639b6a4",
       "comment": "",
@@ -487,6 +541,46 @@
         ["xpath=//div[5]/div/div/div/select", "xpath:position"]
       ],
       "value": "label=Market"
+    }, {
+      "id": "65e1b30d-fe6d-45d2-8aab-bb11b2199c88",
+      "comment": "",
+      "command": "if",
+      "target": "${QUANT} != 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f41067c2-2e34-4ace-89ca-4ab95a6c8690",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='inputqtyundefined-stepper-input']",
+      "targets": [
+        ["id=inputqtyundefined-stepper-input", "id"],
+        ["css=#inputqtyundefined-stepper-input", "css:finder"],
+        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
+        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3218870d-9337-4e40-b942-8d0ef274184c",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//sdps-stepper/div/div/div/input",
+      "targets": [
+        ["id=inputqtyundefined-stepper-input", "id"],
+        ["css=#inputqtyundefined-stepper-input", "css:finder"],
+        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
+        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${QUANT}"
+    }, {
+      "id": "b13fe29e-60e8-4c15-b528-22e1eb11b174",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "6ecd1f39-a0fa-41c4-bee4-15b990d9834b",
       "comment": "",
