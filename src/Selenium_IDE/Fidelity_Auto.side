@@ -56,12 +56,19 @@
       "targets": [],
       "value": "QUANT"
     }, {
-      "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
+      "id": "eb755399-bedd-4365-922d-9dad8b4665a3",
       "comment": "",
       "command": "executeScript",
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "00b0aa03-8311-4925-9d8e-9a96d8392761",
       "comment": "",
@@ -194,6 +201,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e189cd2d-fabd-452c-985d-d8281ad3c993",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/order-entry-base/div/div/div[2]/equity-order-routing/commission/div/div/div[1]/span'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"--\") || element2.textContent.includes(\"--\")))));",
+      "targets": [],
+      "value": "error"
+    }, {
       "id": "5422b4f3-049c-4241-9e92-c3907b96b935",
       "comment": "",
       "command": "click",
@@ -231,6 +245,27 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28aae527-b224-4222-89e0-20c979016df3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "a9be907a-5b53-4ee5-9e16-f2440b416d21",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "b2816706-43f0-477d-bbb7-3bf089ed2eb3",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
       "targets": [],
       "value": ""
     }, {
@@ -293,6 +328,13 @@
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
       "comment": "",
@@ -419,6 +461,27 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c2c66a3-2b14-425d-aefb-31eeaf51307d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "f2d2f5ed-3958-46ef-994c-7b598d5c5045",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "b4bcb70a-ade0-4f13-9235-79720b38ba8a",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
       "targets": [],
       "value": ""
     }, {

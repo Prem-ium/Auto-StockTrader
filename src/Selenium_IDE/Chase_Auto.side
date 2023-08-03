@@ -63,7 +63,7 @@
       "targets": [],
       "value": "FORMAT"
     }, {
-      "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
+      "id": "266a62bd-da7a-4632-b448-3dc4fc32557b",
       "comment": "",
       "command": "executeScript",
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
@@ -76,6 +76,13 @@
       "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "e7de3e0d-8814-41ea-8159-0b882221a58f",
       "comment": "",
@@ -265,6 +272,27 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "06d8002e-7c8a-4d51-8c96-28ca8519dd70",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "a69d1097-7238-4b81-a494-860df1aaaa15",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${AI_ARRAY}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "91b92852-7cd7-4c74-8c8d-64848c4561ed",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3ef100e8-b529-485e-a4d3-69358dc017f6",
       "comment": "",
       "command": "end",
@@ -352,6 +380,13 @@
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "AI_ARRAY"
+    }, {
+      "id": "6b25ba9e-9ebd-44dc-83cf-12247895a297",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "2f94da8a-1dae-43a6-853e-6cdcecc8692a",
       "comment": "",
@@ -562,6 +597,27 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "561cdbe5-cb68-4700-ab7a-5f3ddb6d4236",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "60e8935b-0864-4f99-af99-801ebaa118df",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${AI_ARRAY}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "53402479-d7d1-4ff5-8a7b-18b6d4ef6321",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "587c692d-bb61-4126-a18c-2d24f2f57d53",
       "comment": "",
       "command": "end",
@@ -649,6 +705,13 @@
       "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "18b1d1cf-1e06-4260-bcf5-d1ab6a64b118",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "f786e731-7883-45ec-b2e6-ba6086dddcbe",
       "comment": "",
@@ -858,6 +921,27 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "df8b2ba6-663b-40c9-b0b7-9f1bd56967d9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "e69dd862-fa33-4665-9e68-8df170e694f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${AI_ARRAY}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "46bd6dfc-f3ba-4c50-b518-9475de04ca15",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "ceaaa4af-97f8-492a-ac38-2f7940dda9c2",
       "comment": "",
       "command": "end",
@@ -952,6 +1036,13 @@
       "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "0abddb5d-a0c6-4be9-a1e8-27b0133c0b24",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "3ae132db-4b36-47a8-87c1-7c96888bc5fc",
       "comment": "",
@@ -1182,6 +1273,27 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "c79003ec-4697-4dcc-bca8-9dd704db9792",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "f3bc7320-dec8-499e-b0a3-26875eb094d0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${AI_ARRAY}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "37de3515-01e4-470b-b6f2-460882eaca85",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "0b909152-843d-4cb5-9959-07ed279dfe6e",
       "comment": "",
       "command": "end",
@@ -1276,6 +1388,13 @@
       "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "e39c5ff3-83bc-4c0a-a2d7-093ee10f9e62",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "ca224d09-331d-424e-bbbb-cec4dbcfc7b5",
       "comment": "",
@@ -1517,6 +1636,27 @@
       "comment": "",
       "command": "pause",
       "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "971e3fce-8863-40bf-abda-cbbe0267b925",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${count} + 1;",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "b55ef8b8-de38-4c62-9a96-66ddd6b5fcfb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let percentage = (${count} / ${AI_ARRAY}.length) * 100; return percentage.toFixed(1);",
+      "targets": [],
+      "value": "progress"
+    }, {
+      "id": "b5dcd691-2f2f-4c12-bc80-a470d4bb7b15",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter Progress ${count}: (${progress}%)",
       "targets": [],
       "value": ""
     }, {
