@@ -176,7 +176,7 @@
       "targets": [],
       "value": "${LIMIT_PRICE}"
     }, {
-      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+      "id": "56b5cb2c-9185-4851-9912-f66c6c3a0311",
       "comment": "",
       "command": "sendKeys",
       "target": "id=eqt-ordsel-limit-price-field",
@@ -194,7 +194,7 @@
       ],
       "value": ""
     }, {
-      "id": "0c8a010b-b60a-4819-b4c3-ccdd36af561c",
+      "id": "e6053b4c-d545-40bd-ac73-f497478841a0",
       "comment": "",
       "command": "pause",
       "target": "1300",
@@ -207,6 +207,49 @@
       "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/order-entry-base/div/div/div[2]/equity-order-routing/commission/div/div/div[1]/span'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"--\") || element2.textContent.includes(\"--\")))));",
       "targets": [],
       "value": "error"
+    }, {
+      "id": "0f195b32-3c88-47c6-ba96-ea7cbb1f8e0d",
+      "comment": "",
+      "command": "if",
+      "target": "${error}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=eqt-ordsel-limit-price-field",
+      "targets": [],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "59f5b6c9-8fc0-4245-beb2-c36047db443a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#action-gtc s-slot",
+      "targets": [
+        ["css=#action-gtc s-slot", "css:finder"],
+        ["xpath=//pvd3-segment[@id='action-gtc']/s-root/div/label/s-slot", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55b2ebbe-aa62-4107-9f09-c1ac60654da6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#action-day s-slot",
+      "targets": [
+        ["css=#action-day s-slot", "css:finder"],
+        ["xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36508b0f-58c4-4507-9c95-93c16294290f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "5422b4f3-049c-4241-9e92-c3907b96b935",
       "comment": "",
