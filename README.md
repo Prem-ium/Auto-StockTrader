@@ -132,11 +132,15 @@ Otherwise, <a href="https://www.buymeacoffee.com/prem.ium">Buy-Me-Coffee</a> can
         <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" img width="25%">
 </a>
 
-Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. 
+Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you!
 
-Top monthly donation contributors may get access to exclusive builds and features related to this project such as dynamic account handling, master `.side` file with all automations in one file, etc. 
+### GitHub Sponsors Perks
+#### Gold Sponsor Perks
 
-Thank you for your unwavering support!
+Sponsors who contribute within the `Gold Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive early access to features and perks of the Auto-StockTrader project before the public, along with access to exclusive scripts & features only available to Gold sponsoring users. 
+
+#### Silver Sponsor Perks
+Sponsors who contribute within the `Silver Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive expedited bug report handling, support, and a mention on a README in a project of their choice.
 
 # Disclaimer
 
