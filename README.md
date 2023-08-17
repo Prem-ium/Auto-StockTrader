@@ -4,12 +4,6 @@
 
 <p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
-<!--
-You'll need to download the [Selenium IDE browser extension.](https://www.selenium.dev/selenium-ide/) on Chrome, Edge, or Brave. <a href="https://www.selenium.dev/selenium-ide/" target="_blank"
-rel="noreferrer"> <img
-src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg"
-alt="selenium" width="40" height="40" /></a>
--->
 
 ## Features
 
@@ -142,19 +136,17 @@ Sponsors who contribute within the `Gold Sponsor` monthly tier on my<a href="htt
 #### Silver Sponsor Perks
 Sponsors who contribute within the `Silver Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive expedited bug report handling, support, and a mention on a README in a project of their choice.
 
-# Disclaimer
-
-⚠️ **DISCLAIMER:** You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
+##⚠️ **DISCLAIMER:**
+You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
 
 ## License
 This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
-
-## Potential Brokerages
-
-There are currently no plans to offer automation on other brokerages not listed within this repository. However, I am open to receiving pull-requests to merge any new `.side` projects for automating new brokerages. Upon sending a pull-request, please request a review from me when you believe your PR is merge-ready. 
 
 ## Acknowledgments & Final Remarks
 A special thanks to all <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donor(s), </a>tester(s), and<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> contributor(s).</a>
 
 Thank you so much for your interest in this repository.
 Please consider leaving a :star2: if you found this project to be cool!
+
+### Potential Brokerages
+There are currently no plans to offer automation on other brokerages not listed within this repository. However, I am open to receiving pull-requests to merge any new `.side` projects for automating new brokerages. Upon sending a pull-request, please request a review from me when you believe your PR is merge-ready. 
