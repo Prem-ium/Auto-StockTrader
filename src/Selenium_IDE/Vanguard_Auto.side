@@ -1346,6 +1346,61 @@
       "id": "a7f5daf0-1134-4427-b2b3-f7fa6b2ee441",
       "comment": "",
       "command": "else",
+            "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86a2e842-b651-4ab0-ba34-9f978ccdc737",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//SPAN[@title='28801']",
+      "targets": [],
+      "value": "market-closed"
+    }, {
+      "id": "cdbc82f4-bb54-4db7-9be6-f5b5dc353b4b",
+      "comment": "",
+      "command": "if",
+      "target": "${market-closed} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ac7f715-e5ff-4988-b65a-4eaa700a57e6",
+      "comment": "",
+      "command": "echo",
+      "target": "market closed warning",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74911e5a-0867-4f1a-8d8a-263826677414",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b853b8a-1ff6-4f7d-91e7-d2cfba26cfa8",
+      "comment": "",
+      "command": "click",
+      "target": "id=orderCaptureWarningLayerForm:yesButtonInput",
+      "targets": [
+        ["id=orderCaptureWarningLayerForm:yesButtonInput", "id"],
+        ["css=#orderCaptureWarningLayerForm\\3AyesButtonInput", "css:finder"],
+        ["xpath=//input[@id='orderCaptureWarningLayerForm:yesButtonInput']", "xpath:attributes"],
+        ["xpath=//span[@id='orderCaptureWarningLayerForm:yesButton']/div/span/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/span/span/span/div/span/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e39e6878-2408-43bb-ad4c-5ca45dca17ca",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cceee2a2-0f4c-4c73-b33a-8fd267a67673",
+      "comment": "",
+      "command": "end",
       "target": "",
       "targets": [],
       "value": ""
