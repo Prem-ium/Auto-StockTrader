@@ -16,4 +16,4 @@ REM if "%open_browsers%"=="y" (
 REM    start msedge.exe --profile-directory="Default"
 REM    start brave.exe --profile-directory="Default"
 REM    start brave.exe --profile-directory="Profile 1"
-)
+REM )
