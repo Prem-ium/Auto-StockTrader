@@ -1391,13 +1391,6 @@
       ],
       "value": ""
     }, {
-      "id": "e39e6878-2408-43bb-ad4c-5ca45dca17ca",
-      "comment": "",
-      "command": "else",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "cceee2a2-0f4c-4c73-b33a-8fd267a67673",
       "comment": "",
       "command": "end",
