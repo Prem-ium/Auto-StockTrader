@@ -10,7 +10,7 @@
       "id": "edc50185-b08e-4814-8299-4b98a1cfd2c2",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -24,7 +24,7 @@
       "id": "9d1d46da-1d46-40de-8fdf-9750f00d6cec",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 21}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {
@@ -230,6 +230,41 @@
       ],
       "value": ""
     }, {
+      "id": "7310e92a-c055-41fa-a7cd-c2d5a99977d4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1646de39-6ee6-4ee4-9334-a15c6388ce0b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const xpath2 = '/html/body/form/div[10]/div[2]/div[2]/main/div/div[3]/div[3]/div[1]/div[3]/div/div[2]/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"is not held in this account.\") || element2.textContent.includes(\"review your\")))));",
+      "targets": [],
+      "value": "noPos"
+    }, {
+      "id": "afbbc894-43e5-466b-a782-c8a69d0419b3",
+      "comment": "",
+      "command": "if",
+      "target": "${noPos}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae189c26-cbff-460a-a4eb-5b23429e52b0",
+      "comment": "",
+      "command": "echo",
+      "target": "No position for ${TICK} on ${account}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72c96d28-da2c-429e-9b26-dd9ab5ad5911",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "6c6cbb17-51db-4e5f-8459-2d7347b38853",
       "comment": "",
       "command": "click",
@@ -248,6 +283,13 @@
       "comment": "",
       "command": "echo",
       "target": "Sell ${TICK} on acct ${account} successful!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03b43bb7-2f9f-4a65-9ab0-3bfea940f8ac",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -293,7 +335,7 @@
       "id": "4cfdd1e8-0442-43be-a6db-70dad509de0a",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -307,7 +349,7 @@
       "id": "3e9dfae0-50f4-468c-8619-f1828c348c16",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 21}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
       "targets": [],
       "value": "accounts"
     }, {

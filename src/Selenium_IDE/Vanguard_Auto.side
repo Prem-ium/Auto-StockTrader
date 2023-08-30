@@ -10,7 +10,7 @@
       "id": "5d537d93-9d32-40d6-be14-73ca41d646c3",
       "comment": "",
       "command": "store",
-      "target": "TICKERHERE",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -287,7 +287,7 @@
       "id": "73bed0a3-7e10-4d9f-8613-6389606896db",
       "comment": "",
       "command": "store",
-      "target": "TICKERHERE",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -564,7 +564,7 @@
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -969,7 +969,7 @@
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
       "command": "store",
-      "target": "AREB",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1346,7 +1346,7 @@
       "id": "a7f5daf0-1134-4427-b2b3-f7fa6b2ee441",
       "comment": "",
       "command": "else",
-            "target": "",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -1471,13 +1471,6 @@
       "targets": [],
       "value": "VANGUARD_LOGIN"
     }, {
-      "id": "f38bd345-75b8-49d8-97ed-97d9904b8b47",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${VANGUARD_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
       "id": "c7374ff3-b38c-4e38-b54b-b05c4a08030a",
       "comment": "",
       "command": "executeScript",
@@ -1491,6 +1484,13 @@
       "target": "${use_login}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "f38bd345-75b8-49d8-97ed-97d9904b8b47",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${VANGUARD_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
     }, {
       "id": "71ef1e0f-cb53-4886-b398-3576e54e0bc2",
       "comment": "",

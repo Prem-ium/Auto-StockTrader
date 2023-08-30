@@ -10,7 +10,7 @@
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
       "command": "store",
-      "target": "STOCK_TICKER",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -314,7 +314,7 @@
       "id": "b3d20f89-16df-4859-aed7-e0e9587395bc",
       "comment": "",
       "command": "store",
-      "target": "STOCK_TICKER",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -639,7 +639,7 @@
       "id": "ff0bba64-29e7-422b-9df9-a2137e875cce",
       "comment": "",
       "command": "store",
-      "target": "STOCK_TICKER",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -963,7 +963,7 @@
       "id": "2b05816b-1a0e-4665-87e7-8a56840ccea6",
       "comment": "",
       "command": "store",
-      "target": "STOCK_TICKER",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1315,7 +1315,7 @@
       "id": "29630226-877a-4845-861d-02f7531ce27c",
       "comment": "",
       "command": "store",
-      "target": "TICKER_HERE",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1692,13 +1692,6 @@
       "targets": [],
       "value": "CHASE_LOGIN"
     }, {
-      "id": "843f21c0-02ad-4b12-897f-627f57b7bb9a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${CHASE_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
       "id": "43004f91-1452-4400-93b5-c7f851d9eb55",
       "comment": "",
       "command": "executeScript",
@@ -1712,6 +1705,13 @@
       "target": "${use_login}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "843f21c0-02ad-4b12-897f-627f57b7bb9a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${CHASE_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
     }, {
       "id": "11ba7bad-ad33-4d92-9ee7-8d13799dc1bb",
       "comment": "",

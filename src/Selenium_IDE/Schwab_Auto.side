@@ -10,7 +10,7 @@
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
       "comment": "",
       "command": "store",
-      "target": "VERB",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -114,24 +114,10 @@
     }, {
       "id": "55be14bb-5bb9-4d7d-9967-b2d0cb779af1",
       "comment": "",
-      "command": "pause",
-      "target": "1750",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bafc2e04-db2e-4097-846a-b5797fc3f81d",
-      "comment": "",
-      "command": "assertEditable",
+      "command": "waitForElementEditable",
       "target": "id=_txtSymbol",
-      "targets": [
-        ["id=_txtSymbol", "id"],
-        ["name=symbol", "name"],
-        ["css=#\\_txtSymbol", "css:finder"],
-        ["xpath=//input[@id='_txtSymbol']", "xpath:attributes"],
-        ["xpath=//mc-trade-symbol[@id='mctsymbol1ea50182']/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//mc-trade-symbol/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
+      "targets": [],
+      "value": "45000"
     }, {
       "id": "a93bcd76-af3a-48da-8a44-f5c36e898eaf",
       "comment": "",
@@ -150,7 +136,7 @@
       "id": "814e0938-d4fa-4baf-bfc0-56cdf65a1a25",
       "comment": "",
       "command": "pause",
-      "target": "1550",
+      "target": "1050",
       "targets": [],
       "value": ""
     }, {
@@ -332,7 +318,7 @@
       "id": "2d7949a3-7a85-49d4-8cf4-55796866d0e1",
       "comment": "",
       "command": "store",
-      "target": "ASNS",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -436,26 +422,12 @@
       "targets": [],
       "value": "TICK"
     }, {
-      "id": "ceb8aa7c-2963-4334-8673-d8141662a41b",
+      "id": "7130fabe-77de-4699-9736-578bcb67c7b1",
       "comment": "",
-      "command": "pause",
-      "target": "1750",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "65659eb9-6807-4df3-9030-eff3336838e5",
-      "comment": "",
-      "command": "assertEditable",
+      "command": "waitForElementEditable",
       "target": "id=_txtSymbol",
-      "targets": [
-        ["id=_txtSymbol", "id"],
-        ["name=symbol", "name"],
-        ["css=#\\_txtSymbol", "css:finder"],
-        ["xpath=//input[@id='_txtSymbol']", "xpath:attributes"],
-        ["xpath=//mc-trade-symbol[@id='mctsymbol1ea50182']/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//mc-trade-symbol/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
+      "targets": [],
+      "value": "30000"
     }, {
       "id": "0fc38531-f92e-4240-9159-ef8551a0e7dc",
       "comment": "",
@@ -474,7 +446,7 @@
       "id": "4003d509-31f9-42af-a1e6-f21cf6b57f3c",
       "comment": "",
       "command": "pause",
-      "target": "550",
+      "target": "1000",
       "targets": [],
       "value": ""
     }, {
@@ -495,7 +467,7 @@
       "id": "248f299a-806b-4bb4-89fe-9c2b174e23ac",
       "comment": "",
       "command": "pause",
-      "target": "1250",
+      "target": "1050",
       "targets": [],
       "value": ""
     }, {
@@ -704,7 +676,7 @@
       "id": "23961c54-6cc6-499b-8151-7aa05c166d8f",
       "comment": "",
       "command": "store",
-      "target": "LPCN",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
