@@ -852,7 +852,7 @@
       "id": "a12aff65-31a8-4b95-a87b-ad11ac5f55ec",
       "comment": "",
       "command": "click",
-      "target": "xpath=//span[contains(.,'Buy')]",
+      "target": "xpath=//span[contains(.,'Sell')]",
       "targets": [
         ["css=#stock-sell > span", "css:finder"],
         ["xpath=//div[@id='stock-sell']/span", "xpath:idRelative"],
