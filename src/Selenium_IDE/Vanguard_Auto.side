@@ -651,6 +651,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "6426e3f7-3f35-4630-937b-ffeb3c761aeb",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "f0ebc872-0ce6-432f-b122-8e8e8c1397da",
       "comment": "",
       "command": "click",
@@ -660,6 +667,20 @@
         ["xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
         ["xpath=//a/table/tbody/tr/td[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "36efa1bb-4571-4610-9eb4-d9c70c5ef726",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !(document.querySelector('.vg-SelOneMenuFocusText'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "267e8f37-aef9-457b-ba81-119672cac228",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "c7bad4a4-aaf7-456b-bc7c-dc1bd01c4183",
@@ -689,6 +710,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "8033178b-7696-4a9c-b29f-c1e2877926d0",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "db5c627f-7ac5-445c-a0f3-2884ffaebe62",
       "comment": "",
       "command": "click",
@@ -698,6 +726,20 @@
         ["xpath=//table[@id='baseForm:transactionTypeSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
         ["xpath=//span[2]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "34609291-036d-4138-9d68-57d57bf263ba",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.querySelector('vg-SelOneMenuDropDownwards'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "a8521eb2-284d-4abd-888f-458d318826e2",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "c186be59-adef-4967-a014-a30920ca1a35",
@@ -770,6 +812,13 @@
       ],
       "value": "1"
     }, {
+      "id": "38efe38d-3c81-420a-92d5-2b25abd3d59c",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8c025791-5deb-4719-91fe-4fc63c1ab8a7",
       "comment": "",
       "command": "click",
@@ -781,6 +830,20 @@
         ["xpath=//span[@id='baseForm:orderTypeSelectOne_textCont']/span", "xpath:idRelative"],
         ["xpath=//span[5]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "b88c3a66-a6e6-4e8b-bc27-d503e3a093e9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.querySelector('vg-SelOneMenuDropDownwards'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "16d83fd6-850c-4ed2-9b75-6f68d4956189",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "37ac4be8-b222-4ee3-b74f-883c2269ee58",
@@ -1056,6 +1119,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a07bfdf1-4ace-4a7b-b60f-1058aea4b8c3",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "392146d8-bb36-4a53-970a-18e5f297a37e",
       "comment": "",
       "command": "click",
@@ -1065,6 +1135,20 @@
         ["xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
         ["xpath=//a/table/tbody/tr/td[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "e3b4b921-b9e6-4a89-95ac-bb5efb7320ee",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return !(document.querySelector('.vg-SelOneMenuFocusText'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "5992dafd-0d1e-4bb4-9ba8-bdd510d9f8bf",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "7fcfa4db-d978-4d7f-8b8b-af59d24ecbda",
@@ -1094,6 +1178,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "2626a8e9-1c39-4931-97f5-81be9d98c694",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "0282a73c-b6a1-48ab-a0a2-63147761d897",
       "comment": "",
       "command": "click",
@@ -1103,6 +1194,20 @@
         ["xpath=//table[@id='baseForm:transactionTypeSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
         ["xpath=//span[2]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td[2]", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "20cf434e-8dd1-40e5-b635-7f3d32883af1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.querySelector('vg-SelOneMenuDropDownwards'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "e9f7c491-ba11-44e8-9405-8adbb350d83b",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "650eb6a4-fca7-4338-8a19-23e8a8424569",
@@ -1175,6 +1280,13 @@
       ],
       "value": "1"
     }, {
+      "id": "754b2df6-da81-4c38-b485-b26b589e336c",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b09df44b-7416-4a71-b460-ca3ba50ee53b",
       "comment": "",
       "command": "click",
@@ -1186,6 +1298,20 @@
         ["xpath=//span[@id='baseForm:orderTypeSelectOne_textCont']/span", "xpath:idRelative"],
         ["xpath=//span[5]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "cbb21895-4f96-4f11-8434-04e82641f5f8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.querySelector('vg-SelOneMenuDropDownwards'));",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "1703e0de-5399-40ab-b1ce-ecb699f53165",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "6df560f2-3262-47c8-a32f-61fb323913ce",
