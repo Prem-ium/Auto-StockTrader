@@ -683,10 +683,63 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c7bad4a4-aaf7-456b-bc7c-dc1bd01c4183",
+      "id": "17e43a03-706e-4df5-a044-2d88a16b83f1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.getElementById('baseForm:accountSelectOne:${account}'));",
+      "targets": [],
+      "value": "finished"
+    }, {
+      "id": "1409720a-2af7-474e-84e3-ad13f52e7ad2",
+      "comment": "",
+      "command": "if",
+      "target": "${finished} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e3b110e-f899-48dc-ac35-e98f17208276",
+      "comment": "",
+      "command": "echo",
+      "target": "Run successful across all accounts. Opening holdings & ending test.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "605316e3-b730-4a6b-92f9-b3c019e37ebf",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49e6a3b6-d5c4-487d-8438-a94d00c0a09f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Expand all accounts')]",
+      "targets": [
+        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
+        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aa3c919-5482-4033-9a57-f49dc8fdc16f",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "id=baseForm:accountSelectOne:${account}",
+      "target": "css=#usage_notes > a",
+      "targets": [
+        ["css=#usage_notes > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Usage notes')])[3]", "xpath:link"],
+        ["xpath=//h2[@id='usage_notes']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#usage_notes')])[3]", "xpath:href"],
+        ["xpath=//section[5]/h2/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed5c0ca1-d56d-4c8a-a313-c4708a66da0b",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -1151,10 +1204,63 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "7fcfa4db-d978-4d7f-8b8b-af59d24ecbda",
+      "id": "1bcb8223-05fd-4eb5-83e6-3bd32d78f93b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (!document.getElementById('baseForm:accountSelectOne:${account}'));",
+      "targets": [],
+      "value": "finished"
+    }, {
+      "id": "3152b869-8eb3-4e9a-b647-e1d2d4d5769b",
+      "comment": "",
+      "command": "if",
+      "target": "${finished} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddf36ab4-cc58-48c0-86dd-b583a0b6235a",
+      "comment": "",
+      "command": "echo",
+      "target": "Run successful across all accounts. Opening holdings & ending test.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b41218f8-fd10-4fa9-9a2c-8e1a719b752d",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43a1cc1e-f697-4868-a97f-87ad5ed89023",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Expand all accounts')]",
+      "targets": [
+        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
+        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b80016b-efad-4c28-a8a8-ce9a1ce4beb1",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "id=baseForm:accountSelectOne:${account}",
+      "target": "css=#usage_notes > a",
+      "targets": [
+        ["css=#usage_notes > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Usage notes')])[3]", "xpath:link"],
+        ["xpath=//h2[@id='usage_notes']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#usage_notes')])[3]", "xpath:href"],
+        ["xpath=//section[5]/h2/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "020988e2-1ec8-48c8-99c4-ac7c88848be1",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
