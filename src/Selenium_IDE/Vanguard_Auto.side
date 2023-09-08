@@ -136,17 +136,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "17e43a03-706e-4df5-a044-2d88a16b83f1",
+      "id": "4763f4a0-965d-4e97-881d-f20ab721432d",
       "comment": "",
-      "command": "executeScript",
-      "target": "const ele = document.getElementById('baseForm:accountSelectOne:${account}'); return (!ele);",
+      "command": "storeXpathCount",
+      "target": "xpath=//*[@id=\"baseForm:accountSelectOne:${account}\"]",
       "targets": [],
-      "value": "finished"
+      "value": "remaining_acc"
     }, {
-      "id": "1409720a-2af7-474e-84e3-ad13f52e7ad2",
+      "id": "fa8c29e9-466e-4fb8-b208-c32d4ddfa118",
       "comment": "",
       "command": "if",
-      "target": "${finished} == true",
+      "target": "${remaining_acc} == 0",
       "targets": [],
       "value": ""
     }, {
@@ -664,17 +664,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1bcb8223-05fd-4eb5-83e6-3bd32d78f93b",
+      "id": "c2603de6-ced2-4e88-b696-742e29682768",
       "comment": "",
-      "command": "executeScript",
-      "target": "const ele = document.getElementById('baseForm:accountSelectOne:${account}'); return (!ele);",
+      "command": "storeXpathCount",
+      "target": "xpath=//*[@id=\"baseForm:accountSelectOne:${account}\"]",
       "targets": [],
-      "value": "finished"
+      "value": "remaining_acc"
     }, {
       "id": "3152b869-8eb3-4e9a-b647-e1d2d4d5769b",
       "comment": "",
       "command": "if",
-      "target": "${finished} == true",
+      "target": "${remaining_acc} == 0",
       "targets": [],
       "value": ""
     }, {
@@ -769,20 +769,6 @@
       ],
       "value": ""
     }, {
-      "id": "20cf434e-8dd1-40e5-b635-7f3d32883af1",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const element = document.evaluate(   '//*[@id=\"baseForm:transactionTypeSelectOne_text\"]',   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue;  const containsSelectOne = element.textContent.includes('Select one'); return (containsSelectOne);",
-      "targets": [],
-      "value": "unopened"
-    }, {
-      "id": "e9f7c491-ba11-44e8-9405-8adbb350d83b",
-      "comment": "",
-      "command": "repeatIf",
-      "target": "${unopened} == true",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "650eb6a4-fca7-4338-8a19-23e8a8424569",
       "comment": "",
       "command": "click",
@@ -795,6 +781,20 @@
         ["xpath=//div[8]/div/table/tbody/tr[3]/td", "xpath:position"],
         ["xpath=//td[contains(.,'Sell')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "20cf434e-8dd1-40e5-b635-7f3d32883af1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const element = document.evaluate(   '//*[@id=\"baseForm:transactionTypeSelectOne_text\"]',   document,   null,   XPathResult.FIRST_ORDERED_NODE_TYPE,   null ).singleNodeValue;  const containsSelectOne = element.textContent.includes('Select one'); return (containsSelectOne);",
+      "targets": [],
+      "value": "unopened"
+    }, {
+      "id": "e9f7c491-ba11-44e8-9405-8adbb350d83b",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${unopened} == true",
+      "targets": [],
       "value": ""
     }, {
       "id": "d1470205-9d4c-4ac1-8b86-b4a08cc994d6",
@@ -873,6 +873,19 @@
       ],
       "value": ""
     }, {
+      "id": "6df560f2-3262-47c8-a32f-61fb323913ce",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//td[@id='baseForm:orderTypeSelectOne:1']",
+      "targets": [
+        ["id=baseForm:orderTypeSelectOne:1", "id"],
+        ["css=#baseForm\\3AorderTypeSelectOne\\3A 1", "css:finder"],
+        ["xpath=//td[@id='baseForm:orderTypeSelectOne:1']", "xpath:attributes"],
+        ["xpath=//div[@id='scroll-baseForm:orderTypeSelectOne']/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//div[8]/div/table/tbody/tr[2]/td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "cbb21895-4f96-4f11-8434-04e82641f5f8",
       "comment": "",
       "command": "executeScript",
@@ -885,19 +898,6 @@
       "command": "repeatIf",
       "target": "${unopened} == true",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "6df560f2-3262-47c8-a32f-61fb323913ce",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//td[@id='baseForm:orderTypeSelectOne:1']",
-      "targets": [
-        ["id=baseForm:orderTypeSelectOne:1", "id"],
-        ["css=#baseForm\\3AorderTypeSelectOne\\3A 1", "css:finder"],
-        ["xpath=//td[@id='baseForm:orderTypeSelectOne:1']", "xpath:attributes"],
-        ["xpath=//div[@id='scroll-baseForm:orderTypeSelectOne']/table/tbody/tr[2]/td", "xpath:idRelative"],
-        ["xpath=//div[8]/div/table/tbody/tr[2]/td", "xpath:position"]
-      ],
       "value": ""
     }, {
       "id": "72754019-8d80-43e2-89fe-d34ec21bff04",
