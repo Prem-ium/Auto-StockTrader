@@ -10,7 +10,7 @@
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
       "command": "store",
-      "target": "AMPE",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -24,7 +24,7 @@
       "id": "2c57ae98-c312-45c3-812f-1c42dd3f6c82",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 20}, (_, i) => i + 1);",
       "targets": [],
       "value": "numAccounts"
     }, {
@@ -143,13 +143,6 @@
       "targets": [],
       "value": "finished"
     }, {
-      "id": "28f4063f-dc55-41f5-931f-1e49b05ee4da",
-      "comment": "",
-      "command": "echo",
-      "target": "Status: ${finished}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "1409720a-2af7-474e-84e3-ad13f52e7ad2",
       "comment": "",
       "command": "if",
@@ -181,6 +174,13 @@
         ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
         ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "5ec14c45-9644-4fbd-9490-5e0840ad6611",
+      "comment": "",
+      "command": "echo",
+      "target": "The next command is designed to fail.",
+      "targets": [],
       "value": ""
     }, {
       "id": "9aa3c919-5482-4033-9a57-f49dc8fdc16f",
@@ -559,7 +559,7 @@
       "id": "397e51c1-398c-4d26-a102-7dd6c7ac4d82",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 20}, (_, i) => i + 1);",
       "targets": [],
       "value": "numAccounts"
     }, {
@@ -702,6 +702,13 @@
         ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
         ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "b17180a4-4f89-4e80-886d-702d24a3658c",
+      "comment": "",
+      "command": "echo",
+      "target": "The next command is designed to fail.",
+      "targets": [],
       "value": ""
     }, {
       "id": "7b80016b-efad-4c28-a8a8-ce9a1ce4beb1",
