@@ -5,7 +5,7 @@
 <p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
 
-## Features
+# Features
 
 - Multiple Stock Ticker Automation (Seperated by `,`)
 - Pre-Market, Market, & Post-Market Support
@@ -29,7 +29,7 @@ This project contains the means of automating buy/sell stock orders within:
 - Sofi Invest
 - Vanguard
 
-## Enviornmental Variables
+# Enviornmental Variables
 
 To use this project, you will need to set the following environment variables in your .env file:
 
@@ -76,7 +76,7 @@ To attempt to enter credentials or login where possible, you can set the followi
 
 Refer to `.env.example` for more clarity.
 
-## Installation
+# Installation
 
 Clone the repository & install dependencies:
 
@@ -98,7 +98,7 @@ Passing an argument will quickly update the stock orders in all .side projects.
   python main.py APPL
 ```
 
-### Selenium IDE
+## Selenium IDE
 
 This project requires the use of Selenium IDE browser extension. You will need to download it for your browser's addon extension store. Keep in mind, some browsers such as Chrome are more favorable to use than Edge with this extension. 
 
@@ -111,7 +111,7 @@ After going through the [Installation](#Installation) & running configuring your
 
 For more assistance, refer to [archived README](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD)
 
-## Donations
+# Donations
 
 I've been working on this project for a few months now, and I'm really happy with how it's turned out. Based on the testimony, it has been a great tool in automating stock ticker orders across multiple brokerage accounts in multiple different brokerages. I'm working on creating new features and optimizing the project to run automation orders as efficiently as possible.
 
@@ -128,25 +128,23 @@ Otherwise, <a href="https://www.buymeacoffee.com/prem.ium">Buy-Me-Coffee</a> can
 
 Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you!
 
-### GitHub Sponsors Perks
-#### Gold Sponsor Perks
+## GitHub Sponsors Perks
+<b>Gold Sponsor Perks</b>: Sponsors who contribute within the `Gold Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive early access to features and perks of the Auto-StockTrader project before the public, along with access to exclusive scripts & features only available to Gold sponsoring users. 
 
-Sponsors who contribute within the `Gold Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive early access to features and perks of the Auto-StockTrader project before the public, along with access to exclusive scripts & features only available to Gold sponsoring users. 
+<b>Silver Sponsor Perks</b>: Sponsors who contribute within the `Silver Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive expedited bug report handling, support, and a mention on a README in a project of their choice.
 
-#### Silver Sponsor Perks
-Sponsors who contribute within the `Silver Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive expedited bug report handling, support, and a mention on a README in a project of their choice.
-
-##⚠️ **DISCLAIMER:**
-You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
-
-## License
+# License
 This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
 
-## Acknowledgments & Final Remarks
+# Acknowledgments & Final Remarks
 A special thanks to all <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donor(s), </a>tester(s), and<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> contributor(s).</a>
 
-Thank you so much for your interest in this repository.
-Please consider leaving a :star2: if you found this project to be cool!
 
 ### Potential Brokerages
 There are currently no plans to offer automation on other brokerages not listed within this repository. However, I am open to receiving pull-requests to merge any new `.side` projects for automating new brokerages. Upon sending a pull-request, please request a review from me when you believe your PR is merge-ready. 
+
+### ⚠️ **DISCLAIMER:**
+You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
+
+Thank you so much for your interest in this repository.
+Please consider leaving a :star2: if you found this project to be cool!
