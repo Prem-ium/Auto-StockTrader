@@ -499,7 +499,7 @@
       "id": "231e4e31-a842-4cb7-ba4a-459bf9b6f3d3",
       "comment": "",
       "command": "echo",
-      "target": "${account} finished buying",
+      "target": "${account} finished buying ${TICK}",
       "targets": [],
       "value": ""
     }, {
@@ -1113,7 +1113,7 @@
       "id": "171f7a39-3411-4bfd-b87e-10c8036b934c",
       "comment": "",
       "command": "echo",
-      "target": "${account} finished selling",
+      "target": "${account} finished selling ${TICK}",
       "targets": [],
       "value": ""
     }, {
@@ -1173,7 +1173,7 @@
       "id": "6b0a4de6-b632-487f-96d3-3adc53d4eb75",
       "comment": "",
       "command": "if",
-      "target": "${VANGUARD_LOGIN} != \"LOGIN:HERE\";",
+      "target": "${VANGUARD_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
     }, {
