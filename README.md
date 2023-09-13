@@ -52,6 +52,8 @@ To use this project, you will need to set the following environment variables in
 
 `CUSTOM_DIR` = Directory path updated .side files should be located. (Optional)
 
+`DYNAMIC` = Int value (0= Off, 1=On). Dynamic account handling. (Optional)
+
 Example:
 
 ```bash

@@ -98,6 +98,8 @@ def main():
                 # Update Ticker, if provided
                 if TICKER is not None and command['value'] == 'TICKER':
                     command['target'] = f"return '{TICKER}'" if command['command'] == 'executeScript' else TICKER
+                if command['command'] == 'store' and command['value'] == 'dynamic':
+                    command['target'] = os.environ.get("DYNAMIC", 0)
                 # Update the account number(s) and break to next test
                 if command['command'] == 'executeScript' and command['value'] == 'accounts':
                     command['target'] = f"return {task}"

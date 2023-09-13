@@ -14,19 +14,19 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "b99c300c-2f96-4a9a-ac45-c8e71c5bfe8f",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "dynamic"
+    }, {
       "id": "9b04dfeb-83ed-456b-b6c0-65dd36180f0d",
       "comment": "",
       "command": "executeScript",
       "target": "return ${TICKER}.split(\",\");",
       "targets": [],
       "value": "TICKERS"
-    }, {
-      "id": "9d1d46da-1d46-40de-8fdf-9750f00d6cec",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
-      "targets": [],
-      "value": "accounts"
     }, {
       "id": "f52795f8-b859-4ebc-927f-43b691e5245f",
       "comment": "",
@@ -35,7 +35,56 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "3876e763-6a43-4c7f-9046-1e6d41fc95a1",
+      "id": "ca063ef4-3d2a-4269-9bbb-ef422d80af81",
+      "comment": "",
+      "command": "if",
+      "target": "${dynamic} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df8d591c-f63e-4e4f-9aa3-d7ed1d75a0e1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "0ba3e63e-53fe-434b-91c8-c8146a202b40",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${dynamic} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e5a48b3-85e2-43fa-a34b-2618b5c0dc30",
+      "comment": "",
+      "command": "open",
+      "target": "https://olui2.fs.ml.com/TFPSummary/PortfolioSimpleView.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34731fef-9d1f-48d8-ab9d-dc1611a79891",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const optionElements = document.querySelectorAll('nwal__account-item-info'); return optionElements.length -1;",
+      "targets": [],
+      "value": "len_accounts"
+    }, {
+      "id": "0696c68e-c388-47f4-97e4-e892bd58566b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: ${len_accounts}}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "c48aa6dd-5436-475b-9305-caf9297bf3df",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6f845c7-fe9e-49cf-8e15-dc35471a2e01",
       "comment": "",
       "command": "executeScript",
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
@@ -339,19 +388,12 @@
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "d7df3ac9-fbd1-43a6-8e18-03d9504f3c0d",
+      "id": "613ff68c-ca3e-4d44-99bf-e6c8fa83241e",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "command": "store",
+      "target": "1",
       "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "3e9dfae0-50f4-468c-8619-f1828c348c16",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
-      "targets": [],
-      "value": "accounts"
+      "value": "dynamic"
     }, {
       "id": "24167be7-92be-47af-84c6-7267455f378e",
       "comment": "",
@@ -360,7 +402,56 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "84a1d74d-6a34-4c6c-999b-63a7b99e9840",
+      "id": "3b90a29c-c142-49d6-92b9-6f93a396df26",
+      "comment": "",
+      "command": "if",
+      "target": "${dynamic} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e9dfae0-50f4-468c-8619-f1828c348c16",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 50}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "ffce23f7-07cb-49fd-b7c7-7b593d66557f",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${dynamic} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14facef4-85c3-471e-9c02-6f57fb89bf8e",
+      "comment": "",
+      "command": "open",
+      "target": "https://olui2.fs.ml.com/TFPSummary/PortfolioSimpleView.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "047f6eb9-e8a8-4470-86a6-343e1d3117b6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const optionElements = document.querySelectorAll('nwal__account-item-info'); return optionElements.length -1;",
+      "targets": [],
+      "value": "len_accounts"
+    }, {
+      "id": "8d14deb5-fb32-4f6c-b6e0-ea4f544e8301",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: ${len_accounts}}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "b75c31c9-45a0-4364-83cb-03605f0e8500",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15801d9f-86f3-4c75-a828-91528e45904c",
       "comment": "",
       "command": "executeScript",
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
@@ -373,6 +464,13 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
+    }, {
+      "id": "d7df3ac9-fbd1-43a6-8e18-03d9504f3c0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "5a28f883-1e5a-43fa-bd77-ca47f293d8cb",
       "comment": "",
