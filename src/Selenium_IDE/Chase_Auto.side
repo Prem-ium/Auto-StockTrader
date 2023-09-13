@@ -56,13 +56,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "324b00e7-00c6-4499-bc95-8dfc7cb55014",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Buy\";",
-      "targets": [],
-      "value": "FORMAT"
-    }, {
       "id": "266a62bd-da7a-4632-b448-3dc4fc32557b",
       "comment": "",
       "command": "executeScript",
@@ -70,26 +63,19 @@
       "targets": [],
       "value": "AI_ARRAY"
     }, {
-      "id": "b5069a9a-7cbb-4b3c-9b6a-9a15d48a843d",
-      "comment": "",
-      "command": "echo",
-      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "56390888-fb00-4f17-9391-a7d69d9bccad",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
-    }, {
       "id": "e7de3e0d-8814-41ea-8159-0b882221a58f",
       "comment": "",
       "command": "forEach",
       "target": "TICKERS",
       "targets": [],
       "value": "TICK"
+    }, {
+      "id": "2fb18344-dc5b-403c-90a5-5f2ad46a15ff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "29ffb7ff-914a-4879-aae2-27af390b2b54",
       "comment": "",
@@ -122,7 +108,7 @@
         ["xpath=//fieldset/div/div/span/label", "xpath:position"],
         ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
       ],
-      "value": "35000"
+      "value": "45000"
     }, {
       "id": "f7a398a9-3a88-4c41-8214-111aac63cf88",
       "comment": "",
@@ -152,13 +138,6 @@
       ],
       "value": ""
     }, {
-      "id": "80c0c459-4506-49ad-a42c-5f838df8762e",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "e19ddf26-6389-4fc1-bca9-d700946e1aea",
       "comment": "",
       "command": "type",
@@ -173,13 +152,6 @@
       ],
       "value": "1"
     }, {
-      "id": "1010a04a-6bd9-48fd-b45f-53867c93e83e",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "26e5b155-1918-4948-83f4-5f4a40f32253",
       "comment": "",
       "command": "click",
@@ -192,10 +164,24 @@
       ],
       "value": ""
     }, {
-      "id": "7affb4a4-ea09-49ff-8ac4-6761f9b42421",
+      "id": "4f262227-997c-429e-a7e3-d6355582ddb8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "a2e00122-3a7c-4e2e-91f2-5d8102e46fae",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "873a7044-1f1e-4ebb-bc3a-5b1aab769240",
       "comment": "",
       "command": "pause",
-      "target": "2250",
+      "target": "500",
       "targets": [],
       "value": ""
     }, {
@@ -212,30 +198,18 @@
       ],
       "value": ""
     }, {
-      "id": "c66adb68-c78d-4c79-8095-372dfbe3a28d",
+      "id": "d4054051-8833-4e52-96dd-43a4d8161bd5",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
+      "command": "executeScript",
+      "target": "const xpath = '//*[@id=\"previewHeader\"]/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && element.textContent === \"Order preview\");",
+      "targets": [],
+      "value": "preview"
     }, {
-      "id": "ed275c3c-5e7e-4574-8042-481bfad062b3",
+      "id": "f73128b9-f1c9-4e8e-b8f7-ba6fc11f974a",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "repeatIf",
+      "target": "${preview} == false",
+      "targets": [],
       "value": ""
     }, {
       "id": "c8c5d769-ef78-447a-b71d-fbf2bd8fe050",
@@ -261,14 +235,14 @@
       "id": "d0c8857c-90d0-48b0-9d09-de5fecd4c768",
       "comment": "",
       "command": "echo",
-      "target": "${AI} ${FORMAT} ${TICK} Successful!",
+      "target": "${AI} BUY ${TICK} Successful!",
       "targets": [],
       "value": ""
     }, {
       "id": "0de0d19d-d0fe-44e4-8b98-5be8fb75812b",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -367,13 +341,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d72fed71-9abf-456a-9598-248037c33691",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Sell\"",
-      "targets": [],
-      "value": "FORMAT"
-    }, {
       "id": "22217338-eff5-47d9-8058-e67b0026b82b",
       "comment": "",
       "command": "executeScript",
@@ -381,26 +348,19 @@
       "targets": [],
       "value": "AI_ARRAY"
     }, {
-      "id": "6b25ba9e-9ebd-44dc-83cf-12247895a297",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
-    }, {
-      "id": "2f94da8a-1dae-43a6-853e-6cdcecc8692a",
-      "comment": "",
-      "command": "echo",
-      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a6d40abc-5993-43d9-947d-3706363a292a",
       "comment": "",
       "command": "forEach",
       "target": "TICKERS",
       "targets": [],
       "value": "TICK"
+    }, {
+      "id": "6b25ba9e-9ebd-44dc-83cf-12247895a297",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0;",
+      "targets": [],
+      "value": "count"
     }, {
       "id": "e11b9f9f-1559-4922-9167-4c1ed3cc3daf",
       "comment": "",
@@ -433,7 +393,7 @@
         ["xpath=//fieldset/div/div/span/label", "xpath:position"],
         ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
       ],
-      "value": "35000"
+      "value": "45000"
     }, {
       "id": "50f3c670-db5c-40e7-aaac-81677677e201",
       "comment": "",
@@ -478,14 +438,14 @@
       "id": "babde2bf-ab7b-4de6-b5be-159f3ee29736",
       "comment": "",
       "command": "executeScript",
-      "target": "if (${runCheck} == true) {  const xpath = '//*[@id=\"positionsHeader\"]/span';const element = document.evaluate(  xpath,  document,  null,  XPathResult.FIRST_ORDERED_NODE_TYPE,  null).singleNodeValue;if (element && element.textContent === \"No position\") {  console.log(\"The text is 'Incomplete transaction detected'\");  return true;} else {  console.log(\"The text is not 'Incomplete transaction detected'\");  return false;}} else { return false;}",
+      "target": "if (${runCheck} == true) {const xpath = '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; return (element && element.textContent === \"No position\");}",
       "targets": [],
       "value": "noPosition"
     }, {
       "id": "8e41e847-c185-4644-8b99-d71a5687b9eb",
       "comment": "",
       "command": "if",
-      "target": "${noPosition} == true && ${runCheck} == true",
+      "target": "${noPosition} == true",
       "targets": [],
       "value": ""
     }, {
@@ -510,10 +470,24 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "23b85b8f-688d-4ef8-9e3a-0d3945e05b07",
+      "id": "218483b6-97d9-49cc-a36f-cc99bf0cceec",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "b4b652f1-14b5-4570-b5fb-ab72adb54b9a",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b87b2269-dad8-4b8d-896c-93b499a92b88",
       "comment": "",
       "command": "pause",
-      "target": "2250",
+      "target": "500",
       "targets": [],
       "value": ""
     }, {
@@ -530,30 +504,18 @@
       ],
       "value": ""
     }, {
-      "id": "6e57e693-ab3e-4933-9404-18d36a5e3a63",
+      "id": "50819b5c-8471-4093-bd2a-a7b5cc702c03",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
+      "command": "executeScript",
+      "target": "const xpath = '//*[@id=\"previewHeader\"]/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && element.textContent === \"Order preview\");",
+      "targets": [],
+      "value": "preview"
     }, {
-      "id": "0c4cb2f6-34f0-4f12-a98e-2bf32f728777",
+      "id": "15b0b005-76ec-472c-95aa-75859e8f2e50",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "repeatIf",
+      "target": "${preview} == false",
+      "targets": [],
       "value": ""
     }, {
       "id": "657206b0-8587-4f3d-8335-8b240fb83c07",
@@ -579,14 +541,14 @@
       "id": "b25fcc83-4321-48f7-b543-b1cab3594b93",
       "comment": "",
       "command": "echo",
-      "target": "${AI} ${FORMAT} ${TICK} Successful!",
+      "target": "${AI} SELL ${TICK} Successful!",
       "targets": [],
       "value": ""
     }, {
       "id": "b0a21a4f-3f02-4d1a-9017-13baa306a6c0",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -685,13 +647,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "208f0e28-0854-4874-87f0-fb80e06ffbc6",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Buy\"",
-      "targets": [],
-      "value": "FORMAT"
-    }, {
       "id": "70d4a82e-caa7-4bc0-81ad-42d22595b284",
       "comment": "",
       "command": "executeScript",
@@ -699,12 +654,12 @@
       "targets": [],
       "value": "AI_ARRAY"
     }, {
-      "id": "44765db9-95dc-4db8-a103-ed043f4089a4",
+      "id": "f786e731-7883-45ec-b2e6-ba6086dddcbe",
       "comment": "",
-      "command": "echo",
-      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "command": "forEach",
+      "target": "TICKERS",
       "targets": [],
-      "value": ""
+      "value": "TICK"
     }, {
       "id": "18b1d1cf-1e06-4260-bcf5-d1ab6a64b118",
       "comment": "",
@@ -712,13 +667,6 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
-    }, {
-      "id": "f786e731-7883-45ec-b2e6-ba6086dddcbe",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
     }, {
       "id": "7da53d12-e38a-45f4-95d9-71c4b48e6320",
       "comment": "",
@@ -741,13 +689,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e9932648-2ba8-42c5-8afc-db8c9625e175",
-      "comment": "",
-      "command": "pause",
-      "target": "4800",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "46525abd-f206-4bd2-bc6b-6340a18b2777",
       "comment": "",
       "command": "waitForElementPresent",
@@ -758,7 +699,7 @@
         ["xpath=//fieldset/div/div/span/label", "xpath:position"],
         ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
       ],
-      "value": "35000"
+      "value": "45000"
     }, {
       "id": "dd6f2410-4b74-4f4c-96ce-3ec0478c3a06",
       "comment": "",
@@ -788,13 +729,6 @@
       ],
       "value": ""
     }, {
-      "id": "13e40c0e-64fd-474c-94fb-6b389e8af1fc",
-      "comment": "",
-      "command": "if",
-      "target": "${FORMAT} = \"Buy\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "e927fd3b-3f57-45e3-a440-d990033bee13",
       "comment": "",
       "command": "type",
@@ -809,13 +743,6 @@
       ],
       "value": "1"
     }, {
-      "id": "a869d1c0-c738-4e2c-97e7-3ed3064e5363",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "58001ed1-712d-492f-8859-f2124e11ed61",
       "comment": "",
       "command": "click",
@@ -828,10 +755,24 @@
       ],
       "value": ""
     }, {
-      "id": "f1b7d614-7034-47ac-803b-5616e4b17871",
+      "id": "83aeace2-7076-403f-b7a6-1aa4281f8d64",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c4a923c1-1388-40c8-af42-cb332449ab74",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "177c2c22-8c35-4ac0-a1d6-dd639ab7c19d",
       "comment": "",
       "command": "pause",
-      "target": "2250",
+      "target": "500",
       "targets": [],
       "value": ""
     }, {
@@ -848,30 +789,18 @@
       ],
       "value": ""
     }, {
-      "id": "7a357423-4ebe-42d0-9a4c-880196f451a4",
+      "id": "b5ef4fbb-b32a-4b0a-b67d-c7f9a2fc5f8c",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
+      "command": "executeScript",
+      "target": "const xpath = '//*[@id=\"previewHeader\"]/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && element.textContent === \"Order preview\");",
+      "targets": [],
+      "value": "preview"
     }, {
-      "id": "24a649ed-5159-4172-8e5f-f905519c7855",
+      "id": "c7db6ce5-b69d-405c-8873-b32641a3391a",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "repeatIf",
+      "target": "${preview} == false",
+      "targets": [],
       "value": ""
     }, {
       "id": "e18ee6fd-a456-4c49-bec7-0bcdee81335f",
@@ -910,14 +839,14 @@
       "id": "111a5875-10db-4997-8909-f5401eb5fc91",
       "comment": "",
       "command": "echo",
-      "target": "${AI} ${FORMAT} ${TICK} Successful!",
+      "target": "${AI} BUY ${TICK} Successful!",
       "targets": [],
       "value": ""
     }, {
       "id": "501c479b-fd95-4fa3-ae6f-8748d34c43c4",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -1016,13 +945,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "979748f1-52dc-402f-b4c7-60280517aebe",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"Sell\"",
-      "targets": [],
-      "value": "FORMAT"
-    }, {
       "id": "d6d0f8a9-1024-4e0d-943a-dd471c8d770b",
       "comment": "",
       "command": "executeScript",
@@ -1030,12 +952,12 @@
       "targets": [],
       "value": "AI_ARRAY"
     }, {
-      "id": "5fb7633d-baf5-4517-9bfc-08f91d27878b",
+      "id": "3ae132db-4b36-47a8-87c1-7c96888bc5fc",
       "comment": "",
-      "command": "echo",
-      "target": "${FORMAT}ing ${TICKER} with ${AI_ARRAY}",
+      "command": "forEach",
+      "target": "TICKERS",
       "targets": [],
-      "value": ""
+      "value": "TICK"
     }, {
       "id": "0abddb5d-a0c6-4be9-a1e8-27b0133c0b24",
       "comment": "",
@@ -1043,13 +965,6 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
-    }, {
-      "id": "3ae132db-4b36-47a8-87c1-7c96888bc5fc",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
     }, {
       "id": "f5b9da09-7230-4266-b993-d3327d9e13c9",
       "comment": "",
@@ -1082,7 +997,7 @@
         ["xpath=//fieldset/div/div/span/label", "xpath:position"],
         ["xpath=//label[contains(.,'Buy')]", "xpath:innerText"]
       ],
-      "value": "35000"
+      "value": "45000"
     }, {
       "id": "73ff1c71-a9ce-411a-90db-53b9c4f91e4b",
       "comment": "",
@@ -1127,7 +1042,7 @@
       "id": "824b397c-d3cc-49e4-829f-ffc0c4e9b7bb",
       "comment": "",
       "command": "executeScript",
-      "target": "if (${runCheck} == true) {  const xpath = '//*[@id=\"positionsHeader\"]/span';const element = document.evaluate(  xpath,  document,  null,  XPathResult.FIRST_ORDERED_NODE_TYPE,  null).singleNodeValue;if (element && element.textContent === \"No position\") {  console.log(\"The text is 'Incomplete transaction detected'\");  return true;} else {  console.log(\"The text is not 'Incomplete transaction detected'\");  return false;}} else { return false;}",
+      "target": "if (${runCheck} == true) {const xpath = '//*[@id=\"positionsHeader\"]/span'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; return (element && element.textContent === \"No position\");}",
       "targets": [],
       "value": "noPosition"
     }, {
@@ -1159,24 +1074,25 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a168467e-d6a1-4965-b849-07a60b623427",
+      "id": "26468e17-c267-472c-907a-918c573ad4c7",
       "comment": "",
-      "command": "pause",
-      "target": "2250",
+      "command": "waitForElementPresent",
+      "target": "xpath=//mds-button[@id='previewOrder']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ddafddc5-ea30-40c5-9ecc-577b477584ee",
+      "comment": "",
+      "command": "do",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "ab96c2b6-e99b-447b-ad83-6f5bd05bf5d8",
+      "id": "a168467e-d6a1-4965-b849-07a60b623427",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "pause",
+      "target": "500",
+      "targets": [],
       "value": ""
     }, {
       "id": "83d9277c-5664-46d7-91a8-fb139c8b6c95",
@@ -1192,17 +1108,18 @@
       ],
       "value": ""
     }, {
-      "id": "7b22134d-78fd-44aa-8463-aa3b45da6965",
+      "id": "909a5cf4-f24b-4709-8953-774d5c7225ca",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "executeScript",
+      "target": "const xpath = '//*[@id=\"previewHeader\"]/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && element.textContent === \"Order preview\");",
+      "targets": [],
+      "value": "preview"
+    }, {
+      "id": "87880be5-fe88-4051-b4c2-d85b8d53b179",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${preview} == false",
+      "targets": [],
       "value": ""
     }, {
       "id": "f1dc0a7e-0e19-40ec-8bb6-0e13354583ca",
@@ -1262,7 +1179,7 @@
       "id": "58a3fb8c-d345-4ab5-8c8d-5ade9c6b4aab",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -1562,7 +1479,21 @@
       "id": "83d1f0b9-27ea-4634-b3a5-8e90dc6b78d5",
       "comment": "",
       "command": "pause",
-      "target": "2250",
+      "target": "850",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a0082a9-7efc-4ba6-8768-1f0f069e98a5",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d11e0719-bcb3-4a27-a87c-18c665fa7d3a",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
       "targets": [],
       "value": ""
     }, {
@@ -1579,30 +1510,18 @@
       ],
       "value": ""
     }, {
-      "id": "a1827279-fbb4-4109-ac9c-7257422987ea",
+      "id": "a2ee0a28-ec14-413e-a3d0-1ba3ee062952",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
-      "value": ""
+      "command": "executeScript",
+      "target": "const xpath = '//*[@id=\"previewHeader\"]/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && element.textContent === \"Order preview\");",
+      "targets": [],
+      "value": "preview"
     }, {
-      "id": "6b2c155d-2daf-469c-81c5-c6d8d25f9dbd",
+      "id": "0d7859e5-2ee1-402d-8735-f09a9ef77d04",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//mds-button[@id='previewOrder']",
-      "targets": [
-        ["id=previewOrder", "id"],
-        ["css=#previewOrder", "css:finder"],
-        ["xpath=//mds-button[@id='previewOrder']", "xpath:attributes"],
-        ["xpath=//div[@id='tradeBalancesEntryStickyFooter']/div[2]/div/div[2]/div[3]/div/div[2]/mds-button", "xpath:idRelative"],
-        ["xpath=//div[2]/mds-button", "xpath:position"]
-      ],
+      "command": "repeatIf",
+      "target": "${preview} == false",
+      "targets": [],
       "value": ""
     }, {
       "id": "37583149-498b-4518-96fe-da1f1c809ac7",
@@ -1635,7 +1554,7 @@
       "id": "d550d030-69c8-4493-88da-ec270a9f2623",
       "comment": "",
       "command": "pause",
-      "target": "2500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -1692,17 +1611,10 @@
       "targets": [],
       "value": "CHASE_LOGIN"
     }, {
-      "id": "43004f91-1452-4400-93b5-c7f851d9eb55",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${CHASE_LOGIN} != \"LOGIN:HERE\";",
-      "targets": [],
-      "value": "use_login"
-    }, {
       "id": "70ef1285-7ad2-4895-9eca-ab6d25048e4f",
       "comment": "",
       "command": "if",
-      "target": "${use_login}",
+      "target": "${CHASE_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
     }, {
