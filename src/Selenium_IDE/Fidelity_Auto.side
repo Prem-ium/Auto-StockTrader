@@ -539,6 +539,20 @@
     "id": "2db8e529-1771-4461-b300-3e5027c85693",
     "name": "0 Fido Login",
     "commands": [{
+      "id": "efdf0883-1c21-4807-aa8f-c0bcd306d44c",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "action"
+    }, {
+      "id": "41e28a48-36ea-4f21-a522-02ac518528a0",
+      "comment": "",
+      "command": "if",
+      "target": "${action} == 0",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "615f1a28-8146-4313-85a7-5693201d753e",
       "comment": "",
       "command": "open",
@@ -560,17 +574,10 @@
       "targets": [],
       "value": "LOGIN"
     }, {
-      "id": "836d2a91-161b-459a-bebb-3f6390bbf6b4",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${FIDELITY_LOGIN} != \"LOGIN:HERE\";",
-      "targets": [],
-      "value": "use_login"
-    }, {
       "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
       "comment": "",
       "command": "if",
-      "target": "${use_login}",
+      "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
     }, {
@@ -647,6 +654,41 @@
         ["xpath=//button", "xpath:position"],
         ["xpath=//button[contains(.,'Log In')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "2e50c447-d85c-46ca-8a18-003da8727bae",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4efb77a-dd55-40f4-9a22-1ca6fe134ccd",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${action} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ead23bc-2676-440a-9ef5-ccadbc2dfd51",
+      "comment": "",
+      "command": "open",
+      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9ca9b0d-1341-4730-bd16-1d8e96becc8d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+      "targets": [],
+      "value": "acc_array"
+    }, {
+      "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
+      "comment": "",
+      "command": "echo",
+      "target": "${acc_array}",
+      "targets": [],
       "value": ""
     }, {
       "id": "c3657f82-8f80-4a86-84a9-947474233276",
