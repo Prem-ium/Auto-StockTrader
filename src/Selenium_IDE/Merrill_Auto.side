@@ -70,12 +70,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "dbff6b13-2603-4f20-b421-3baee98cf097",
+      "id": "b5349b9b-b4b8-4168-a18b-0c68959a90f8",
       "comment": "",
-      "command": "pause",
-      "target": "3000",
+      "command": "waitForElementPresent",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "c47c5c83-f31b-4148-94eb-2b0027deb90c",
       "comment": "",
@@ -98,12 +98,12 @@
       "targets": [],
       "value": "label=Sell"
     }, {
-      "id": "132ac824-ab19-47d7-b220-d313e2738245",
+      "id": "2c93c939-8da3-44a1-9014-4ed9ddce2fc2",
       "comment": "",
-      "command": "pause",
-      "target": "1000",
+      "command": "waitForElementEditable",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "c034afb7-d686-40a4-8df6-e68406846b54",
       "comment": "",
@@ -154,12 +154,12 @@
       "targets": [],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "b968b49f-2524-49ca-8a5c-716f5c576fd9",
+      "id": "4f567fd7-9d6b-4169-b8cd-26fbd835fa73",
       "comment": "",
-      "command": "pause",
-      "target": "1000",
+      "command": "waitForElementEditable",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "61971ee3-072d-4e36-889f-40f7569d0c53",
       "comment": "",
@@ -192,7 +192,7 @@
       "id": "57c6711d-cea8-4f61-a5d3-1fc45ea97bf3",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -233,7 +233,7 @@
       "id": "7310e92a-c055-41fa-a7cd-c2d5a99977d4",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "1500",
       "targets": [],
       "value": ""
     }, {
@@ -282,7 +282,7 @@
       "id": "1a7b5e24-57de-46e4-820e-1dd00e0dba6b",
       "comment": "",
       "command": "echo",
-      "target": "Sell ${TICK} on acct ${account} successful!",
+      "target": "Sell ${TICK} on acct ${account} ran!",
       "targets": [],
       "value": ""
     }, {
@@ -395,12 +395,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2294195a-37dd-49a9-bcaa-8da31f0b8c01",
+      "id": "04b5893b-3f05-4d7f-afdf-4f7f199ad895",
       "comment": "",
-      "command": "pause",
-      "target": "3000",
+      "command": "waitForElementPresent",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ddlOrderType",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "3380d0d8-3b1a-4c8e-aa8c-5ed8489e37f9",
       "comment": "",
@@ -423,12 +423,12 @@
       "targets": [],
       "value": "label=Buy"
     }, {
-      "id": "1143338c-25e9-4b1c-a8f0-ed32b7b92181",
+      "id": "d94f9007-8740-430f-aa6b-6dd75b239130",
       "comment": "",
-      "command": "pause",
-      "target": "1000",
+      "command": "waitForElementEditable",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtSymbol",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "a56d201f-f2b9-4c02-96b5-076ddbdb3bcc",
       "comment": "",
@@ -479,12 +479,12 @@
       "targets": [],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "528946c6-65a3-4153-b21a-010146abf616",
+      "id": "1365f49e-e64c-4017-ba12-5b7c973277fa",
       "comment": "",
-      "command": "pause",
-      "target": "1000",
+      "command": "waitForElementEditable",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_txtQuantity",
       "targets": [],
-      "value": ""
+      "value": "30000"
     }, {
       "id": "d206ce64-eea7-41fa-9429-ed863509638f",
       "comment": "",
@@ -517,7 +517,7 @@
       "id": "912ae8cf-c4de-42d3-b886-31c1042ef5df",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -572,7 +572,7 @@
       "id": "26ad3c67-c5f2-4557-859b-a50d9be47a90",
       "comment": "",
       "command": "echo",
-      "target": "Sell ${TICK} on acct ${account} successful!",
+      "target": "Buy ${TICK} on acct ${account} ran!",
       "targets": [],
       "value": ""
     }, {
@@ -636,17 +636,10 @@
       "targets": [],
       "value": "LOGIN"
     }, {
-      "id": "86d5cc88-251f-46ed-b19e-49c88baedfca",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${MERRILL_LOGIN} != \"LOGIN:HERE\";",
-      "targets": [],
-      "value": "use_login"
-    }, {
       "id": "081b7e85-5ee5-4fea-aa38-436ac0fcaf7b",
       "comment": "",
       "command": "if",
-      "target": "${use_login}",
+      "target": "${MERRILL_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
     }, {
