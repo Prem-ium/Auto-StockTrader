@@ -839,7 +839,7 @@
       "id": "111a5875-10db-4997-8909-f5401eb5fc91",
       "comment": "",
       "command": "echo",
-      "target": "${AI} BUY ${TICK} Successful!",
+      "target": "${AI} Pre-Market BUY ${TICK} Successful!",
       "targets": [],
       "value": ""
     }, {
@@ -1125,7 +1125,7 @@
       "id": "f1dc0a7e-0e19-40ec-8bb6-0e13354583ca",
       "comment": "",
       "command": "pause",
-      "target": "3900",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -1172,7 +1172,7 @@
       "id": "d89aa690-6ab6-46a3-ab60-07016e45a870",
       "comment": "",
       "command": "echo",
-      "target": "${AI} ${FORMAT} ${TICK} Successful!",
+      "target": "${AI} Pre-Market Sell ${TICK} Successful!",
       "targets": [],
       "value": ""
     }, {
