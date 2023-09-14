@@ -66,7 +66,7 @@
       "id": "34731fef-9d1f-48d8-ab9d-dc1611a79891",
       "comment": "",
       "command": "executeScript",
-      "target": "const optionElements = document.querySelectorAll('nwal__account-item-info'); return optionElements.length -1;",
+      "target": "const optionElements = document.querySelectorAll('.nwal__account-item-info'); return optionElements.length -1;",
       "targets": [],
       "value": "len_accounts"
     }, {
@@ -433,7 +433,7 @@
       "id": "047f6eb9-e8a8-4470-86a6-343e1d3117b6",
       "comment": "",
       "command": "executeScript",
-      "target": "const optionElements = document.querySelectorAll('nwal__account-item-info'); return optionElements.length -1;",
+      "target": "const optionElements = document.querySelectorAll('.nwal__account-item-info'); return optionElements.length -1;",
       "targets": [],
       "value": "len_accounts"
     }, {
