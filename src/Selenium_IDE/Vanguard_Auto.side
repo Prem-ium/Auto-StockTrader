@@ -104,14 +104,16 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "f0ebc872-0ce6-432f-b122-8e8e8c1397da",
+      "id": "8c040653-1518-423b-8d6a-6dd97333c80b",
       "comment": "",
       "command": "click",
-      "target": "xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]",
+      "target": "id=baseForm:accountSelectOne_text",
       "targets": [
-        ["css=#baseForm\\3A accountSelectOne-border .vg-SelOneMenuIconCell", "css:finder"],
-        ["xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
-        ["xpath=//a/table/tbody/tr/td[2]", "xpath:position"]
+        ["id=baseForm:accountSelectOne_text", "id"],
+        ["css=#baseForm\\3A accountSelectOne_text", "css:finder"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_text']", "xpath:attributes"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_textCont']/span", "xpath:idRelative"],
+        ["xpath=//a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -132,7 +134,7 @@
       "id": "4dccd687-2a29-4a31-962f-49fd48a2f854",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "50",
       "targets": [],
       "value": ""
     }, {
@@ -203,7 +205,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "43085b6e-a689-4350-914f-22c7ef9abccf",
+      "id": "478d0930-794c-4892-a228-4695f876fc53",
       "comment": "",
       "command": "click",
       "target": "id=baseForm:accountSelectOne:${account}",
@@ -216,13 +218,6 @@
       ],
       "value": ""
     }, {
-      "id": "8a1f0bc5-425f-47f9-9c30-20e8d96e8763",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "8033178b-7696-4a9c-b29f-c1e2877926d0",
       "comment": "",
       "command": "do",
@@ -230,18 +225,27 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "db5c627f-7ac5-445c-a0f3-2884ffaebe62",
+      "id": "7c1f09da-159d-4a46-ad0d-eb84c3897226",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cfdbbda-d2bc-4bea-9d4e-0f622ac2e688",
       "comment": "",
       "command": "click",
-      "target": "xpath=//table[@id='baseForm:transactionTypeSelectOne-border']/tbody/tr/td[2]",
+      "target": "id=baseForm:transactionTypeSelectOne_text",
       "targets": [
-        ["css=#baseForm\\3AtransactionTypeSelectOne-border .vg-SelOneMenuIconCell", "css:finder"],
-        ["xpath=//table[@id='baseForm:transactionTypeSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
-        ["xpath=//span[2]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td[2]", "xpath:position"]
+        ["id=baseForm:transactionTypeSelectOne_text", "id"],
+        ["css=#baseForm\\3AtransactionTypeSelectOne_text", "css:finder"],
+        ["xpath=//span[@id='baseForm:transactionTypeSelectOne_text']", "xpath:attributes"],
+        ["xpath=//span[@id='baseForm:transactionTypeSelectOne_textCont']/span", "xpath:idRelative"],
+        ["xpath=//span[2]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "c186be59-adef-4967-a014-a30920ca1a35",
+      "id": "2d7c73f2-d71c-4aba-808f-dace8de17d4f",
       "comment": "",
       "command": "click",
       "target": "id=baseForm:transactionTypeSelectOne:1",
@@ -250,7 +254,7 @@
         ["css=#baseForm\\3AtransactionTypeSelectOne\\3A 1", "css:finder"],
         ["xpath=//td[@id='baseForm:transactionTypeSelectOne:1']", "xpath:attributes"],
         ["xpath=//div[@id='scroll-baseForm:transactionTypeSelectOne']/table/tbody/tr[2]/td", "xpath:idRelative"],
-        ["xpath=//div[9]/div/table/tbody/tr[2]/td", "xpath:position"],
+        ["xpath=//div[8]/div/table/tbody/tr[2]/td", "xpath:position"],
         ["xpath=//td[contains(.,'Buy')]", "xpath:innerText"]
       ],
       "value": ""
@@ -639,14 +643,16 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "392146d8-bb36-4a53-970a-18e5f297a37e",
+      "id": "6125f73f-b5e6-4f80-81e9-228cd6aab2aa",
       "comment": "",
       "command": "click",
-      "target": "xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]",
+      "target": "id=baseForm:accountSelectOne_text",
       "targets": [
-        ["css=#baseForm\\3A accountSelectOne-border .vg-SelOneMenuIconCell", "css:finder"],
-        ["xpath=//table[@id='baseForm:accountSelectOne-border']/tbody/tr/td[2]", "xpath:idRelative"],
-        ["xpath=//a/table/tbody/tr/td[2]", "xpath:position"]
+        ["id=baseForm:accountSelectOne_text", "id"],
+        ["css=#baseForm\\3A accountSelectOne_text", "css:finder"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_text']", "xpath:attributes"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_textCont']/span", "xpath:idRelative"],
+        ["xpath=//a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -731,23 +737,23 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "812622fb-2992-49ee-9640-1be29a5d1334",
+      "id": "d99a96f1-19c3-44f1-9fff-506ec15f7707",
       "comment": "",
       "command": "click",
       "target": "id=baseForm:accountSelectOne:${account}",
       "targets": [
-        ["id=baseForm:accountSelectOne:15", "id"],
-        ["css=#baseForm\\3A accountSelectOne\\3A 15", "css:finder"],
-        ["xpath=//td[@id='baseForm:accountSelectOne:15']", "xpath:attributes"],
-        ["xpath=//div[@id='scroll-baseForm:accountSelectOne']/table/tbody/tr[16]/td", "xpath:idRelative"],
-        ["xpath=//tr[16]/td", "xpath:position"]
+        ["id=baseForm:accountSelectOne_text", "id"],
+        ["css=#baseForm\\3A accountSelectOne_text", "css:finder"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_text']", "xpath:attributes"],
+        ["xpath=//span[@id='baseForm:accountSelectOne_textCont']/span", "xpath:idRelative"],
+        ["xpath=//a/table/tbody/tr/td/span/span", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "de3f39a2-cd7a-4807-9362-6654c9b42aff",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "500",
       "targets": [],
       "value": ""
     }, {
