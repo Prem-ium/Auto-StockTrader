@@ -33,33 +33,33 @@ This project contains the means of automating buy/sell stock orders within:
 To use this project, you will need to set the following environment variables in your .env file:
 | Variable          | Description                                       | Type                 |
 |-------------------|---------------------------------------------------|----------------------|
-| SCHWAB_AI         | Total Number of Schwab Accounts                  | Integer              |
-| MERRILL_AI        | Total Number of Merrill Accounts                 | Integer              |
-| VANGUARD_AI       | Total Number of Vanguard Accounts  | Integer       |
-| FIDELITY_AI       | Fidelity account numbers                          | Nested List of Strings|
-| CHASE_AI          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
-| FIRSTRADE_AI      | Fidelity Account Numbers | List of Strings       |
-| ALLY_AI           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
-| |
-| CUSTOM_DIR        | Path to the folder to store updated .side files  | String               |
-| DYNAMIC           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
-| SOFI_AI           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
-| SOFI_ACCOUNT_NAMES| Account names and numbers for SoFi Auto.side    | String               |
-| SOFI_LOGIN        | Login credentials for SoFi Auto.side file       | String               |
-| EXCLUDE_ACCOUNTS  | List of SoFi account names to exclude           | String               |
+| `SCHWAB_AI`         | Total Number of Schwab Accounts                  | Integer              |
+| `MERRILL_AI`      | Total Number of Merrill Accounts                 | Integer              |
+| `VANGUARD_AI`       | Total Number of Vanguard Accounts  | Integer       |
+| `FIDELITY_AI`       | Fidelity account numbers                          | Nested List of Strings|
+| `CHASE_AI`          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
+| `FIRSTRADE_AI`      | Fidelity Account Numbers | List of Strings       |
+| `ALLY_AI`           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
+| --|--|--|
+| `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
+| `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
+| `SOFI_AI`           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
+| `SOFI_ACCOUNT_NAMES`| Account names and numbers for SoFi Auto.side    | String               |
+| `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
+| `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
 Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I reccomend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. 
 
 
 | Variable          | Description                                       | Type                 | Example                          |
 |-------------------|---------------------------------------------------|----------------------|----------------------------------|
-| CHASE_LOGIN       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
-| FIDELITY_LOGIN    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
-| FIRSTADE_LOGIN    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
-| MERRILL_LOGIN     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
-| SCHWAB_LOGIN      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
-| ALLY_LOGIN        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
-| VANGUARD_LOGIN    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
+| `CHASE_LOGIN`       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
+| `FIDELITY_LOGIN`    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
+| `FIRSTADE_LOGIN`    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
+| `MERRILL_LOGIN`     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
+| `SCHWAB_LOGIN`      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
+| `ALLY_LOGIN`        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
+| `VANGUARD_LOGIN`    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
 
 Refer to `.env.example` for more clarity.
 
