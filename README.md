@@ -35,7 +35,7 @@ To use this project, you will need to set the following environment variables in
 |-------------------|---------------------------------------------------|----------------------|
 | SCHWAB_AI         | Total Number of Schwab Accounts                  | Integer              |
 | MERRILL_AI        | Total Number of Merrill Accounts                 | Integer              |
-| VANGUARD_AI       | Total Number of Schwab Accounts  | Integer       |
+| VANGUARD_AI       | Total Number of Vanguard Accounts  | Integer       |
 | FIDELITY_AI       | Fidelity account numbers                          | Nested List of Strings|
 | CHASE_AI          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
 | FIRSTRADE_AI      | Fidelity Account Numbers | List of Strings       |
