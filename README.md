@@ -82,7 +82,7 @@ Follow these steps to set up and use Selenium IDE for automation:
 3. **Configure Environment Variables (`.env`):**
     - Create `.env` & Configure your (`.env`) file using [Environmental Variables](https://github.com/Prem-ium/Auto-StockTrader#environmental-variables) formats.
 
-3. **Run the Python Script:**
+4. **Run the Python Script:**
   ```
     python main.py
   ```
@@ -98,10 +98,10 @@ Follow these steps to set up and use Selenium IDE for automation:
     python main.py NVDA,TSLA,APPL
   ```
 
-4. **Open Updated Side Files:**
+5. **Open Updated Side Files:**
    - Open updated `.side` project files in Selenium IDE.
 
-5. **Execute Desired Automation within Selenium IDE:**
+6. **Execute Desired Automation within Selenium IDE:**
    - Log in to your brokerage account.
    - Begin running your desired automation tasks in either the buy or sell test tabs.
 
