@@ -93,7 +93,7 @@ Follow these steps to set up and use Selenium IDE for automation:
     python main.py APPL
   ```
 
-  Seperate multiple with `,`
+  - Seperate multiple with `,`
   ```bsh
     python main.py NVDA,TSLA,APPL
   ```
@@ -115,7 +115,7 @@ If you appreciate my work and would like to show your support, there are two con
 
 1. **GitHub Sponsors**
    - [Donate via GitHub Sponsors](https://github.com/sponsors/Prem-ium)
-   - This is the preferred donation method as it incurs no transaction fees & different tiers offer support.
+   - This is the preferred donation method as it incurs no transaction fees & different tiers offer perks.
    - GitHub Silver & Gold Sponsors receive benefits with their donations ranging from exclusive private scripts with unique features, expedited bug support, & more. 
    [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Prem-ium)
 
