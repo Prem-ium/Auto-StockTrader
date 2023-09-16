@@ -66,7 +66,7 @@ def main():
 
             if var_name == "SCHWAB_AI":
                 info["task"] = "Array.from({length: " + os.environ[var_name] + "}, (_, i) => i);"
-            elif var_name == "MERRILL_AI":
+            elif var_name == "MERRILL_AI" or var_name == "VANGUARD_AI":
                 info["task"] = "Array.from({length: " +os.environ[var_name] + "}, (_, i) => i + 1);"
             else:
                 info["task"] = os.environ[var_name].replace(" ", "")
@@ -77,7 +77,9 @@ def main():
                 LOGINS.append("LOGIN:HERE")
         else:
             print(f"{var_name} is disabled. Skipping...")
+
     print('\n\n')
+
     for filePath in FILES:
         task = ""
         for var_name, info in FILE_TASK_MAP.items():

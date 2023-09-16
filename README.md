@@ -6,16 +6,16 @@
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
 
 # Features
-
-- Multiple Stock Ticker Automation (Seperated by `,`)
-- Pre-Market, Market, & Post-Market Support
-- Quickstart Desktop `.bat` Script
-- XPATH Error Handling & Output
+- Multiple Stock Tickers Support (ex: `NVDA,TSLA,AREB` buys/sells in one test run)
+- Extended & Market Hours Support
 - Market & Limit Order Support
-- Account Quickstart Python Script
-- Login Credentials Automation
+- `.bat` Script to Update `.side` files with new Tickers, Account Variables, etc.
+- XPATH Checking & Error Handling 
+- Account Slicing (Automate from a specific account & onward)
+- Account Login Automation 
+- JavaScript Account Array Helper Scripts
 
-*Note: Top Github Sponsor/Buy-Me-Coffee donation contributors may get access to more advanced beta features before the public.*
+*Note: Gold Github Sponsor/Buy-Me-Coffee donation contributors may get access to exclusive features or beta features before the public.*
 
 ## Supported Brokerages
 This project contains the means of automating buy/sell stock orders within:
@@ -30,51 +30,36 @@ This project contains the means of automating buy/sell stock orders within:
 - Vanguard
 
 # Enviornmental Variables
-
 To use this project, you will need to set the following environment variables in your .env file:
+| Variable          | Description                                       | Type                 |
+|-------------------|---------------------------------------------------|----------------------|
+| SCHWAB_AI         | Total Number of Schwab Accounts                  | Integer              |
+| MERRILL_AI        | Total Number of Merrill Accounts                 | Integer              |
+| FIDELITY_AI       | Fidelity account numbers                          | Nested List of Strings|
+| CHASE_AI          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
+| FIRSTRADE_AI      | Fidelity Account Numbers | List of Strings       |
+| VANGUARD_AI       | List of account numbers for Vanguard Auto.side  | List of Strings       |
+| ALLY_AI           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
+| |
+| CUSTOM_DIR        | Path to the folder to store updated .side files  | String               |
+| DYNAMIC           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
+| SOFI_AI           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
+| SOFI_ACCOUNT_NAMES| Account names and numbers for SoFi Auto.side    | String               |
+| SOFI_LOGIN        | Login credentials for SoFi Auto.side file       | String               |
+| EXCLUDE_ACCOUNTS  | List of SoFi account names to exclude           | String               |
 
-`SCHWAB_AI` = Total number of SCHWAB accounts.
+Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I reccomend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. 
 
-`MERRILL_AI` = Total number of Merrill accounts.
 
-`CHASE_AI` = A list of stringified JSON array containing your Chase Investment AI numbers
-[found within the desktop stock order URL](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png), separated by commas.
-
-`FIDELITY_AI` = A list of stringified JSON array containing your Fidelity Investment account numbers, separated by commas.
-
-`ALLY_AI` = A stringified JSON array containing your Ally Investment account name + numbers, separated by commas.
-
-- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), you will need to change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to miminize risk, Market, & Quantity: 1. Otherwise, running the automation script will buy 100 shares by default or whatever number you've previously entered into Ally default order settings.
-
-`FIRSTRADE_AI` = A stringified JSON array containing your FirstTrade Investment account numbers, separated by commas.
-
-`VANGUARD_AI` = A stringified JSON array containing your Vanguard Investment account numbers, separated by commas. (Only for old Outdated Test Cases)
-
-`CUSTOM_DIR` = Directory path updated .side files should be located. (Optional)
-
-`DYNAMIC` = Int value (0= Off, 1=On). Dynamic account handling. (Optional)
-
-Example:
-
-```bash
-CHASE_AI="['1234567890','0987654321']";
-ALLY_AI="['Individual-A123456789','Individual-B098765432']";
-FIRSTRADE_AI="['111111','222222']";
-VANGUARD_AI="['54554326','54678936']";
-```
-
-**Account Credentials Separated by ':'**
-
-To attempt to enter credentials or login where possible, you can set the following environment variables: 
-
-- `CHASE_LOGIN`: "USERNAME:PASSWORD" for Chase.
-- `FIDELITY_LOGIN`: "USERNAME:PASSWORD" for Fidelity.
-- `FIRSTRADE_LOGIN`: "USERNAME:PASSWORD" for FirstTrade.
-- `MERRILL_LOGIN`: "USERNAME:PASSWORD" for Merrill.
-- `SCHWAB_LOGIN`: "USERNAME:PASSWORD" for Schwab.
-- `ALLY_LOGIN`: "USERNAME:PASSWORD" for Ally.
-- `VANGUARD_LOGIN`: "USERNAME:PASSWORD" for Vanguard.
-
+| Variable          | Description                                       | Type                 | Example                          |
+|-------------------|---------------------------------------------------|----------------------|----------------------------------|
+| CHASE_LOGIN       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
+| FIDELITY_LOGIN    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
+| FIRSTADE_LOGIN    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
+| MERRILL_LOGIN     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
+| SCHWAB_LOGIN      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
+| ALLY_LOGIN        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
+| VANGUARD_LOGIN    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
 
 Refer to `.env.example` for more clarity.
 
@@ -94,12 +79,16 @@ Configure [Enviornmental Variables](https://github.com/Prem-ium/Auto-StockTrader
   python main.py
 ```
 
-Passing an argument will quickly update the stock orders in all .side projects.
+Pass a Stock Ticker as an argument to update all `.side` files
 
 ```
   python main.py APPL
 ```
 
+Seperate multiple with `,`
+```
+  python main.py NVDA,TSLA,APPL
+```
 ## Selenium IDE
 
 This project requires the use of Selenium IDE browser extension. You will need to download it for your browser's addon extension store. Keep in mind, some browsers such as Chrome are more favorable to use than Edge with this extension. 
@@ -138,15 +127,17 @@ Your generous donations will greatly assist me in covering the expenses associat
 # License
 This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
 
-# Acknowledgments & Final Remarks
-A special thanks to all <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donor(s), </a>tester(s), and<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> contributor(s).</a>
+# Acknowledgments / Final Remarks
+I want to thank <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donators</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a> 
+Thank you for supporting my work. 
+I am beyond grateful, because of each one of you, I am able to build cool projects like this.
 
-
-### Potential Brokerages
-There are currently no plans to offer automation on other brokerages not listed within this repository. However, I am open to receiving pull-requests to merge any new `.side` projects for automating new brokerages. Upon sending a pull-request, please request a review from me when you believe your PR is merge-ready. 
-
-### ⚠️ **DISCLAIMER:**
-You're using this project at your own risk. I am not responsible for any financial loss, account suspension/ban, or any other damage that may occur with the use of the project(s) in this repostory. I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. This project is provided "as is" and without warranty of any kind. By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
-
-Thank you so much for your interest in this repository.
+Thank you so much for your support in this repository.
 Please consider leaving a :star2: if you found this project to be cool!
+
+### ⚠️ DISCLAIMER ⚠️
+I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
+
+You may use this tool at your own risk. I am not responsible for any financial loss, account restriction, or any other damage that may occur with the use of this tool. This project is provided "as is" and without warranty of any kind. 
+
+By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
