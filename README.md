@@ -33,96 +33,97 @@ This project contains the means of automating buy/sell stock orders within:
 To use this project, you will need to set the following environment variables in your .env file:
 | Variable          | Description                                       | Type                 |
 |-------------------|---------------------------------------------------|----------------------|
-| SCHWAB_AI         | Total Number of Schwab Accounts                  | Integer              |
-| MERRILL_AI        | Total Number of Merrill Accounts                 | Integer              |
-| VANGUARD_AI       | Total Number of Vanguard Accounts  | Integer       |
-| FIDELITY_AI       | Fidelity account numbers                          | Nested List of Strings|
-| CHASE_AI          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
-| FIRSTRADE_AI      | Fidelity Account Numbers | List of Strings       |
-| ALLY_AI           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
-| |
-| CUSTOM_DIR        | Path to the folder to store updated .side files  | String               |
-| DYNAMIC           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
-| SOFI_AI           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
-| SOFI_ACCOUNT_NAMES| Account names and numbers for SoFi Auto.side    | String               |
-| SOFI_LOGIN        | Login credentials for SoFi Auto.side file       | String               |
-| EXCLUDE_ACCOUNTS  | List of SoFi account names to exclude           | String               |
+| `SCHWAB_AI`         | Total Number of Schwab Accounts                  | Integer              |
+| `MERRILL_AI`      | Total Number of Merrill Accounts                 | Integer              |
+| `VANGUARD_AI`       | Total Number of Vanguard Accounts  | Integer       |
+| `FIDELITY_AI`       | Fidelity account numbers                          | Nested List of Strings|
+| `CHASE_AI`          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
+| `FIRSTRADE_AI`      | Fidelity Account Numbers | List of Strings       |
+| `ALLY_AI`           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
+| --|--|--|
+| `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
+| `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
+| `SOFI_AI`           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
+| `SOFI_ACCOUNT_NAMES`| Account names and numbers for SoFi Auto.side    | String               |
+| `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
+| `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
 Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I reccomend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. 
 
 
 | Variable          | Description                                       | Type                 | Example                          |
 |-------------------|---------------------------------------------------|----------------------|----------------------------------|
-| CHASE_LOGIN       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
-| FIDELITY_LOGIN    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
-| FIRSTADE_LOGIN    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
-| MERRILL_LOGIN     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
-| SCHWAB_LOGIN      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
-| ALLY_LOGIN        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
-| VANGUARD_LOGIN    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
+| `CHASE_LOGIN`       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
+| `FIDELITY_LOGIN`    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
+| `FIRSTADE_LOGIN`    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
+| `MERRILL_LOGIN`     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
+| `SCHWAB_LOGIN`      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
+| `ALLY_LOGIN`        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
+| `VANGUARD_LOGIN`    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
 
 Refer to `.env.example` for more clarity.
 
 # Installation
 
-Clone the repository & install dependencies:
+Follow these steps to set up and use Selenium IDE for automation:
 
-```bash
-git clone https://github.com/Prem-ium/Auto-StockTrader
-cd Auto-StockTrader
-pip install -r requirements.txt
-```
+1. **Download Selenium IDE:**
+   - Download and install the Selenium IDE browser extension for your preferred browser from the addon extension store. We recommend using Chrome or Chromium browser for the best experience.
+     - [Chrome Webstore Selenium IDE Page](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd)
+     - [Edge Addon Selenium IDE Page](https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp)
 
-Configure [Enviornmental Variables](https://github.com/Prem-ium/Auto-StockTrader#enviornmental-variables) and run the script.
+2. **Clone Repository & Install Dependencies:**
+   ```bash
+        git clone https://github.com/Prem-ium/Auto-StockTrader
+        cd Auto-StockTrader
+        pip install -r requirements.txt
+    ```
+    
+3. **Configure Environment Variables (`.env`):**
+    - Create `.env` & Configure your (`.env`) file using [Environmental Variables](https://github.com/Prem-ium/Auto-StockTrader#environmental-variables) formats.
 
-```
-  python main.py
-```
+3. **Run the Python Script:**
+  ```
+    python main.py
+  ```
 
-Pass a Stock Ticker as an argument to update all `.side` files
+  - Pass a Stock Ticker as an argument to update all `.side` files
 
-```
-  python main.py APPL
-```
+  ```
+    python main.py APPL
+  ```
 
-Seperate multiple with `,`
-```
-  python main.py NVDA,TSLA,APPL
-```
-## Selenium IDE
+  Seperate multiple with `,`
+  ```bsh
+    python main.py NVDA,TSLA,APPL
+  ```
 
-This project requires the use of Selenium IDE browser extension. You will need to download it for your browser's addon extension store. Keep in mind, some browsers such as Chrome are more favorable to use than Edge with this extension. 
+4. **Open Updated Side Files:**
+   - Open updated `.side` project files in Selenium IDE.
 
-- [Chrome](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd)
-- [Edge](https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp)
+5. **Execute Desired Automation within Selenium IDE:**
+   - Log in to your brokerage account.
+   - Begin running your desired automation tasks in either the buy or sell test tabs.
 
-After going through the [Installation](#Installation) & running configuring your `.env` variables, you must open the generated `.side` file of your brokerage of choice, login to your brokerage account, and start running your desired test. 
-
-- [Selenium IDE Github Repository](https://github.com/SeleniumHQ/selenium-ide)
-
-For more assistance, refer to [archived README](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/X_Archive/README.MD)
+For the most reliable automation runs, it is recommended to use Chrome or Chromium browser.
 
 # Donations
 
-I've been working on this project for a few months now, and I'm really happy with how it's turned out. Based on the testimony, it has been a great tool in automating stock ticker orders across multiple brokerage accounts in multiple different brokerages. I'm working on creating new features and optimizing the project to run automation orders as efficiently as possible.
+I've been diligently working on this project for several months, and I'm thrilled with the progress it has made. Based on user testimonials, it has proven to be an invaluable tool for automating stock ticker orders across multiple brokerage accounts and various brokerages. I am continually striving to enhance its functionality and optimize its efficiency for automated order execution.
 
-If you would like to show your appreciation for my work, I have set up two methods of sending in a donation: 
+If you appreciate my work and would like to show your support, there are two convenient ways to make a donation:
 
-<a href="https://github.com/sponsors/Prem-ium">Github Sponsors</a>, the ideal donation method, to make donations with no fees!
-<a href="https://github.com/sponsors/Prem-ium" target="_blank">
-        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor" img width="25%">
-</a>
-Otherwise, <a href="https://www.buymeacoffee.com/prem.ium">Buy-Me-Coffee</a> can be used to place donations as well. 
-<a href="https://www.buymeacoffee.com/prem.ium" target="_blank">
-        <img src="https://raw.githubusercontent.com/Prem-ium/youtube-analytics-bot/main/output-examples/media/coffee-logo.png" alt="Buy Me A Coffee" img width="25%">
-</a>
+1. **GitHub Sponsors**
+   - [Donate via GitHub Sponsors](https://github.com/sponsors/Prem-ium)
+   - This is the preferred donation method as it incurs no transaction fees & different tiers offer support.
+   - GitHub Silver & Gold Sponsors receive benefits with their donations ranging from exclusive private scripts with unique features, expedited bug support, & more. 
+   [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Prem-ium)
 
-Your generous donations will greatly assist me in covering the expenses associated with developing new features and promoting the project to a broader audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you!
+2. **Buy Me A Coffee**
+   - [Donate via Buy Me A Coffee](https://www.buymeacoffee.com/prem.ium)
+   - [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/prem.ium)
 
-## GitHub Sponsors Perks
-<b>Gold Sponsor Perks</b>: Sponsors who contribute within the `Gold Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive early access to features and perks of the Auto-StockTrader project before the public, along with access to exclusive scripts & features only available to Gold sponsoring users. 
-
-<b>Silver Sponsor Perks</b>: Sponsors who contribute within the `Silver Sponsor` monthly tier on my<a href="https://github.com/sponsors/Prem-ium"> Github Sponsors page</a> are entitled to receive expedited bug report handling, support, and a mention on a README in a project of their choice.
+Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
 
 # License
 This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
