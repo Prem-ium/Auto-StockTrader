@@ -56,13 +56,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "d8803e9d-5e84-4540-895b-e94a17059415",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "266a62bd-da7a-4632-b448-3dc4fc32557b",
       "comment": "",
       "command": "executeScript",
@@ -333,13 +326,6 @@
       "target": "false",
       "targets": [],
       "value": "runCheck"
-    }, {
-      "id": "7f8829cb-3568-4bf2-a88e-d02af92f9d14",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
     }, {
       "id": "22217338-eff5-47d9-8058-e67b0026b82b",
       "comment": "",
@@ -640,13 +626,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "bb0243cc-09a4-4a74-9807-fbbd65951870",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "70d4a82e-caa7-4bc0-81ad-42d22595b284",
       "comment": "",
       "command": "executeScript",
@@ -930,13 +909,6 @@
       "target": "false",
       "targets": [],
       "value": "runCheck"
-    }, {
-      "id": "eee11326-43c0-4ce8-888d-a0ba2178d632",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
     }, {
       "id": "d6d0f8a9-1024-4e0d-943a-dd471c8d770b",
       "comment": "",
