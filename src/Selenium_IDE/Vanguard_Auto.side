@@ -66,36 +66,9 @@
       "id": "70d62899-7d5e-4162-8fa9-f6e46e06c8c0",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  if (element && element.textContent === \"Incomplete transaction detected\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; if (element && element.textContent === \"Incomplete transaction detected\") {    const okButton = document.getElementById('okButtonInput');    if (okButton) {        okButton.click();    } } ",
       "targets": [],
-      "value": "result"
-    }, {
-      "id": "da66ec58-2f97-4f8b-abd8-365de9eb9707",
-      "comment": "",
-      "command": "if",
-      "target": "${result} == true",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b209e871-fa20-4d3e-aaf1-75cfeae03c9d",
-      "comment": "",
-      "command": "click",
-      "target": "id=okButtonInput",
-      "targets": [
-        ["id=okButtonInput", "id"],
-        ["css=#okButtonInput", "css:finder"],
-        ["xpath=//input[@id='okButtonInput']", "xpath:attributes"],
-        ["xpath=//div[@id='yui_3_4_0_1_1678804546692_390']/input", "xpath:idRelative"],
-        ["xpath=//span/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e4745827-f8aa-4012-8f14-f60466149d52",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
+      "value": "incomplete"
     }, {
       "id": "6426e3f7-3f35-4630-937b-ffeb3c761aeb",
       "comment": "",
@@ -297,7 +270,7 @@
       "id": "6a43da2d-3c26-4db9-97e1-d67fa5c525b6",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -605,36 +578,9 @@
       "id": "fa45bae4-436f-4a1d-bf90-d53af008a9f2",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  if (element && element.textContent === \"Incomplete transaction detected\") {   console.log(\"The text is 'Incomplete transaction detected'\");   return true; } else {   console.log(\"The text is not 'Incomplete transaction detected'\");   return false; }",
+      "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; if (element && element.textContent === \"Incomplete transaction detected\") {    const okButton = document.getElementById('okButtonInput');    if (okButton) {        okButton.click();    } } ",
       "targets": [],
-      "value": "result"
-    }, {
-      "id": "52bd4b45-53d3-486b-a088-e74ccb3bcee2",
-      "comment": "",
-      "command": "if",
-      "target": "${result} == true",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1eba3e7b-82b7-4fbc-a142-86cbea0a9d5a",
-      "comment": "",
-      "command": "click",
-      "target": "id=okButtonInput",
-      "targets": [
-        ["id=okButtonInput", "id"],
-        ["css=#okButtonInput", "css:finder"],
-        ["xpath=//input[@id='okButtonInput']", "xpath:attributes"],
-        ["xpath=//div[@id='yui_3_4_0_1_1678804546692_390']/input", "xpath:idRelative"],
-        ["xpath=//span/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "026c2a3d-8bc6-41d7-80c0-09ffa7985061",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
+      "value": "incomplete"
     }, {
       "id": "a07bfdf1-4ace-4a7b-b60f-1058aea4b8c3",
       "comment": "",
@@ -827,7 +773,7 @@
       "id": "96c786c5-cae0-43f8-a8c7-66a0f5cd6b7a",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
