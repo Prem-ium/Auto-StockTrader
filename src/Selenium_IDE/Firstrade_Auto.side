@@ -520,26 +520,19 @@
       "targets": [],
       "value": "FIRSTRADE_LOGIN"
     }, {
+      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
+      "comment": "",
+      "command": "if",
+      "target": "${FIRSTRADE_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
       "comment": "",
       "command": "executeScript",
       "target": "return ${FIRSTRADE_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
-    }, {
-      "id": "836d2a91-161b-459a-bebb-3f6390bbf6b4",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${FIRSTRADE_LOGIN} != \"LOGIN:HERE\";",
-      "targets": [],
-      "value": "use_login"
-    }, {
-      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
-      "comment": "",
-      "command": "if",
-      "target": "${use_login}",
-      "targets": [],
-      "value": ""
     }, {
       "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
       "comment": "",

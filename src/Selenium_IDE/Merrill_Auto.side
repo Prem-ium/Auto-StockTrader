@@ -741,19 +741,19 @@
       "targets": [],
       "value": "MERRILL_LOGIN"
     }, {
-      "id": "548274e2-0661-4d2d-a4ef-41fc72a57791",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${MERRILL_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
       "id": "081b7e85-5ee5-4fea-aa38-436ac0fcaf7b",
       "comment": "",
       "command": "if",
       "target": "${MERRILL_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "548274e2-0661-4d2d-a4ef-41fc72a57791",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${MERRILL_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
     }, {
       "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
       "comment": "",
