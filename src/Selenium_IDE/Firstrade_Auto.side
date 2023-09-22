@@ -7,12 +7,26 @@
     "id": "c4367fd5-3ea6-4cac-ae91-509defb9d7c9",
     "name": "Buy_Firstrade",
     "commands": [{
-      "id": "30dfd5f1-3abb-4b9c-bd14-9e537847415a",
+      "id": "0d6894dd-2d55-4987-9e90-c92de75a3c00",
       "comment": "",
       "command": "store",
       "target": "TICKER_GOES_HERE",
       "targets": [],
       "value": "TICKER"
+    }, {
+      "id": "30dfd5f1-3abb-4b9c-bd14-9e537847415a",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
+    }, {
+      "id": "0c21e4cd-cee0-4c9a-902d-711bd51ff73f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
+      "targets": [],
+      "value": "target"
     }, {
       "id": "a9efebcd-6b04-46fe-8622-0ecb5642d9bd",
       "comment": "",
@@ -27,13 +41,6 @@
       "target": "return ['YOUR','ACCOUNTS','HERE'];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "0c21e4cd-cee0-4c9a-902d-711bd51ff73f",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "0158ffb3-1dcf-4c14-8727-77ae21435138",
       "comment": "",
@@ -94,7 +101,7 @@
       "id": "43fefee1-9afb-4306-8432-151c9ec959b0",
       "comment": "",
       "command": "pause",
-      "target": "1200",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -138,7 +145,7 @@
         ["xpath=//div[@id='colorbox']/div/div/ul[2]/li[2]/input", "xpath:idRelative"],
         ["xpath=//ul[2]/li[2]/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "bd07a705-7268-4cc1-a629-926010789596",
       "comment": "",
@@ -257,6 +264,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "8f52ba48-9f1e-4129-bfd5-e5f8ca8e8402",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
+    }, {
+      "id": "e2e95a20-d305-49d8-a243-44c1465daa0c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "c962cffb-a5b7-4ed7-be34-866dd0101d3c",
       "comment": "",
       "command": "executeScript",
@@ -270,13 +291,6 @@
       "target": "return ['YOUR','ACCOUNTS','HERE'];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "e2e95a20-d305-49d8-a243-44c1465daa0c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "ef7683ac-2b3d-4c60-986c-0f9d96209cd7",
       "comment": "",
@@ -337,7 +351,7 @@
       "id": "82772a8c-cdcb-429e-b31a-6c51bebe3a8b",
       "comment": "",
       "command": "pause",
-      "target": "1200",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -380,7 +394,7 @@
         ["xpath=//div[@id='colorbox']/div/div/ul[2]/li[2]/input", "xpath:idRelative"],
         ["xpath=//ul[2]/li[2]/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "1593ca70-cbeb-4702-9fae-bb680f82c944",
       "comment": "",

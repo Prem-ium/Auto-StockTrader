@@ -14,19 +14,19 @@
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "b99c300c-2f96-4a9a-ac45-c8e71c5bfe8f",
+      "id": "7b7eb3a6-0155-4205-9b10-78f5e14e07cc",
       "comment": "",
       "command": "store",
       "target": "1",
       "targets": [],
       "value": "dynamic"
     }, {
-      "id": "9b04dfeb-83ed-456b-b6c0-65dd36180f0d",
+      "id": "b99c300c-2f96-4a9a-ac45-c8e71c5bfe8f",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "command": "store",
+      "target": "1",
       "targets": [],
-      "value": "TICKERS"
+      "value": "QUANTITY"
     }, {
       "id": "f52795f8-b859-4ebc-927f-43b691e5245f",
       "comment": "",
@@ -97,6 +97,13 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
+    }, {
+      "id": "9b04dfeb-83ed-456b-b6c0-65dd36180f0d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "3a63b83e-108c-4d71-839c-2376db962aed",
       "comment": "",
@@ -236,7 +243,7 @@
         ["xpath=//div[@id='SellAmtPanel']/div[2]/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "57c6711d-cea8-4f61-a5d3-1fc45ea97bf3",
       "comment": "",
@@ -282,7 +289,7 @@
       "id": "7310e92a-c055-41fa-a7cd-c2d5a99977d4",
       "comment": "",
       "command": "pause",
-      "target": "1500",
+      "target": "750",
       "targets": [],
       "value": ""
     }, {
@@ -394,6 +401,13 @@
       "target": "1",
       "targets": [],
       "value": "dynamic"
+    }, {
+      "id": "941237bf-0e47-4642-bb3c-8586d456a3b5",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
     }, {
       "id": "24167be7-92be-47af-84c6-7267455f378e",
       "comment": "",
@@ -610,7 +624,7 @@
         ["xpath=//div[@id='SellAmtPanel']/div[2]/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "912ae8cf-c4de-42d3-b886-31c1042ef5df",
       "comment": "",

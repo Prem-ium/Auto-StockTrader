@@ -14,6 +14,27 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "2dd83c0f-e905-40bd-8d40-33d4d889485c",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "40ce5ee8-288f-4b5d-b53e-b483def82b76",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
+    }, {
+      "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "004fed99-a22a-47e3-8963-9f3d979bb352",
       "comment": "",
       "command": "executeScript",
@@ -27,20 +48,6 @@
       "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "40ce5ee8-288f-4b5d-b53e-b483def82b76",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "74257aa6-98dd-41bf-a634-b4d787b2e850",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "3fed3ab7-1dd3-4b36-aa04-c8757d622901",
       "comment": "",
@@ -150,7 +157,7 @@
         ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "26e5b155-1918-4948-83f4-5f4a40f32253",
       "comment": "",
@@ -239,13 +246,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0de0d19d-d0fe-44e4-8b98-5be8fb75812b",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "06d8002e-7c8a-4d51-8c96-28ca8519dd70",
       "comment": "",
       "command": "executeScript",
@@ -292,6 +292,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "98fd1e42-6faf-479b-ae25-138bc956401c",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "3e85cc91-9356-4773-afb6-8f47c46b3801",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "97540dc1-365a-41f3-9218-7101ee73d064",
       "comment": "",
       "command": "executeScript",
@@ -305,20 +319,6 @@
       "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "98fd1e42-6faf-479b-ae25-138bc956401c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "3e85cc91-9356-4773-afb6-8f47c46b3801",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "0f50d7b5-56ba-4dc3-a840-e80890d48df7",
       "comment": "",
@@ -545,13 +545,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "b0a21a4f-3f02-4d1a-9017-13baa306a6c0",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "a75e12ef-8d68-4588-959d-25e63dcc52a1",
       "comment": "",
       "command": "end",
@@ -605,6 +598,27 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "bb16819c-3094-4d03-8a0f-48bf9999359c",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "1f803797-cc86-4eb1-b65a-832c9a91fc39",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
+    }, {
+      "id": "b076f9e7-2155-4548-b4cc-667d73fec3ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SPLIT_TARGET\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "e6497b8b-4b54-4e46-983e-9b1ec2844c7c",
       "comment": "",
       "command": "executeScript",
@@ -618,20 +632,6 @@
       "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "bb16819c-3094-4d03-8a0f-48bf9999359c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "b076f9e7-2155-4548-b4cc-667d73fec3ac",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SPLIT_TARGET\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "cbc198e1-fdf8-43d7-b1b0-0468e7ee3af5",
       "comment": "",
@@ -741,7 +741,7 @@
         ["xpath=//div[@id='tradeQuantity-text']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": "${QUANTITY}"
     }, {
       "id": "58001ed1-712d-492f-8859-f2124e11ed61",
       "comment": "",
@@ -843,13 +843,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "501c479b-fd95-4fa3-ae6f-8748d34c43c4",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "df8b2ba6-663b-40c9-b0b7-9f1bd56967d9",
       "comment": "",
       "command": "executeScript",
@@ -896,6 +889,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "136c26cc-4473-41e2-92a4-5ad5bb18df07",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "babfd393-9fe7-4a7c-b3cc-af4e4387ecbd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "b82ae3ea-a832-4599-b8c1-be033ccf5216",
       "comment": "",
       "command": "executeScript",
@@ -909,20 +916,6 @@
       "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "136c26cc-4473-41e2-92a4-5ad5bb18df07",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "babfd393-9fe7-4a7c-b3cc-af4e4387ecbd",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "21daa83a-f70c-4f2c-accf-5567e910b1b4",
       "comment": "",
@@ -1176,13 +1169,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "58a3fb8c-d345-4ab5-8c8d-5ade9c6b4aab",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "526938f3-4f45-4221-90ca-2b44d29f87d2",
       "comment": "",
       "command": "end",
@@ -1236,6 +1222,27 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "8a7e915b-7e94-46fc-b889-f07ccea59d88",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "5aedbda4-51af-43f1-8172-d23d176c8569",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANTITY"
+    }, {
+      "id": "112bff61-20b5-4f46-9657-ca60c91e6fa2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"STRIP_AI_HERE\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
       "id": "ea647863-e687-43f6-9ffc-6a329e4ab31c",
       "comment": "",
       "command": "executeScript",
@@ -1263,20 +1270,6 @@
       "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
       "targets": [],
       "value": "accounts"
-    }, {
-      "id": "8a7e915b-7e94-46fc-b889-f07ccea59d88",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "112bff61-20b5-4f46-9657-ca60c91e6fa2",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"STRIP_AI_HERE\".trim();",
-      "targets": [],
-      "value": "target"
     }, {
       "id": "8e81f32b-8686-4c1e-933c-7f259630e291",
       "comment": "",
@@ -1548,13 +1541,6 @@
       "comment": "",
       "command": "echo",
       "target": "${AI} ${FORMAT} ${TICK} Successful!",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d550d030-69c8-4493-88da-ec270a9f2623",
-      "comment": "",
-      "command": "pause",
-      "target": "750",
       "targets": [],
       "value": ""
     }, {

@@ -10,16 +10,23 @@
       "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
       "comment": "",
       "command": "store",
-      "target": "SHMP",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
+      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "command": "store",
+      "target": "1",
       "targets": [],
-      "value": "TICKERS"
+      "value": "QUANT"
+    }, {
+      "id": "c7c4bd38-5b25-46d0-8159-aab47e646616",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
       "comment": "",
@@ -28,19 +35,19 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "c7c4bd38-5b25-46d0-8159-aab47e646616",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "index"
-    }, {
       "id": "51277964-fd77-466b-9595-0617964dbc41",
       "comment": "",
       "command": "executeScript",
       "target": "return .46",
       "targets": [],
       "value": "LIMIT_PRICE"
+    }, {
+      "id": "fc552045-99cb-4624-a30e-f89aeb329c25",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return true;",
+      "targets": [],
+      "value": "assume_limit"
     }, {
       "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
       "comment": "",
@@ -49,12 +56,12 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
+      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
       "comment": "",
-      "command": "store",
-      "target": "1",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
       "targets": [],
-      "value": "QUANT"
+      "value": "TICKERS"
     }, {
       "id": "eb755399-bedd-4365-922d-9dad8b4665a3",
       "comment": "",
@@ -155,12 +162,19 @@
       "targets": [],
       "value": "30000"
     }, {
+      "id": "50806021-d09b-418f-a4b8-54e4464d2794",
+      "comment": "",
+      "command": "executeScript",
+      "target": "if (${assume_limit} == true) {     const element = document.getElementById('eq-ticket__last-price');     const priceElement = element.querySelector('.last-price');     const priceText = priceElement.textContent.trim().replace(/\\$/g, '');     const currentPrice = parseFloat(priceText);     if (!isNaN(currentPrice)) {         return (currentPrice + 0.10).toFixed(2);     }  } else {         return ${LIMIT_PRICE}; }",
+      "targets": [],
+      "value": "LIMIT"
+    }, {
       "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
       "comment": "",
       "command": "type",
       "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
-      "value": "${LIMIT_PRICE}"
+      "value": "${LIMIT}"
     }, {
       "id": "86a77a53-d144-4161-8b7b-395dfad3757f",
       "comment": "",
@@ -174,7 +188,7 @@
       "command": "sendKeys",
       "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
-      "value": "${LIMIT_PRICE}"
+      "value": "${LIMIT}"
     }, {
       "id": "56b5cb2c-9185-4851-9912-f66c6c3a0311",
       "comment": "",
@@ -326,16 +340,23 @@
       "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
       "comment": "",
       "command": "store",
-      "target": "SHMP",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "command": "store",
+      "target": "1",
       "targets": [],
-      "value": "TICKERS"
+      "value": "QUANT"
+    }, {
+      "id": "94a6ef3a-266f-4fc2-8622-8e2c17b92ed7",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
     }, {
       "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
       "comment": "",
@@ -344,26 +365,12 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "e82678ad-daf4-46fa-bead-4524120f90cc",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "index"
-    }, {
       "id": "85bea692-3a09-4056-9921-27fd1c96586a",
       "comment": "",
       "command": "executeScript",
       "target": "return \"SLICE_TARGET\".trim();",
       "targets": [],
       "value": "target"
-    }, {
-      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
     }, {
       "id": "1d1a0857-f802-40c7-80ac-099c5827362c",
       "comment": "",
@@ -378,6 +385,13 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
+    }, {
+      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
       "comment": "",
