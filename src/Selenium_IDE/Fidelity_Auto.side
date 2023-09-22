@@ -42,13 +42,6 @@
       "targets": [],
       "value": "LIMIT_PRICE"
     }, {
-      "id": "fc552045-99cb-4624-a30e-f89aeb329c25",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return true;",
-      "targets": [],
-      "value": "assume_limit"
-    }, {
       "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
       "comment": "",
       "command": "executeScript",
@@ -161,13 +154,6 @@
       "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
       "value": "30000"
-    }, {
-      "id": "50806021-d09b-418f-a4b8-54e4464d2794",
-      "comment": "",
-      "command": "executeScript",
-      "target": "if (${assume_limit} == true) {     const element = document.getElementById('eq-ticket__last-price');     const priceElement = element.querySelector('.last-price');     const priceText = priceElement.textContent.trim().replace(/\\$/g, '');     const currentPrice = parseFloat(priceText);     if (!isNaN(currentPrice)) {         return (currentPrice + 0.10).toFixed(2);     }  } else {         return ${LIMIT_PRICE}; }",
-      "targets": [],
-      "value": "LIMIT"
     }, {
       "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
       "comment": "",
