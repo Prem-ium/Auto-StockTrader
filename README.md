@@ -48,7 +48,7 @@ To use this project, you will need to set the following environment variables in
 | `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
 | `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
-Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I reccomend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. 
+Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I recommend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. Note: The login test is best-try. Many brokerages such as Chase may block the login, but you are able to fill out user/password info quickly (if you choose to use this tool.)
 
 
 | Variable          | Description                                       | Type                 | Example                          |
