@@ -670,6 +670,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "018908e1-3ede-4128-afd6-440bcc367f7b",
+      "comment": "",
+      "command": "echo",
+      "target": "Account Management Tool",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "0ead23bc-2676-440a-9ef5-ccadbc2dfd51",
       "comment": "",
       "command": "open",
