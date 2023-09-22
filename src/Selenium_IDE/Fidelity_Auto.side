@@ -567,19 +567,19 @@
       "targets": [],
       "value": "FIDELITY_LOGIN"
     }, {
-      "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${FIDELITY_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
       "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
       "comment": "",
       "command": "if",
       "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
       "targets": [],
       "value": ""
+    }, {
+      "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${FIDELITY_LOGIN}.split(\":\");",
+      "targets": [],
+      "value": "LOGIN"
     }, {
       "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
       "comment": "",
@@ -691,10 +691,17 @@
       "targets": [],
       "value": "acc_array"
     }, {
-      "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
+      "id": "a6505b5d-22d8-4309-8c17-f841b634b0bb",
       "comment": "",
       "command": "echo",
       "target": "${acc_array}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
+      "comment": "",
+      "command": "echo",
+      "target": "Remember to follow .env.example. If you have only one login for fidelity, it should be like: \"FIDELITY_AI= [['995123718’,’996245678’,’997656055']]\"",
       "targets": [],
       "value": ""
     }, {
