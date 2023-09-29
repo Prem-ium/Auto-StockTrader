@@ -14,33 +14,12 @@
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
-    }, {
-      "id": "c7c4bd38-5b25-46d0-8159-aab47e646616",
+      "id": "99219aba-29c5-4f95-850c-4bfd09bacec2",
       "comment": "",
       "command": "store",
       "target": "0",
       "targets": [],
-      "value": "index"
-    }, {
-      "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "51277964-fd77-466b-9595-0617964dbc41",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return .46",
-      "targets": [],
-      "value": "LIMIT_PRICE"
+      "value": "dynamic"
     }, {
       "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
       "comment": "",
@@ -56,12 +35,89 @@
       "targets": [],
       "value": "TICKERS"
     }, {
-      "id": "eb755399-bedd-4365-922d-9dad8b4665a3",
+      "id": "9801549d-8263-49c4-ae31-6228d5e23b0a",
+      "comment": "",
+      "command": "if",
+      "target": "${dynamic} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69023bbe-e23a-4eda-8928-12096f54902c",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "b4d25122-e12d-45a5-9fa5-2685605df813",
       "comment": "",
       "command": "executeScript",
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "7336eef1-154e-4739-87d7-e7d82368962f",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${dynamic} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "603b85cd-bfa5-4280-9443-34e73bd550bf",
+      "comment": "",
+      "command": "open",
+      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82555785-74d8-4acf-a065-8c13acd3126b",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11bc161e-9252-4dfd-899d-8fc8b62c6fde",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "6f903db5-f3db-457f-abbb-669d86c0f14b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "8ec6b851-da4d-40d8-add8-4cbc86a2d0e8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51277964-fd77-466b-9595-0617964dbc41",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return .46",
+      "targets": [],
+      "value": "LIMIT_PRICE"
+    }, {
+      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
     }, {
       "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
       "comment": "",
@@ -330,14 +386,35 @@
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
+      "id": "45dd1037-8b6b-4c14-85c5-31651477527a",
       "comment": "",
       "command": "store",
-      "target": "1",
+      "target": "0",
       "targets": [],
-      "value": "QUANT"
+      "value": "dynamic"
     }, {
-      "id": "94a6ef3a-266f-4fc2-8622-8e2c17b92ed7",
+      "id": "85bea692-3a09-4056-9921-27fd1c96586a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"SLICE_TARGET\".trim();",
+      "targets": [],
+      "value": "target"
+    }, {
+      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
+      "id": "f4916055-ed7a-4edf-8d7a-e8e11cbf9af9",
+      "comment": "",
+      "command": "if",
+      "target": "${dynamic} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cef2882-9653-4e75-8d1e-6d7be2fae51f",
       "comment": "",
       "command": "store",
       "target": "0",
@@ -351,19 +428,61 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "85bea692-3a09-4056-9921-27fd1c96586a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SLICE_TARGET\".trim();",
-      "targets": [],
-      "value": "target"
-    }, {
-      "id": "1d1a0857-f802-40c7-80ac-099c5827362c",
+      "id": "fa37f085-92aa-4c82-ad20-6d1b0eeda3f4",
       "comment": "",
       "command": "executeScript",
       "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "96c58f11-23ec-4f13-98ed-e0ebdadf5f63",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${dynamic} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a79079-e1e6-40cd-ba46-9e6d97a9b99d",
+      "comment": "",
+      "command": "open",
+      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dad67028-0db4-4174-9ed4-04d7bb8ca991",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b0a90ee-681b-496e-8363-e6dbdb40f366",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "6ef5db96-c493-434f-adf6-2e1c51998c59",
+      "comment": "",
+      "command": "executeScript",
+      "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "2a97573f-f13d-4cb7-88f2-8cf9e4bff569",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
     }, {
       "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
       "comment": "",
@@ -371,13 +490,6 @@
       "target": "return 0;",
       "targets": [],
       "value": "count"
-    }, {
-      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
     }, {
       "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
       "comment": "",
@@ -567,19 +679,19 @@
       "targets": [],
       "value": "FIDELITY_LOGIN"
     }, {
-      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
-      "comment": "",
-      "command": "if",
-      "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
       "comment": "",
       "command": "executeScript",
       "target": "return ${FIDELITY_LOGIN}.split(\":\");",
       "targets": [],
       "value": "LOGIN"
+    }, {
+      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
+      "comment": "",
+      "command": "if",
+      "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
     }, {
       "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
       "comment": "",
@@ -670,13 +782,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "018908e1-3ede-4128-afd6-440bcc367f7b",
-      "comment": "",
-      "command": "echo",
-      "target": "Account Management Tool",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "0ead23bc-2676-440a-9ef5-ccadbc2dfd51",
       "comment": "",
       "command": "open",
@@ -691,17 +796,10 @@
       "targets": [],
       "value": "acc_array"
     }, {
-      "id": "a6505b5d-22d8-4309-8c17-f841b634b0bb",
-      "comment": "",
-      "command": "echo",
-      "target": "${acc_array}",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
       "comment": "",
       "command": "echo",
-      "target": "Remember to follow .env.example. If you have only one login for fidelity, it should be like: \"FIDELITY_AI= [['995123718’,’996245678’,’997656055']]\"",
+      "target": "${acc_array}",
       "targets": [],
       "value": ""
     }, {
