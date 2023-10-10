@@ -110,7 +110,7 @@
       "command": "executeScript",
       "target": "return .46",
       "targets": [],
-      "value": "LIMIT_PRICE"
+      "value": "LIMIT"
     }, {
       "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
       "comment": "",
