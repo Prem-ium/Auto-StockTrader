@@ -63,46 +63,42 @@
       "targets": [],
       "value": "account"
     }, {
-      "id": "4f358542-76e0-4f45-aff8-e16834e368e2",
+      "id": "a213310b-9595-4c6d-aa72-2157bd1cad5a",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//mc-trade-account-selector/div/div/button/span",
+      "target": "xpath=//sdps-account-selector/div/div/button",
       "targets": [
-        ["css=#mcAccountSelector > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//button[@id='mcAccountSelector']/span", "xpath:idRelative"],
-        ["xpath=//mc-trade-account-selector/div/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Individual')]", "xpath:innerText"]
+        ["id=basic-example-small", "id"],
+        ["css=#basic-example-small", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-example-small-container']/button", "xpath:idRelative"],
+        ["xpath=//sdps-account-selector/div/div/button", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "24ce14cc-52f7-4f19-a18a-a8126459a838",
+      "id": "75cecab5-14cd-4b8a-b401-4175d8040b4a",
       "comment": "",
       "command": "click",
-      "target": "id=mcAccountSelector",
+      "target": "css=.sdps-account-selector__icon",
       "targets": [
-        ["id=mcAccountSelector", "id"],
-        ["css=#mcAccountSelector", "css:finder"],
-        ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
-        ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
+        ["css=.sdps-account-selector__icon", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']/span[5]", "xpath:idRelative"],
+        ["xpath=//span[5]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "02da7340-c0ab-4318-8ccf-60aca4f598ca",
+      "id": "db1c1e78-70f8-4eff-bb4e-3c7b9132be18",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
       "targets": [],
       "value": ""
     }, {
-      "id": "03111779-a2d8-4785-94f8-c60455d5bf59",
+      "id": "dc6ba57f-6ffd-45bd-a920-02ac0c11096b",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
-      "targets": [
-        ["css=#brokerage-acc-8 > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//a[@id='brokerage-acc-8']/span", "xpath:idRelative"],
-        ["xpath=//li[9]/a/span", "xpath:position"]
-      ],
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
+      "targets": [],
       "value": ""
     }, {
       "id": "68c08b02-f9b0-458e-b8e4-5d4d24ef0aef",
@@ -381,38 +377,39 @@
       "id": "67bb05d0-27bd-43c3-853d-1dfa19681c9e",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//mc-trade-account-selector/div/div/button/span",
-      "targets": [],
+      "target": "xpath=//sdps-account-selector/div/div/button",
+      "targets": [
+        ["id=basic-example-small", "id"],
+        ["css=#basic-example-small", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-example-small-container']/button", "xpath:idRelative"],
+        ["xpath=//sdps-account-selector/div/div/button", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "29024848-2d0f-4e8a-b663-aa9997f20d9e",
       "comment": "",
       "command": "click",
-      "target": "id=mcAccountSelector",
+      "target": "css=.sdps-account-selector__icon",
       "targets": [
-        ["id=mcAccountSelector", "id"],
-        ["css=#mcAccountSelector", "css:finder"],
-        ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
-        ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
+        ["css=.sdps-account-selector__icon", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']/span[5]", "xpath:idRelative"],
+        ["xpath=//span[5]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "0091f144-bdcd-4700-9f58-7d60a3037887",
+      "id": "cc8c5735-3f13-45cd-af5c-184c1a486cb1",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
       "targets": [],
       "value": ""
     }, {
-      "id": "dc465e40-87b6-462a-b2ed-a7db1470028b",
+      "id": "3ca30f25-1b00-42d9-9f57-7e3122de504b",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
-      "targets": [
-        ["css=#brokerage-acc-8 > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//a[@id='brokerage-acc-8']/span", "xpath:idRelative"],
-        ["xpath=//li[9]/a/span", "xpath:position"]
-      ],
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
+      "targets": [],
       "value": ""
     }, {
       "id": "7c4a7f8a-0fa9-46f8-b2d9-19a26920d360",
@@ -729,41 +726,42 @@
       "targets": [],
       "value": "account"
     }, {
-      "id": "550b71a4-3a7b-4a01-8631-d2b9332fea02",
+      "id": "d6b7bb62-03d9-4fce-9eb7-7151bd64c76a",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//mc-trade-account-selector/div/div/button/span",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "35c7b086-e594-41e8-8ed0-9cd6c878a561",
-      "comment": "",
-      "command": "click",
-      "target": "id=mcAccountSelector",
+      "target": "xpath=//sdps-account-selector/div/div/button",
       "targets": [
-        ["id=mcAccountSelector", "id"],
-        ["css=#mcAccountSelector", "css:finder"],
-        ["xpath=//button[@id='mcAccountSelector']", "xpath:attributes"],
-        ["xpath=//mc-trade-account-selector/div/div/button", "xpath:position"]
+        ["id=basic-example-small", "id"],
+        ["css=#basic-example-small", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']", "xpath:attributes"],
+        ["xpath=//div[@id='basic-example-small-container']/button", "xpath:idRelative"],
+        ["xpath=//sdps-account-selector/div/div/button", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "848ce45d-f51b-4680-b73f-5e9d8ff659aa",
+      "id": "c474eea2-e016-4579-b2d7-9556ab71f624",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sdps-account-selector__icon",
+      "targets": [
+        ["css=.sdps-account-selector__icon", "css:finder"],
+        ["xpath=//button[@id='basic-example-small']/span[5]", "xpath:idRelative"],
+        ["xpath=//span[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2afd6e1-1661-400d-936e-7df69005dd54",
       "comment": "",
       "command": "assertElementPresent",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
       "targets": [],
       "value": ""
     }, {
-      "id": "2dbfa3ce-825f-4efd-b8f1-f0a36d1ffed2",
+      "id": "a0e6a97e-7349-449f-8665-4db965e9c5c9",
       "comment": "",
       "command": "click",
-      "target": "xpath=//a[@id='brokerage-acc-${account}']/span",
-      "targets": [
-        ["css=#brokerage-acc-8 > .sdps-account-selector__left-col", "css:finder"],
-        ["xpath=//a[@id='brokerage-acc-8']/span", "xpath:idRelative"],
-        ["xpath=//li[9]/a/span", "xpath:position"]
-      ],
+      "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
+      "targets": [],
       "value": ""
     }, {
       "id": "0de48f3f-582d-4b67-b485-b99f4ddbb41d",
