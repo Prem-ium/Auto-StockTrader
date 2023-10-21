@@ -29,6 +29,8 @@ This project contains the means of automating buy/sell stock orders within:
 - Sofi Invest
 - Vanguard
 
+Note: As I no longer have an Ally Invest or Merrill Edge account, I will no longer be able to provide updates or changes to those files. 
+
 # Enviornmental Variables
 To use this project, you will need to set the following environment variables in your .env file:
 | Variable          | Description                                       | Type                 |
