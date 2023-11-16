@@ -1,3 +1,9 @@
+# NOTE: This script is no longer used.
+# It is not maintained. It is not guaranteed to work.
+# This was extremely *early* phase code that was used to test the concept of automating stock purchases.
+# This repo now uses Selenium IDE to automate stock purchases.
+# A Sofi Selenium IDE script should be used instead of this script.
+
 import sys
 import os
 import traceback
