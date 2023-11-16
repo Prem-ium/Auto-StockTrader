@@ -40,7 +40,7 @@ To use this project, you will need to set the following environment variables in
 | `MERRILL_AI`      | Total Number of Merrill Accounts                 | Integer              |
 | `VANGUARD_AI`       | Total Number of Vanguard Accounts  | Integer       |
 | `FIDELITY_AI`       | Fidelity account numbers                          | Nested List of Strings|
-| `CHASE_AI`          | [AI Values found in Chase's Trade URL for each account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
+| `CHASE_AI`          | [AI Values found in Chase's Trade URL for each account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png). You can find [Step-By-Step](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD#chase-automation) here.           | Nested List of Strings| 
 | `FIRSTRADE_AI`      | Firstrade Account Numbers | List of Strings       |
 | `ALLY_AI`           | Ally Account Numbers -- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
 | --|--|--|
@@ -51,7 +51,7 @@ To use this project, you will need to set the following environment variables in
 | `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
 | `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
-
+[Need more help?](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD) 
 
 
 <details>
