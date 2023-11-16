@@ -6,30 +6,31 @@
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
 
 # Features
-- Multiple Stock Tickers Support (ex: `NVDA,TSLA,AREB` buys/sells in one test run)
-- Extended & Market Hours Support
-- Market & Limit Order Support
-- `.bat` Script to Update `.side` files with new Tickers, Account Variables, etc.
-- XPATH Checking & Error Handling 
+- Multiple Stock Tickers Support (ex: `NVDA,TSLA,AAPL` buys/sells in one test run)
+- Multiple Accounts/Login Support 
+- Dynamic Error Checking & Handling using XPATHs
 - Account Slicing (Automate from a specific account & onward)
+- Extended Hours Support for Certain Brokerages
+- Limit Order Support for Certain Brokerages
+- `.bat` Script to Update `.side` files with new Tickers, Account Variables, etc.
 - Account Login Automation 
 - JavaScript Account Array Helper Scripts
 
-*Note: Gold Github Sponsor/Buy-Me-Coffee donation contributors may get access to exclusive features or beta features before the public.*
+*Note: Gold Github Sponsor donation contributors get access to additional exclusive features.*
 
 ## Supported Brokerages
 This project contains the means of automating buy/sell stock orders within:
 
 - Ally Invest
-- Chase JP Morgan Investments
 - Charles Schwab
-- Firstrade
+- Chase's J.P. Morgan Invest
 - Fidelity
+- Firstrade
 - Merrill Edge Lynch
 - Sofi Invest
 - Vanguard
 
-Note: As I no longer have an Ally Invest or Merrill Edge account, I will no longer be able to provide updates or changes to those files. 
+Note: Please note that although I no longer have an Ally Invest or Merrill Edge account, the existing scripts should still function as intended. However, I won't be able to provide updates or make changes specific to those platforms.
 
 # Enviornmental Variables
 To use this project, you will need to set the following environment variables in your .env file:
@@ -39,9 +40,9 @@ To use this project, you will need to set the following environment variables in
 | `MERRILL_AI`      | Total Number of Merrill Accounts                 | Integer              |
 | `VANGUARD_AI`       | Total Number of Vanguard Accounts  | Integer       |
 | `FIDELITY_AI`       | Fidelity account numbers                          | Nested List of Strings|
-| `CHASE_AI`          | [AI Values found in Trade URL of Every Account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
-| `FIRSTRADE_AI`      | Fidelity Account Numbers | List of Strings       |
-| `ALLY_AI`           | In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
+| `CHASE_AI`          | [AI Values found in Chase's Trade URL for each account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png)            | Nested List of Strings| 
+| `FIRSTRADE_AI`      | Firstrade Account Numbers | List of Strings       |
+| `ALLY_AI`           | Ally Account Numbers -- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
 | --|--|--|
 | `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
 | `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
@@ -50,18 +51,30 @@ To use this project, you will need to set the following environment variables in
 | `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
 | `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
-Addionally, you may chose to store your login in your `.env` to automatically open and login to any brokerage. (<b>This is not recommended!!</b> I recommend using the login test to open the login URL to manually login, however storing credentials in a `.side` file is not recommended). Multiple account credentials are seperated by the `:` character. Note: The login test is best-try. Many brokerages such as Chase may block the login, but you are able to fill out user/password info quickly (if you choose to use this tool.)
 
 
-| Variable          | Description                                       | Type                 | Example                          |
-|-------------------|---------------------------------------------------|----------------------|----------------------------------|
-| `CHASE_LOGIN`       | Chase Account Credentials                         | String               | CHASE_LOGIN="USERNAME:PASSWORD"   |
-| `FIDELITY_LOGIN`    | Fidelity Account Credentials                      | String               | FIDELITY_LOGIN="USERNAME:PASSWORD"|
-| `FIRSTADE_LOGIN`    | Firstrade Account Credentials                    | String               | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
-| `MERRILL_LOGIN`     | Merrill Account Credentials                       | String               | MERRILL_LOGIN="USERNAME:PASSWORD" |
-| `SCHWAB_LOGIN`      | Schwab Account Credentials                        | String               | SCHWAB_LOGIN="USERNAME:PASSWORD"  |
-| `ALLY_LOGIN`        | Ally Account Credentials                          | String               | ALLY_LOGIN="USERNAME:PASSWORD"    |
-| `VANGUARD_LOGIN`    | Vanguard Account Credentials                      | String               | VANGUARD_LOGIN="USERNAME:PASSWORD"|
+
+<details>
+  <summary>Login Env Example</summary>
+  <p>
+
+  If you prefer, you can store your login information in a `.env` file to automatically open and log in to any brokerage. However, I strongly advise against this practice. Instead, I recommend using the login test to open the login URL and manually log in. Storing credentials in a `.side` file is  discouraged due to security reasons. Multiple account credentials are separated by the `:` character.
+
+  Please note that the login test is a best-try approach. Some brokerages, like Chase, may block automated logins, but you can quickly fill out the user/password information manually if you choose to use this tool.
+  </p>
+  
+  | Variable          | Description                                   | Type    | Example                        |
+  |-------------------|-----------------------------------------------|---------|--------------------------------|
+  | `CHASE_LOGIN`     | Chase Account Credentials                     | String  | CHASE_LOGIN="USERNAME:PASSWORD" |
+  | `FIDELITY_LOGIN`  | Fidelity Account Credentials                  | String  | FIDELITY_LOGIN="USERNAME:PASSWORD"|
+  | `FIRSTADE_LOGIN`  | Firstrade Account Credentials                 | String  | FIRSTADE_LOGIN="USERNAME:PASSWORD"|
+  | `MERRILL_LOGIN`   | Merrill Account Credentials                    | String  | MERRILL_LOGIN="USERNAME:PASSWORD"|
+  | `SCHWAB_LOGIN`    | Schwab Account Credentials                     | String  | SCHWAB_LOGIN="USERNAME:PASSWORD" |
+  | `ALLY_LOGIN`      | Ally Account Credentials                       | String  | ALLY_LOGIN="USERNAME:PASSWORD"   |
+  | `VANGUARD_LOGIN`  | Vanguard Account Credentials                   | String  | VANGUARD_LOGIN="USERNAME:PASSWORD"|
+</details>
+
+
 
 Refer to `.env.example` for more clarity.
 
@@ -117,9 +130,8 @@ If you appreciate my work and would like to show your support, there are two con
 
 1. **GitHub Sponsors**
    - [Donate via GitHub Sponsors](https://github.com/sponsors/Prem-ium)
-   - This is the preferred donation method as it incurs no transaction fees & different tiers offer perks.
-   - GitHub Silver & Gold Sponsors receive benefits with their donations ranging from exclusive private scripts with unique features, expedited bug support, & more. 
-   [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Prem-ium)
+   - This is the preferred donation method as you can place donations with no transaction fees & possibily receive perks for your donation.
+   - [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Prem-ium)
 
 2. **Buy Me A Coffee**
    - [Donate via Buy Me A Coffee](https://www.buymeacoffee.com/prem.ium)
@@ -128,15 +140,13 @@ If you appreciate my work and would like to show your support, there are two con
 Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
 
 # License
-This repository uses the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
+This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
 
 # Acknowledgments / Final Remarks
-I want to thank <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donators</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a> 
-Thank you for supporting my work. 
-I am beyond grateful, because of each one of you, I am able to build cool projects like this.
+I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donators</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
 
-Thank you so much for your support in this repository.
-Please consider leaving a :star2: if you found this project to be cool!
+Thank you for backing my work. Each one of you plays a crucial role, and I am truly grateful for your contributions.
+If you find this project interesting, please consider leaving a :star2:, <a href="https://github.com/sponsors/Prem-ium">donating, </a> or <a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank">contributing</a> if you found this project to be helpful!
 
 ### ⚠️ DISCLAIMER ⚠️
 I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
