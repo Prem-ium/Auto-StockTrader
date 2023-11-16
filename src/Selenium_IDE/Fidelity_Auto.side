@@ -14,12 +14,26 @@
       "targets": [],
       "value": "TICKER"
     }, {
-      "id": "99219aba-29c5-4f95-850c-4bfd09bacec2",
+      "id": "51277964-fd77-466b-9595-0617964dbc41",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return .46",
+      "targets": [],
+      "value": "LIMIT"
+    }, {
+      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
+    }, {
+      "id": "69023bbe-e23a-4eda-8928-12096f54902c",
       "comment": "",
       "command": "store",
       "target": "0",
       "targets": [],
-      "value": "dynamic"
+      "value": "index"
     }, {
       "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
       "comment": "",
@@ -28,12 +42,12 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
+      "id": "99219aba-29c5-4f95-850c-4bfd09bacec2",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "command": "store",
+      "target": "0",
       "targets": [],
-      "value": "TICKERS"
+      "value": "dynamic"
     }, {
       "id": "9801549d-8263-49c4-ae31-6228d5e23b0a",
       "comment": "",
@@ -41,13 +55,6 @@
       "target": "${dynamic} == 0",
       "targets": [],
       "value": ""
-    }, {
-      "id": "69023bbe-e23a-4eda-8928-12096f54902c",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "index"
     }, {
       "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
       "comment": "",
@@ -105,19 +112,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "51277964-fd77-466b-9595-0617964dbc41",
+      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
       "comment": "",
       "command": "executeScript",
-      "target": "return .46",
+      "target": "return ${TICKER}.split(\",\");",
       "targets": [],
-      "value": "LIMIT"
-    }, {
-      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
+      "value": "TICKERS"
     }, {
       "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
       "comment": "",
@@ -386,6 +386,20 @@
       "targets": [],
       "value": "TICKER"
     }, {
+      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "QUANT"
+    }, {
+      "id": "3cef2882-9653-4e75-8d1e-6d7be2fae51f",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "index"
+    }, {
       "id": "45dd1037-8b6b-4c14-85c5-31651477527a",
       "comment": "",
       "command": "store",
@@ -400,26 +414,12 @@
       "targets": [],
       "value": "target"
     }, {
-      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
       "id": "f4916055-ed7a-4edf-8d7a-e8e11cbf9af9",
       "comment": "",
       "command": "if",
       "target": "${dynamic} == 0",
       "targets": [],
       "value": ""
-    }, {
-      "id": "3cef2882-9653-4e75-8d1e-6d7be2fae51f",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "index"
     }, {
       "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
       "comment": "",
@@ -477,19 +477,19 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
-    }, {
       "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
       "comment": "",
       "command": "executeScript",
       "target": "return 0;",
       "targets": [],
       "value": "count"
+    }, {
+      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
       "comment": "",
