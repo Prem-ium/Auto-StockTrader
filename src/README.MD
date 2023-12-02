@@ -12,7 +12,7 @@ Automating orders for Chase's J.P. Morgan Self-Directed Investing Brokerage is f
 
 **Update Test Cases:** Copy the AI for each account and replace the return statement in all test cases (Buy/Sell Test in Selenium IDE).
 ```javascript
-return ['54658965', 'YOUR', 'AI', 'GOES', 'HERE']
+return [['54658965', 'YOUR', 'AI', 'GOES', 'HERE']]
 ```
 **Provide Stock Ticker:** Input the Stock Ticker as a return statement and click the start button to begin automation.
 ```javascript
