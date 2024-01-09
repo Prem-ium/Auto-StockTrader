@@ -44,14 +44,14 @@ else:
     TICKER = None
 
 FILE_TASK_MAP = {
-    "CHASE_AI": {"file": "src\Selenium_IDE\Chase_Auto.side", "task": ""},
-    "FIRSTRADE_AI": {"file": "src\Selenium_IDE\Firstrade_Auto.side", "task": ""},
-    "VANGUARD_AI": {"file": "src\Selenium_IDE\Vanguard_Auto.side", "task": ""},
-    "FIDELITY_AI": {"file": "src\Selenium_IDE\Fidelity_Auto.side", "task": ""},
-    "SCHWAB_AI": {"file": "src\Selenium_IDE\Schwab_Auto.side", "task": ""},
-    "SOFI_AI": {"file": "src\X_Archive\Sofi Helper.side", "task": ""},
-    "ALLY_AI": {"file": "src\Selenium_IDE\Ally_Auto.side", "task": ""},
-    "MERRILL_AI": {"file": "src\Selenium_IDE\Merrill_Auto.side", "task": ""},
+    "CHASE_AI": {"file": os.path.join("src", "Selenium_IDE", "Chase_Auto.side"), "task": ""},
+    "FIRSTRADE_AI": {"file": os.path.join("src", "Selenium_IDE", "Firstrade_Auto.side"), "task": ""},
+    "VANGUARD_AI": {"file": os.path.join("src", "Selenium_IDE", "Vanguard_Auto.side"), "task": ""},
+    "FIDELITY_AI": {"file": os.path.join("src", "Selenium_IDE", "Fidelity_Auto.side"), "task": ""},
+    "SCHWAB_AI": {"file": os.path.join("src", "Selenium_IDE", "Schwab_Auto.side"), "task": ""},
+    "SOFI_AI": {"file": os.path.join("src", "X_Archive", "Sofi Helper.side"), "task": ""},
+    "ALLY_AI": {"file": os.path.join("src", "Selenium_IDE", "Ally_Auto.side"), "task": ""},
+    "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
 }
 
 CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
@@ -105,10 +105,14 @@ def main():
                     command['target'] = f"return {task}"
                     break
 
-        filePath = filePath.replace("src\\Selenium_IDE\\", "")
-        filePath = filePath.replace("src\\X_Archive\\", "")
-
-        filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
+        if os.name == 'nt':
+            filePath = filePath.replace("src\\Selenium_IDE\\", "")
+            filePath = filePath.replace("src\\X_Archive\\", "")
+            filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
+        elif os.name == 'posix':
+            filePath = os.path.join("src", "Selenium_IDE", filePath.replace("src\\Selenium_IDE\\", ""))
+            filePath = os.path.join("src", "X_Archive", filePath.replace("src\\X_Archive\\", ""))
+            filePath = os.path.join(CUSTOM_DIR, filePath) if CUSTOM_DIR else f'ENV-{filePath}'
 
         # Create a new file with the updated data
         with open(filePath, 'w') as file:
@@ -122,9 +126,8 @@ def main():
     try:
         # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
         if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
-
-                shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
-                print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+            shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+            print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
     except Exception as e:
         if os.name == 'posix':
             print('Running Linux')
