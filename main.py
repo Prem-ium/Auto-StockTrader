@@ -77,9 +77,7 @@ def main():
                 LOGINS.append("LOGIN:HERE")
         else:
             print(f"{var_name} is disabled. Skipping...")
-
     print('\n\n')
-
     for filePath in FILES:
         task = ""
         for var_name, info in FILE_TASK_MAP.items():
@@ -121,10 +119,20 @@ def main():
     if CUSTOM_DIR and len(sys.argv) != 2:
         os.startfile(CUSTOM_DIR)
 
-    # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
-    if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
-        shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
-        print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+    try:
+        # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
+        if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
+
+                shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+                print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+    except Exception as e:
+        if os.name == 'posix':
+            print('Running Linux')
+            # create file shortcut of RSA-QuickStart.sh located in /src to the desktop
+            os.system(f"cp src/RSA-QuickStart.sh {os.environ['USERPROFILE']}/Desktop/RSA-QuickStart.sh")
+            print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}/Desktop/RSA-QuickStart.sh")
+        else:
+            print(e.with_traceback())
 
     print(f"\n\nProgram successfully completed! Thanks for using Prem-ium\'s Automated Stock Trading project!\nPlease leave a star or drop a follow if you found this project cool!\nhttps://github.com/Prem-ium/Auto-StockTrader\n")
 
