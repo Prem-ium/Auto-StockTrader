@@ -110,8 +110,8 @@ def main():
             filePath = filePath.replace("src\\X_Archive\\", "")
             filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
         elif os.name == 'posix':
-            filePath = os.path.join("src", "Selenium_IDE", filePath.replace("src\\Selenium_IDE\\", ""))
-            filePath = os.path.join("src", "X_Archive", filePath.replace("src\\X_Archive\\", ""))
+            filePath = os.path.join("src", "Selenium_IDE", filePath.replace("src/Selenium_IDE/", ""))
+            filePath = os.path.join("src", "X_Archive", filePath.replace("src/X_Archive/", ""))
             filePath = os.path.join(CUSTOM_DIR, filePath) if CUSTOM_DIR else f'ENV-{filePath}'
 
         # Create a new file with the updated data
@@ -130,10 +130,8 @@ def main():
             print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
     except Exception as e:
         if os.name == 'posix':
-            print('Running Linux')
-            # create file shortcut of RSA-QuickStart.sh located in /src to the desktop
-            os.system(f"cp src/RSA-QuickStart.sh {os.environ['USERPROFILE']}/Desktop/RSA-QuickStart.sh")
-            print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}/Desktop/RSA-QuickStart.sh")
+            os.system(f"cp src/RSA-QuickStart.sh {os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
+            print(f"\n\nCreated/Updated:\t{os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
         else:
             print(e.with_traceback())
 
