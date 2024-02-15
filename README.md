@@ -27,8 +27,10 @@ This project contains the means of automating buy/sell stock orders within:
 - Fidelity
 - Firstrade
 - Merrill Edge Lynch
+- Robinhood (GitHub Gold Sponsor, Early Access)
 - Sofi Invest
 - Vanguard
+- WellsTrade (GitHub Gold Sponsor, Exclusive Access)
 
 Note: Please note that although I no longer have an Ally Invest or Merrill Edge account, the existing scripts should still function as intended. However, I won't be able to provide updates or make changes specific to those platforms.
 
@@ -43,6 +45,8 @@ To use this project, you will need to set the following environment variables in
 | `CHASE_AI`          | [AI Values found in Chase's Trade URL for each account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png). You can find [Step-By-Step](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD#chase-automation) here.           | Nested List of Strings| 
 | `FIRSTRADE_AI`      | Firstrade Account Numbers | List of Strings       |
 | `ALLY_AI`           | Ally Account Numbers -- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
+| `ROBINHOOD_AI`*    | Total Number of Robinhood Accounts                 | Integer              |
+| `WELLSTRADE_AI`*    | Any value.                 | Any              |
 | --|--|--|
 | `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
 | `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
@@ -50,6 +54,8 @@ To use this project, you will need to set the following environment variables in
 | `SOFI_ACCOUNT_NAMES`| Account names and numbers for SoFi Auto.side    | String               |
 | `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
 | `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
+
+`*` = Reference for Gold Sponsors Only
 
 [Need more help?](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD) 
 
