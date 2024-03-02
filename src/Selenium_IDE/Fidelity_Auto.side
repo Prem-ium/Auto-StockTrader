@@ -5,7 +5,7 @@
   "url": "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry",
   "tests": [{
     "id": "685c8f77-8fe3-45fc-8e13-51b6c4fea30c",
-    "name": "Fido Buy",
+    "name": "Fidelity Buy",
     "commands": [{
       "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
       "comment": "",
@@ -374,10 +374,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "b482296e-d59c-4337-8d3c-892af1e97857",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Fidelity Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "663b8ae4-3df7-4c2a-b3b1-7b57fe8e7162",
-    "name": "Fido Sell",
+    "name": "Fidelity Sell",
     "commands": [{
       "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
       "comment": "",
@@ -646,10 +653,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "a75099f6-1987-4d0d-8213-5a5d517ed656",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Fidelity Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "2db8e529-1771-4461-b300-3e5027c85693",
-    "name": "0 Fido Login",
+    "name": "| Fidelity Login",
     "commands": [{
       "id": "efdf0883-1c21-4807-aa8f-c0bcd306d44c",
       "comment": "",

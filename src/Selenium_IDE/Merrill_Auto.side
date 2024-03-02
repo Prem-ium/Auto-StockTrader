@@ -4,6 +4,152 @@
   "name": "Merrill Lynch",
   "url": "https://olui2.fs.ml.com",
   "tests": [{
+    "id": "f5052143-1096-43df-9348-77756d35ce51",
+    "name": "| Login Merrill Edge",
+    "commands": [{
+      "id": "06844a9e-ccc4-4aaf-b22c-f7a0c48738cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://olui2.fs.ml.com/login/signin.aspx?sgt=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f4a83a7-d9c1-4ab7-be05-29db93bc9880",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "MERRILL_LOGIN"
+    }, {
+      "id": "081b7e85-5ee5-4fea-aa38-436ac0fcaf7b",
+      "comment": "",
+      "command": "if",
+      "target": "${MERRILL_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "548274e2-0661-4d2d-a4ef-41fc72a57791",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var LOGIN = ${MERRILL_LOGIN}; var colonIndex = LOGIN.indexOf(':'); return [     LOGIN.substring(0, colonIndex),     LOGIN.substring(colonIndex + 1) ];",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77c6365b-f3b4-4a6e-a003-12c527d2301b",
+      "comment": "",
+      "command": "click",
+      "target": "id=oid",
+      "targets": [
+        ["id=oid", "id"],
+        ["name=oid", "name"],
+        ["css=#oid", "css:finder"],
+        ["xpath=//input[@id='oid']", "xpath:attributes"],
+        ["xpath=//section[@id='sign-in-main-content']/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b63be7-c7b4-48c4-98ba-d022b9cc8a22",
+      "comment": "",
+      "command": "type",
+      "target": "id=oid",
+      "targets": [
+        ["id=oid", "id"],
+        ["name=oid", "name"],
+        ["css=#oid", "css:finder"],
+        ["xpath=//input[@id='oid']", "xpath:attributes"],
+        ["xpath=//section[@id='sign-in-main-content']/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "bb593432-d328-4d14-8ce6-d81eb2a59ad5",
+      "comment": "",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//section[@id='sign-in-main-content']/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94b15a23-a97f-444e-b14e-e0165604398e",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//section[@id='sign-in-main-content']/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "b4806763-133b-48fa-86ae-d967d91797e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=secure-signin-submit",
+      "targets": [
+        ["id=secure-signin-submit", "id"],
+        ["linkText=Log in", "linkText"],
+        ["css=#secure-signin-submit", "css:finder"],
+        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
+        ["xpath=//a[@id='secure-signin-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='caw-signin']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[4]", "xpath:href"],
+        ["xpath=//section/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc571bf3-cc61-45d7-a246-4915bfb18df9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "xpath=//div[3]/div/span/div/div[2]/a",
+      "targets": [
+        ["id=me_cs_lo_oth_529_001_020123", "id"],
+        ["name=me_cs_lo_oth_529_001_020123", "name"],
+        ["css=#me_cs_lo_oth_529_001_020123", "css:finder"],
+        ["xpath=//a[@id='me_cs_lo_oth_529_001_020123']", "xpath:attributes"],
+        ["xpath=//div[@id='ContentPH01']/a", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23a34551-84da-4d4d-8403-9d7c562923d1",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=me_cs_lo_oth_529_001_020123",
+      "targets": [
+        ["id=me_cs_lo_oth_529_001_020123", "id"],
+        ["name=me_cs_lo_oth_529_001_020123", "name"],
+        ["css=#me_cs_lo_oth_529_001_020123", "css:finder"],
+        ["xpath=//a[@id='me_cs_lo_oth_529_001_020123']", "xpath:attributes"],
+        ["xpath=//div[@id='ContentPH01']/a", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d78c5455-4a58-4c4e-a437-82ac0cab5955",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "abeb29df-f535-4ffd-815a-1b73fdc45d16",
     "name": "Sell Mer. Edge",
     "commands": [{
@@ -717,152 +863,6 @@
       "value": ""
     }, {
       "id": "b0100f05-e7e4-4cca-8f30-07e5f0273b43",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "f5052143-1096-43df-9348-77756d35ce51",
-    "name": "0 Login Mer. Edge",
-    "commands": [{
-      "id": "06844a9e-ccc4-4aaf-b22c-f7a0c48738cb",
-      "comment": "",
-      "command": "open",
-      "target": "https://olui2.fs.ml.com/login/signin.aspx?sgt=3",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3f4a83a7-d9c1-4ab7-be05-29db93bc9880",
-      "comment": "",
-      "command": "store",
-      "target": "LOGIN:HERE",
-      "targets": [],
-      "value": "MERRILL_LOGIN"
-    }, {
-      "id": "081b7e85-5ee5-4fea-aa38-436ac0fcaf7b",
-      "comment": "",
-      "command": "if",
-      "target": "${MERRILL_LOGIN} != \"LOGIN:HERE\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "548274e2-0661-4d2d-a4ef-41fc72a57791",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${MERRILL_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
-      "id": "75a7478d-c4a7-49f3-9f17-aea42469cfb3",
-      "comment": "",
-      "command": "echo",
-      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "77c6365b-f3b4-4a6e-a003-12c527d2301b",
-      "comment": "",
-      "command": "click",
-      "target": "id=oid",
-      "targets": [
-        ["id=oid", "id"],
-        ["name=oid", "name"],
-        ["css=#oid", "css:finder"],
-        ["xpath=//input[@id='oid']", "xpath:attributes"],
-        ["xpath=//section[@id='sign-in-main-content']/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "47b63be7-c7b4-48c4-98ba-d022b9cc8a22",
-      "comment": "",
-      "command": "type",
-      "target": "id=oid",
-      "targets": [
-        ["id=oid", "id"],
-        ["name=oid", "name"],
-        ["css=#oid", "css:finder"],
-        ["xpath=//input[@id='oid']", "xpath:attributes"],
-        ["xpath=//section[@id='sign-in-main-content']/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div/div/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[0]}"
-    }, {
-      "id": "bb593432-d328-4d14-8ce6-d81eb2a59ad5",
-      "comment": "",
-      "command": "click",
-      "target": "id=pass",
-      "targets": [
-        ["id=pass", "id"],
-        ["name=pass", "name"],
-        ["css=#pass", "css:finder"],
-        ["xpath=//input[@id='pass']", "xpath:attributes"],
-        ["xpath=//section[@id='sign-in-main-content']/div/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "94b15a23-a97f-444e-b14e-e0165604398e",
-      "comment": "",
-      "command": "type",
-      "target": "id=pass",
-      "targets": [
-        ["id=pass", "id"],
-        ["name=pass", "name"],
-        ["css=#pass", "css:finder"],
-        ["xpath=//input[@id='pass']", "xpath:attributes"],
-        ["xpath=//section[@id='sign-in-main-content']/div/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[1]}"
-    }, {
-      "id": "b4806763-133b-48fa-86ae-d967d91797e6",
-      "comment": "",
-      "command": "click",
-      "target": "id=secure-signin-submit",
-      "targets": [
-        ["id=secure-signin-submit", "id"],
-        ["linkText=Log in", "linkText"],
-        ["css=#secure-signin-submit", "css:finder"],
-        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
-        ["xpath=//a[@id='secure-signin-submit']", "xpath:attributes"],
-        ["xpath=//div[@id='caw-signin']/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[4]", "xpath:href"],
-        ["xpath=//section/div/div/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "cc571bf3-cc61-45d7-a246-4915bfb18df9",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "xpath=//div[3]/div/span/div/div[2]/a",
-      "targets": [
-        ["id=me_cs_lo_oth_529_001_020123", "id"],
-        ["name=me_cs_lo_oth_529_001_020123", "name"],
-        ["css=#me_cs_lo_oth_529_001_020123", "css:finder"],
-        ["xpath=//a[@id='me_cs_lo_oth_529_001_020123']", "xpath:attributes"],
-        ["xpath=//div[@id='ContentPH01']/a", "xpath:idRelative"],
-        ["xpath=//div[3]/div/span/div/div[2]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "23a34551-84da-4d4d-8403-9d7c562923d1",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "id=me_cs_lo_oth_529_001_020123",
-      "targets": [
-        ["id=me_cs_lo_oth_529_001_020123", "id"],
-        ["name=me_cs_lo_oth_529_001_020123", "name"],
-        ["css=#me_cs_lo_oth_529_001_020123", "css:finder"],
-        ["xpath=//a[@id='me_cs_lo_oth_529_001_020123']", "xpath:attributes"],
-        ["xpath=//div[@id='ContentPH01']/a", "xpath:idRelative"],
-        ["xpath=//div[3]/div/span/div/div[2]/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d78c5455-4a58-4c4e-a437-82ac0cab5955",
       "comment": "",
       "command": "end",
       "target": "",

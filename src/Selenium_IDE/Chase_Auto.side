@@ -301,6 +301,13 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "1a483dab-7484-465f-a4f8-e214de9d1fe1",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Chase Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "d7bde928-89ba-4368-97f5-032492d419dc",
@@ -628,6 +635,13 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "de9c17c8-0d4c-478a-b430-75484975a288",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Chase Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "fe1ab38d-ab36-4352-a144-5e409ecb92a5",
@@ -925,6 +939,13 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cbe1504-21ce-4570-a617-4aa62cdf32ef",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Chase Pre-Market Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
       "targets": [],
       "value": ""
     }]
@@ -1252,6 +1273,13 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37cebdd6-6413-42cd-9c8f-ceaa90c2ce44",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Chase Pre-Market Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
       "targets": [],
       "value": ""
     }]
@@ -1650,10 +1678,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "a31a35d4-076a-49a1-9b7e-b6cfa834440c",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Chase Limit orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "2d99eb36-148b-4193-a48c-4bbb53ff95f5",
-    "name": "0 Login Chase",
+    "name": "| Chase Login",
     "commands": [{
       "id": "0b1cac16-125a-4ea3-af0a-3c8ee8c8a0b4",
       "comment": "",

@@ -4,6 +4,119 @@
   "name": "Schwab Automated",
   "url": "https://client.schwab.com/app/trade/tom/#/trade",
   "tests": [{
+    "id": "b9eea497-2592-4c70-bba1-36c1f66168c8",
+    "name": "| Login Schwab",
+    "commands": [{
+      "id": "0fa645fa-5c44-4eef-b72f-6a3441c6bd9e",
+      "comment": "",
+      "command": "open",
+      "target": "https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71256ede-2764-4470-b37f-ea6b4e7cca01",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "SCHWAB_LOGIN"
+    }, {
+      "id": "186feb56-385a-4e83-bcbb-1386e6f90ad2",
+      "comment": "",
+      "command": "if",
+      "target": "${SCHWAB_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1af578a-9b98-48ea-9128-7d8e3e457864",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var LOGIN = ${SCHWAB_LOGIN}; var colonIndex = LOGIN.indexOf(':'); return [     LOGIN.substring(0, colonIndex),     LOGIN.substring(colonIndex + 1) ];",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "aca88a4a-352f-4e57-97f1-f6307002c44f",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=1",
+      "targets": [
+        ["index=1"]
+      ],
+      "value": ""
+    }, {
+      "id": "eca9bb34-6a55-44a3-aabf-9bf116cb2657",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginIdInput",
+      "targets": [
+        ["id=loginIdInput", "id"],
+        ["css=#loginIdInput", "css:finder"],
+        ["xpath=//input[@id='loginIdInput']", "xpath:attributes"],
+        ["xpath=//div[@id='user-name']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2200ddb5-4a6d-462d-987a-5bec88dfa8af",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginIdInput",
+      "targets": [
+        ["id=loginIdInput", "id"],
+        ["css=#loginIdInput", "css:finder"],
+        ["xpath=//input[@id='loginIdInput']", "xpath:attributes"],
+        ["xpath=//div[@id='user-name']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "3f12c6bc-4f42-4783-bb56-53acf1fb2b4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=passwordInput",
+      "targets": [
+        ["id=passwordInput", "id"],
+        ["css=#passwordInput", "css:finder"],
+        ["xpath=//input[@id='passwordInput']", "xpath:attributes"],
+        ["xpath=//div[@id='password']/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "791b52c5-a165-43a3-a220-664c000c2eeb",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordInput",
+      "targets": [
+        ["id=passwordInput", "id"],
+        ["css=#passwordInput", "css:finder"],
+        ["xpath=//input[@id='passwordInput']", "xpath:attributes"],
+        ["xpath=//div[@id='password']/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "6df08d35-c0dd-46d3-b3c6-7d38a5da4420",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLogin",
+      "targets": [
+        ["id=btnLogin", "id"],
+        ["css=#btnLogin", "css:finder"],
+        ["xpath=//button[@id='btnLogin']", "xpath:attributes"],
+        ["xpath=//div[@id='button-container']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0438c0af-6e9a-4707-b421-05fee2e0e374",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "00fe9fca-2260-4ca5-beee-945eb08cc90c",
     "name": "Buy Schwab",
     "commands": [{
@@ -13,13 +126,6 @@
       "target": "JOB",
       "targets": [],
       "value": "TICKER"
-    }, {
-      "id": "cd349c6c-753e-4f1f-97db-03506bdb22d7",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
     }, {
       "id": "6e8d053a-4fc4-4fdb-a70b-153dc04752be",
       "comment": "",
@@ -31,7 +137,7 @@
       "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i);",
+      "target": "return Array.from({length: 30}, (_, i) => i);;",
       "targets": [],
       "value": "accounts"
     }, {
@@ -100,6 +206,13 @@
       "target": "xpath=//*[@id=\"basic-example-small-header-0-account-${account}\"]",
       "targets": [],
       "value": ""
+    }, {
+      "id": "cd349c6c-753e-4f1f-97db-03506bdb22d7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "68c08b02-f9b0-458e-b8e4-5d4d24ef0aef",
       "comment": "",
@@ -185,31 +298,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e40a201b-3a15-4b61-b2ae-ab93f231ce33",
+      "id": "56d4ffa3-d29c-48c3-bdef-4d165d6154c1",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//input[@id='inputqtyundefined-stepper-input']",
-      "targets": [
-        ["id=inputqtyundefined-stepper-input", "id"],
-        ["css=#inputqtyundefined-stepper-input", "css:finder"],
-        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
-        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
-        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
-      ],
+      "command": "executeScript",
+      "target": "var inputElement = document.getElementById(\"ordernumber01inputqty-stepper-input\"); inputElement.value = ${QUANT} - 1; var incrementButton = document.querySelector('.sdps-button--input-right-inset'); incrementButton.click();",
+      "targets": [],
       "value": ""
-    }, {
-      "id": "e5939647-ab72-4f4e-8f25-8034c573eea8",
-      "comment": "",
-      "command": "type",
-      "target": "xpath=//sdps-stepper/div/div/div/input",
-      "targets": [
-        ["id=inputqtyundefined-stepper-input", "id"],
-        ["css=#inputqtyundefined-stepper-input", "css:finder"],
-        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
-        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
-        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
-      ],
-      "value": "${QUANT}"
     }, {
       "id": "6fc4462e-641e-40bd-80b2-1a51a1667fe3",
       "comment": "",
@@ -256,7 +350,7 @@
       "id": "766ed655-343c-4d67-9253-0914dbcfb990",
       "comment": "",
       "command": "pause",
-      "target": "1500",
+      "target": "6500",
       "targets": [],
       "value": ""
     }, {
@@ -306,10 +400,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "693838ed-b703-47b2-b65b-81c3792b8376",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Schwab Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "a76629fc-6faf-44c5-a5d0-9fe8941ce312",
-    "name": "Sell Schwab",
+    "name": "Schwab Sell",
     "commands": [{
       "id": "2d7949a3-7a85-49d4-8cf4-55796866d0e1",
       "comment": "",
@@ -317,20 +418,6 @@
       "target": "JOB",
       "targets": [],
       "value": "TICKER"
-    }, {
-      "id": "2dd9872c-5598-4661-b721-ce97f7e6b08c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "a3c8ae3a-ea55-4b00-ae71-c5f4c8ab78c6",
-      "comment": "",
-      "command": "store",
-      "target": "1.00",
-      "targets": [],
-      "value": "LIMIT"
     }, {
       "id": "6995d2d3-06a5-4754-a099-ccb1c4cb2356",
       "comment": "",
@@ -342,7 +429,7 @@
       "id": "faea0380-ed7c-4300-b2e5-cdf12cd367a4",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 50}, (_, i) => i);",
+      "target": "return Array.from({length: 30}, (_, i) => i);;",
       "targets": [],
       "value": "accounts"
     }, {
@@ -366,6 +453,13 @@
       "target": "let list = ${accounts}; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
+    }, {
+      "id": "2dd9872c-5598-4661-b721-ce97f7e6b08c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "b6c4f34e-6c59-44b6-8beb-9c9e1743e38d",
       "comment": "",
@@ -518,31 +612,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "f41067c2-2e34-4ace-89ca-4ab95a6c8690",
+      "id": "9cf842b8-0a2c-4ba8-8da9-13027c784da9",
       "comment": "",
-      "command": "click",
-      "target": "xpath=//input[@id='inputqtyundefined-stepper-input']",
-      "targets": [
-        ["id=inputqtyundefined-stepper-input", "id"],
-        ["css=#inputqtyundefined-stepper-input", "css:finder"],
-        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
-        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
-        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
-      ],
+      "command": "executeScript",
+      "target": "var element = document.querySelector('[aria-label=\"increment number\"]');         for (var i = 0; i < (${QUANT}- 1); i++) {             element.click();         }",
+      "targets": [],
       "value": ""
-    }, {
-      "id": "3218870d-9337-4e40-b942-8d0ef274184c",
-      "comment": "",
-      "command": "type",
-      "target": "xpath=//sdps-stepper/div/div/div/input",
-      "targets": [
-        ["id=inputqtyundefined-stepper-input", "id"],
-        ["css=#inputqtyundefined-stepper-input", "css:finder"],
-        ["xpath=//input[@id='inputqtyundefined-stepper-input']", "xpath:attributes"],
-        ["xpath=//div[@id='inputqtyundefined-stepper']/div/div/input", "xpath:idRelative"],
-        ["xpath=//sdps-stepper/div/div/div/input", "xpath:position"]
-      ],
-      "value": "${QUANT}"
     }, {
       "id": "b13fe29e-60e8-4c15-b528-22e1eb11b174",
       "comment": "",
@@ -574,7 +649,7 @@
       "id": "f34996e3-3d12-4d1c-a44a-a4560ef251a3",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = '/html/body/div[1]/div[3]/div/div[2]/div[1]/div[4]/app-root/app-trade/mc-trade/div[2]/div[2]/div[1]/div[3]/div[1]/p[2]'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; return (element && element.textContent.includes('This security is not currently held in this account.'));",
+      "target": "const xpath = '/html/body/div[1]/div[3]/div/div[2]/div[1]/div[4]/app-root/app-trade/mc-trade/div[2]/div[2]/div[1]/div[3]/div[1]/p[2]'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; return (element && (element.textContent.includes('This security is not currently held in this account.') || element.textContent.includes('greater quantity of shares than you hold in this account')));",
       "targets": [],
       "value": "no_position"
     }, {
@@ -588,7 +663,7 @@
       "id": "3499621c-0aec-499c-8325-b7dcdaf38903",
       "comment": "",
       "command": "echo",
-      "target": "${account} Has No Position With ${TICK} ",
+      "target": "${account} either has no position with ${TICK} or the transaction would result in oversold shares.",
       "targets": [],
       "value": ""
     }, {
@@ -665,6 +740,13 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "237d66e0-7362-477d-b10d-ec61ade5daf8",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Schwab Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "41be4d96-884b-4213-94db-b47b55cc8e79",
@@ -676,13 +758,6 @@
       "target": "JOB",
       "targets": [],
       "value": "TICKER"
-    }, {
-      "id": "e3bdaf58-60bf-4550-8df9-4456272b250c",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
     }, {
       "id": "4b86aaa8-891d-41e0-b7ca-65ae2fe3da6e",
       "comment": "",
@@ -701,7 +776,7 @@
       "id": "833779a8-533b-463a-a067-9c2e018286f9",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 20}, (_, i) => i);",
+      "target": "return Array.from({length: 30}, (_, i) => i);;",
       "targets": [],
       "value": "accounts"
     }, {
@@ -718,6 +793,13 @@
       "target": "let list = ${accounts}; list = list.slice(list.indexOf(${target}) + 1); return list;",
       "targets": [],
       "value": "numb"
+    }, {
+      "id": "e3bdaf58-60bf-4550-8df9-4456272b250c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "3ac1254f-39aa-4c41-ace7-353028bb9fbe",
       "comment": "",
@@ -971,131 +1053,11 @@
       "target": "",
       "targets": [],
       "value": ""
-    }]
-  }, {
-    "id": "b9eea497-2592-4c70-bba1-36c1f66168c8",
-    "name": "0 Login Schwab",
-    "commands": [{
-      "id": "0fa645fa-5c44-4eef-b72f-6a3441c6bd9e",
-      "comment": "",
-      "command": "open",
-      "target": "https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx",
-      "targets": [],
-      "value": ""
     }, {
-      "id": "14fddac9-8c36-439b-a284-452670484ab4",
+      "id": "3f91ca54-34e9-43ce-bb3c-5d0204d7ffaa",
       "comment": "",
       "command": "echo",
-      "target": "Login Landing Page Opened",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "71256ede-2764-4470-b37f-ea6b4e7cca01",
-      "comment": "",
-      "command": "store",
-      "target": "LOGIN:HERE",
-      "targets": [],
-      "value": "SCHWAB_LOGIN"
-    }, {
-      "id": "b1af578a-9b98-48ea-9128-7d8e3e457864",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${SCHWAB_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
-      "id": "709c42ea-4584-4cd8-898a-b6276bb28f1d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${SCHWAB_LOGIN} != \"LOGIN:HERE\";",
-      "targets": [],
-      "value": "use_login"
-    }, {
-      "id": "186feb56-385a-4e83-bcbb-1386e6f90ad2",
-      "comment": "",
-      "command": "if",
-      "target": "${use_login}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aca88a4a-352f-4e57-97f1-f6307002c44f",
-      "comment": "",
-      "command": "selectFrame",
-      "target": "index=1",
-      "targets": [
-        ["index=1"]
-      ],
-      "value": ""
-    }, {
-      "id": "eca9bb34-6a55-44a3-aabf-9bf116cb2657",
-      "comment": "",
-      "command": "click",
-      "target": "id=loginIdInput",
-      "targets": [
-        ["id=loginIdInput", "id"],
-        ["css=#loginIdInput", "css:finder"],
-        ["xpath=//input[@id='loginIdInput']", "xpath:attributes"],
-        ["xpath=//div[@id='user-name']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "2200ddb5-4a6d-462d-987a-5bec88dfa8af",
-      "comment": "",
-      "command": "type",
-      "target": "id=loginIdInput",
-      "targets": [
-        ["id=loginIdInput", "id"],
-        ["css=#loginIdInput", "css:finder"],
-        ["xpath=//input[@id='loginIdInput']", "xpath:attributes"],
-        ["xpath=//div[@id='user-name']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${LOGIN[0]}"
-    }, {
-      "id": "3f12c6bc-4f42-4783-bb56-53acf1fb2b4a",
-      "comment": "",
-      "command": "click",
-      "target": "id=passwordInput",
-      "targets": [
-        ["id=passwordInput", "id"],
-        ["css=#passwordInput", "css:finder"],
-        ["xpath=//input[@id='passwordInput']", "xpath:attributes"],
-        ["xpath=//div[@id='password']/div/input", "xpath:idRelative"],
-        ["xpath=//div[4]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "791b52c5-a165-43a3-a220-664c000c2eeb",
-      "comment": "",
-      "command": "type",
-      "target": "id=passwordInput",
-      "targets": [
-        ["id=passwordInput", "id"],
-        ["css=#passwordInput", "css:finder"],
-        ["xpath=//input[@id='passwordInput']", "xpath:attributes"],
-        ["xpath=//div[@id='password']/div/input", "xpath:idRelative"],
-        ["xpath=//div[4]/div/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[1]}"
-    }, {
-      "id": "6df08d35-c0dd-46d3-b3c6-7d38a5da4420",
-      "comment": "",
-      "command": "click",
-      "target": "id=btnLogin",
-      "targets": [
-        ["id=btnLogin", "id"],
-        ["css=#btnLogin", "css:finder"],
-        ["xpath=//button[@id='btnLogin']", "xpath:attributes"],
-        ["xpath=//div[@id='button-container']/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "0438c0af-6e9a-4707-b421-05fee2e0e374",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "Finished automating Schwab Limit Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
       "targets": [],
       "value": ""
     }]
