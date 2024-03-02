@@ -4,8 +4,122 @@
   "name": "Ally",
   "url": "https://live.invest.ally.com",
   "tests": [{
+    "id": "48efa588-1652-474d-bf14-fe6fafba72ec",
+    "name": "| Ally Login",
+    "commands": [{
+      "id": "6ad1e795-957c-4704-96ed-aea209d6c877",
+      "comment": "",
+      "command": "open",
+      "target": "https://secure.ally.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e870f0c-f09a-42ae-8e2f-fcee4b309994",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "ALLY_LOGIN"
+    }, {
+      "id": "cbe9dbd3-c02a-453d-88eb-9a308cb8b14e",
+      "comment": "",
+      "command": "if",
+      "target": "${ALLY_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "841c2af1-82b5-4f34-967e-367ac9e0aa3f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var LOGIN = ${ALLY_LOGIN}; var colonIndex = LOGIN.indexOf(':'); return [     LOGIN.substring(0, colonIndex),     LOGIN.substring(colonIndex + 1) ];",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "7668aa20-e298-4aa7-aa1e-ed4c1233ba6c",
+      "comment": "",
+      "command": "echo",
+      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db80bde9-fc92-4bc2-bfd4-123c00280c7d",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='ally-login-login-form']/div/div/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4abbdf47-4eaa-4ae9-b224-8c763c1a22c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='ally-login-login-form']/div/div/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "035cfb12-13f7-4362-868d-06608f75647e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='ally-login-login-form']/div[2]/div/div/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a9c963b-c956-4d1c-ac22-577eed67abd5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='ally-login-login-form']/div[2]/div/div/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/span/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "299e1a3b-01c7-4efb-bfe1-b3fa84bbd460",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Log In')]",
+      "targets": [
+        ["css=#login-button-987fc212-10bb-4fc3-aa72-87f966987e2e > .sc-eXAmlR", "css:finder"],
+        ["xpath=//button[@id='login-button-987fc212-10bb-4fc3-aa72-87f966987e2e']/span", "xpath:idRelative"],
+        ["xpath=//form/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Log In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea262938-03b3-4903-b647-270a6ac3a0fa",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "24549c69-892a-4b1a-8caa-c9fd62a77ebf",
-    "name": "Buy",
+    "name": "Buy Ally",
     "commands": [{
       "id": "34438ce8-07eb-4e60-bc44-91fe755b49e5",
       "comment": "",
@@ -21,17 +135,24 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "646d9f0a-fa7c-47a5-9405-2e85cc72578c",
+      "id": "41d453c7-90bd-4e35-af69-48538a723ddf",
       "comment": "",
       "command": "executeScript",
       "target": "return \"SLICE_TARGET\"",
       "targets": [],
       "value": "target"
     }, {
+      "id": "646d9f0a-fa7c-47a5-9405-2e85cc72578c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "7e9dd287-d442-4d67-90d2-32852442a90b",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
       "targets": [],
       "value": ""
     }, {
@@ -41,6 +162,13 @@
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "ce666352-23f0-4639-92df-45bf8a4aec14",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "d375394a-81dd-40d3-85e3-abb777d9aa23",
       "comment": "",
@@ -60,13 +188,6 @@
         ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
         ["xpath=//select", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "2d092694-37e4-482c-9dac-eb0790cbbc17",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "894x908",
-      "targets": [],
       "value": ""
     }, {
       "id": "78d90259-381f-4fd8-8af3-db59ebcb2874",
@@ -118,7 +239,7 @@
       "command": "sendKeys",
       "target": "css=.styled-input",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "0b475c0f-1b83-426c-bd5d-358092b6f1f3",
       "comment": "",
@@ -180,14 +301,21 @@
       "id": "569e51e6-5b25-41d7-9e02-628e161b9df6",
       "comment": "",
       "command": "echo",
-      "target": "${account} Buy ${TICKER} Test Ran Successfully!",
+      "target": "Buy. ${TICK} under ${account} completed.",
       "targets": [],
       "value": ""
     }, {
       "id": "d6f230e6-27d4-44a7-b132-0099e4285bc7",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "704e9c6e-6845-46da-acc3-7bb223ee8380",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -197,10 +325,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "72eaf03a-3825-43c2-8cc9-deefd85cfb07",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Ally Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "e0b28894-e4e4-4292-8e4e-bbfd95e5114c",
-    "name": "Sell",
+    "name": "Sell Ally",
     "commands": [{
       "id": "5bd0b0b4-7758-4976-a514-1adba2647a66",
       "comment": "",
@@ -223,10 +358,17 @@
       "targets": [],
       "value": "target"
     }, {
+      "id": "67a53f84-aa4c-47fa-a26d-2a23b993b7e7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "26a77bc4-1273-4cd5-b6bb-9d75a87d493d",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
       "targets": [],
       "value": ""
     }, {
@@ -236,6 +378,13 @@
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "4318d8ea-4700-4ee6-b5c4-b74537e820d0",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "12772b8b-ddd3-4c46-aa3e-1daac7fc01c0",
       "comment": "",
@@ -255,13 +404,6 @@
         ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
         ["xpath=//select", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "457ccc79-90e1-48d4-a251-2b15457a6d2b",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "894x908",
-      "targets": [],
       "value": ""
     }, {
       "id": "0cc63989-349c-4d7a-915e-0bbf276398b9",
@@ -313,7 +455,7 @@
       "command": "sendKeys",
       "target": "css=.styled-input",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "874addb5-5545-4175-85d4-ed2fc82d5f2c",
       "comment": "",
@@ -375,14 +517,21 @@
       "id": "9bbd2915-b2d5-4ddc-a303-9b11772b6263",
       "comment": "",
       "command": "echo",
-      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "target": "Sell. ${TICK} under ${account} completed.",
       "targets": [],
       "value": ""
     }, {
       "id": "18a4d8dc-d8ba-43a1-95f8-653f2642501e",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03ea2977-8293-40c3-b4f0-145c99f943a3",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -392,10 +541,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "45c5bcdf-a7e9-4fb4-a104-e4adfdeb3e56",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Ally Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "9f94071d-8bcb-4a00-83f8-58a00c075e7e",
-    "name": "Buy_Limit",
+    "name": "Buy Limit Ally",
     "commands": [{
       "id": "c7010fb5-97b3-438d-bcad-fccab99abb19",
       "comment": "",
@@ -420,15 +576,22 @@
     }, {
       "id": "7fe2fcb9-50c7-447b-9c29-727185e4e067",
       "comment": "",
-      "command": "store",
-      "target": "1.00",
+      "command": "executeScript",
+      "target": "return 1.00;",
       "targets": [],
       "value": "LIMIT"
+    }, {
+      "id": "7e728f45-6e5f-4ffb-abe5-945eb265db1f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
     }, {
       "id": "d236c854-34ab-43eb-9c09-3eee22a776d9",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
       "targets": [],
       "value": ""
     }, {
@@ -438,6 +601,13 @@
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "87bfcba9-fd04-4d7a-84ef-93a689623150",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "60971750-7e05-4c5a-8481-b50d1f87c25d",
       "comment": "",
@@ -457,13 +627,6 @@
         ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
         ["xpath=//select", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "8e545afd-c365-469f-b7a3-9ab8ebf6b200",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "894x908",
-      "targets": [],
       "value": ""
     }, {
       "id": "5611ce8d-6bee-48b0-8119-781bfdef328c",
@@ -515,7 +678,7 @@
       "command": "sendKeys",
       "target": "css=.styled-input",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "d3c352b0-d177-49de-8868-d45f3385e1d8",
       "comment": "",
@@ -635,14 +798,21 @@
       "id": "30c92b12-6d98-4c6c-ba93-7665a98c21d5",
       "comment": "",
       "command": "echo",
-      "target": "${account} Buy ${TICKER} Test Ran Successfully!",
+      "target": "Buy. ${TICK} for ${LIMIT} under ${account} completed.",
       "targets": [],
       "value": ""
     }, {
       "id": "6960a989-7fcb-4634-811f-0a68daaae6db",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54acde8d-1b95-48d3-8ac5-2bd1e71e7744",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -652,10 +822,17 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "6816436f-d2ca-40f8-9b2e-bbeb636bbeb8",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Ally Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "6617908a-6855-44df-8928-cc224372d3e2",
-    "name": "Sell_Limit",
+    "name": "Sell Limit Ally",
     "commands": [{
       "id": "d12a6826-7a16-4b65-a87a-edba0a33d818",
       "comment": "",
@@ -685,10 +862,17 @@
       "targets": [],
       "value": "LIMIT"
     }, {
+      "id": "2b98474e-13a9-44e7-8c31-c8ab445c070e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
+      "targets": [],
+      "value": "TICKERS"
+    }, {
       "id": "e9b67ba8-a894-42cf-8739-24d2a14b8f87",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
       "targets": [],
       "value": ""
     }, {
@@ -698,6 +882,13 @@
       "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "16035450-f043-41e5-8fd4-7a01a61136e7",
+      "comment": "",
+      "command": "forEach",
+      "target": "TICKERS",
+      "targets": [],
+      "value": "TICK"
     }, {
       "id": "92873f3a-e9a9-4089-90ce-b0799ff7d2b7",
       "comment": "",
@@ -717,13 +908,6 @@
         ["xpath=//div[@id='modal']/div[2]/div/ally-select/select", "xpath:idRelative"],
         ["xpath=//select", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "c82b92c0-7cff-4212-b60b-26282670273c",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "894x908",
-      "targets": [],
       "value": ""
     }, {
       "id": "4eb72364-bf14-499b-8143-e0080a18e62f",
@@ -775,7 +959,7 @@
       "command": "sendKeys",
       "target": "css=.styled-input",
       "targets": [],
-      "value": "${TICKER}"
+      "value": "${TICK}"
     }, {
       "id": "11478f68-54c3-4bb3-9ceb-61d35a935756",
       "comment": "",
@@ -852,7 +1036,7 @@
       "id": "a12aff65-31a8-4b95-a87b-ad11ac5f55ec",
       "comment": "",
       "command": "click",
-      "target": "xpath=//span[contains(.,'Sell')]",
+      "target": "xpath=//span[contains(.,'Buy')]",
       "targets": [
         ["css=#stock-sell > span", "css:finder"],
         ["xpath=//div[@id='stock-sell']/span", "xpath:idRelative"],
@@ -895,14 +1079,21 @@
       "id": "58d03037-3e59-4acb-8fa3-b730872ddef0",
       "comment": "",
       "command": "echo",
-      "target": "${account} Sell ${TICKER} Test Ran Successfully!",
+      "target": "Buy. ${TICK} for ${LIMIT} under ${account} completed.",
       "targets": [],
       "value": ""
     }, {
       "id": "425bf988-7593-4ecd-aa57-259b0f3d0b27",
       "comment": "",
       "command": "open",
-      "target": "/trading-full/stocks",
+      "target": "https://live.invest.ally.com/trading-full/stocks",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49b80866-7559-4907-ad4d-ce178e2db17f",
+      "comment": "",
+      "command": "end",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -910,6 +1101,13 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5af75d2-af96-4a02-907c-7d4a9efbba09",
+      "comment": "",
+      "command": "echo",
+      "target": "Finished automating Ally Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
       "targets": [],
       "value": ""
     }]
