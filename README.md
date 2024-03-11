@@ -46,7 +46,7 @@ To use this project, you will need to set the following environment variables in
 | `FIRSTRADE_AI`      | Firstrade Account Numbers | List of Strings       |
 | `ALLY_AI`           | Ally Account Numbers -- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
 | `ROBINHOOD_AI`*    | Total Number of Robinhood Accounts                 | Integer              |
-| `WELLSTRADE_AI`*    | Any value.                 | Any              |
+| `WELLSTRADE_AI`*    | Total Number of Wellstrade Accounts                 | Integer              |
 | --|--|--|
 | `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
 | `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
