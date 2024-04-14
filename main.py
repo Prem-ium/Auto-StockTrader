@@ -126,11 +126,11 @@ def main():
     try:
         # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
         if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
-            shutil.copyfile("src\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+            shutil.copyfile("src\\Helper_Scripts\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
             print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
     except Exception as e:
         if os.name == 'posix':
-            os.system(f"cp src/RSA-QuickStart.sh {os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
+            os.system(f"cp src/Helper_Scripts/RSA-QuickStart.sh {os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
             print(f"\n\nCreated/Updated:\t{os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
         else:
             print(e.with_traceback())
