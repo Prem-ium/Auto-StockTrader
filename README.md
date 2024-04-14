@@ -16,7 +16,7 @@
 - Account Login Automation 
 - JavaScript Account Array Helper Scripts
 
-*Note: Gold Github Sponsor donation contributors get access to additional exclusive features.*
+**Note: Gold GitHub Sponsor contributors receive access to exclusive features. While the public version of this repository remains free for all users, project updates and maintenance may be less frequent for free users compared to the private Gold Sponsor repository, which receives regular updates, exclusive features, and improvements on this project.**
 
 ## Supported Brokerages
 This project contains the means of automating buy/sell stock orders within:
@@ -49,6 +49,8 @@ To use this project, you will need to set the following environment variables in
 | `WELLSTRADE_AI`*    | Total Number of Wellstrade Accounts                 | Integer              |
 | --|--|--|
 | `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
+| `INCLUDE_PREMARKET`*        | Include Pre-Market in Buy/Sell Suite  | Boolean               |
+| `SET_SPEED`*        | Modify default speed of IDE execution (in milliseconds). Defaults to fastest (0).  | Integer               |
 | `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
 | `SOFI_AI`           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
 | `SOFI_ACCOUNT_NAMES`| Account names and numbers for SoFi Auto.side    | String               |
@@ -153,6 +155,11 @@ I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium"
 
 Thank you for backing my work. Each one of you plays a crucial role, and I am truly grateful for your contributions.
 If you find this project interesting, please consider leaving a :star2:, <a href="https://github.com/sponsors/Prem-ium">donating, </a> or <a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank">contributing</a> if you found this project to be helpful!
+
+### Speed Considerations:
+- Depending on your computer's speed, you may need to slow down test execution on faster machines (This can be done by assigning the `SET_SPEED` env, for Gold Sponsors. Otherwise, free-users may adjust the value manually using the slider in Selenium IDE).
+- Selecting 'Reference' instead of 'Log' in Selenium IDE can slightly speed up execution.
+- Enabling 'Best performance' battery mode on Laptop Battery settings can slightly speed up execution.
 
 ### ⚠️ DISCLAIMER ⚠️
 I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
