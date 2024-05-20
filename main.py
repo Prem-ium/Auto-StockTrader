@@ -33,7 +33,7 @@ import  os
 import  json
 import  sys
 import  shutil
-
+import subprocess
 from    dotenv             import load_dotenv
 
 load_dotenv()
@@ -111,9 +111,9 @@ def main():
             filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
         elif os.name == 'posix':
             filePath = os.path.join("src", "Selenium_IDE", filePath.replace("src/Selenium_IDE/", ""))
-            filePath = os.path.join("src", "X_Archive", filePath.replace("src/X_Archive/", ""))
+            # filePath = os.path.join("src", "X_Archive", filePath.replace("src/X_Archive/", ""))
             filePath = os.path.join(CUSTOM_DIR, filePath) if CUSTOM_DIR else f'ENV-{filePath}'
-
+        print("filepath: ", filePath)
         # Create a new file with the updated data
         with open(filePath, 'w') as file:
             json.dump(data, file, indent=2)
@@ -121,7 +121,7 @@ def main():
         print(f"Created/Updated:\t{filePath}!")
 
     if CUSTOM_DIR and len(sys.argv) != 2:
-        os.startfile(CUSTOM_DIR)
+        subprocess.call(['open', CUSTOM_DIR])
 
     try:
         # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
