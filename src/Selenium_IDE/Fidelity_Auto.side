@@ -3,836 +3,1183 @@
   "version": "2.0",
   "name": "Fidelity",
   "url": "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry",
-  "tests": [{
-    "id": "685c8f77-8fe3-45fc-8e13-51b6c4fea30c",
-    "name": "Fidelity Buy",
-    "commands": [{
-      "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
-      "comment": "",
-      "command": "store",
-      "target": "JOB",
-      "targets": [],
-      "value": "TICKER"
-    }, {
-      "id": "51277964-fd77-466b-9595-0617964dbc41",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return .46",
-      "targets": [],
-      "value": "LIMIT"
-    }, {
-      "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
-    }, {
-      "id": "69023bbe-e23a-4eda-8928-12096f54902c",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SLICE_TARGET\".trim();",
-      "targets": [],
-      "value": "target"
-    }, {
-      "id": "99219aba-29c5-4f95-850c-4bfd09bacec2",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "dynamic"
-    }, {
-      "id": "9801549d-8263-49c4-ae31-6228d5e23b0a",
-      "comment": "",
-      "command": "if",
-      "target": "${dynamic} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "b4d25122-e12d-45a5-9fa5-2685605df813",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "list"
-    }, {
-      "id": "7336eef1-154e-4739-87d7-e7d82368962f",
-      "comment": "",
-      "command": "elseIf",
-      "target": "${dynamic} == 1",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "603b85cd-bfa5-4280-9443-34e73bd550bf",
-      "comment": "",
-      "command": "open",
-      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "82555785-74d8-4acf-a065-8c13acd3126b",
-      "comment": "",
-      "command": "pause",
-      "target": "1250",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "11bc161e-9252-4dfd-899d-8fc8b62c6fde",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "6f903db5-f3db-457f-abbb-669d86c0f14b",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "list"
-    }, {
-      "id": "8ec6b851-da4d-40d8-add8-4cbc86a2d0e8",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
-    }, {
-      "id": "00b0aa03-8311-4925-9d8e-9a96d8392761",
-      "comment": "",
-      "command": "forEach",
-      "target": "list",
-      "targets": [],
-      "value": "account"
-    }, {
-      "id": "25adc79e-a66b-4881-8326-2ac24f570ae0",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
-      "id": "5c8539cb-a215-423a-b583-c70ab71dd04d",
-      "comment": "",
-      "command": "echo",
-      "target": "STARTING: ${account} BUY Order for ${TICK}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
-      "comment": "",
-      "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a6324823-db4b-4bf3-8a97-c2bf60761025",
-      "comment": "",
-      "command": "click",
-      "target": "css=#action-buy s-assigned-wrapper",
-      "targets": [
-        ["css=#action-buy s-assigned-wrapper", "css:finder"],
-        ["xpath=//pvd3-segment[@id='action-buy']/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:idRelative"],
-        ["xpath=//label/s-slot/s-assigned-wrapper", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a8fd4168-033f-47e4-89ca-62c6ce227559",
-      "comment": "",
-      "command": "click",
-      "target": "css=#market-no s-slot",
-      "targets": [
-        ["css=#market-no s-slot", "css:finder"],
-        ["xpath=//pvd3-segment[@id='market-no']/s-root/div/label/s-slot", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ac3b1fa5-f2e4-4d2e-be74-c4067667b3be",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "id=eqt-ordsel-limit-price-label",
-      "targets": [
-        ["id=eqt-ordsel-limit-price-label", "id"],
-        ["css=#eqt-ordsel-limit-price-label", "css:finder"],
-        ["xpath=//label[@id='eqt-ordsel-limit-price-label']", "xpath:attributes"],
-        ["xpath=//div[@id='limit-price']/label", "xpath:idRelative"],
-        ["xpath=//div[2]/div/label", "xpath:position"],
-        ["xpath=//label[contains(.,'Limit price')]", "xpath:innerText"]
-      ],
-      "value": "30000"
-    }, {
-      "id": "5b675ccd-8948-44e3-9adb-12924e894929",
-      "comment": "",
-      "command": "click",
-      "target": "id=eqt-ordsel-limit-price-label",
-      "targets": [
-        ["id=eqt-ordsel-limit-price-label", "id"],
-        ["css=#eqt-ordsel-limit-price-label", "css:finder"],
-        ["xpath=//label[@id='eqt-ordsel-limit-price-label']", "xpath:attributes"],
-        ["xpath=//div[@id='limit-price']/label", "xpath:idRelative"],
-        ["xpath=//div[2]/div/label", "xpath:position"],
-        ["xpath=//label[contains(.,'Limit price')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "9146243c-4f0b-4aee-a6fa-614c7e28a6a5",
-      "comment": "",
-      "command": "waitForElementEditable",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "30000"
-    }, {
-      "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
-      "comment": "",
-      "command": "type",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${LIMIT}"
-    }, {
-      "id": "86a77a53-d144-4161-8b7b-395dfad3757f",
-      "comment": "",
-      "command": "clickAt",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "182c2429-1166-4c4f-902f-4e73c158509b",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${LIMIT}"
-    }, {
-      "id": "56b5cb2c-9185-4851-9912-f66c6c3a0311",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${KEY_ENTER}"
-    }, {
-      "id": "06379a6f-e464-4f57-9c09-ec95f54708d6",
-      "comment": "",
-      "command": "click",
-      "target": "css=#action-day s-assigned-wrapper",
-      "targets": [
-        ["css=#action-day s-assigned-wrapper", "css:finder"],
-        ["xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot/s-assigned-wrapper", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e6053b4c-d545-40bd-ac73-f497478841a0",
-      "comment": "",
-      "command": "pause",
-      "target": "1300",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e189cd2d-fabd-452c-985d-d8281ad3c993",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/order-entry-base/div/div/div[2]/equity-order-routing/commission/div/div/div[1]/span'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"--\") || element2.textContent.includes(\"--\")))));",
-      "targets": [],
-      "value": "error"
-    }, {
-      "id": "0f195b32-3c88-47c6-ba96-ea7cbb1f8e0d",
-      "comment": "",
-      "command": "if",
-      "target": "${error}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${KEY_ENTER}"
-    }, {
-      "id": "59f5b6c9-8fc0-4245-beb2-c36047db443a",
-      "comment": "",
-      "command": "click",
-      "target": "css=#action-gtc s-slot",
-      "targets": [
-        ["css=#action-gtc s-slot", "css:finder"],
-        ["xpath=//pvd3-segment[@id='action-gtc']/s-root/div/label/s-slot", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "55b2ebbe-aa62-4107-9f09-c1ac60654da6",
-      "comment": "",
-      "command": "click",
-      "target": "css=#action-day s-slot",
-      "targets": [
-        ["css=#action-day s-slot", "css:finder"],
-        ["xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "36508b0f-58c4-4507-9c95-93c16294290f",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5422b4f3-049c-4241-9e92-c3907b96b935",
-      "comment": "",
-      "command": "click",
-      "target": "css=#previewOrderBtn .pvd3-button-root",
-      "targets": [
-        ["css=#previewOrderBtn .pvd3-button-root", "css:finder"],
-        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
-        ["xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/pvd3-button/s-root/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Preview order')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ed5e6df8-2812-4466-8c41-e1c0fcc7f471",
-      "comment": "",
-      "command": "click",
-      "target": "id=placeOrderBtn",
-      "targets": [
-        ["id=placeOrderBtn", "id"],
-        ["css=#placeOrderBtn", "css:finder"],
-        ["xpath=//button[@id='placeOrderBtn']", "xpath:attributes"],
-        ["xpath=//div[2]/div/div[3]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Place order')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f663fda9-612d-411f-b6de-8ea9ce568d08",
-      "comment": "",
-      "command": "echo",
-      "target": "COMPLETED: ${account} Ordered ${TICK}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "77fa486f-0fe9-4a57-8ad2-b7072275122b",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "28aae527-b224-4222-89e0-20c979016df3",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${count} + 1;",
-      "targets": [],
-      "value": "count"
-    }, {
-      "id": "a9be907a-5b53-4ee5-9e16-f2440b416d21",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
-      "targets": [],
-      "value": "progress"
-    }, {
-      "id": "b2816706-43f0-477d-bbb7-3bf089ed2eb3",
-      "comment": "",
-      "command": "echo",
-      "target": "Counter Progress ${count}: (${progress}%)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "46a53dd0-e413-4d4d-a94f-bd0db92a57a6",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b482296e-d59c-4337-8d3c-892af1e97857",
-      "comment": "",
-      "command": "echo",
-      "target": "Finished automating Fidelity Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "663b8ae4-3df7-4c2a-b3b1-7b57fe8e7162",
-    "name": "Fidelity Sell",
-    "commands": [{
-      "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
-      "comment": "",
-      "command": "store",
-      "target": "JOB",
-      "targets": [],
-      "value": "TICKER"
-    }, {
-      "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
-      "comment": "",
-      "command": "store",
-      "target": "1",
-      "targets": [],
-      "value": "QUANT"
-    }, {
-      "id": "3cef2882-9653-4e75-8d1e-6d7be2fae51f",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "index"
-    }, {
-      "id": "45dd1037-8b6b-4c14-85c5-31651477527a",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "dynamic"
-    }, {
-      "id": "85bea692-3a09-4056-9921-27fd1c96586a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return \"SLICE_TARGET\".trim();",
-      "targets": [],
-      "value": "target"
-    }, {
-      "id": "f4916055-ed7a-4edf-8d7a-e8e11cbf9af9",
-      "comment": "",
-      "command": "if",
-      "target": "${dynamic} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return [  ['Account','one','here'                        ], [         'Account','two','here'                            ]                                                                           ];",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "fa37f085-92aa-4c82-ad20-6d1b0eeda3f4",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "list"
-    }, {
-      "id": "96c58f11-23ec-4f13-98ed-e0ebdadf5f63",
-      "comment": "",
-      "command": "elseIf",
-      "target": "${dynamic} == 1",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "72a79079-e1e6-40cd-ba46-9e6d97a9b99d",
-      "comment": "",
-      "command": "open",
-      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "dad67028-0db4-4174-9ed4-04d7bb8ca991",
-      "comment": "",
-      "command": "pause",
-      "target": "1250",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0b0a90ee-681b-496e-8363-e6dbdb40f366",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
-      "targets": [],
-      "value": "accounts"
-    }, {
-      "id": "6ef5db96-c493-434f-adf6-2e1c51998c59",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
-      "targets": [],
-      "value": "list"
-    }, {
-      "id": "2a97573f-f13d-4cb7-88f2-8cf9e4bff569",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
-    }, {
-      "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
-      "targets": [],
-      "value": "TICKERS"
-    }, {
-      "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
-      "comment": "",
-      "command": "forEach",
-      "target": "list",
-      "targets": [],
-      "value": "account"
-    }, {
-      "id": "8d934b3c-351c-4168-a9db-b174671377b3",
-      "comment": "",
-      "command": "forEach",
-      "target": "TICKERS",
-      "targets": [],
-      "value": "TICK"
-    }, {
-      "id": "e981fb93-7a4f-41a6-9931-a7d4169dfb48",
-      "comment": "",
-      "command": "echo",
-      "target": "STARTING: ${account} SELL Order for ${TICK}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
-      "comment": "",
-      "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8d904aa2-ef1b-47e3-94cd-923438578869",
-      "comment": "",
-      "command": "click",
-      "target": "css=#market-yes s-slot",
-      "targets": [
-        ["css=#market-yes s-slot", "css:finder"],
-        ["xpath=//pvd3-segment[@id='market-yes']/s-root/div/label/s-slot", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3116c469-34c3-426a-ac9f-b2985cb09d2a",
-      "comment": "",
-      "command": "pause",
-      "target": "1800",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6ef49e21-0681-497d-9b98-dc7cade3af4b",
-      "comment": "",
-      "command": "click",
-      "target": "css=#previewOrderBtn .pvd3-button-root",
-      "targets": [
-        ["css=#previewOrderBtn .pvd3-button-root", "css:finder"],
-        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
-        ["xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/pvd3-button/s-root/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Preview order')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "1a9e06ca-1718-43cc-bfbb-80a4d34dbfed",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1d76441d-159d-48fd-a10f-33ffdb7c51a4",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/pvd3-modal[1]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"do not have enough shares\") || element2.textContent.includes(\"was not found\")))));",
-      "targets": [],
-      "value": "result"
-    }, {
-      "id": "18875430-cb78-4906-866c-9649a5a253f3",
-      "comment": "",
-      "command": "if",
-      "target": "${result} == true",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "180cd9f0-411b-4c3d-a854-293b9100e734",
-      "comment": "",
-      "command": "echo",
-      "target": "${account}: Selling ${TICK} Failed. Security not in account",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "01eed2cc-76bd-4ae9-b284-43683a8a68a4",
-      "comment": "",
-      "command": "else",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "41b9ccab-907c-4c18-86d5-52be7dd29524",
-      "comment": "",
-      "command": "click",
-      "target": "id=placeOrderBtn",
-      "targets": [
-        ["id=placeOrderBtn", "id"],
-        ["css=#placeOrderBtn", "css:finder"],
-        ["xpath=//button[@id='placeOrderBtn']", "xpath:attributes"],
-        ["xpath=//div[2]/div/div[3]/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Place order')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "728a334b-52c5-4778-8cf0-2a6d4f78b570",
-      "comment": "",
-      "command": "echo",
-      "target": "COMPLETED: ${account} SOLD ${TICK}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ec8bd0b9-0f6a-41a8-be43-55c14ccae549",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e0b4c386-d7b7-4599-b351-4df562a47c10",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8c2c66a3-2b14-425d-aefb-31eeaf51307d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${count} + 1;",
-      "targets": [],
-      "value": "count"
-    }, {
-      "id": "f2d2f5ed-3958-46ef-994c-7b598d5c5045",
-      "comment": "",
-      "command": "executeScript",
-      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
-      "targets": [],
-      "value": "progress"
-    }, {
-      "id": "b4bcb70a-ade0-4f13-9235-79720b38ba8a",
-      "comment": "",
-      "command": "echo",
-      "target": "Counter Progress ${count}: (${progress}%)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a7a9bc6f-039a-41e4-86f6-685b6aefcd0b",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a75099f6-1987-4d0d-8213-5a5d517ed656",
-      "comment": "",
-      "command": "echo",
-      "target": "Finished automating Fidelity Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "2db8e529-1771-4461-b300-3e5027c85693",
-    "name": "| Fidelity Login",
-    "commands": [{
-      "id": "efdf0883-1c21-4807-aa8f-c0bcd306d44c",
-      "comment": "",
-      "command": "store",
-      "target": "0",
-      "targets": [],
-      "value": "action"
-    }, {
-      "id": "41e28a48-36ea-4f21-a522-02ac518528a0",
-      "comment": "",
-      "command": "if",
-      "target": "${action} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "615f1a28-8146-4313-85a7-5693201d753e",
-      "comment": "",
-      "command": "open",
-      "target": "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3835fe1f-7ddc-473b-a3a4-55361aa6f6f3",
-      "comment": "",
-      "command": "store",
-      "target": "LOGIN:HERE",
-      "targets": [],
-      "value": "FIDELITY_LOGIN"
-    }, {
-      "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${FIDELITY_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
-      "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
-      "comment": "",
-      "command": "if",
-      "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
-      "comment": "",
-      "command": "echo",
-      "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d243563e-d248-4edd-ad29-e0f1bfba02e6",
-      "comment": "",
-      "command": "click",
-      "target": "id=userId-input",
-      "targets": [
-        ["id=userId-input", "id"],
-        ["css=#userId-input", "css:finder"],
-        ["xpath=//input[@id='userId-input']", "xpath:attributes"],
-        ["xpath=//div[@id='fs-username-div']/input", "xpath:idRelative"],
-        ["xpath=//div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "220cfd2d-ddf6-4b3e-afc7-2e5b744eab80",
-      "comment": "",
-      "command": "type",
-      "target": "id=userId-input",
-      "targets": [
-        ["id=userId-input", "id"],
-        ["css=#userId-input", "css:finder"],
-        ["xpath=//input[@id='userId-input']", "xpath:attributes"],
-        ["xpath=//div[@id='fs-username-div']/input", "xpath:idRelative"],
-        ["xpath=//div/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[0]}"
-    }, {
-      "id": "bc48fe54-c65a-4ed1-8f31-da30def0db3e",
-      "comment": "",
-      "command": "click",
-      "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=PIN", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='fs-password-div']/input", "xpath:idRelative"],
-        ["xpath=//div[4]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "2abc9cff-361a-4f93-b54f-17ea3d9b066a",
-      "comment": "",
-      "command": "type",
-      "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=PIN", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='fs-password-div']/input", "xpath:idRelative"],
-        ["xpath=//div[4]/div/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[1]}"
-    }, {
-      "id": "8b783b4f-a64f-4e05-9e19-f2639b7267e5",
-      "comment": "",
-      "command": "click",
-      "target": "id=fs-login-button",
-      "targets": [
-        ["id=fs-login-button", "id"],
-        ["css=#fs-login-button", "css:finder"],
-        ["xpath=//button[@id='fs-login-button']", "xpath:attributes"],
-        ["xpath=//div[@id='fs-submit-div']/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Log In')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "2e50c447-d85c-46ca-8a18-003da8727bae",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c4efb77a-dd55-40f4-9a22-1ca6fe134ccd",
-      "comment": "",
-      "command": "elseIf",
-      "target": "${action} == 1",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0ead23bc-2676-440a-9ef5-ccadbc2dfd51",
-      "comment": "",
-      "command": "open",
-      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a9ca9b0d-1341-4730-bd16-1d8e96becc8d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
-      "targets": [],
-      "value": "acc_array"
-    }, {
-      "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
-      "comment": "",
-      "command": "echo",
-      "target": "${acc_array}",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c3657f82-8f80-4a86-84a9-947474233276",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }]
-  }],
-  "suites": [{
-    "id": "2076ccc1-f9b5-4a8f-a8b7-45c11df5b928",
-    "name": "Default Suite",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
-  }],
-  "urls": ["https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry"],
+  "tests": [
+    {
+      "id": "685c8f77-8fe3-45fc-8e13-51b6c4fea30c",
+      "name": "Fidelity Buy",
+      "commands": [
+        {
+          "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
+          "comment": "",
+          "command": "store",
+          "target": "TBIO,TIRX,IVP,BZFD",
+          "targets": [],
+          "value": "TICKER"
+        },
+        {
+          "id": "51277964-fd77-466b-9595-0617964dbc41",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return .46",
+          "targets": [],
+          "value": "LIMIT"
+        },
+        {
+          "id": "caf64a5f-ec83-4936-a580-b4afbb74a291",
+          "comment": "",
+          "command": "store",
+          "target": "1",
+          "targets": [],
+          "value": "QUANT"
+        },
+        {
+          "id": "69023bbe-e23a-4eda-8928-12096f54902c",
+          "comment": "",
+          "command": "store",
+          "target": "0",
+          "targets": [],
+          "value": "index"
+        },
+        {
+          "id": "e62688a7-bc0e-49df-936e-e4e0b203b2f3",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return \"SLICE_TARGET\".trim();",
+          "targets": [],
+          "value": "target"
+        },
+        {
+          "id": "99219aba-29c5-4f95-850c-4bfd09bacec2",
+          "comment": "",
+          "command": "store",
+          "target": 0,
+          "targets": [],
+          "value": "dynamic"
+        },
+        {
+          "id": "9801549d-8263-49c4-ae31-6228d5e23b0a",
+          "comment": "",
+          "command": "if",
+          "target": "${dynamic} == 0",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304']];",
+          "targets": [],
+          "value": "accounts"
+        },
+        {
+          "id": "b4d25122-e12d-45a5-9fa5-2685605df813",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
+          "targets": [],
+          "value": "list"
+        },
+        {
+          "id": "7336eef1-154e-4739-87d7-e7d82368962f",
+          "comment": "",
+          "command": "elseIf",
+          "target": "${dynamic} == 1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "603b85cd-bfa5-4280-9443-34e73bd550bf",
+          "comment": "",
+          "command": "open",
+          "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "82555785-74d8-4acf-a065-8c13acd3126b",
+          "comment": "",
+          "command": "pause",
+          "target": "1250",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "11bc161e-9252-4dfd-899d-8fc8b62c6fde",
+          "comment": "",
+          "command": "executeScript",
+          "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+          "targets": [],
+          "value": "accounts"
+        },
+        {
+          "id": "6f903db5-f3db-457f-abbb-669d86c0f14b",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
+          "targets": [],
+          "value": "list"
+        },
+        {
+          "id": "8ec6b851-da4d-40d8-add8-4cbc86a2d0e8",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e43ad2b7-f9b0-4f3b-a8e1-44f2ead58779",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return ${TICKER}.split(\",\");",
+          "targets": [],
+          "value": "TICKERS"
+        },
+        {
+          "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return 0;",
+          "targets": [],
+          "value": "count"
+        },
+        {
+          "id": "00b0aa03-8311-4925-9d8e-9a96d8392761",
+          "comment": "",
+          "command": "forEach",
+          "target": "list",
+          "targets": [],
+          "value": "account"
+        },
+        {
+          "id": "25adc79e-a66b-4881-8326-2ac24f570ae0",
+          "comment": "",
+          "command": "forEach",
+          "target": "TICKERS",
+          "targets": [],
+          "value": "TICK"
+        },
+        {
+          "id": "5c8539cb-a215-423a-b583-c70ab71dd04d",
+          "comment": "",
+          "command": "echo",
+          "target": "STARTING: ${account} BUY Order for ${TICK}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
+          "comment": "",
+          "command": "open",
+          "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a6324823-db4b-4bf3-8a97-c2bf60761025",
+          "comment": "",
+          "command": "click",
+          "target": "css=#action-buy s-assigned-wrapper",
+          "targets": [
+            [
+              "css=#action-buy s-assigned-wrapper",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='action-buy']/s-root/div/label/s-slot/s-assigned-wrapper",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//label/s-slot/s-assigned-wrapper",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "a8fd4168-033f-47e4-89ca-62c6ce227559",
+          "comment": "",
+          "command": "click",
+          "target": "css=#market-no s-slot",
+          "targets": [
+            [
+              "css=#market-no s-slot",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='market-no']/s-root/div/label/s-slot",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "ac3b1fa5-f2e4-4d2e-be74-c4067667b3be",
+          "comment": "",
+          "command": "waitForElementPresent",
+          "target": "id=eqt-ordsel-limit-price-label",
+          "targets": [
+            [
+              "id=eqt-ordsel-limit-price-label",
+              "id"
+            ],
+            [
+              "css=#eqt-ordsel-limit-price-label",
+              "css:finder"
+            ],
+            [
+              "xpath=//label[@id='eqt-ordsel-limit-price-label']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='limit-price']/label",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div/label",
+              "xpath:position"
+            ],
+            [
+              "xpath=//label[contains(.,'Limit price')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": "30000"
+        },
+        {
+          "id": "5b675ccd-8948-44e3-9adb-12924e894929",
+          "comment": "",
+          "command": "click",
+          "target": "id=eqt-ordsel-limit-price-label",
+          "targets": [
+            [
+              "id=eqt-ordsel-limit-price-label",
+              "id"
+            ],
+            [
+              "css=#eqt-ordsel-limit-price-label",
+              "css:finder"
+            ],
+            [
+              "xpath=//label[@id='eqt-ordsel-limit-price-label']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='limit-price']/label",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div/label",
+              "xpath:position"
+            ],
+            [
+              "xpath=//label[contains(.,'Limit price')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "9146243c-4f0b-4aee-a6fa-614c7e28a6a5",
+          "comment": "",
+          "command": "waitForElementEditable",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": "30000"
+        },
+        {
+          "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
+          "comment": "",
+          "command": "type",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": "${LIMIT}"
+        },
+        {
+          "id": "86a77a53-d144-4161-8b7b-395dfad3757f",
+          "comment": "",
+          "command": "clickAt",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "182c2429-1166-4c4f-902f-4e73c158509b",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": "${LIMIT}"
+        },
+        {
+          "id": "56b5cb2c-9185-4851-9912-f66c6c3a0311",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "06379a6f-e464-4f57-9c09-ec95f54708d6",
+          "comment": "",
+          "command": "click",
+          "target": "css=#action-day s-assigned-wrapper",
+          "targets": [
+            [
+              "css=#action-day s-assigned-wrapper",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot/s-assigned-wrapper",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot/s-assigned-wrapper",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "e6053b4c-d545-40bd-ac73-f497478841a0",
+          "comment": "",
+          "command": "pause",
+          "target": "1300",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e189cd2d-fabd-452c-985d-d8281ad3c993",
+          "comment": "",
+          "command": "executeScript",
+          "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/order-entry-base/div/div/div[2]/equity-order-routing/commission/div/div/div[1]/span'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"--\") || element2.textContent.includes(\"--\")))));",
+          "targets": [],
+          "value": "error"
+        },
+        {
+          "id": "0f195b32-3c88-47c6-ba96-ea7cbb1f8e0d",
+          "comment": "",
+          "command": "if",
+          "target": "${error}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "4c115915-c9e8-4406-aa39-e5675829f5e6",
+          "comment": "",
+          "command": "sendKeys",
+          "target": "id=eqt-ordsel-limit-price-field",
+          "targets": [],
+          "value": "${KEY_ENTER}"
+        },
+        {
+          "id": "59f5b6c9-8fc0-4245-beb2-c36047db443a",
+          "comment": "",
+          "command": "click",
+          "target": "css=#action-gtc s-slot",
+          "targets": [
+            [
+              "css=#action-gtc s-slot",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='action-gtc']/s-root/div/label/s-slot",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment[2]/s-root/div/label/s-slot",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "55b2ebbe-aa62-4107-9f09-c1ac60654da6",
+          "comment": "",
+          "command": "click",
+          "target": "css=#action-day s-slot",
+          "targets": [
+            [
+              "css=#action-day s-slot",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='action-day']/s-root/div/label/s-slot",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[3]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "36508b0f-58c4-4507-9c95-93c16294290f",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "5422b4f3-049c-4241-9e92-c3907b96b935",
+          "comment": "",
+          "command": "click",
+          "target": "css=#previewOrderBtn .pvd3-button-root",
+          "targets": [
+            [
+              "css=#previewOrderBtn .pvd3-button-root",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='button'])[10]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div/div/div/pvd3-button/s-root/button",
+              "xpath:position"
+            ],
+            [
+              "xpath=//button[contains(.,'Preview order')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "ed5e6df8-2812-4466-8c41-e1c0fcc7f471",
+          "comment": "",
+          "command": "click",
+          "target": "id=placeOrderBtn",
+          "targets": [
+            [
+              "id=placeOrderBtn",
+              "id"
+            ],
+            [
+              "css=#placeOrderBtn",
+              "css:finder"
+            ],
+            [
+              "xpath=//button[@id='placeOrderBtn']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[2]/div/div[3]/div/div/button",
+              "xpath:position"
+            ],
+            [
+              "xpath=//button[contains(.,'Place order')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "f663fda9-612d-411f-b6de-8ea9ce568d08",
+          "comment": "",
+          "command": "echo",
+          "target": "COMPLETED: ${account} Ordered ${TICK}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "77fa486f-0fe9-4a57-8ad2-b7072275122b",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "28aae527-b224-4222-89e0-20c979016df3",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return ${count} + 1;",
+          "targets": [],
+          "value": "count"
+        },
+        {
+          "id": "a9be907a-5b53-4ee5-9e16-f2440b416d21",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+          "targets": [],
+          "value": "progress"
+        },
+        {
+          "id": "b2816706-43f0-477d-bbb7-3bf089ed2eb3",
+          "comment": "",
+          "command": "echo",
+          "target": "Counter Progress ${count}: (${progress}%)",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "46a53dd0-e413-4d4d-a94f-bd0db92a57a6",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "b482296e-d59c-4337-8d3c-892af1e97857",
+          "comment": "",
+          "command": "echo",
+          "target": "Finished automating Fidelity Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "663b8ae4-3df7-4c2a-b3b1-7b57fe8e7162",
+      "name": "Fidelity Sell",
+      "commands": [
+        {
+          "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
+          "comment": "",
+          "command": "store",
+          "target": "TBIO,TIRX,IVP,BZFD",
+          "targets": [],
+          "value": "TICKER"
+        },
+        {
+          "id": "eb3e268d-7156-4904-b0ed-ee0cec1c5ef5",
+          "comment": "",
+          "command": "store",
+          "target": "1",
+          "targets": [],
+          "value": "QUANT"
+        },
+        {
+          "id": "3cef2882-9653-4e75-8d1e-6d7be2fae51f",
+          "comment": "",
+          "command": "store",
+          "target": "0",
+          "targets": [],
+          "value": "index"
+        },
+        {
+          "id": "45dd1037-8b6b-4c14-85c5-31651477527a",
+          "comment": "",
+          "command": "store",
+          "target": 0,
+          "targets": [],
+          "value": "dynamic"
+        },
+        {
+          "id": "85bea692-3a09-4056-9921-27fd1c96586a",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return \"SLICE_TARGET\".trim();",
+          "targets": [],
+          "value": "target"
+        },
+        {
+          "id": "f4916055-ed7a-4edf-8d7a-e8e11cbf9af9",
+          "comment": "",
+          "command": "if",
+          "target": "${dynamic} == 0",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304']];",
+          "targets": [],
+          "value": "accounts"
+        },
+        {
+          "id": "fa37f085-92aa-4c82-ad20-6d1b0eeda3f4",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let accounts = ${accounts}; return accounts[${index}].slice(accounts[${index}].indexOf(${target}) + 1);",
+          "targets": [],
+          "value": "list"
+        },
+        {
+          "id": "96c58f11-23ec-4f13-98ed-e0ebdadf5f63",
+          "comment": "",
+          "command": "elseIf",
+          "target": "${dynamic} == 1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "72a79079-e1e6-40cd-ba46-9e6d97a9b99d",
+          "comment": "",
+          "command": "open",
+          "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "dad67028-0db4-4174-9ed4-04d7bb8ca991",
+          "comment": "",
+          "command": "pause",
+          "target": "1250",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0b0a90ee-681b-496e-8363-e6dbdb40f366",
+          "comment": "",
+          "command": "executeScript",
+          "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+          "targets": [],
+          "value": "accounts"
+        },
+        {
+          "id": "6ef5db96-c493-434f-adf6-2e1c51998c59",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let accounts = ${accounts}; return accounts.slice(accounts.indexOf(${target}) + 1);",
+          "targets": [],
+          "value": "list"
+        },
+        {
+          "id": "2a97573f-f13d-4cb7-88f2-8cf9e4bff569",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return 0;",
+          "targets": [],
+          "value": "count"
+        },
+        {
+          "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return ${TICKER}.split(\",\");",
+          "targets": [],
+          "value": "TICKERS"
+        },
+        {
+          "id": "cae7b3f1-d9ba-4199-80d1-e7cf817a9587",
+          "comment": "",
+          "command": "forEach",
+          "target": "list",
+          "targets": [],
+          "value": "account"
+        },
+        {
+          "id": "8d934b3c-351c-4168-a9db-b174671377b3",
+          "comment": "",
+          "command": "forEach",
+          "target": "TICKERS",
+          "targets": [],
+          "value": "TICK"
+        },
+        {
+          "id": "e981fb93-7a4f-41a6-9931-a7d4169dfb48",
+          "comment": "",
+          "command": "echo",
+          "target": "STARTING: ${account} SELL Order for ${TICK}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "f2426a45-a49c-4bfb-940e-f767bc9acadd",
+          "comment": "",
+          "command": "open",
+          "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=S&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8d904aa2-ef1b-47e3-94cd-923438578869",
+          "comment": "",
+          "command": "click",
+          "target": "css=#market-yes s-slot",
+          "targets": [
+            [
+              "css=#market-yes s-slot",
+              "css:finder"
+            ],
+            [
+              "xpath=//pvd3-segment[@id='market-yes']/s-root/div/label/s-slot",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div[2]/div/div/pvd3-segmented-control/s-root/div/div/s-slot/s-assigned-wrapper/pvd3-segment/s-root/div/label/s-slot",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "3116c469-34c3-426a-ac9f-b2985cb09d2a",
+          "comment": "",
+          "command": "pause",
+          "target": "1800",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "6ef49e21-0681-497d-9b98-dc7cade3af4b",
+          "comment": "",
+          "command": "click",
+          "target": "css=#previewOrderBtn .pvd3-button-root",
+          "targets": [
+            [
+              "css=#previewOrderBtn .pvd3-button-root",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='button'])[10]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//pvd3-button[@id='previewOrderBtn']/s-root/button",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[2]/div/div/div/pvd3-button/s-root/button",
+              "xpath:position"
+            ],
+            [
+              "xpath=//button[contains(.,'Preview order')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "1a9e06ca-1718-43cc-bfbb-80a4d34dbfed",
+          "comment": "",
+          "command": "pause",
+          "target": "1000",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "1d76441d-159d-48fd-a10f-33ffdb7c51a4",
+          "comment": "",
+          "command": "executeScript",
+          "target": "const xpath2 = '/html/body/div[3]/ap122489-ett-component/div/pvd3-modal[1]/s-root/div/div[2]/div/div[2]/s-slot/s-assigned-wrapper/pvd3-inline-alert/s-root/div/div[2]/s-slot/s-assigned-wrapper/div'; const element2 = document.evaluate(xpath2,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue; return (((element2 && (element2.textContent.includes(\"do not have enough shares\") || element2.textContent.includes(\"was not found\")))));",
+          "targets": [],
+          "value": "result"
+        },
+        {
+          "id": "18875430-cb78-4906-866c-9649a5a253f3",
+          "comment": "",
+          "command": "if",
+          "target": "${result} == true",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "180cd9f0-411b-4c3d-a854-293b9100e734",
+          "comment": "",
+          "command": "echo",
+          "target": "${account}: Selling ${TICK} Failed. Security not in account",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "01eed2cc-76bd-4ae9-b284-43683a8a68a4",
+          "comment": "",
+          "command": "else",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "41b9ccab-907c-4c18-86d5-52be7dd29524",
+          "comment": "",
+          "command": "click",
+          "target": "id=placeOrderBtn",
+          "targets": [
+            [
+              "id=placeOrderBtn",
+              "id"
+            ],
+            [
+              "css=#placeOrderBtn",
+              "css:finder"
+            ],
+            [
+              "xpath=//button[@id='placeOrderBtn']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[2]/div/div[3]/div/div/button",
+              "xpath:position"
+            ],
+            [
+              "xpath=//button[contains(.,'Place order')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "728a334b-52c5-4778-8cf0-2a6d4f78b570",
+          "comment": "",
+          "command": "echo",
+          "target": "COMPLETED: ${account} SOLD ${TICK}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "ec8bd0b9-0f6a-41a8-be43-55c14ccae549",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "e0b4c386-d7b7-4599-b351-4df562a47c10",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "8c2c66a3-2b14-425d-aefb-31eeaf51307d",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return ${count} + 1;",
+          "targets": [],
+          "value": "count"
+        },
+        {
+          "id": "f2d2f5ed-3958-46ef-994c-7b598d5c5045",
+          "comment": "",
+          "command": "executeScript",
+          "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+          "targets": [],
+          "value": "progress"
+        },
+        {
+          "id": "b4bcb70a-ade0-4f13-9235-79720b38ba8a",
+          "comment": "",
+          "command": "echo",
+          "target": "Counter Progress ${count}: (${progress}%)",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a7a9bc6f-039a-41e4-86f6-685b6aefcd0b",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a75099f6-1987-4d0d-8213-5a5d517ed656",
+          "comment": "",
+          "command": "echo",
+          "target": "Finished automating Fidelity Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "2db8e529-1771-4461-b300-3e5027c85693",
+      "name": "| Fidelity Login",
+      "commands": [
+        {
+          "id": "efdf0883-1c21-4807-aa8f-c0bcd306d44c",
+          "comment": "",
+          "command": "store",
+          "target": "0",
+          "targets": [],
+          "value": "action"
+        },
+        {
+          "id": "41e28a48-36ea-4f21-a522-02ac518528a0",
+          "comment": "",
+          "command": "if",
+          "target": "${action} == 0",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "615f1a28-8146-4313-85a7-5693201d753e",
+          "comment": "",
+          "command": "open",
+          "target": "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "3835fe1f-7ddc-473b-a3a4-55361aa6f6f3",
+          "comment": "",
+          "command": "store",
+          "target": "smbock77:f9AUBjg$R7Y5",
+          "targets": [],
+          "value": "FIDELITY_LOGIN"
+        },
+        {
+          "id": "360f7e65-2aba-4ad8-9736-ad54f21795e8",
+          "comment": "",
+          "command": "executeScript",
+          "target": "return ${FIDELITY_LOGIN}.split(\":\");",
+          "targets": [],
+          "value": "LOGIN"
+        },
+        {
+          "id": "6db7699f-73a5-47c0-8192-466dfa2f796f",
+          "comment": "",
+          "command": "if",
+          "target": " ${FIDELITY_LOGIN} != \"LOGIN:HERE\"",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "acc7743d-174c-48a7-aa06-f12decd6ef30",
+          "comment": "",
+          "command": "echo",
+          "target": "It is not reccomended to use this method to automate a login. Proceed at your own risk.",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "d243563e-d248-4edd-ad29-e0f1bfba02e6",
+          "comment": "",
+          "command": "click",
+          "target": "id=userId-input",
+          "targets": [
+            [
+              "id=userId-input",
+              "id"
+            ],
+            [
+              "css=#userId-input",
+              "css:finder"
+            ],
+            [
+              "xpath=//input[@id='userId-input']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='fs-username-div']/input",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div/input",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "220cfd2d-ddf6-4b3e-afc7-2e5b744eab80",
+          "comment": "",
+          "command": "type",
+          "target": "id=userId-input",
+          "targets": [
+            [
+              "id=userId-input",
+              "id"
+            ],
+            [
+              "css=#userId-input",
+              "css:finder"
+            ],
+            [
+              "xpath=//input[@id='userId-input']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='fs-username-div']/input",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div/input",
+              "xpath:position"
+            ]
+          ],
+          "value": "${LOGIN[0]}"
+        },
+        {
+          "id": "bc48fe54-c65a-4ed1-8f31-da30def0db3e",
+          "comment": "",
+          "command": "click",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "name=PIN",
+              "name"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=//input[@id='password']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='fs-password-div']/input",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[4]/div/input",
+              "xpath:position"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "2abc9cff-361a-4f93-b54f-17ea3d9b066a",
+          "comment": "",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ],
+            [
+              "name=PIN",
+              "name"
+            ],
+            [
+              "css=#password",
+              "css:finder"
+            ],
+            [
+              "xpath=//input[@id='password']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='fs-password-div']/input",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//div[4]/div/input",
+              "xpath:position"
+            ]
+          ],
+          "value": "${LOGIN[1]}"
+        },
+        {
+          "id": "8b783b4f-a64f-4e05-9e19-f2639b7267e5",
+          "comment": "",
+          "command": "click",
+          "target": "id=fs-login-button",
+          "targets": [
+            [
+              "id=fs-login-button",
+              "id"
+            ],
+            [
+              "css=#fs-login-button",
+              "css:finder"
+            ],
+            [
+              "xpath=//button[@id='fs-login-button']",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//div[@id='fs-submit-div']/button",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button",
+              "xpath:position"
+            ],
+            [
+              "xpath=//button[contains(.,'Log In')]",
+              "xpath:innerText"
+            ]
+          ],
+          "value": ""
+        },
+        {
+          "id": "2e50c447-d85c-46ca-8a18-003da8727bae",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c4efb77a-dd55-40f4-9a22-1ca6fe134ccd",
+          "comment": "",
+          "command": "elseIf",
+          "target": "${action} == 1",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "0ead23bc-2676-440a-9ef5-ccadbc2dfd51",
+          "comment": "",
+          "command": "open",
+          "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "a9ca9b0d-1341-4730-bd16-1d8e96becc8d",
+          "comment": "",
+          "command": "executeScript",
+          "target": "const elements = document.getElementsByClassName(\"acct-selector__acct-num\"); const textArray = []; for (let i = 0; i < elements.length; i++) {   const text = elements[i].textContent.trim();   textArray.push(text); } return textArray;",
+          "targets": [],
+          "value": "acc_array"
+        },
+        {
+          "id": "5a63d0b1-2c1f-4ae4-8b02-a7f0e93e76e8",
+          "comment": "",
+          "command": "echo",
+          "target": "${acc_array}",
+          "targets": [],
+          "value": ""
+        },
+        {
+          "id": "c3657f82-8f80-4a86-84a9-947474233276",
+          "comment": "",
+          "command": "end",
+          "target": "",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "2076ccc1-f9b5-4a8f-a8b7-45c11df5b928",
+      "name": "Default Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 300,
+      "tests": []
+    }
+  ],
+  "urls": [
+    "https://digital.fidelity.com/ftgw/digital/trade-equity/index/orderEntry"
+  ],
   "plugins": []
 }
