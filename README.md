@@ -16,7 +16,8 @@
 - Account Login Automation 
 - JavaScript Account Array Helper Scripts
 
-**Note: Gold GitHub Sponsor contributors receive access to exclusive features. While the public version of this repository remains free for all users, project updates and maintenance may be less frequent for free users compared to the private Gold Sponsor repository, which receives regular updates, exclusive features, and improvements on this project.**
+## Notice
+Gold GitHub Sponsors will gain access to a private `sponsor` repository, which includes the latest updates and exclusive features. The free, public version of this project will not be updated as frequently as the sponsor repository. If you are a Gold Sponsor, make sure to reference the `sponsor` repo's README instead of the public README, as the `sponsor` repo contains significant upgrades and changes not available in the public version. If you're interested in becoming a Gold Sponsor, you can [become one here.](https://github.com/sponsors/Prem-ium)
 
 ## Supported Brokerages
 This project contains the means of automating buy/sell stock orders within:
@@ -27,9 +28,9 @@ This project contains the means of automating buy/sell stock orders within:
 - Fidelity
 - Firstrade
 - Merrill Edge Lynch
-- Robinhood (GitHub Gold Sponsor, Early Access)
 - Sofi Invest
 - Vanguard
+- Robinhood (GitHub Gold Sponsor, Early Access)
 - WellsTrade (GitHub Gold Sponsor, Exclusive Access)
 
 Note: Please note that although I no longer have an Ally Invest or Merrill Edge account, the existing scripts should still function as intended. However, I won't be able to provide updates or make changes specific to those platforms.
@@ -150,6 +151,37 @@ Your generous donations will go a long way in helping me cover the expenses asso
 # License
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
 
+# Project Tree
+```
+📦 
+├─ .env.example
+├─ .github
+│  └─ FUNDING.yml
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+├─ main.py
+├─ requirements.txt
+└─ src
+   ├─ Helper_Scripts
+   │  ├─ Fidelity_Account_Array.js
+   │  ├─ RSA-QuickStart.bat
+   │  ├─ RSA-QuickStart.sh
+   │  └─ SoFi_Account_Array.js
+   ├─ README.MD
+   ├─ Selenium_IDE
+   │  ├─ Ally_Auto.side
+   │  ├─ Chase_Auto.side
+   │  ├─ Fidelity_Auto.side
+   │  ├─ Firstrade_Auto.side
+   │  ├─ Merrill_Auto.side
+   │  ├─ Schwab_Auto.side
+   │  └─ Vanguard_Auto.side
+   └─ X_Archive
+      ├─ README.MD
+      ├─ Sofi Helper.side
+      └─ sofi_main.py
+```
 # Acknowledgments / Final Remarks
 I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donators</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
 
