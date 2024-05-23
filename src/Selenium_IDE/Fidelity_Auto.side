@@ -150,7 +150,7 @@
       "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=111.03&SKIP_ORDER_PREVIEW=Y",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&SKIP_ORDER_PREVIEW=Y",
       "targets": [],
       "value": ""
     }, {
