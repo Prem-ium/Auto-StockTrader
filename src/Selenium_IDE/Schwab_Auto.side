@@ -215,7 +215,7 @@
           "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -231,7 +231,7 @@
           "id": "b6ca055f-d2c7-4f83-a187-43da6ecaa44e",
           "comment": "",
           "command": "executeScript",
-          "target": "return Array.from({length: 7}, (_, i) => i);",
+          "target": "return Array.from({length: 8}, (_, i) => i);",
           "targets": [],
           "value": "accounts"
         },
@@ -691,7 +691,7 @@
           "id": "2d7949a3-7a85-49d4-8cf4-55796866d0e1",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -707,7 +707,7 @@
           "id": "faea0380-ed7c-4300-b2e5-cdf12cd367a4",
           "comment": "",
           "command": "executeScript",
-          "target": "return Array.from({length: 7}, (_, i) => i);",
+          "target": "return Array.from({length: 8}, (_, i) => i);",
           "targets": [],
           "value": "accounts"
         },
@@ -1253,7 +1253,7 @@
           "id": "23961c54-6cc6-499b-8151-7aa05c166d8f",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -1277,7 +1277,7 @@
           "id": "833779a8-533b-463a-a067-9c2e018286f9",
           "comment": "",
           "command": "executeScript",
-          "target": "return Array.from({length: 7}, (_, i) => i);",
+          "target": "return Array.from({length: 8}, (_, i) => i);",
           "targets": [],
           "value": "accounts"
         },

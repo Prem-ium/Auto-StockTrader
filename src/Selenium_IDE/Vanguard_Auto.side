@@ -12,7 +12,7 @@
           "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -822,7 +822,7 @@
           "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -2005,7 +2005,7 @@
           "id": "2cc9aea6-3035-4a22-8c00-2b78a537c1f6",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },

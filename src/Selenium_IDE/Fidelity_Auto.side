@@ -12,7 +12,7 @@
           "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -68,7 +68,7 @@
           "id": "0d2f24ca-310d-41b1-9791-c34b9b9b8333",
           "comment": "",
           "command": "executeScript",
-          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304']];",
+          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304','Z30417457']];",
           "targets": [],
           "value": "accounts"
         },
@@ -551,7 +551,7 @@
           "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
           "comment": "",
           "command": "store",
-          "target": "TBIO,TIRX,IVP,BZFD",
+          "target": "GV",
           "targets": [],
           "value": "TICKER"
         },
@@ -599,7 +599,7 @@
           "id": "32cf33c6-7b71-43eb-878e-63132ea3bbad",
           "comment": "",
           "command": "executeScript",
-          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304']];",
+          "target": "return [['X96879736','Z25718951','Z26498112','Z27693075','Z29395981','Z31332155','231759827','235958625','Z29503304','Z30417457']];",
           "targets": [],
           "value": "accounts"
         },
