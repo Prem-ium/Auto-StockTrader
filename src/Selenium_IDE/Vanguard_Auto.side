@@ -4,6 +4,140 @@
   "name": "Vanguard",
   "url": "https://personal1.vanguard.com/twe-trade-web-equity-etf/trade",
   "tests": [{
+    "id": "fc14f86b-7526-4124-b1c1-776cf0b13d0f",
+    "name": "| Login Vanguard",
+    "commands": [{
+      "id": "95ae2867-85b3-4569-978e-a3214ccf56ef",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca2cf219-8d97-4990-a975-74bad45e7c97",
+      "comment": "",
+      "command": "store",
+      "target": "LOGIN:HERE",
+      "targets": [],
+      "value": "VANGUARD_LOGIN"
+    }, {
+      "id": "6b0a4de6-b632-487f-96d3-3adc53d4eb75",
+      "comment": "",
+      "command": "if",
+      "target": "${VANGUARD_LOGIN} != \"LOGIN:HERE\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f38bd345-75b8-49d8-97ed-97d9904b8b47",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var LOGIN = ${VANGUARD_LOGIN}; var colonIndex = LOGIN.indexOf(':'); return [     LOGIN.substring(0, colonIndex),     LOGIN.substring(colonIndex + 1) ];",
+      "targets": [],
+      "value": "LOGIN"
+    }, {
+      "id": "71ef1e0f-cb53-4886-b398-3576e54e0bc2",
+      "comment": "",
+      "command": "click",
+      "target": "id=USER",
+      "targets": [
+        ["id=USER", "id"],
+        ["name=USER", "name"],
+        ["css=#USER", "css:finder"],
+        ["xpath=//input[@id='USER']", "xpath:attributes"],
+        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebcae294-059d-4d07-9cb0-846005c64095",
+      "comment": "",
+      "command": "type",
+      "target": "id=USER",
+      "targets": [
+        ["id=USER", "id"],
+        ["name=USER", "name"],
+        ["css=#USER", "css:finder"],
+        ["xpath=//input[@id='USER']", "xpath:attributes"],
+        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${LOGIN[0]}"
+    }, {
+      "id": "ad143007-8014-4124-9818-b439e08d0761",
+      "comment": "",
+      "command": "click",
+      "target": "id=PASSWORD-blocked",
+      "targets": [
+        ["id=PASSWORD-blocked", "id"],
+        ["css=#PASSWORD-blocked", "css:finder"],
+        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
+        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8833593e-1f78-4458-bce2-88aa4751785c",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "225680e5-490c-4f3b-bd69-1642a62825dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=PASSWORD-blocked",
+      "targets": [
+        ["id=PASSWORD-blocked", "id"],
+        ["css=#PASSWORD-blocked", "css:finder"],
+        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
+        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
+        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
+      ],
+      "value": "${LOGIN[1]}"
+    }, {
+      "id": "2308bf41-8214-4af2-993d-3e969d53cf43",
+      "comment": "",
+      "command": "click",
+      "target": "id=username-password-form",
+      "targets": [
+        ["id=username-password-form", "id"],
+        ["name=username-password-form", "name"],
+        ["css=#username-password-form", "css:finder"],
+        ["xpath=//form[@id='username-password-form']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed98d22b-072e-497f-8c19-67d69438c798",
+      "comment": "",
+      "command": "click",
+      "target": "css=.c11n-button__label",
+      "targets": [
+        ["css=.c11n-button__label", "css:finder"],
+        ["xpath=//button[@id='username-password-submit-btn']/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11fcaf75-6d3b-4d5c-bf60-d3bbef5bce93",
+      "comment": "",
+      "command": "pause",
+      "target": "4500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "886b306f-f72b-403a-a8d5-f7dd24151b9e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
     "id": "170b3536-4002-495a-901b-76046b2ae305",
     "name": "Buy Vanguard",
     "commands": [{
@@ -17,21 +151,21 @@
       "id": "0a1eb697-4ed3-4375-b2a0-d6e705d9d22d",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
       "targets": [],
       "value": "TICKERS"
     }, {
       "id": "2c57ae98-c312-45c3-812f-1c42dd3f6c82",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 20}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 25}, (_, i) => i + 1);;",
       "targets": [],
-      "value": "numAccounts"
+      "value": "accounts"
     }, {
       "id": "97461af7-5218-4ea8-9308-386f2426f9b5",
       "comment": "",
-      "command": "store",
-      "target": "-1",
+      "command": "executeScript",
+      "target": "return  ;",
       "targets": [],
       "value": "target"
     }, {
@@ -45,9 +179,16 @@
       "id": "1d25bd5f-8b97-4d6b-919a-c41ce4d0a4c7",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${numAccounts}.slice(${numAccounts}.indexOf(${target}) + 1);",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "58aa6c0e-b47d-4781-8e6a-5be42f57da65",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "bbc4aa9b-01b0-469f-970b-4f74f10641fb",
       "comment": "",
@@ -69,6 +210,13 @@
       "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; if (element && element.textContent === \"Incomplete transaction detected\") {    const okButton = document.getElementById('okButtonInput');    if (okButton) {        okButton.click();    } } ",
       "targets": [],
       "value": "incomplete"
+    }, {
+      "id": "9f4cdb01-8854-4362-8beb-c8b042a33149",
+      "comment": "",
+      "command": "if",
+      "target": "${accounts}.length != 1",
+      "targets": [],
+      "value": ""
     }, {
       "id": "6426e3f7-3f35-4630-937b-ffeb3c761aeb",
       "comment": "",
@@ -121,60 +269,7 @@
       "id": "fa8c29e9-466e-4fb8-b208-c32d4ddfa118",
       "comment": "",
       "command": "if",
-      "target": "${remaining_acc} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2e3b110e-f899-48dc-ac35-e98f17208276",
-      "comment": "",
-      "command": "echo",
-      "target": "Run successful across all accounts. Opening holdings & ending test.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "605316e3-b730-4a6b-92f9-b3c019e37ebf",
-      "comment": "",
-      "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "49e6a3b6-d5c4-487d-8438-a94d00c0a09f",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//span[contains(.,'Expand all accounts')]",
-      "targets": [
-        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
-        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
-        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5ec14c45-9644-4fbd-9490-5e0840ad6611",
-      "comment": "",
-      "command": "echo",
-      "target": "The next command is designed to fail.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9aa3c919-5482-4033-9a57-f49dc8fdc16f",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "css=#usage_notes > a",
-      "targets": [
-        ["css=#usage_notes > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Usage notes')])[3]", "xpath:link"],
-        ["xpath=//h2[@id='usage_notes']/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#usage_notes')])[3]", "xpath:href"],
-        ["xpath=//section[5]/h2/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ed5c0ca1-d56d-4c8a-a313-c4708a66da0b",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "${remaining_acc} != 0",
       "targets": [],
       "value": ""
     }, {
@@ -191,17 +286,17 @@
       ],
       "value": ""
     }, {
+      "id": "7c1f09da-159d-4a46-ad0d-eb84c3897226",
+      "comment": "",
+      "command": "pause",
+      "target": "850",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "8033178b-7696-4a9c-b29f-c1e2877926d0",
       "comment": "",
       "command": "do",
       "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7c1f09da-159d-4a46-ad0d-eb84c3897226",
-      "comment": "",
-      "command": "pause",
-      "target": "500",
       "targets": [],
       "value": ""
     }, {
@@ -501,7 +596,35 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "4ecba474-09fb-4450-ab45-fc4cb1ea86f8",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bd9d9b4-812c-4180-b3b9-ddd3fd4d13fe",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return -1",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "ed5c0ca1-d56d-4c8a-a313-c4708a66da0b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e3b6bb20-2760-4ebd-8877-542aba54c107",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f2e1371-559b-49fd-93e1-b4ad2e7d3109",
       "comment": "",
       "command": "end",
       "target": "",
@@ -512,6 +635,13 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e629ea8-0734-4b25-9ddb-62f6e08cd814",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
       "targets": [],
       "value": ""
     }]
@@ -529,21 +659,21 @@
       "id": "cf63991b-a469-419e-adc4-8a8bbda4d6c3",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
       "targets": [],
       "value": "TICKERS"
     }, {
       "id": "397e51c1-398c-4d26-a102-7dd6c7ac4d82",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 20}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 25}, (_, i) => i + 1);;",
       "targets": [],
-      "value": "numAccounts"
+      "value": "accounts"
     }, {
-      "id": "38f0ed0d-ce1d-419a-a4f6-06266ba19020",
+      "id": "e3d0d8a5-2c16-4906-9e65-f628c820c58e",
       "comment": "",
-      "command": "store",
-      "target": "-1",
+      "command": "executeScript",
+      "target": "return ;",
       "targets": [],
       "value": "target"
     }, {
@@ -557,9 +687,16 @@
       "id": "18cbe85c-8fc4-4e28-b9b0-3e5d0b03c2be",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${numAccounts}.slice(${numAccounts}.indexOf(${target}) + 1);",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "ba6cd9bd-1d8e-419b-97dd-c31ee52250b4",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "cf34d76b-bdf3-49dc-a9da-2936c0a06fd5",
       "comment": "",
@@ -581,6 +718,13 @@
       "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; if (element && element.textContent === \"Incomplete transaction detected\") {    const okButton = document.getElementById('okButtonInput');    if (okButton) {        okButton.click();    } } ",
       "targets": [],
       "value": "incomplete"
+    }, {
+      "id": "6c92b30e-a8fe-4cb9-9636-d01595c0e491",
+      "comment": "",
+      "command": "if",
+      "target": "${accounts}.length != 1",
+      "targets": [],
+      "value": ""
     }, {
       "id": "a07bfdf1-4ace-4a7b-b60f-1058aea4b8c3",
       "comment": "",
@@ -626,60 +770,7 @@
       "id": "3152b869-8eb3-4e9a-b647-e1d2d4d5769b",
       "comment": "",
       "command": "if",
-      "target": "${remaining_acc} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ddf36ab4-cc58-48c0-86dd-b583a0b6235a",
-      "comment": "",
-      "command": "echo",
-      "target": "Run successful across all accounts. Opening holdings & ending test.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b41218f8-fd10-4fa9-9a2c-8e1a719b752d",
-      "comment": "",
-      "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "43a1cc1e-f697-4868-a97f-87ad5ed89023",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//span[contains(.,'Expand all accounts')]",
-      "targets": [
-        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
-        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
-        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "b17180a4-4f89-4e80-886d-702d24a3658c",
-      "comment": "",
-      "command": "echo",
-      "target": "The next command is designed to fail.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7b80016b-efad-4c28-a8a8-ce9a1ce4beb1",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "css=#usage_notes > a",
-      "targets": [
-        ["css=#usage_notes > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Usage notes')])[3]", "xpath:link"],
-        ["xpath=//h2[@id='usage_notes']/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#usage_notes')])[3]", "xpath:href"],
-        ["xpath=//section[5]/h2/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "020988e2-1ec8-48c8-99c4-ac7c88848be1",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "${remaining_acc} != 0",
       "targets": [],
       "value": ""
     }, {
@@ -699,7 +790,7 @@
       "id": "de3f39a2-cd7a-4807-9362-6654c9b42aff",
       "comment": "",
       "command": "pause",
-      "target": "500",
+      "target": "850",
       "targets": [],
       "value": ""
     }, {
@@ -805,6 +896,27 @@
       ],
       "value": "1"
     }, {
+      "id": "62979d57-215a-4a2d-9248-919c5e133c00",
+      "comment": "",
+      "command": "pause",
+      "target": "600",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d5ede40-d25b-4bb1-961b-ebcb38ee3a99",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const price = \"0.091\"; const element = document.getElementById(\"baseForm:_id51\"); if (element) {     const inputElement = document.getElementById(\"baseForm:limitPriceTextField\"); if (inputElement) {     inputElement.value = price;     inputElement.dispatchEvent(new Event('input', { bubbles: true }));     return true; } } return false;",
+      "targets": [],
+      "value": "for-otc"
+    }, {
+      "id": "2d377fdb-0496-4aec-a4d9-fa2e3916ffcf",
+      "comment": "",
+      "command": "if",
+      "target": "${for-otc} == false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "754b2df6-da81-4c38-b485-b26b589e336c",
       "comment": "",
       "command": "do",
@@ -874,6 +986,68 @@
       ],
       "value": ""
     }, {
+      "id": "75a738a5-b0d1-444f-8021-48e264ba5815",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58410803-dde5-444a-8547-0c2d4d961fd3",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//td[@id='baseForm:durationTypeSelectOne_main']",
+      "targets": [],
+      "value": "Duration"
+    }, {
+      "id": "9e71f264-4f30-41ae-a6c5-ea099a631f8b",
+      "comment": "",
+      "command": "if",
+      "target": "${Duration} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8242bb71-a51e-4fdf-af0b-215ac80aefdd",
+      "comment": "",
+      "command": "echo",
+      "target": "Duration exists.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ed46344-2cb8-4c4e-8f20-5f715b3f9808",
+      "comment": "",
+      "command": "click",
+      "target": "id=baseForm:durationTypeSelectOne_textCont",
+      "targets": [
+        ["id=baseForm:durationTypeSelectOne_textCont", "id"],
+        ["css=#baseForm\\3A durationTypeSelectOne_textCont", "css:finder"],
+        ["xpath=//span[@id='baseForm:durationTypeSelectOne_textCont']", "xpath:attributes"],
+        ["xpath=//td[@id='baseForm:durationTypeSelectOne_main']/span", "xpath:idRelative"],
+        ["xpath=//span[8]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23b6dabd-8d49-4842-9dce-eca5501c345e",
+      "comment": "",
+      "command": "click",
+      "target": "id=baseForm:durationTypeSelectOne:2",
+      "targets": [
+        ["id=baseForm:durationTypeSelectOne:2", "id"],
+        ["css=#baseForm\\3A durationTypeSelectOne\\3A 2", "css:finder"],
+        ["xpath=//td[@id='baseForm:durationTypeSelectOne:2']", "xpath:attributes"],
+        ["xpath=//div[@id='scroll-baseForm:durationTypeSelectOne']/table/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//div[8]/div/table/tbody/tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'60-day (GTC)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f30d8a5-a484-436e-b257-191be4990575",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "099b1425-37ce-4b6f-beb9-45d4658c7ff2",
       "comment": "",
       "command": "storeXpathCount",
@@ -895,42 +1069,38 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c5516590-d68a-4ab8-a2a8-509cf06858a4",
+      "id": "afcd19f4-aa01-457d-bc56-328d701fd205",
+      "comment": "",
+      "command": "pause",
+      "target": "1200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d95af47-1235-49b8-b833-962510a070cc",
       "comment": "",
       "command": "click",
-      "target": "id=baseForm:costBasisMethodSelectOne_text",
+      "target": "id=baseForm:costBasisMethodSelectOne_main",
       "targets": [
-        ["id=baseForm:costBasisMethodSelectOne_text", "id"],
-        ["css=#baseForm\\3A costBasisMethodSelectOne_text", "css:finder"],
-        ["xpath=//span[@id='baseForm:costBasisMethodSelectOne_text']", "xpath:attributes"],
-        ["xpath=//span[@id='baseForm:costBasisMethodSelectOne_textCont']/span", "xpath:idRelative"],
-        ["xpath=//span[9]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td/span/span", "xpath:position"]
+        ["id=baseForm:costBasisMethodSelectOne_main", "id"],
+        ["css=#baseForm\\3A costBasisMethodSelectOne_main", "css:finder"],
+        ["xpath=//td[@id='baseForm:costBasisMethodSelectOne_main']", "xpath:attributes"],
+        ["xpath=//table[@id='baseForm:costBasisMethodSelectOne-border']/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//span[9]/div/span/table/tbody/tr/td[2]/span/div/span/div/a/table/tbody/tr/td", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "4446e19f-383c-480c-b34d-bab19888be47",
+      "id": "904d497f-37d6-4027-bb6d-36774b941417",
       "comment": "",
-      "command": "click",
-      "target": "id=baseForm:costBasisMethodSelectOne:2",
-      "targets": [
-        ["id=baseForm:costBasisMethodSelectOne:2", "id"],
-        ["css=#baseForm\\3A costBasisMethodSelectOne\\3A 2", "css:finder"],
-        ["xpath=//td[@id='baseForm:costBasisMethodSelectOne:2']", "xpath:attributes"],
-        ["xpath=//div[@id='scroll-baseForm:costBasisMethodSelectOne']/table/tbody/tr[3]/td", "xpath:idRelative"],
-        ["xpath=//div[8]/div/table/tbody/tr[3]/td", "xpath:position"]
-      ],
+      "command": "pause",
+      "target": "1200",
+      "targets": [],
       "value": ""
     }, {
-      "id": "77c5938c-d51f-4cf6-97eb-44621f089b18",
+      "id": "66554fdc-2ad9-41c3-bb46-9c46533234d9",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)",
-      "targets": [
-        ["css=#baseForm\\3A costBasisMethodTable tr:nth-child(2) > .noTopBorder:nth-child(2)", "css:finder"],
-        ["xpath=//table[@id='baseForm:costBasisMethodTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
-        ["xpath=//span[9]/div/span/table/tbody/tr[2]/td[2]", "xpath:position"],
-        ["xpath=//td[contains(.,'Cost basis reporting methods ')]", "xpath:innerText"]
-      ],
+      "command": "executeScript",
+      "target": " var dropdownContainer = document.getElementById('baseForm:costBasisMethodSelectOne_label'); var clickEvent = new MouseEvent('click', {   bubbles: true,   cancelable: true,   view: window }); dropdownContainer.dispatchEvent(clickEvent); var optionElement = document.getElementById('baseForm:costBasisMethodSelectOne:2');  var optionClickEvent = new MouseEvent('click', {   bubbles: true,   cancelable: true,   view: window }); optionElement.dispatchEvent(optionClickEvent);",
+      "targets": [],
       "value": ""
     }, {
       "id": "a78cb037-abed-4f89-b554-daf93e63453d",
@@ -963,7 +1133,7 @@
       "id": "0834267b-8b60-457e-922d-76e4d17ac74d",
       "comment": "",
       "command": "executeScript",
-      "target": "const xpath = '//*[@id=\"orderCaptureErrorLayerForm:_id3\"]/dl/dd/span'; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;  return (element && (element.textContent === \"This order cannot be accepted because the quantity you entered exceeds the number of shares held in this account.\" || element.textContent.includes(\"cannot be accepted\")))",
+      "target": "const xpath = '//*[@id=\"orderCaptureErrorLayerForm:_id3\"]/dl/dd/span';  const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;   if (element) {     return (         element.textContent === \"This order cannot be accepted because the quantity you entered exceeds the number of shares held in this account.\" ||          element.textContent.includes(\"cannot be accepted\") ||         element.textContent.includes(\"Vanguard does not allow purchases in OTC securities\")     ); } else {     return false; }",
       "targets": [],
       "value": "result"
     }, {
@@ -1097,171 +1267,72 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "80a26655-cdb9-4ccb-9e82-c2346421ad65",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ac528f5-dda4-465e-95eb-b43009ec6865",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "739b4bd6-ff3c-4685-8f60-329ed5ef22ce",
       "comment": "",
       "command": "end",
       "target": "",
       "targets": [],
       "value": ""
-    }]
-  }, {
-    "id": "fc14f86b-7526-4124-b1c1-776cf0b13d0f",
-    "name": "Vanguard Login",
-    "commands": [{
-      "id": "95ae2867-85b3-4569-978e-a3214ccf56ef",
+    }, {
+      "id": "43f65b9c-61d6-433b-a716-2be8a47befdc",
       "comment": "",
       "command": "open",
       "target": "https://holdings.web.vanguard.com/",
       "targets": [],
       "value": ""
-    }, {
-      "id": "ca2cf219-8d97-4990-a975-74bad45e7c97",
-      "comment": "",
-      "command": "store",
-      "target": "LOGIN:HERE",
-      "targets": [],
-      "value": "VANGUARD_LOGIN"
-    }, {
-      "id": "6b0a4de6-b632-487f-96d3-3adc53d4eb75",
-      "comment": "",
-      "command": "if",
-      "target": "${VANGUARD_LOGIN} != \"LOGIN:HERE\"",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "f38bd345-75b8-49d8-97ed-97d9904b8b47",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${VANGUARD_LOGIN}.split(\":\");",
-      "targets": [],
-      "value": "LOGIN"
-    }, {
-      "id": "71ef1e0f-cb53-4886-b398-3576e54e0bc2",
-      "comment": "",
-      "command": "click",
-      "target": "id=USER",
-      "targets": [
-        ["id=USER", "id"],
-        ["name=USER", "name"],
-        ["css=#USER", "css:finder"],
-        ["xpath=//input[@id='USER']", "xpath:attributes"],
-        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ebcae294-059d-4d07-9cb0-846005c64095",
-      "comment": "",
-      "command": "type",
-      "target": "id=USER",
-      "targets": [
-        ["id=USER", "id"],
-        ["name=USER", "name"],
-        ["css=#USER", "css:finder"],
-        ["xpath=//input[@id='USER']", "xpath:attributes"],
-        ["xpath=//form[@id='username-password-form']/div[2]/div/c11n-input/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${LOGIN[0]}"
-    }, {
-      "id": "ad143007-8014-4124-9818-b439e08d0761",
-      "comment": "",
-      "command": "click",
-      "target": "id=PASSWORD-blocked",
-      "targets": [
-        ["id=PASSWORD-blocked", "id"],
-        ["css=#PASSWORD-blocked", "css:finder"],
-        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
-        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
-        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "8833593e-1f78-4458-bce2-88aa4751785c",
-      "comment": "",
-      "command": "click",
-      "target": "css=html",
-      "targets": [
-        ["css=html", "css:finder"],
-        ["xpath=//html", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "225680e5-490c-4f3b-bd69-1642a62825dd",
-      "comment": "",
-      "command": "type",
-      "target": "id=PASSWORD-blocked",
-      "targets": [
-        ["id=PASSWORD-blocked", "id"],
-        ["css=#PASSWORD-blocked", "css:finder"],
-        ["xpath=//input[@id='PASSWORD-blocked']", "xpath:attributes"],
-        ["xpath=//lgn-password-input[@id='PASSWORD']/c11n-input/input", "xpath:idRelative"],
-        ["xpath=//lgn-password-input/c11n-input/input", "xpath:position"]
-      ],
-      "value": "${LOGIN[1]}"
-    }, {
-      "id": "2308bf41-8214-4af2-993d-3e969d53cf43",
-      "comment": "",
-      "command": "click",
-      "target": "id=username-password-form",
-      "targets": [
-        ["id=username-password-form", "id"],
-        ["name=username-password-form", "name"],
-        ["css=#username-password-form", "css:finder"],
-        ["xpath=//form[@id='username-password-form']", "xpath:attributes"],
-        ["xpath=//form", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ed98d22b-072e-497f-8c19-67d69438c798",
-      "comment": "",
-      "command": "click",
-      "target": "css=.c11n-button__label",
-      "targets": [
-        ["css=.c11n-button__label", "css:finder"],
-        ["xpath=//button[@id='username-password-submit-btn']/span/span", "xpath:idRelative"],
-        ["xpath=//span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "886b306f-f72b-403a-a8d5-f7dd24151b9e",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "79daa0ca-2833-4bb2-91a3-1adefa64744e",
-    "name": "Vanguard Limit Buy",
+    "name": "Vanguard Limit Order",
     "commands": [{
       "id": "2cc9aea6-3035-4a22-8c00-2b78a537c1f6",
       "comment": "",
       "command": "store",
-      "target": "NXU",
+      "target": "JOB",
       "targets": [],
       "value": "TICKER"
     }, {
       "id": "cc71e7ea-aa3d-42ac-b9f5-3aa045b6656f",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${TICKER}.split(\",\");",
+      "target": "return ${TICKER}.toUpperCase().split(\",\");",
       "targets": [],
       "value": "TICKERS"
     }, {
       "id": "f799ed01-198a-40fa-a3e6-e47d68df5bc8",
       "comment": "",
       "command": "executeScript",
-      "target": "return Array.from({length: 20}, (_, i) => i + 1);",
+      "target": "return Array.from({length: 25}, (_, i) => i + 1);;",
       "targets": [],
-      "value": "numAccounts"
+      "value": "accounts"
     }, {
-      "id": "cccdb69c-abb5-4c9c-b0ce-8048cab3df26",
+      "id": "eb0bea54-4f14-463e-9977-822816edb7b1",
       "comment": "",
-      "command": "store",
-      "target": "-1",
+      "command": "executeScript",
+      "target": "return  ;",
       "targets": [],
       "value": "target"
+    }, {
+      "id": "bcec3505-a6fb-421c-b9e0-3805b49e5c12",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "one-for-buy-two-for-sell"
     }, {
       "id": "243fc650-4bd3-4e34-bb7e-f113fbcd0e88",
       "comment": "",
@@ -1280,9 +1351,16 @@
       "id": "f4bed7eb-8d28-4fe4-8fb9-4a99155e7f9f",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${numAccounts}.slice(${numAccounts}.indexOf(${target}) + 1);",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
       "targets": [],
       "value": "list"
+    }, {
+      "id": "e8914b73-934e-41f5-8486-08c186154337",
+      "comment": "",
+      "command": "setSpeed",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "e7dfc9c9-364c-4e03-ba7f-8f31de771f50",
       "comment": "",
@@ -1304,6 +1382,13 @@
       "target": "const xpath = \"/html/body/div[3]/div[5]/span/div/span[3]/div/div[1]/div/div[2]/div/span/span[2]/div/div/div[1]/span/div/p[1]/b\"; const element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; if (element && element.textContent === \"Incomplete transaction detected\") {    const okButton = document.getElementById('okButtonInput');    if (okButton) {        okButton.click();    } } ",
       "targets": [],
       "value": "incomplete"
+    }, {
+      "id": "c56c8ba2-896f-4389-8330-f086edadcb19",
+      "comment": "",
+      "command": "if",
+      "target": "${accounts}.length != 1",
+      "targets": [],
+      "value": ""
     }, {
       "id": "25843242-7275-438f-b0bf-c6e350376dc5",
       "comment": "",
@@ -1356,60 +1441,7 @@
       "id": "84c78150-6a42-4f82-8214-6ae3cf581e1c",
       "comment": "",
       "command": "if",
-      "target": "${remaining_acc} == 0",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1ac149b6-121a-41e8-9d9b-0e59ebf2227c",
-      "comment": "",
-      "command": "echo",
-      "target": "Run successful across all accounts. Opening holdings & ending test.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "94a829b9-2d13-4532-93f4-eeadb681809e",
-      "comment": "",
-      "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "389f3ded-1dd9-49bd-b311-11cc0dc28ab6",
-      "comment": "",
-      "command": "click",
-      "target": "xpath=//span[contains(.,'Expand all accounts')]",
-      "targets": [
-        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
-        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
-        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d136a811-65c1-4201-a9f7-89d35304e6c3",
-      "comment": "",
-      "command": "echo",
-      "target": "The next command is designed to fail.",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3d01a1d1-e882-4620-bb37-b8cccbe96773",
-      "comment": "",
-      "command": "assertElementPresent",
-      "target": "css=#usage_notes > a",
-      "targets": [
-        ["css=#usage_notes > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Usage notes')])[3]", "xpath:link"],
-        ["xpath=//h2[@id='usage_notes']/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#usage_notes')])[3]", "xpath:href"],
-        ["xpath=//section[5]/h2/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5338d659-f18e-46ef-90d0-d23685499855",
-      "comment": "",
-      "command": "end",
-      "target": "",
+      "target": "${remaining_acc} != 0",
       "targets": [],
       "value": ""
     }, {
@@ -1426,17 +1458,17 @@
       ],
       "value": ""
     }, {
-      "id": "069f64c5-ffce-45cb-bf3e-dc288db32162",
-      "comment": "",
-      "command": "do",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "7418902f-245b-413b-b47b-1aae5ca3274f",
       "comment": "",
       "command": "pause",
       "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "069f64c5-ffce-45cb-bf3e-dc288db32162",
+      "comment": "",
+      "command": "do",
+      "target": "",
       "targets": [],
       "value": ""
     }, {
@@ -1456,7 +1488,7 @@
       "id": "c445b1e0-f98d-46ab-8ed9-b57ba4d7e1b8",
       "comment": "",
       "command": "click",
-      "target": "id=baseForm:transactionTypeSelectOne:1",
+      "target": "id=baseForm:transactionTypeSelectOne:${one-for-buy-two-for-sell}",
       "targets": [
         ["id=baseForm:transactionTypeSelectOne:1", "id"],
         ["css=#baseForm\\3AtransactionTypeSelectOne\\3A 1", "css:finder"],
@@ -1751,7 +1783,7 @@
       "id": "7490bd9c-d2fd-4727-b9c5-dae916c78f85",
       "comment": "",
       "command": "echo",
-      "target": "${account} finished buying ${TICK}",
+      "target": "${account} finished (One for Buy, Two for Sell) ${one-for-buy-two-for-sell} ${TICK}",
       "targets": [],
       "value": ""
     }, {
@@ -1783,10 +1815,31 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "352d05e6-3671-4ad5-84ee-47f0d60a49cf",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e596884e-8523-4436-ab08-42e7b9fb72b4",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3cc12ec1-cc4a-46a1-9ac7-a1b43aeeb0da",
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1b43ed0-a5bb-4da3-8716-17323db87904",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
       "targets": [],
       "value": ""
     }]
