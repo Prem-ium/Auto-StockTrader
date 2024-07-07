@@ -17,7 +17,7 @@
       "id": "51277964-fd77-466b-9595-0617964dbc41",
       "comment": "",
       "command": "executeScript",
-      "target": "return .46",
+      "target": "return 1.50",
       "targets": [],
       "value": "LIMIT"
     }, {
@@ -87,7 +87,7 @@
       "id": "82555785-74d8-4acf-a065-8c13acd3126b",
       "comment": "",
       "command": "pause",
-      "target": "1250",
+      "target": "2250",
       "targets": [],
       "value": ""
     }, {
@@ -150,7 +150,7 @@
       "id": "8b43dcdd-ba19-4ec2-afb3-eae7ae3c87dd",
       "comment": "",
       "command": "open",
-      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&SKIP_ORDER_PREVIEW=Y",
+      "target": "https://oltx.fidelity.com/ftgw/fbc/oftrade/stockInit?ignoreRedirect=Y&ORDER_TYPE=E&ACCOUNT=${account}&SYMBOL=${TICK}&PRICE_TYPE=L&ORDER_ACTION=B&QTY=${QUANT}&AMOUNT=${LIMIT}&SKIP_ORDER_PREVIEW=Y",
       "targets": [],
       "value": ""
     }, {
@@ -210,13 +210,6 @@
       "target": "id=eqt-ordsel-limit-price-field",
       "targets": [],
       "value": "30000"
-    }, {
-      "id": "3d0efeb5-dbac-4071-a267-97ccf0416973",
-      "comment": "",
-      "command": "type",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${LIMIT}"
     }, {
       "id": "86a77a53-d144-4161-8b7b-395dfad3757f",
       "comment": "",
