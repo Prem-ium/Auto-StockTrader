@@ -5,7 +5,7 @@
 <p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
         <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a></p>
 
-# Features
+# Features 🚀
 - Multiple Stock Tickers Support (ex: `NVDA,TSLA,AAPL` buys/sells in one test run)
 - Multiple Accounts/Login Support 
 - Dynamic Error Checking & Handling using XPATHs
@@ -19,7 +19,7 @@
 ## Notice
 Gold GitHub Sponsors will gain access to a private `sponsor` repository, which includes the latest updates and exclusive features. The free, public version of this project will not be updated as frequently as the sponsor repository. If you are a Gold Sponsor, make sure to reference the `sponsor` repo's README instead of the public README, as the `sponsor` repo contains significant upgrades and changes not available in the public version. If you're interested in becoming a Gold Sponsor, you can [become one here.](https://github.com/sponsors/Prem-ium)
 
-## Supported Brokerages
+## Supported Brokerages 🏦
 This project contains the means of automating buy/sell stock orders within:
 
 - Ally Invest
@@ -35,7 +35,7 @@ This project contains the means of automating buy/sell stock orders within:
 
 Note: Please note that although I no longer have an Ally Invest or Merrill Edge account, the existing scripts should still function as intended. However, I won't be able to provide updates or make changes specific to those platforms.
 
-# Enviornmental Variables
+# Enviornmental Variables 🔧
 To use this project, you will need to set the following environment variables in your .env file:
 | Variable          | Description                                       | Type                 |
 |-------------------|---------------------------------------------------|----------------------|
@@ -87,7 +87,7 @@ To use this project, you will need to set the following environment variables in
 
 Refer to `.env.example` for more clarity.
 
-# Installation
+# Installation ⚙️
 
 Follow these steps to set up and use Selenium IDE for automation:
 
@@ -131,7 +131,7 @@ Follow these steps to set up and use Selenium IDE for automation:
 
 For the most reliable automation runs, it is recommended to use Chrome or Chromium browser.
 
-# Donations
+# Donations ❤️
 
 I've been diligently working on this project for several months, and I'm thrilled with the progress it has made. Based on user testimonials, it has proven to be an invaluable tool for automating stock ticker orders across multiple brokerage accounts and various brokerages. I am continually striving to enhance its functionality and optimize its efficiency for automated order execution.
 
@@ -148,7 +148,7 @@ If you appreciate my work and would like to show your support, there are two con
 
 Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
 
-# Pull Request Requirements
+# Pull Request Requirements 📋
 
 To ensure a smooth review process, please follow these guidelines when submitting a pull request (PR):
 
@@ -201,21 +201,21 @@ This repository follows the [BSD 3-Clause “New” or “Revised” License.](h
 </details>
 
 
-# Acknowledgments / Final Remarks
+# Acknowledgments / Final Remarks 💬
 I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donors</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
 
 Thank you for backing my work. Each one of you plays a crucial role, and I am truly grateful for your contributions.
 If you find this project interesting, please consider leaving a :star2:, <a href="https://github.com/sponsors/Prem-ium">donating, </a> or <a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank">contributing</a> if you found this project to be helpful!
 
-## Speed Considerations:
+# Speed Considerations:
 - Adjust `SET_SPEED` env to control test execution pace on faster computers.
 - Opt for 'Reference' over 'Log' in Selenium IDE for faster execution.
 - Activate 'Best performance' mode in Laptop Battery settings to accelerate execution.
 - Keep the browser's automation tab as the focused window for potential speed enhancements.
 
-### ⚠️ DISCLAIMER ⚠️
+# ⚠️ DISCLAIMER ⚠️
 I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
 
 You may use this tool at your own risk. I am not responsible for any financial loss, account restriction, or any other damage that may occur with the use of this tool. This project is provided "as is" and without warranty of any kind. 
 
-By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any and all claims, damages, or losses arising from the use of the project. 
+By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any claims, damages, or losses arising from the use of the project. 
