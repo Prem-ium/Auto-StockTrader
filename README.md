@@ -148,7 +148,7 @@ If you appreciate my work and would like to show your support, there are two con
 
 Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
 
-### Pull Request Requirements
+# Pull Request Requirements
 
 To ensure a smooth review process, please follow these guidelines when submitting a pull request (PR):
 
@@ -164,50 +164,54 @@ By adhering to these guidelines, you help maintain the quality and consistency o
 # License
 This repository follows the [BSD 3-Clause “New” or “Revised” License.]https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
-# Project Tree
+<details><summary><h2>🎯 Project Tree</h2></summary>
+
 ```
-📦 
-├─ .env.example
-├─ .github
-│  └─ FUNDING.yml
-├─ .gitignore
-├─ LICENSE
-├─ README.md
-├─ main.py
-├─ requirements.txt
-└─ src
-   ├─ Helper_Scripts
-   │  ├─ Fidelity_Account_Array.js
-   │  ├─ merge-tax-pdfs.py
-   │  ├─ README.MD
-   │  ├─ requirements.txt
-   │  ├─ RSA-QuickStart.bat
-   │  ├─ RSA-QuickStart.sh
-   │  └─ SoFi_Account_Array.js
-   ├─ README.MD
-   ├─ Selenium_IDE
-   │  ├─ Ally_Auto.side
-   │  ├─ Chase_Auto.side
-   │  ├─ Fidelity_Auto.side
-   │  ├─ Firstrade_Auto.side
-   │  ├─ Merrill_Auto.side
-   │  ├─ Schwab_Auto.side
-   │  └─ Vanguard_Auto.side
-   └─ X_Archive
-      ├─ README.MD
-      ├─ Sofi Helper.side
-      └─ sofi_main.py
+├─ .env.example
+├─ .github
+│  └─ FUNDING.yml
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+├─ main.py
+├─ requirements.txt
+└─ src
+   ├─ Helper_Scripts
+   │  ├─ Fidelity_Account_Array.js
+   │  ├─ merge-tax-pdfs.py
+   │  ├─ README.md
+   │  ├─ requirements.txt
+   │  ├─ RSA-QuickStart.bat
+   │  ├─ RSA-QuickStart.sh
+   │  └─ SoFi_Account_Array.js
+   ├─ README.md
+   ├─ Selenium_IDE
+   │  ├─ Ally_Auto.side
+   │  ├─ Chase_Auto.side
+   │  ├─ Fidelity_Auto.side
+   │  ├─ Firstrade_Auto.side
+   │  ├─ Merrill_Auto.side
+   │  ├─ Schwab_Auto.side
+   │  └─ Vanguard_Auto.side
+   └─ X_Archive
+      ├─ README.md
+      ├─ Sofi Helper.side
+      └─ sofi_main.py
 ```
+</details>
+
+
 # Acknowledgments / Final Remarks
-I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donators</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
+I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donors</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
 
 Thank you for backing my work. Each one of you plays a crucial role, and I am truly grateful for your contributions.
 If you find this project interesting, please consider leaving a :star2:, <a href="https://github.com/sponsors/Prem-ium">donating, </a> or <a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank">contributing</a> if you found this project to be helpful!
 
-### Speed Considerations:
-- Depending on your computer's speed, you may need to slow down test execution on faster machines (This can be done by assigning the `SET_SPEED` env, for Gold Sponsors. Otherwise, free-users may adjust the value manually using the slider in Selenium IDE).
-- Selecting 'Reference' instead of 'Log' in Selenium IDE can slightly speed up execution.
-- Enabling 'Best performance' battery mode on Laptop Battery settings can slightly speed up execution.
+## Speed Considerations:
+- Adjust `SET_SPEED` env to control test execution pace on faster computers.
+- Opt for 'Reference' over 'Log' in Selenium IDE for faster execution.
+- Activate 'Best performance' mode in Laptop Battery settings to accelerate execution.
+- Keep the browser's automation tab as the focused window for potential speed enhancements.
 
 ### ⚠️ DISCLAIMER ⚠️
 I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
