@@ -162,7 +162,7 @@ Once you have verified that your changes adhere to these guidelines, please open
 By adhering to these guidelines, you help maintain the quality and consistency of the project. Thank you for your interest in making contributions!
 
 # License
-This repository follows the [BSD 3-Clause “New” or “Revised” License.]https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
+This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
 <details><summary><h2>🎯 Project Tree</h2></summary>
 
