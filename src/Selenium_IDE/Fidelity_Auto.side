@@ -225,13 +225,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "182c2429-1166-4c4f-902f-4e73c158509b",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "id=eqt-ordsel-limit-price-field",
-      "targets": [],
-      "value": "${LIMIT}"
-    }, {
       "id": "56b5cb2c-9185-4851-9912-f66c6c3a0311",
       "comment": "",
       "command": "sendKeys",
