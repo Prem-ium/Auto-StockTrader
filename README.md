@@ -148,8 +148,21 @@ If you appreciate my work and would like to show your support, there are two con
 
 Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
 
+### Pull Request Requirements
+
+To ensure a smooth review process, please follow these guidelines when submitting a pull request (PR):
+
+1. **Title**: Provide a clear and concise title.
+2. **Description**: Include a detailed description of changes, problems addressed, and any relevant context.
+3. **Documentation**: If necessary, update comments, README, requirements, and any relevant documentation.
+4. **License Compliance**: Ensure any changes made in forks uphold the [repository's license](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE). Do not make changes to certain areas such as the `FUNDING.yml` or any present copyright information without approval.
+
+Once you have verified that your changes adhere to these guidelines, please open a pull request with your changes and click 'Request Review' on the Pull Request.
+
+By adhering to these guidelines, you help maintain the quality and consistency of the project. Thank you for your interest in making contributions!
+
 # License
-This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://choosealicense.com/licenses/bsd-3-clause/#)
+This repository follows the [BSD 3-Clause “New” or “Revised” License.]https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
 # Project Tree
 ```
@@ -165,6 +178,9 @@ This repository follows the [BSD 3-Clause “New” or “Revised” License.](h
 └─ src
    ├─ Helper_Scripts
    │  ├─ Fidelity_Account_Array.js
+   │  ├─ merge-tax-pdfs.py
+   │  ├─ README.MD
+   │  ├─ requirements.txt
    │  ├─ RSA-QuickStart.bat
    │  ├─ RSA-QuickStart.sh
    │  └─ SoFi_Account_Array.js
