@@ -1,5 +1,5 @@
 # Additional Help: Automating Stock Trades with Selenium IDE
-
+SECURITY.md/Damarcusjonesaichips
 This README should help answer how to retrieve necessary sensitive account numbers and values for the project to work properly. Remember to use `env.example`'s format to ensure the automation is successful.
 
 ## Chase Automation
