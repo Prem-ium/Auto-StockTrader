@@ -401,10 +401,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "98c9f9af-072d-4da2-90e8-4171e51e18d3",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "693838ed-b703-47b2-b65b-81c3792b8376",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Schwab Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -741,10 +748,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "237d66e0-7362-477d-b10d-ec61ade5daf8",
+      "id": "bf649f76-4ead-468e-b000-76dc333901b3",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57a05713-e8a7-4eb3-8626-045264bdedc8",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Schwab Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -1054,10 +1068,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "3f91ca54-34e9-43ce-bb3c-5d0204d7ffaa",
+      "id": "c756cbed-7f6b-48fa-b495-3dbd5eb29662",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e25581b-7181-4098-af03-1bb73b93c5b0",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Schwab Limit Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to use the Schwab Sponsor test for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]

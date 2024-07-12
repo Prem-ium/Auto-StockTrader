@@ -252,6 +252,20 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "1e254390-4b2e-4445-a86c-5a5ade17d9b5",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "216bea27-f7ca-49fe-be4e-ef6d83369e73",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "79f621d4-a532-4e4a-bb70-680c3f88d074",
@@ -499,6 +513,20 @@
       "comment": "",
       "command": "end",
       "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ea07250-8df6-45ab-a86f-eb489a5760c6",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cfd994f-eed2-4c9c-831a-e6e84b67df73",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]

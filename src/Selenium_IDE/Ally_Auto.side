@@ -326,10 +326,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a2d09023-0a25-4608-9bf9-ea71f0227550",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "72eaf03a-3825-43c2-8cc9-deefd85cfb07",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Ally Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -542,10 +549,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "c13ebe35-c482-4a9b-a6dc-10caaaa007f5",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "45c5bcdf-a7e9-4fb4-a104-e4adfdeb3e56",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Ally Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -823,10 +837,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "6816436f-d2ca-40f8-9b2e-bbeb636bbeb8",
+      "id": "19468e38-6f03-457e-aec5-447257421fa6",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bec0fcd-ada2-4566-b4be-2fdd84b0e007",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Ally Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -1104,10 +1125,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "10be42dc-83b3-4732-8373-8b3ea140f0ac",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c5af75d2-af96-4a02-907c-7d4a9efbba09",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Ally Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]

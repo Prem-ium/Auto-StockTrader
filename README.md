@@ -16,8 +16,15 @@
 - Account Login Automation 
 - JavaScript Account Array Helper Scripts
 
-## Notice
-Gold GitHub Sponsors will gain access to a private `sponsor` repository, which includes the latest updates and exclusive features. The free, public version of this project will not be updated as frequently as the sponsor repository. If you are a Gold Sponsor, make sure to reference the `sponsor` repo's README instead of the public README, as the `sponsor` repo contains significant upgrades and changes not available in the public version. If you're interested in becoming a Gold Sponsor, you can [become one here.](https://github.com/sponsors/Prem-ium)
+
+## Unlock Premium Features with Gold Sponsorship 🌟
+Unlock exclusive access to a private sponsor repository with the latest updates, optimized features, and content not available in the public version by becoming a Gold sponsor. 
+
+In the private repository, the Python script has been completely reworked for maximum efficiency. The automation process is streamlined, requiring significantly less technical skill and setup time. While the public version demands considerable configuration (for example, with Chase and Fidelity), the Gold Sponsor version is designed to be as seamless and user-friendly. 
+
+You'll gain access to extra scripts, like an Automated Cash Transfer/Withdrawal tool for managing funds across multiple accounts, along with features in the automation scripts to prioritize speed and minimize errors.
+
+Interested in becoming a Gold Sponsor? [Sign up here!](https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false)
 
 ## Supported Brokerages 🏦
 This project contains the means of automating buy/sell stock orders within:
@@ -139,7 +146,7 @@ If you appreciate my work and would like to show your support, there are two con
 
 1. **GitHub Sponsors**
    - [Donate via GitHub Sponsors](https://github.com/sponsors/Prem-ium)
-   - This is the preferred donation method as you can place donations with no transaction fees & possibily receive perks for your donation.
+   - Preferred because this donation method is fee-free and offers perks for your contribution.
    - [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Prem-ium)
 
 2. **Buy Me A Coffee**
@@ -147,6 +154,10 @@ If you appreciate my work and would like to show your support, there are two con
    - [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/prem.ium)
 
 Your generous donations will go a long way in helping me cover the expenses associated with developing new features and promoting the project to a wider audience. I extend my heartfelt gratitude to all those who have already contributed. Thank you for your support!
+
+## Experiencing Issues? 🛠️
+I'm not available to respond to issues in this repository. For direct support, please consider sponsoring me below under the `Silver` or `Gold` tier.
+[![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/Prem-ium)
 
 # Pull Request Requirements 📋
 

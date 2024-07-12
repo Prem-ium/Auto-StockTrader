@@ -361,10 +361,17 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "d36dfb63-336f-47b3-a866-494e9f8a5509",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b482296e-d59c-4337-8d3c-892af1e97857",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Fidelity Buy orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -640,10 +647,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a75099f6-1987-4d0d-8213-5a5d517ed656",
+      "id": "efa6e416-e179-42c4-9635-4d622664d9cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a91f44a2-631e-48a5-8b09-97a7cca34a45",
       "comment": "",
       "command": "echo",
-      "target": "Finished automating Fidelity Sell orders for ${TICKER}. Thanks for using Prem-ium's Auto-StockTrader Project. If you are a 'Gold' tier GitHub sponsor, please remember to pull from the private Gold sponsor repo for a better experience + exclusive features! ",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]

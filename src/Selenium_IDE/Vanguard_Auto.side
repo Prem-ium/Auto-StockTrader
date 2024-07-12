@@ -641,7 +641,14 @@
       "id": "4e629ea8-0734-4b25-9ddb-62f6e08cd814",
       "comment": "",
       "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8bb020f-c428-4155-bb6e-c985d06c5522",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -1288,10 +1295,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "43f65b9c-61d6-433b-a716-2be8a47befdc",
+      "id": "c10f23e7-65ef-4eae-85f5-90e5fdfeb09e",
       "comment": "",
       "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ff95159-b87c-46b9-b4b4-cf8794cbd944",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
@@ -1836,10 +1850,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "a1b43ed0-a5bb-4da3-8716-17323db87904",
+      "id": "924b161f-29e0-4ed8-a414-fd6b98edf48e",
       "comment": "",
       "command": "open",
-      "target": "https://holdings.web.vanguard.com/",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69bdf2f7-32a3-4118-9520-218a9005de5b",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
       "targets": [],
       "value": ""
     }]
