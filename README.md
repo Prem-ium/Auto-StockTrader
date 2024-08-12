@@ -37,8 +37,8 @@ This project contains the means of automating buy/sell stock orders within:
 - Merrill Edge Lynch
 - Sofi Invest
 - Vanguard
-- Robinhood (GitHub Gold Sponsor, Early Access)
-- WellsTrade (GitHub Gold Sponsor, Exclusive Access)
+- Robinhood (GitHub Gold Sponsor)
+- WellsTrade (GitHub Gold Sponsor)
 
 Note: Please note that although I no longer have an Ally Invest or Merrill Edge account, the existing scripts should still function as intended. However, I won't be able to provide updates or make changes specific to those platforms.
 
@@ -53,19 +53,15 @@ To use this project, you will need to set the following environment variables in
 | `CHASE_AI`          | [AI Values found in Chase's Trade URL for each account](https://user-images.githubusercontent.com/80719066/216079858-746af166-8387-41ad-9564-dd0c6285eb39.png). You can find [Step-By-Step](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD#chase-automation) here.           | Nested List of Strings| 
 | `FIRSTRADE_AI`      | Firstrade Account Numbers | List of Strings       |
 | `ALLY_AI`           | Ally Account Numbers -- In [Ally Invest Settings Webpage](https://live.invest.ally.com/settings), change the default orders on the settings for all accounts to be a small penny stock for default stock ticker to minimize risk, Market, 1 Quantity!! | List of Strings       |
-| `ROBINHOOD_AI`*    | Total Number of Robinhood Accounts                 | Integer              |
-| `WELLSTRADE_AI`*    | Total Number of Wellstrade Accounts                 | Integer              |
 | --|--|--|
 | `CUSTOM_DIR`        | Path to the folder to store updated .side files  | String               |
-| `INCLUDE_PREMARKET`*        | Include Pre-Market in Buy/Sell Suite  | Boolean               |
-| `SET_SPEED`*        | Modify default speed of IDE execution (in milliseconds). Defaults to fastest (0).  | Integer               |
 | `DYNAMIC`           | Dynamic Account Length Feature (0=Off, 1=On)    | Integer              |
 | `SOFI_AI`           | List of account numbers for Sofi Helper Auto.side| List of Strings       |
 | `SOFI_ACCOUNT_NAMES`| Account names and numbers for SoFi Auto.side    | String               |
 | `SOFI_LOGIN`        | Login credentials for SoFi Auto.side file       | String               |
 | `EXCLUDE_ACCOUNTS`  | List of SoFi account names to exclude           | String               |
 
-`*` = Reference for Gold Sponsors Only
+As a reminder, if you are a Gold Sponsor, please refer to the `sponsors` repository README instead of this public version. The sponsor version includes more features and customization options tailored specifically for your needs.
 
 [Need more help?](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD) 
 
@@ -175,6 +171,7 @@ By adhering to these guidelines, you help maintain the quality and consistency o
 # License
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
+<!--
 <details><summary><h2>🎯 Project Tree</h2></summary>
 
 ```
@@ -210,6 +207,7 @@ This repository follows the [BSD 3-Clause “New” or “Revised” License.](h
       └─ sofi_main.py
 ```
 </details>
+-->
 
 
 # Acknowledgments / Final Remarks 💬
@@ -218,13 +216,18 @@ I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium"
 Thank you for backing my work. Each one of you plays a crucial role, and I am truly grateful for your contributions.
 If you find this project interesting, please consider leaving a :star2:, <a href="https://github.com/sponsors/Prem-ium">donating, </a> or <a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank">contributing</a> if you found this project to be helpful!
 
-# Speed Considerations:
+## Other Projects
+
+- **Tax Document Consolidator (Coming Soon):** A comprehensive tool for consolidating tax documents from multiple brokerages, streamlining your tax preparation. Stay tuned for its release, which will be available for purchase soon.
+- **[Referral-Link-Me](https://github.com/Prem-ium/Referral-Link-Me/blob/main/README.md):** Maximize your rewards with curated referral links for credit cards, brokerages, and more. Earn extra benefits while supporting my work. If you’re unable to provide direct donations or contributions, using these referral links is a great way to support what I do.
+
+## Speed Considerations:
 - Adjust `SET_SPEED` env to control test execution pace on faster computers.
 - Opt for 'Reference' over 'Log' in Selenium IDE for faster execution.
 - Activate 'Best performance' mode in Laptop Battery settings to accelerate execution.
 - Keep the browser's automation tab as the focused window for potential speed enhancements.
 
-# ⚠️ DISCLAIMER ⚠️
+## ⚠️ DISCLAIMER ⚠️
 I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
 
 You may use this tool at your own risk. I am not responsible for any financial loss, account restriction, or any other damage that may occur with the use of this tool. This project is provided "as is" and without warranty of any kind. 
