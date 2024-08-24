@@ -1,5 +1,9 @@
 <h1 align="center"> ⚙️ Auto Stock Trader 💵 </h1>
-
+<!--
+<p align="center">
+    <img src="https://github.com/Prem-ium/Auto-StockTrader/blob/main/.github/assets/Auto-StockTrader-Banner.jpeg?raw=true" alt="Auto Stock Trader Banner" style="height: 450px;">
+</p>
+-->
 <p align="center">An <i>awesome</i> repository containing scripts and projects for automating stock orders across multiple brokerages.</p>
 
 <p align="right"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white"/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><a href="https://github.com/sponsors/Prem-ium" target="_blank">
