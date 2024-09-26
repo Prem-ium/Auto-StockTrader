@@ -27,21 +27,24 @@
 #   OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+import os
+import json
+import sys
+import argparse
+import shutil
+import traceback
+import subprocess
 
-
-import  os
-import  json
-import  sys
-import  shutil
-
-from    dotenv             import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
-if len(sys.argv) == 2:
-    TICKER = sys.argv[1].upper()
-    print(f"Argument Received\nTicker: {TICKER}\n\n")
-else:
-    TICKER = None
+parser = argparse.ArgumentParser(description="Process stock trading arguments.")
+parser.add_argument("tickers", nargs='?', default="JOB", help="Tickers to process")
+
+args = parser.parse_args()
+
+TICKERS = args.tickers.upper()
+if "," in TICKERS:  print(f"{'-'*100}\nTICKERS passed:\t{TICKERS}\n{'-'*40}")
 
 FILE_TASK_MAP = {
     "CHASE_AI": {"file": os.path.join("src", "Selenium_IDE", "Chase_Auto.side"), "task": ""},
@@ -59,6 +62,11 @@ FILES = []
 LOGINS = []
 
 def main():
+    result = subprocess.run(['git', 'pull'], capture_output=True, text=True)
+    if 'Your local changes to the following files would be overwritten by merge' in result.stderr:
+        subprocess.run(['git', 'reset', '--hard'], check=True)
+        result = subprocess.run(['git', 'pull'], capture_output=False, text=False)
+    print('-'*100)
     for var_name, info in FILE_TASK_MAP.items():
         if os.environ.get(var_name):
             FILES.append(info["file"])
@@ -77,7 +85,8 @@ def main():
                 LOGINS.append("LOGIN:HERE")
         else:
             print(f"{var_name} is disabled. Skipping...")
-    print('\n\n')
+    
+    print(f'\n{"-"*100}\n')
     for filePath in FILES:
         task = ""
         for var_name, info in FILE_TASK_MAP.items():
@@ -96,8 +105,8 @@ def main():
                     command['target'] = LOGINS.pop(0)
 
                 # Update Ticker, if provided
-                if TICKER is not None and command['value'] == 'TICKER':
-                    command['target'] = f"return '{TICKER}'" if command['command'] == 'executeScript' else TICKER
+                if TICKERS is not None and command['value'] == 'TICKER':
+                    command['target'] = f"return '{TICKERS}'" if command['command'] == 'executeScript' else TICKERS
                 if command['command'] == 'store' and command['value'] == 'dynamic':
                     command['target'] = os.environ.get("DYNAMIC", 0)
                 # Update the account number(s) and break to next test
@@ -124,18 +133,46 @@ def main():
         os.startfile(CUSTOM_DIR)
 
     try:
-        # Create a file shortcut of RSA-QuickStart.bat located in /src to the desktop
-        if not os.path.exists(f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat"):
-            shutil.copyfile("src\\Helper_Scripts\\RSA-QuickStart.bat", f"{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
-            print(f"\n\nCreated/Updated:\t{os.environ['USERPROFILE']}\\Desktop\\RSA-QuickStart.bat")
+        directory = os.path.dirname(os.path.abspath(__file__))
+        is_windows = os.name == 'nt'
+        desktop_path = os.path.join(os.environ['USERPROFILE'], 'Desktop', 'RSA-QuickStart.bat') if is_windows else os.path.join(os.path.expanduser('~'), 'Desktop', 'RSA-QuickStart.sh')
+        source_path = os.path.join(directory, 'src', 'Helper_Scripts', 'RSA-QuickStart.bat') if is_windows else os.path.join(directory, 'src', 'Helper_Scripts', 'RSA-QuickStart.sh')
+
+        shutil.copyfile(source_path, desktop_path)
+        print(f"Created/Updated:\t{desktop_path}\n{'-'*100}")
+
+        with open(desktop_path, 'r') as file:
+            content = file.read()
+            content = content.replace('set directory=', f'set directory={directory}') if is_windows else content.replace('export DIRECTORY=', f'export DIRECTORY={directory}')
+        with open(desktop_path, 'w') as file:
+            file.write(content)
+    except FileNotFoundError:
+        print(f'Encountered File Not Found Error: {traceback.format_exc()}\n')
+        return
     except Exception as e:
-        if os.name == 'posix':
-            os.system(f"cp src/Helper_Scripts/RSA-QuickStart.sh {os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
-            print(f"\n\nCreated/Updated:\t{os.path.expanduser('~')}/Desktop/RSA-QuickStart.sh")
-        else:
-            print(e.with_traceback())
+        print(f"An unexpected error occurred: {e}")
+        traceback.print_exc()
+        return
 
-    print(f"\n\nProgram successfully completed! Thanks for using Prem-ium\'s Automated Stock Trading project!\nPlease leave a star or drop a follow if you found this project cool!\nhttps://github.com/Prem-ium/Auto-StockTrader\n")
-
+    
 if __name__ == "__main__":
     main()
+
+print(f"""
+=========================================================================================================
+                                          Script Done
+=========================================================================================================
+                          Free Public Version - Limited Features/Support
+          To access exclusive features such as faster, up-to-date automation, 
+          additional command line arguments, and an automated cash transfer/withdrawal tool, 
+          consider becoming a Gold Sponsor:
+      
+          https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
+
+          Reminder Gold Sponsors: Please check your email & accept the private repository invite.
+          Be sure to use the private version to take full advantage of your sponsorship benefits.
+
+          Thank you for your support!
+                                         (C) Prem-ium
+=========================================================================================================
+""")

@@ -1,8 +1,11 @@
 @echo off
 set /p ticker=Enter the ticker symbol: 
 
-REM REPLACE THE PATH BELOW WITH YOUR OWN PATH TO THE PROJECT FOLDER
-cd C:\Users\Frost\Desktop\CodingProjects\Auto-StockTrader
+REM set directory variable to the path of the project folder
+set directory=
+
+REM Navigate to the project folder using the directory variable
+cd %directory%
 
 python main.py %ticker%
 
@@ -17,3 +20,5 @@ REM    start msedge.exe --profile-directory="Default"
 REM    start brave.exe --profile-directory="Default"
 REM    start brave.exe --profile-directory="Profile 1"
 REM )
+
+timeout /t 15 /nobreak >nul
