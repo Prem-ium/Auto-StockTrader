@@ -123,7 +123,7 @@
       "id": "431f11b5-635e-458b-8360-9531d5f5dbe5",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -422,7 +422,7 @@
       "id": "2d7949a3-7a85-49d4-8cf4-55796866d0e1",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -769,7 +769,7 @@
       "id": "23961c54-6cc6-499b-8151-7aa05c166d8f",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {

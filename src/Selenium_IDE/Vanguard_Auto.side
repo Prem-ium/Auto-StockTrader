@@ -144,7 +144,7 @@
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -162,10 +162,10 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "97461af7-5218-4ea8-9308-386f2426f9b5",
+      "id": "83d4fafa-10d6-4e94-828d-451808cd9267",
       "comment": "",
-      "command": "executeScript",
-      "target": "return  ;",
+      "command": "store",
+      "target": "last-success",
       "targets": [],
       "value": "target"
     }, {
@@ -659,7 +659,7 @@
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -679,8 +679,8 @@
     }, {
       "id": "e3d0d8a5-2c16-4906-9e65-f628c820c58e",
       "comment": "",
-      "command": "executeScript",
-      "target": "return ;",
+      "command": "store",
+      "target": "last-success",
       "targets": [],
       "value": "target"
     }, {
@@ -1316,7 +1316,7 @@
       "id": "2cc9aea6-3035-4a22-8c00-2b78a537c1f6",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1334,10 +1334,10 @@
       "targets": [],
       "value": "accounts"
     }, {
-      "id": "eb0bea54-4f14-463e-9977-822816edb7b1",
+      "id": "59087d79-9306-4bc6-993c-d8df20804e14",
       "comment": "",
-      "command": "executeScript",
-      "target": "return  ;",
+      "command": "store",
+      "target": "last-success",
       "targets": [],
       "value": "target"
     }, {

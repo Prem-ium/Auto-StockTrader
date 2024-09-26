@@ -23,8 +23,8 @@
     }, {
       "id": "0c21e4cd-cee0-4c9a-902d-711bd51ff73f",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
+      "command": "store",
+      "target": "enterlastsuccessfulaccounthere",
       "targets": [],
       "value": "target"
     }, {
@@ -52,7 +52,7 @@
       "id": "8c9dc35a-76b8-4428-a554-848f848b2b0d",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}.trim()) + 1);",
       "targets": [],
       "value": "list"
     }, {
@@ -285,10 +285,10 @@
       "targets": [],
       "value": "QUANTITY"
     }, {
-      "id": "e2e95a20-d305-49d8-a243-44c1465daa0c",
+      "id": "3a7f8864-c6ce-41a0-bc24-2367f38b18eb",
       "comment": "",
-      "command": "executeScript",
-      "target": "return \"LAST_SUCCESSFUL_ACCOUNT_HERE\".trim();",
+      "command": "store",
+      "target": "enterlastsuccessfulaccounthere",
       "targets": [],
       "value": "target"
     }, {
@@ -313,10 +313,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "020ab8b9-c9f0-4eab-9e44-288650372ddb",
+      "id": "3c57aa74-6990-4332-bb2c-fe40c6c9ecbb",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}) + 1);",
+      "target": "return ${accounts}.slice(${accounts}.indexOf(${target}.trim()) + 1);",
       "targets": [],
       "value": "list"
     }, {
@@ -532,7 +532,7 @@
     }]
   }, {
     "id": "24b2fe7d-03f7-4b18-b846-77fae0f90f87",
-    "name": "0-Firstrade_Login",
+    "name": "| Firstrade Login",
     "commands": [{
       "id": "550a267d-aa4e-423f-b611-90458a1759ac",
       "comment": "",

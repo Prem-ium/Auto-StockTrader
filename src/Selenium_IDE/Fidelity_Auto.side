@@ -10,7 +10,7 @@
       "id": "15dbef43-b5dd-4baf-8460-bc6b5744cea5",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -118,13 +118,6 @@
       "target": "return ${TICKER}.split(\",\");",
       "targets": [],
       "value": "TICKERS"
-    }, {
-      "id": "4e05d2db-a483-4693-96d5-45a4d6ce1941",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
     }, {
       "id": "00b0aa03-8311-4925-9d8e-9a96d8392761",
       "comment": "",
@@ -340,17 +333,17 @@
       "targets": [],
       "value": "count"
     }, {
-      "id": "a9be907a-5b53-4ee5-9e16-f2440b416d21",
+      "id": "96575f14-2574-4f49-b8ca-99e9fe427610",
       "comment": "",
       "command": "executeScript",
-      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+      "target": "    let totalSteps = ${list}.length * ${TICKERS}.length;     let currentAccountIndex = ${list}.indexOf(${account});     let currentTickerIndex = ${TICKERS}.indexOf(${TICK});     let currentStep = (currentAccountIndex * ${TICKERS}.length) + currentTickerIndex + 1;     let percentage = (currentStep / totalSteps) * 100;     return percentage.toFixed(1);",
       "targets": [],
       "value": "progress"
     }, {
-      "id": "b2816706-43f0-477d-bbb7-3bf089ed2eb3",
+      "id": "b34ed3d7-2b62-4d7a-bafd-1187f1ce1b71",
       "comment": "",
       "command": "echo",
-      "target": "Counter Progress ${count}: (${progress}%)",
+      "target": "${account} - ${TICK} DONE: (${progress}%)",
       "targets": [],
       "value": ""
     }, {
@@ -382,7 +375,7 @@
       "id": "caac9739-def8-4d8b-83e9-eba2cc0bb00a",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -476,13 +469,6 @@
       "target": "",
       "targets": [],
       "value": ""
-    }, {
-      "id": "8bf6939e-d8ab-4c39-9419-77492b909735",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0;",
-      "targets": [],
-      "value": "count"
     }, {
       "id": "e9a1aa9b-6f8f-4c2b-91ee-a0da483ec060",
       "comment": "",
@@ -619,24 +605,17 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "8c2c66a3-2b14-425d-aefb-31eeaf51307d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return ${count} + 1;",
-      "targets": [],
-      "value": "count"
-    }, {
       "id": "f2d2f5ed-3958-46ef-994c-7b598d5c5045",
       "comment": "",
       "command": "executeScript",
-      "target": "let percentage = (${count} / ${list}.length) * 100; return percentage.toFixed(1);",
+      "target": "    let totalSteps = ${list}.length * ${TICKERS}.length;     let currentAccountIndex = ${list}.indexOf(${account});     let currentTickerIndex = ${TICKERS}.indexOf(${TICK});     let currentStep = (currentAccountIndex * ${TICKERS}.length) + currentTickerIndex + 1;     let percentage = (currentStep / totalSteps) * 100;     return percentage.toFixed(1);",
       "targets": [],
       "value": "progress"
     }, {
       "id": "b4bcb70a-ade0-4f13-9235-79720b38ba8a",
       "comment": "",
       "command": "echo",
-      "target": "Counter Progress ${count}: (${progress}%)",
+      "target": "${account} - ${TICK} DONE: (${progress}%)",
       "targets": [],
       "value": ""
     }, {

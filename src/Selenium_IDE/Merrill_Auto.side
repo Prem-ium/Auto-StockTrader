@@ -156,7 +156,7 @@
       "id": "edc50185-b08e-4814-8299-4b98a1cfd2c2",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -551,7 +551,7 @@
       "id": "4cfdd1e8-0442-43be-a6db-70dad509de0a",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {

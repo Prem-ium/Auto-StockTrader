@@ -10,7 +10,7 @@
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -323,7 +323,7 @@
       "id": "b3d20f89-16df-4859-aed7-e0e9587395bc",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -664,7 +664,7 @@
       "id": "ff0bba64-29e7-422b-9df9-a2137e875cce",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -977,7 +977,7 @@
       "id": "2b05816b-1a0e-4665-87e7-8a56840ccea6",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
@@ -1318,7 +1318,7 @@
       "id": "29630226-877a-4845-861d-02f7531ce27c",
       "comment": "",
       "command": "store",
-      "target": "JOB",
+      "target": "TICKERHERE",
       "targets": [],
       "value": "TICKER"
     }, {
