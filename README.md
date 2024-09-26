@@ -239,9 +239,10 @@ If you find this project interesting, please consider leaving a :star2:, <a href
 - Keep the browser's automation tab as the focused window for potential speed enhancements.
 <details>
   <summary>🎯 Stream Deck</summary>
-  
+  <!--![image](https://github.com/user-attachments/assets/ea4f71a8-183f-402a-91e5-2c1c5f7b3e3b)-->
+
   <p>This part of the README might be extremely specific to a subset of people, specifically those who own Elgato Stream Decks. This is how I have mine currently set up, which may or may not be helpful for others:</p>
-  <img src="" alt="Stream Deck Setup">
+  <img src="https://github.com/user-attachments/assets/ea4f71a8-183f-402a-91e5-2c1c5f7b3e3b" alt="Stream Deck Setup">
   
   <table>
     <tr>
