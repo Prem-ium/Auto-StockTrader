@@ -48,7 +48,7 @@ The private version of the automation script(s) have been **completely reworked*
 You gain access to the latest updates for brokerage automation and project features, ensuring that any potential optimizations, errors, or bugs are promptly addressed in the private version. In contrast, the public version remains unchanged and is not updated as frequently.
 
 #### 💰 **Exclusive Tools**  
-Gain access to the **Automated Cash Transfer/Withdrawal tool**, which lets you seamlessly consolidate funds from multiple accounts into a single account. This script also allows you to rename multiple accounts for easier management. Additionally, Gold Sponsors receive exclusive access to trading  automation for Robinhood and WellsTrade.
+Gain access to the **Automated Cash Transfer/Withdrawal tool**, which lets you seamlessly consolidate funds from multiple accounts into a single account. Unlock Fidelity, Schwab, Wellstrade, and Chase. This script also allows you to rename multiple accounts for easier management. Additionally, Gold Sponsors receive exclusive access to trading  automation for Robinhood and WellsTrade.
 
 **Ready to upgrade?**  
 [Become a Gold Sponsor **here** and unlock these exclusive benefits!](https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false)
@@ -181,45 +181,6 @@ By adhering to these guidelines, you help maintain the quality and consistency o
 
 # License
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
-
-<!--
-<details><summary><h2>🎯 Project Tree</h2></summary>
-
-```
-├─ .env.example
-├─ .github
-│  └─ FUNDING.yml
-├─ .gitignore
-├─ LICENSE
-├─ README.md
-├─ main.py
-├─ requirements.txt
-└─ src
-   ├─ Helper_Scripts
-   │  ├─ Fidelity_Account_Array.js
-   │  ├─ merge-tax-pdfs.py
-   │  ├─ README.md
-   │  ├─ requirements.txt
-   │  ├─ RSA-QuickStart.bat
-   │  ├─ RSA-QuickStart.sh
-   │  └─ SoFi_Account_Array.js
-   ├─ README.md
-   ├─ Selenium_IDE
-   │  ├─ Ally_Auto.side
-   │  ├─ Chase_Auto.side
-   │  ├─ Fidelity_Auto.side
-   │  ├─ Firstrade_Auto.side
-   │  ├─ Merrill_Auto.side
-   │  ├─ Schwab_Auto.side
-   │  └─ Vanguard_Auto.side
-   └─ X_Archive
-      ├─ README.md
-      ├─ Sofi Helper.side
-      └─ sofi_main.py
-```
-</details>
--->
-
 
 # Acknowledgments / Final Remarks 💬
 I express my sincere gratitude to <a href="https://github.com/sponsors/Prem-ium">my sponsors</a>, <a href="https://www.buymeacoffee.com/prem.ium" target="_blank">donors</a>, &<a href="https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors" target="_blank"> project contributor(s).</a>  Your support is invaluable, and it enables me to create exciting projects like this.
