@@ -1,0 +1,589 @@
+{
+  "id": "e4e597d0-462c-413c-9297-475a4a3036c2",
+  "version": "2.0",
+  "name": "Account Manager",
+  "url": "http://localhost/",
+  "tests": [{
+    "id": "208cfed9-1e03-448d-91ad-1364fa16bc02",
+    "name": "[ Merrill Edge Account Rename ]",
+    "commands": [{
+      "id": "a46221a1-3a6a-4d76-8157-13d8d0d8657d",
+      "comment": "",
+      "command": "echo",
+      "target": "Edge Account Rename Tool has been provided for the public. Fidelity is available for Gold Sponsors. ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41d2411a-5cd0-4313-a93f-4e12b3be05ff",
+      "comment": "",
+      "command": "echo",
+      "target": "The following has been provided \"as is\", no updates/improvements will be added for this public version. ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9a9d601-8f6d-48bc-903b-df9ab9f869ba",
+      "comment": "",
+      "command": "open",
+      "target": "https://olui2.fs.ml.com/CSProfileSettings/DisplayOptions.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e55a3a34-13bd-4172-9b77-9d3ab9c2ebe8",
+      "comment": "Change '15' to the number of your accounts",
+      "command": "executeScript",
+      "target": "return Array.from({length: 15}, (_, i) => i);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "9d331980-9f39-42f1-b249-5e76d2eace19",
+      "comment": "",
+      "command": "forEach",
+      "target": "accounts",
+      "targets": [],
+      "value": "numb"
+    }, {
+      "id": "a539fb01-e5b9-4171-9028-94ff59ac7a5b",
+      "comment": "",
+      "command": "pause",
+      "target": "450",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d6f70da-b800-4383-a2f5-8988507a9aaa",
+      "comment": "",
+      "command": "click",
+      "target": "id=rename${numb}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a270ce55-d46d-4a05-8c52-25e1ed2e3ccd",
+      "comment": "",
+      "command": "click",
+      "target": "id=input${numb}",
+      "targets": [
+        ["id=input0", "id"],
+        ["css=#input0", "css:finder"],
+        ["xpath=//input[@id='input0']", "xpath:attributes"],
+        ["xpath=//div[@id='dvID0']/input", "xpath:idRelative"],
+        ["xpath=//td/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5307381-1311-4c11-82e5-e7fd3502c02c",
+      "comment": "",
+      "command": "type",
+      "target": "id=input${numb}",
+      "targets": [
+        ["id=input0", "id"],
+        ["css=#input0", "css:finder"],
+        ["xpath=//input[@id='input0']", "xpath:attributes"],
+        ["xpath=//div[@id='dvID0']/input", "xpath:idRelative"],
+        ["xpath=//td/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${numb}-CMA-EDGE"
+    }, {
+      "id": "22dab363-342b-42d1-9981-c386c8cfa8f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=rename${numb}",
+      "targets": [
+        ["id=rename0", "id"],
+        ["css=#rename0", "css:finder"],
+        ["xpath=//a[@id='rename0']", "xpath:attributes"],
+        ["xpath=//tr[@id='GEGrid1_tr_0_0']/td[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:Rename('input0','rename0',0,'');\")]", "xpath:href"],
+        ["xpath=//td[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32b99ebd-9b74-43f6-a086-5c8bc427e207",
+      "comment": "",
+      "command": "echo",
+      "target": "${numb} Account Name Updated",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2871e4c8-e4d8-4533-9898-7855363dcb75",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eacc5aff-c1a9-4e93-ba52-54ba6d6c28e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ctl00_btnSave",
+      "targets": [
+        ["id=ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ctl00_btnSave", "id"],
+        ["css=#ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ctl00_btnSave", "css:finder"],
+        ["xpath=//span[@id='ctl00_ctl00_ctl01_cphSiteMst_cphNestedPage_cphStage_view1_ctl00_btnSave']", "xpath:attributes"],
+        ["xpath=//a[@id='lnkSaveDisplayOptions']/span", "xpath:idRelative"],
+        ["xpath=//p/a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Save Changes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52e9e6c4-dd85-49c2-98c3-07584b414080",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22a0ec9f-5b9c-4523-a669-779bbcf70018",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a8abba1b-36b1-4572-83e7-52e5bee21c54",
+    "name": "- Vanguard Withdrawal Tool",
+    "commands": [{
+      "id": "ae22a01c-0ea3-4818-b62e-a17c608cda2f",
+      "comment": "",
+      "command": "echo",
+      "target": "Vanguard Automated Withdrawal Tool has been provided for the public. Fidelity, Chase, Schwab, Wellstrade is available for Gold Sponsors. ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cafb2351-d9a4-42a6-a3a3-b4fa74ce452b",
+      "comment": "",
+      "command": "echo",
+      "target": "The following has been provided \"as is\", no updates/improvements will be added for this public version. ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2d826e6-25a3-483d-99c6-d17e93d395cd",
+      "comment": "",
+      "command": "open",
+      "target": "https://holdings.web.vanguard.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa25d989-aa83-4f16-97c9-8bd9efd5ad74",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 50;",
+      "targets": [],
+      "value": "minimum_balance"
+    }, {
+      "id": "ddf1d6c8-02ad-4a5c-8026-8811aeaf65d5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 20;",
+      "targets": [],
+      "value": "minimum_withdrawl"
+    }, {
+      "id": "a4ac8ae3-ff82-45c4-b3cc-b278c29d18ff",
+      "comment": "DRY mode: 1= enabled, 0= disabled",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "DRY"
+    }, {
+      "id": "f09c6cb6-afda-427d-8b23-cd98a1142610",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Expand all accounts')]",
+      "targets": [
+        ["css=.c11n-link--primary:nth-child(1) > .c11n-link__content", "css:finder"],
+        ["xpath=//main[@id='app-main-content']/ss-lib-page-layout/section/div[2]/div/div[4]/div/app-holdings/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//app-holdings/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Expand all accounts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8416a05b-1a95-4d6a-96e5-486ede46e753",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e153750d-2ce3-49eb-acb4-5f5c642eacd3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const accordions = document.querySelectorAll('c11n-accordion'); const filteredAccordions = Array.from(accordions).filter(accordion => {     const headingText = accordion.querySelector('span.c11n-accordion__heading span').textContent;     return headingText.includes('Brokerage Account') && !headingText.includes('IRA'); }); const hrefList = []; filteredAccordions.forEach(accordion => {     const anchors = accordion.querySelectorAll('a.c11n-nav-overflow__a.c11n-menu__item');     anchors.forEach(anchor => {         const href = anchor.getAttribute('href');         if (href.includes('ExchangeFunds') && href.endsWith('onRetirementMode=true')) {             hrefList.push(href);         }     }); }); return (hrefList);",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "169bae20-fba1-490b-a753-8e4327707f67",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1;",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "7ce54612-6c6b-476f-9b1b-2e451b73d6f2",
+      "comment": "",
+      "command": "echo",
+      "target": "${list}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "373b33f1-52e4-4121-b1e8-c37c54557b71",
+      "comment": "",
+      "command": "forEach",
+      "target": "list",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "1dc8ea4a-6217-4527-9590-ad8fd7ba3153",
+      "comment": "",
+      "command": "if",
+      "target": "${i} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af96b854-9ccf-4e0b-a736-19fc42c200ee",
+      "comment": "",
+      "command": "echo",
+      "target": "Skipping first account. ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecc0458c-fb38-49f9-9427-d0ad08c26992",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1;",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "50777c07-bb9a-43e3-9103-9840a3cafdad",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9344dc5-5052-4593-b9c3-abeed484bec2",
+      "comment": "",
+      "command": "open",
+      "target": "${url}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9241ece-4b34-46e8-92b3-4024cca23c4c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[2]/label/input",
+      "targets": [
+        ["xpath=//span[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62ed68ef-6ba4-42fa-8151-ca79cdce889a",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=/html/body/div[2]/div[6]/span[1]/div/div/div/span/form/span[2]/div/div[5]/span/div/span/div/span/span[1]/span[${i}]/div/div/div[2]/div/span/div/span/span[1]/span/span[1]/table/tbody/tr[2]/td[3]/span/span[1]/span/span[1]/span",
+      "targets": [],
+      "value": "balance"
+    }, {
+      "id": "235ffce6-b234-4647-8e50-e978366d4c63",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var balance = ${balance}; var minAmountToKeep = ${minimum_balance}; var cleanedBalance = parseFloat(balance.replace(/[$,]/g, '')); var amountToWithdraw = cleanedBalance - minAmountToKeep; amountToWithdraw = Math.max(0, amountToWithdraw); return (amountToWithdraw - 0.05).toFixed(2);",
+      "targets": [],
+      "value": "amount"
+    }, {
+      "id": "dc80db2a-2c91-48ed-abce-2dc274ee19b3",
+      "comment": "",
+      "command": "if",
+      "target": "${amount} > 0 && ${amount} > ${minimum_withdrawl}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab6f3dea-9be7-4625-92d1-f139d9be0911",
+      "comment": "",
+      "command": "pause",
+      "target": "1250",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ab8113f-65ef-4067-a833-72a3b873e12f",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//span[3]/input",
+      "targets": [],
+      "value": "drop_one"
+    }, {
+      "id": "6895e166-2207-4164-830f-0f564d408963",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//span[2]/span[3]/input",
+      "targets": [],
+      "value": "drop_two"
+    }, {
+      "id": "1581f6d4-8676-4cb3-a1eb-e9eedbd23128",
+      "comment": "",
+      "command": "if",
+      "target": "${drop_one} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6705e53a-2184-4bf3-a966-76cf897f3bd5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[3]/input",
+      "targets": [
+        ["xpath=//span[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41f090ea-7dfd-4c08-afde-2b18416e6e92",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//span[3]/input",
+      "targets": [
+        ["id=buysellForm:dollarInputAmountsellAccount0559423304152718", "id"],
+        ["name=buysellForm:dollarInputAmountsellAccount0559423304152718", "name"],
+        ["css=#buysellForm\\3A dollarInputAmountsellAccount0559423304152718", "css:finder"],
+        ["xpath=//input[@id='buysellForm:dollarInputAmountsellAccount0559423304152718']", "xpath:attributes"],
+        ["xpath=//span[@id='comp-buysellForm:dollarInputAmountsellAccount0559423304152718']/span[3]/input", "xpath:idRelative"],
+        ["xpath=//span[3]/input", "xpath:position"]
+      ],
+      "value": "${amount}"
+    }, {
+      "id": "5cd38680-412f-4f9b-8c00-1159281b19a1",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${drop_two} == 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3027dbd3-f849-4349-b19a-7ea50d10faff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[2]/span[3]/input",
+      "targets": [
+        ["id=buysellForm:dollarInputAmountsellAccount3580522330121557", "id"],
+        ["name=buysellForm:dollarInputAmountsellAccount3580522330121557", "name"],
+        ["css=#buysellForm\\3A dollarInputAmountsellAccount3580522330121557", "css:finder"],
+        ["xpath=//input[@id='buysellForm:dollarInputAmountsellAccount3580522330121557']", "xpath:attributes"],
+        ["xpath=//span[@id='comp-buysellForm:dollarInputAmountsellAccount3580522330121557']/span[3]/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b743396-dfb5-4475-b073-5b4c70b68ab3",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//span[2]/span[3]/input",
+      "targets": [],
+      "value": "${amount}"
+    }, {
+      "id": "f1f61354-650f-4c8f-8af9-0e33da056967",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c764defd-a576-4456-8066-f36e84d38d3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=buysellForm:exchangeEditContinueInput",
+      "targets": [
+        ["id=buysellForm:exchangeEditContinueInput", "id"],
+        ["css=#buysellForm\\3A exchangeEditContinueInput", "css:finder"],
+        ["xpath=//input[@id='buysellForm:exchangeEditContinueInput']", "xpath:attributes"],
+        ["xpath=//span[@id='buysellForm:exchangeEditContinue']/div/span/div/input", "xpath:idRelative"],
+        ["xpath=//span/table/tbody/tr/td[2]/span/span/span/div/span/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "253ad9ea-cd6e-4b53-99b0-65e81d58dbe1",
+      "comment": "",
+      "command": "pause",
+      "target": "1900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23effaa3-cd43-4b1c-99c6-84223f15a1f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=buysellForm:buyAccountNavBox0_headcontent",
+      "targets": [
+        ["id=buysellForm:buyAccountNavBox0_headcontent", "id"],
+        ["css=#buysellForm\\3A buyAccountNavBox0_headcontent", "css:finder"],
+        ["xpath=//div[@id='buysellForm:buyAccountNavBox0_headcontent']", "xpath:attributes"],
+        ["xpath=//div[@id='buysellForm:buyAccountNavBox0_head']/span/div/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div/span/div/span/div/span/span/span/div/div/div/span/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3468889-1860-4540-9d3d-0c529bb6d374",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//tr[5]/td/span/span/span/span[2]/label/input",
+      "targets": [
+        ["xpath=//tr[5]/td/span/span/span/span[2]/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00e38880-615a-4352-8819-836ff3c949e1",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46bd4204-86e0-4a36-87d8-da0a90aca230",
+      "comment": "",
+      "command": "click",
+      "target": "id=buysellForm:exchangeEditBuyContinueInput",
+      "targets": [
+        ["id=buysellForm:exchangeEditBuyContinueInput", "id"],
+        ["css=#buysellForm\\3A exchangeEditBuyContinueInput", "css:finder"],
+        ["xpath=//input[@id='buysellForm:exchangeEditBuyContinueInput']", "xpath:attributes"],
+        ["xpath=//span[@id='buysellForm:exchangeEditBuyContinue']/div/span/div/input", "xpath:idRelative"],
+        ["xpath=//div[8]/span/span/table/tbody/tr/td/span/span/span/div/span/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a7c258-be34-4b2b-8923-20435a08e4f3",
+      "comment": "",
+      "command": "pause",
+      "target": "1500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4b3efcb-43ea-4281-b62f-894292b83243",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//*[@id=\"buysellForm:invalidSpecialPayeeInput\"]",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "0d6a9347-6a54-4395-aa5f-bcd3c409752c",
+      "comment": "",
+      "command": "if",
+      "target": "${error} != 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5beeb388-7bd1-4916-b260-3e1b6c835492",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[2]/span/span/div/span/div/input",
+      "targets": [
+        ["id=exchangeReviewLayerForm:exchangeConsentAcceptReviewInput", "id"],
+        ["css=#exchangeReviewLayerForm\\3A exchangeConsentAcceptReviewInput", "css:finder"],
+        ["xpath=//input[@id='exchangeReviewLayerForm:exchangeConsentAcceptReviewInput']", "xpath:attributes"],
+        ["xpath=//span[@id='exchangeReviewLayerForm:exchangeConsentAcceptReview']/div/span/div/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/span/div/span/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86c3ce8c-c283-49b7-8d37-d052731fbe51",
+      "comment": "",
+      "command": "if",
+      "target": "${DRY} != 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dde77657-a103-4860-8fda-e886e37ec657",
+      "comment": "",
+      "command": "click",
+      "target": "id=buysellForm:exchangeReviewSubmitInput",
+      "targets": [
+        ["id=buysellForm:exchangeReviewSubmitInput", "id"],
+        ["css=#buysellForm\\3A exchangeReviewSubmitInput", "css:finder"],
+        ["xpath=//input[@id='buysellForm:exchangeReviewSubmitInput']", "xpath:attributes"],
+        ["xpath=//span[@id='buysellForm:exchangeReviewSubmit']/div/span/div/input", "xpath:idRelative"],
+        ["xpath=//td[2]/span[3]/span/span/div/span/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06932125-4b9f-4bc6-897d-622a1ee2ea8d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78a4d771-3319-46d2-b013-383cb7a1baea",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad8ac184-36b8-4ab8-b49a-297dcd7f78eb",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6189e3b6-b996-4d6b-8b72-3261a4a8a0db",
+      "comment": "",
+      "command": "echo",
+      "target": "Not enough funds to meet minimum: ${amount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0217370a-3a78-4fdd-8a07-03208662f7c7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "056efd7d-8363-4662-93bf-f54275740333",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${i} + 1;",
+      "targets": [],
+      "value": "i"
+    }, {
+      "id": "b463577a-3383-45ce-9d72-5dad9e3f1b70",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce2a2800-a015-4ad8-b68e-38a66290845b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ce7fdb0-bb7d-4363-b02f-6a4da6a72ce7",
+      "comment": "",
+      "command": "open",
+      "target": "https://github.com/sponsors/Prem-ium/sponsorships?sponsor=Prem-ium&tier_id=308205&preview=false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad794090-adf8-4501-87de-d4202869b94b",
+      "comment": "",
+      "command": "echo",
+      "target": "Please consider sponsoring this project by becoming a sponsor. Gold sponsors get an invite to a private repository with exclusive features, priority bug support, & frequent updates. If you are a Gold sponsor, please remember to use the private sponsors repo instead of this public version to reap the benefits of your support! Thank you for your support!",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6d1373e6-7a21-4814-b8c8-e041000d57b3",
+    "name": "Account Rename Tool",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["208cfed9-1e03-448d-91ad-1364fa16bc02"]
+  }, {
+    "id": "664d0d8b-ed95-4ff5-bc85-0e08c0d9b713",
+    "name": "Account Withdrawal Tool",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a8abba1b-36b1-4572-83e7-52e5bee21c54"]
+  }],
+  "urls": ["https://digital.fidelity.com/", "http://localhost/"],
+  "plugins": []
+}

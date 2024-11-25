@@ -57,7 +57,8 @@ FILE_TASK_MAP = {
     "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
 }
 
-CUSTOM_DIR = os.environ.get("CUSTOM_DIR", "")
+CUSTOM_DIR = os.environ.get("CUSTOM_DIR", os.path.join(os.path.expanduser('~'), 'Desktop', 'AutoStockTrader-Sponsor'))
+os.makedirs(CUSTOM_DIR, exist_ok=True)
 FILES = []
 LOGINS = []
 
@@ -66,6 +67,10 @@ def main():
     if 'Your local changes to the following files would be overwritten by merge' in result.stderr:
         subprocess.run(['git', 'reset', '--hard'], check=True)
         result = subprocess.run(['git', 'pull'], capture_output=False, text=False)
+    if CUSTOM_DIR:
+        dest_path = os.path.join(CUSTOM_DIR, "Account_Management_Tools.side")
+        try:    shutil.copyfile(os.path.join("src", "Selenium_IDE", "Account_Management_Tools.side"), dest_path)
+        except  shutil.SameFileError:    pass
     print('-'*100)
     for var_name, info in FILE_TASK_MAP.items():
         if os.environ.get(var_name):
