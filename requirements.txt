@@ -1,3 +1,1 @@
 python-dotenv
-selenium
-webdriver_manager
