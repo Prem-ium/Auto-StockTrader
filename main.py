@@ -52,7 +52,7 @@ FILE_TASK_MAP = {
     "VANGUARD_AI": {"file": os.path.join("src", "Selenium_IDE", "Vanguard_Auto.side"), "task": ""},
     "FIDELITY_AI": {"file": os.path.join("src", "Selenium_IDE", "Fidelity_Auto.side"), "task": ""},
     "SCHWAB_AI": {"file": os.path.join("src", "Selenium_IDE", "Schwab_Auto.side"), "task": ""},
-    "SOFI_AI": {"file": os.path.join("src", "X_Archive", "Sofi Helper.side"), "task": ""},
+    "SOFI_AI":  {"file": os.path.join("src","Selenium_IDE","Sofi Helper.side"),     "task": ""},
     "ALLY_AI": {"file": os.path.join("src", "Selenium_IDE", "Ally_Auto.side"), "task": ""},
     "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
 }

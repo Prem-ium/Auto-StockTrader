@@ -76,18 +76,8 @@ To use this project, you will need to set the following environment variables in
 | `DYNAMIC`             | Enable dynamic account length feature (0 = Off, 1 = On)                                                                 | Integer                     |
 | `SOFI_AI`             | List of account numbers for Sofi Helper Auto.side                                                                         | List of Strings             |
 
-As a reminder, if you are a Gold Sponsor, please refer to the `sponsors` repository README instead of this public version. The sponsor version includes more features and customization options tailored specifically for your needs.
-
-### Archived Sofi Script Environmental Variables:
-| Variable             | Description                                                                                                            | Type                        |
-|----------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| `SOFI_ACCOUNT_NAMES`  | Account names and numbers for SoFi Auto.side                                                                             | String                      |
-| `SOFI_LOGIN`          | Login credentials for SoFi Auto.side file                                                                                | String                      |
-| `EXCLUDE_ACCOUNTS`    | List of SoFi account names to exclude                                                                                    | String                      |
-
-
+As a reminder, if you are a Gold Sponsor, please refer to the private `sponsors` repository README instead of this public version. The sponsor version includes more features and customization options tailored specifically for your needs.
 [Need more help?](https://github.com/Prem-ium/Auto-StockTrader/blob/main/src/README.MD) 
-
 
 <details>
   <summary>Login Env Example</summary>
