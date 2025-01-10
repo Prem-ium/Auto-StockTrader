@@ -144,7 +144,7 @@ def main():
         source_path = os.path.join(directory, 'src', 'Helper_Scripts', 'RSA-QuickStart.bat') if is_windows else os.path.join(directory, 'src', 'Helper_Scripts', 'RSA-QuickStart.sh')
 
         shutil.copyfile(source_path, desktop_path)
-        print(f"Created/Updated:\t{desktop_path}\n{'-'*100}")
+        print(f"Created/Updated:\t{desktop_path}")
 
         with open(desktop_path, 'r') as file:
             content = file.read()
@@ -165,19 +165,20 @@ if __name__ == "__main__":
 
 print(f"""
 =========================================================================================================
-                                          Script Done
-=========================================================================================================
-                          Free Public Version - Limited Features/Support
-          To access exclusive features such as faster, up-to-date automation, 
-          additional command line arguments, and an automated cash transfer/withdrawal tool, 
-          consider becoming a Gold Sponsor:
-      
-          https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
+                        Script Execution Complete
+---------------------------------------------------------------------------------------------------------
+                Free Public Version - Limited Features/Support
+                            (C) Prem-ium
+---------------------------------------------------------------------------------------------------------
+Upgrading to Gold Sponsorship unlocks exclusive features, including:
+- Faster, reliable Python/Selenium IDE scripts with consolidated brokerage automation.
+- Seamless automation with automated limit prices and account retrieval.
+- Exclusive setup and customization options via .env and command line arguments.
+- Automated cash transfer/withdrawal tools for Fidelity, Chase, and more.
+- WellsTrade & Robinhood automation support.
 
-          Reminder Gold Sponsors: Please check your email & accept the private repository invite.
-          Be sure to use the private version to take full advantage of your sponsorship benefits.
+Join here: https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
 
-          Thank you for your support!
-                                         (C) Prem-ium
-=========================================================================================================
-""")
+Thank you for your support!
+=========================================================================================================""")
+
