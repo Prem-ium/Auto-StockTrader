@@ -1,5 +1,6 @@
+
 .env
-.vscode/
 test*
 ENV-*
-Master Test Suite.side
+Master*.side
+Ticker*.side
