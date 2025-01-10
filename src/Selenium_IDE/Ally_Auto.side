@@ -119,7 +119,7 @@
     }]
   }, {
     "id": "24549c69-892a-4b1a-8caa-c9fd62a77ebf",
-    "name": "Buy Ally",
+    "name": "+ Buy Ally",
     "commands": [{
       "id": "34438ce8-07eb-4e60-bc44-91fe755b49e5",
       "comment": "",
@@ -342,7 +342,7 @@
     }]
   }, {
     "id": "e0b28894-e4e4-4292-8e4e-bbfd95e5114c",
-    "name": "Sell Ally",
+    "name": "- Sell Ally",
     "commands": [{
       "id": "5bd0b0b4-7758-4976-a514-1adba2647a66",
       "comment": "",
@@ -565,7 +565,7 @@
     }]
   }, {
     "id": "9f94071d-8bcb-4a00-83f8-58a00c075e7e",
-    "name": "Buy Limit Ally",
+    "name": "+ Buy Limit Ally",
     "commands": [{
       "id": "c7010fb5-97b3-438d-bcad-fccab99abb19",
       "comment": "",
@@ -853,7 +853,7 @@
     }]
   }, {
     "id": "6617908a-6855-44df-8928-cc224372d3e2",
-    "name": "Sell Limit Ally",
+    "name": "- Sell Limit Ally",
     "commands": [{
       "id": "d12a6826-7a16-4b65-a87a-edba0a33d818",
       "comment": "",

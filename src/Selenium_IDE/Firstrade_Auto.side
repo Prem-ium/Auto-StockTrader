@@ -5,7 +5,7 @@
   "url": "https://invest.firstrade.com",
   "tests": [{
     "id": "c4367fd5-3ea6-4cac-ae91-509defb9d7c9",
-    "name": "Buy_Firstrade",
+    "name": "+ Buy Firstrade",
     "commands": [{
       "id": "0d6894dd-2d55-4987-9e90-c92de75a3c00",
       "comment": "",
@@ -269,7 +269,7 @@
     }]
   }, {
     "id": "79f621d4-a532-4e4a-bb70-680c3f88d074",
-    "name": "Sell_Firstrade",
+    "name": "- Sell Firstrade",
     "commands": [{
       "id": "79813301-6cc4-48d2-9e86-2a68ce307317",
       "comment": "",

@@ -151,7 +151,7 @@
     }]
   }, {
     "id": "abeb29df-f535-4ffd-815a-1b73fdc45d16",
-    "name": "Sell Mer. Edge",
+    "name": "- Sell Merrill Edge",
     "commands": [{
       "id": "edc50185-b08e-4814-8299-4b98a1cfd2c2",
       "comment": "",
@@ -546,7 +546,7 @@
     }]
   }, {
     "id": "7fa891f3-a2b2-41a2-b7c7-9455fc84b406",
-    "name": "Buy Mer. Edge",
+    "name": "+ Buy Merrill Edge",
     "commands": [{
       "id": "4cfdd1e8-0442-43be-a6db-70dad509de0a",
       "comment": "",

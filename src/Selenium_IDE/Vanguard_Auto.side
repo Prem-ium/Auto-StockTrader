@@ -139,7 +139,7 @@
     }]
   }, {
     "id": "170b3536-4002-495a-901b-76046b2ae305",
-    "name": "Buy Vanguard",
+    "name": "+ Buy Vanguard",
     "commands": [{
       "id": "6d2cd864-1b84-40a3-9a76-6195d4222dd3",
       "comment": "",
@@ -654,7 +654,7 @@
     }]
   }, {
     "id": "5d285f40-efe8-4198-b0da-221c7a37f7d3",
-    "name": "Sell Vanguard",
+    "name": "- Sell Vanguard",
     "commands": [{
       "id": "e678bb18-9674-41d7-8af0-005de2d1e537",
       "comment": "",
@@ -1311,7 +1311,7 @@
     }]
   }, {
     "id": "79daa0ca-2833-4bb2-91a3-1adefa64744e",
-    "name": "Vanguard Limit Order",
+    "name": "[ Vanguard Limit Order",
     "commands": [{
       "id": "2cc9aea6-3035-4a22-8c00-2b78a537c1f6",
       "comment": "",

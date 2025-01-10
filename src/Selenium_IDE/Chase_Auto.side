@@ -5,7 +5,7 @@
   "url": "https://secure07ea.chase.com/web/auth/dashboard#/dashboard/trade/equity/entry;ai=select-account;sym=",
   "tests": [{
     "id": "75907887-ba9d-4dee-bb52-282bdd7b2e40",
-    "name": "Chase Buy",
+    "name": "+ Chase Buy",
     "commands": [{
       "id": "a6b981bf-2ae0-4540-9aa5-219e5983fe46",
       "comment": "",
@@ -318,7 +318,7 @@
     }]
   }, {
     "id": "d7bde928-89ba-4368-97f5-032492d419dc",
-    "name": "Chase Sell",
+    "name": "- Chase Sell",
     "commands": [{
       "id": "b3d20f89-16df-4859-aed7-e0e9587395bc",
       "comment": "",
@@ -659,7 +659,7 @@
     }]
   }, {
     "id": "fe1ab38d-ab36-4352-a144-5e409ecb92a5",
-    "name": "Premarket Chase Buy",
+    "name": "+ Premarket Chase Buy",
     "commands": [{
       "id": "ff0bba64-29e7-422b-9df9-a2137e875cce",
       "comment": "",
@@ -972,7 +972,7 @@
     }]
   }, {
     "id": "d1d806de-facf-40b6-b3de-66cfb39c5594",
-    "name": "Premarket Chase Sell",
+    "name": "- Premarket Chase Sell",
     "commands": [{
       "id": "2b05816b-1a0e-4665-87e7-8a56840ccea6",
       "comment": "",
@@ -1313,7 +1313,7 @@
     }]
   }, {
     "id": "5b211ca2-e94e-49d6-bf4b-d304a7cb59e6",
-    "name": "X Chase Limit Order",
+    "name": "[ Chase Limit Order",
     "commands": [{
       "id": "29630226-877a-4845-861d-02f7531ce27c",
       "comment": "",
