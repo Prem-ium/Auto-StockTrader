@@ -1,6 +1,5 @@
 
 .env
 test*
-ENV-*
 Master*.side
 Ticker*.side
