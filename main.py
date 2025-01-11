@@ -57,7 +57,7 @@ FILE_TASK_MAP = {
     "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
 }
 
-CUSTOM_DIR = os.environ.get("CUSTOM_DIR", os.path.join(os.path.expanduser('~'), 'Desktop', 'AutoStockTrader-Sponsor'))
+CUSTOM_DIR = os.environ.get("CUSTOM_DIR", os.path.join(os.path.expanduser('~'), 'Desktop', 'AutoStockTrader'))
 os.makedirs(CUSTOM_DIR, exist_ok=True)
 FILES = []
 LOGINS = []
