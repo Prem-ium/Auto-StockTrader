@@ -194,12 +194,16 @@ I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](
 
 ## Other Projects
 
-- **Tax Document Consolidator (Coming Soon):**  
-  I’m developing a 1099 Tax Consolidation script that merges multiple tax PDFs from brokerages into a single CSV, summarizing all relevant tax information (proceeds, costs, gains, interest earned, etc.).  
-  - The script also includes data analysis and visualization features for your 1099 tax returns.  
-  - This tool is ideal for people with multiple accounts, saving them money on tax document fees (which typically range from $50-$100 per document).  
-  - It also comes with a CSV/PDF viewer to verify accuracy.  
-  - Stay tuned for its upcoming release, available for purchase soon.
+- **TaxMerge – 1099 Tax Document Consolidator:**  
+  I’ve developed a 1099 Tax Consolidation script that merges multiple tax PDFs from various brokerages into a single CSV, summarizing all the important tax information (proceeds, costs, gains, interest earned, etc.).  
+  - Includes **data analysis** and **visualization** features for easy review of your 1099 tax returns.  
+  - Perfect for individuals with multiple brokerage accounts, helping them avoid paying the usual tax document fees (typically $50-$100 per document).  
+  - Comes with a **CSV/PDF viewer** to cross-check and ensure accuracy.  
+  - **Available now for purchase**! Check it out on [GitHub](https://github.com/Prem-ium/Tax-Merge).
+    <details open><video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls="controls" style="max-width: 100%; height: auto;">
+    Your browser does not support video tags.
+    https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95
+</video></details>
 
 - **[Referral-Link-Me](https://github.com/Prem-ium/Referral-Link-Me/blob/main/README.md):**  
   Maximize your rewards with curated referral links for credit cards, brokerages, and more.
