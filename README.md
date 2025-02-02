@@ -199,14 +199,7 @@ I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](
   - Includes **data analysis** and **visualization** features for easy review of your 1099 tax returns.  
   - Perfect for individuals with multiple brokerage accounts, helping them avoid paying the usual tax document fees (typically $50-$100 per document).  
   - Comes with a **CSV/PDF viewer** to cross-check and ensure accuracy.  
-  - **Available now for purchase**! Check it out on [GitHub](https://github.com/Prem-ium/Tax-Merge).
-    <details open><video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls="controls" style="max-width: 100%; height: auto;">
-    Your browser does not support video tags.
-    https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95
-</video></details>
-
-- **[Referral-Link-Me](https://github.com/Prem-ium/Referral-Link-Me/blob/main/README.md):**  
-  Maximize your rewards with curated referral links for credit cards, brokerages, and more.
+  - **Available now for purchase**! Check it out on [GitHub](https://github.com/Prem-ium/Tax-Merge).<details open><summary>🎥 Demo Video</summary>Check out the demo video below to see how it works:<video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls="controls" style="max-width: 100%; height: auto;">Your browser does not support video tags.<a href="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95">View the video</a></video></details>
 
 ## Speed Considerations:
 
