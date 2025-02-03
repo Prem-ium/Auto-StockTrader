@@ -36,7 +36,7 @@ This project contains the means of automating buy/sell stock orders within:
 - WellsTrade (Gold Sponsor Only)
 
 ---
-### 🚀 Unlock Premium Features w/ Gold Sponsorship! 🌟
+## 🚀 Unlock Premium Features w/ Gold Sponsorship! 🌟
 Gold Sponsors gain **exclusive access** to advanced, fully optimized features that streamline and automate brokerage management. Here’s a sneak peek at what you’ll receive with Gold Sponsorship:
 
 #### 🌟 **Optimized Python & Selenium Scripts**
@@ -144,7 +144,7 @@ Follow these steps to set up and use Selenium IDE for automation:
    - Begin running your desired automation tasks in either the buy or sell test tabs.
 
 ---
-# Donations ❤️
+## Donations ❤️
 
 I've been diligently working on this project for several months, and I'm thrilled with the progress it has made. Based on user testimonials, it has proven to be an invaluable tool for automating stock ticker orders across multiple brokerage accounts and various brokerages. I am continually striving to enhance its functionality and optimize its efficiency for automated order execution.
 
@@ -170,8 +170,8 @@ I'm not available to respond to issues in this repository. For direct support, p
 [![Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/Prem-ium)
 
 ---
-## Pull Request Requirements 📋
-
+<details>
+        <summary>Pull Request Requirements 📋</summary>
 To ensure a smooth review process, please follow these guidelines when submitting a pull request (PR):
 
 1. **Title**: Provide a clear and concise title.
@@ -182,17 +182,18 @@ To ensure a smooth review process, please follow these guidelines when submittin
 Once you have verified that your changes adhere to these guidelines, please open a pull request with your changes and click 'Request Review' on the Pull Request.
 
 By adhering to these guidelines, you help maintain the quality and consistency of the project. Thank you for your interest in making contributions!
+</details>
 
 ---
-# License
+## License
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
 ---
-# Acknowledgments / Final Remarks 💬
+## Acknowledgments / Final Remarks 💬
 
 I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](https://www.buymeacoffee.com/prem.ium), and [project contributors](https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors). Your support is invaluable, allowing me to continue creating exciting projects like this. Each one of you plays a crucial role, and I am deeply grateful for your contributions. If you find this project valuable, please consider leaving a :star2:, [donating](https://github.com/sponsors/Prem-ium), or [contributing](https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors).
 
-## Other Projects
+### Other Projects
 
 - **TaxMerge – 1099 Tax Document Consolidator:**  
   I’ve developed a 1099 Tax Consolidation script that merges multiple tax PDFs from various brokerages into a single CSV, summarizing all the important tax information (proceeds, costs, gains, interest earned, etc.).  
@@ -201,7 +202,7 @@ I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](
   - Comes with a **CSV/PDF viewer** to cross-check and ensure accuracy.  
   - **Available now for purchase**! Check it out on [GitHub](https://github.com/Prem-ium/Tax-Merge).<details open><summary>🎥 Demo Video</summary>Check out the demo video below to see how it works:<video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls="controls" style="max-width: 100%; height: auto;">Your browser does not support video tags.<a href="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95">View the video</a></video></details>
 
-## Speed Considerations:
+### Speed Considerations:
 
 - Adjust the `SET_SPEED` environment variable to control test execution speed on faster computers.
 - Use 'Reference' instead of 'Log' in Selenium IDE for faster performance.
@@ -231,7 +232,7 @@ I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](
 </details>
 
 
-## ⚠️ DISCLAIMER ⚠️
+### ⚠️ DISCLAIMER ⚠️
 - I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
 - You may use this tool at your own risk. I am not responsible for any financial loss, account restriction, or any other damage that may occur with the use of this tool. This project is provided "as is" and without warranty of any kind. 
 - By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any claims, damages, or losses arising from the use of the project.
