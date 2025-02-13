@@ -179,6 +179,16 @@ Upgrading to Gold Sponsorship unlocks exclusive features, including:
 
 Join here: https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
 
+---------------------------------------------------------------------------------------------------------
+Related: Check out my new project, **TaxMerge**.
+
+A powerful app that consolidates multiple 1099-PDF tax forms into a single CSV file.  
+If you have accounts across multiple brokerages, this tool will save you (or your accountant)
+the hassle of managing multiple tax forms.
+
+Check it out: https://github.com/Prem-ium/Tax-Merge  
+---------------------------------------------------------------------------------------------------------
 Thank you for your support!
 =========================================================================================================""")
+
 
