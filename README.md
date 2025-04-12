@@ -110,7 +110,6 @@ Follow these steps to set up and use Selenium IDE for automation:
    - Install the Selenium IDE browser extension for your preferred browser from the add-on store. For the most reliable automation runs, it is recommend to use a Chromium browser. Avoid using Firefox if possible.
      - [Chrome Web Store Selenium IDE Page](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd)
      - [Edge Add-on Selenium IDE Page](https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp)
-     - Note: Due to recent changes, Selenium IDE extension might be unavailable in the browser extension store. You can manually import the extension using the provided `.crx` file located in the `src`-> `Selenium_IDE` folder of this project. Go to manage extensions on your browser, enable developer mode, and drag the `Selenium-IDE.crx` file into the window.
 
 2. **Clone the Repository & Install Dependencies:**
    ```bash
