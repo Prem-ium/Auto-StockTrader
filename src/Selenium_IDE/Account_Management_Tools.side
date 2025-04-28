@@ -4,6 +4,120 @@
   "name": "Account Manager",
   "url": "http://localhost/",
   "tests": [{
+    "id": "aa447fb9-1700-464c-91b8-fabcc941ee91",
+    "name": "[ Fidelity Account Rename ]",
+    "commands": [{
+      "id": "f1fd36d6-f939-41ce-8413-69d7ec38d9de",
+      "comment": "",
+      "command": "open",
+      "target": "https://digital.fidelity.com/ftgw/digital/portfolio/summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4cdc97f-d86a-4f2b-b5f3-fdfd4f66188c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from({length: 10}, (_, i) => i + 1);",
+      "targets": [],
+      "value": "accounts"
+    }, {
+      "id": "11bf21ca-731b-4cf5-8ee4-eedce21d8421",
+      "comment": "",
+      "command": "click",
+      "target": "css=.customize-text s-fallback-wrapper",
+      "targets": [
+        ["css=.customize-text s-fallback-wrapper", "css:finder"],
+        ["xpath=//a/span/s-slot/s-fallback-wrapper", "xpath:position"],
+        ["xpath=//s-fallback-wrapper[contains(.,'Customize')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3762eed-e33f-4666-957d-44c9a6af991f",
+      "comment": "",
+      "command": "forEach",
+      "target": "accounts",
+      "targets": [],
+      "value": "numb"
+    }, {
+      "id": "dd7da370-4611-4e70-9bf5-8fd4433971a0",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c21c6f5d-76d0-4619-8e91-d91eb12e09b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-modal__accounts-item:nth-child(${numb}) .pvd-checkbox__label",
+      "targets": [
+        ["css=.custom-modal__accounts-item:nth-child(2) .pvd-checkbox__label", "css:finder"],
+        ["xpath=//div[@id='pvd-tab-panel-id-589795610982']/s-slot/s-assigned-wrapper/div/div[2]/div/div/div/div[2]/div/div/pvd3-checkbox/s-root/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/pvd3-checkbox/s-root/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0df0a67-9336-4cc1-8a59-ae4b1386d778",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-actions-el:nth-child(2) .pvd-button__text s-assigned-wrapper",
+      "targets": [
+        ["css=.account-actions-el:nth-child(2) .pvd-button__text s-assigned-wrapper", "css:finder"],
+        ["xpath=//div[@id='pvd-tab-panel-id-14083821632']/s-slot/s-assigned-wrapper/div/div/div[2]/pvd3-button/s-root/button/div/span/s-slot/s-assigned-wrapper", "xpath:idRelative"],
+        ["xpath=//div[2]/pvd3-button/s-root/button/div/span/s-slot/s-assigned-wrapper", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62e1badb-78db-4f71-a337-ebc1d70863de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-name-input-field .pvd-input__input",
+      "targets": [
+        ["css=.account-name-input-field .pvd-input__input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='pvd-tab-panel-id-14083821632']/s-slot/s-assigned-wrapper/div/div[2]/div/div/div/div/div/div/pvd3-input/s-root/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/pvd3-input/s-root/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4520c904-66f0-4c42-9546-0d2470b7692b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.account-name-input-field .pvd-input__input",
+      "targets": [
+        ["css=.account-name-input-field .pvd-input__input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='pvd-tab-panel-id-14083821632']/s-slot/s-assigned-wrapper/div/div[2]/div/div/div/div/div/div/pvd3-input/s-root/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/pvd3-input/s-root/div/input", "xpath:position"]
+      ],
+      "value": "Individual ${numb}"
+    }, {
+      "id": "cbf70c7f-8bab-4eaf-8918-a78664576bac",
+      "comment": "",
+      "command": "echo",
+      "target": "${numb} Account Name Updated",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1947c14-8edd-4003-9489-c6ad9f96ac76",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e20537e-2124-44c8-a448-1ac6eaccfedb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-modal__btn-actions:nth-child(3) .custom-modal__btn-actions--save .pvd-button__text s-assigned-wrapper",
+      "targets": [
+        ["css=.custom-modal__btn-actions:nth-child(3) .custom-modal__btn-actions--save .pvd-button__text s-assigned-wrapper", "css:finder"],
+        ["xpath=//div[@id='pvd-tab-panel-id-730480405543']/s-slot/s-assigned-wrapper/div/div[3]/div[2]/helios-button[2]/s-root/button/div/span/s-slot/s-assigned-wrapper", "xpath:idRelative"],
+        ["xpath=//helios-button[2]/s-root/button/div/span/s-slot/s-assigned-wrapper", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
     "id": "208cfed9-1e03-448d-91ad-1364fa16bc02",
     "name": "[ Merrill Edge Account Rename ]",
     "commands": [{
