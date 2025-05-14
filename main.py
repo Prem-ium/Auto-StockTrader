@@ -43,38 +43,37 @@ parser.add_argument("tickers", nargs='?', default="JOB", help="Tickers to proces
 
 args = parser.parse_args()
 
-TICKERS = args.tickers.upper()
-if "," in TICKERS:  print(f"{'-'*100}\nTICKERS passed:\t{TICKERS}\n{'-'*40}")
-
-FILE_TASK_MAP = {
-    "CHASE_AI": {"file": os.path.join("src", "Selenium_IDE", "Chase_Auto.side"), "task": ""},
-    "FIRSTRADE_AI": {"file": os.path.join("src", "Selenium_IDE", "Firstrade_Auto.side"), "task": ""},
-    "VANGUARD_AI": {"file": os.path.join("src", "Selenium_IDE", "Vanguard_Auto.side"), "task": ""},
-    "FIDELITY_AI": {"file": os.path.join("src", "Selenium_IDE", "Fidelity_Auto.side"), "task": ""},
-    "SCHWAB_AI": {"file": os.path.join("src", "Selenium_IDE", "Schwab_Auto.side"), "task": ""},
-    "SOFI_AI":  {"file": os.path.join("src","Selenium_IDE","Sofi Helper.side"),     "task": ""},
-    "ALLY_AI": {"file": os.path.join("src", "Selenium_IDE", "Ally_Auto.side"), "task": ""},
-    "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
-}
-
-CUSTOM_DIR = os.environ.get("CUSTOM_DIR", os.path.join(os.path.expanduser('~'), 'Desktop', 'AutoStockTrader'))
-os.makedirs(CUSTOM_DIR, exist_ok=True)
-FILES = []
-LOGINS = []
-
 def main():
+    TICKERS = args.tickers.upper()
+    if "," in TICKERS:  print(f"{'-'*100}\nTICKERS passed:\t{TICKERS}\n{'-'*40}")
+
+    file_task_map = {
+        "CHASE_AI": {"file": os.path.join("src", "Selenium_IDE", "Chase_Auto.side"), "task": ""},
+        "FIRSTRADE_AI": {"file": os.path.join("src", "Selenium_IDE", "Firstrade_Auto.side"), "task": ""},
+        "VANGUARD_AI": {"file": os.path.join("src", "Selenium_IDE", "Vanguard_Auto.side"), "task": ""},
+        "FIDELITY_AI": {"file": os.path.join("src", "Selenium_IDE", "Fidelity_Auto.side"), "task": ""},
+        "SCHWAB_AI": {"file": os.path.join("src", "Selenium_IDE", "Schwab_Auto.side"), "task": ""},
+        "SOFI_AI":  {"file": os.path.join("src","Selenium_IDE","Sofi Helper.side"),     "task": ""},
+        "ALLY_AI": {"file": os.path.join("src", "Selenium_IDE", "Ally_Auto.side"), "task": ""},
+        "MERRILL_AI": {"file": os.path.join("src", "Selenium_IDE", "Merrill_Auto.side"), "task": ""},
+    }
+    custom_dir = os.environ.get("CUSTOM_DIR", os.path.join(os.path.expanduser('~'), 'Desktop', 'AutoStockTrader'))
+    os.makedirs(custom_dir, exist_ok=True)
+
+    files = []
+    logins = []
     result = subprocess.run(['git', 'pull'], capture_output=True, text=True)
     if 'Your local changes to the following files would be overwritten by merge' in result.stderr:
         subprocess.run(['git', 'reset', '--hard'], check=True)
         result = subprocess.run(['git', 'pull'], capture_output=False, text=False)
-    if CUSTOM_DIR:
-        dest_path = os.path.join(CUSTOM_DIR, "Account_Management_Tools.side")
+    if custom_dir:
+        dest_path = os.path.join(custom_dir, "Account_Management_Tools.side")
         try:    shutil.copyfile(os.path.join("src", "Selenium_IDE", "Account_Management_Tools.side"), dest_path)
         except  shutil.SameFileError:    pass
-    print('-'*100)
-    for var_name, info in FILE_TASK_MAP.items():
+    print('-'*105)
+    for var_name, info in file_task_map.items():
         if os.environ.get(var_name):
-            FILES.append(info["file"])
+            files.append(info["file"])
             print(f"{var_name} is enabled.")
 
             if var_name == "SCHWAB_AI":
@@ -85,16 +84,16 @@ def main():
                 info["task"] = os.environ[var_name].replace(" ", "")
 
             try:
-                LOGINS.append(os.environ[var_name.split("_")[0] + "_LOGIN"])
+                logins.append(os.environ[var_name.split("_")[0] + "_LOGIN"])
             except:
-                LOGINS.append("LOGIN:HERE")
+                logins.append("LOGIN:HERE")
         else:
             print(f"{var_name} is disabled. Skipping...")
     
-    print(f'\n{"-"*100}\n')
-    for filePath in FILES:
+    print(f'\n{"-"*105}\n')
+    for filePath in files:
         task = ""
-        for var_name, info in FILE_TASK_MAP.items():
+        for var_name, info in file_task_map.items():
             if info["file"].lower() in filePath.lower():
                 task = info["task"]
                 break
@@ -107,7 +106,7 @@ def main():
             for command in test['commands']:
                 # Store Login information, if provided
                 if command['command'] == 'store' and 'LOGIN' in command['value']:
-                    command['target'] = LOGINS.pop(0)
+                    command['target'] = logins.pop(0)
 
                 # Update Ticker, if provided
                 if TICKERS is not None and command['value'] == 'TICKER':
@@ -122,11 +121,11 @@ def main():
         if os.name == 'nt':
             filePath = filePath.replace("src\\Selenium_IDE\\", "")
             filePath = filePath.replace("src\\X_Archive\\", "")
-            filePath = f'{CUSTOM_DIR}/{filePath}' if CUSTOM_DIR else f'ENV-{filePath}'
+            filePath = f'{custom_dir}/{filePath}' if custom_dir else f'ENV-{filePath}'
         elif os.name == 'posix':
             filePath = os.path.join("src", "Selenium_IDE", filePath.replace("src/Selenium_IDE/", ""))
             filePath = os.path.join("src", "X_Archive", filePath.replace("src/X_Archive/", ""))
-            filePath = os.path.join(CUSTOM_DIR, filePath) if CUSTOM_DIR else f'ENV-{filePath}'
+            filePath = os.path.join(custom_dir, filePath) if custom_dir else f'ENV-{filePath}'
 
         # Create a new file with the updated data
         with open(filePath, 'w') as file:
@@ -134,8 +133,8 @@ def main():
 
         print(f"Created/Updated:\t{filePath}!")
 
-    if CUSTOM_DIR and len(sys.argv) != 2:
-        os.startfile(CUSTOM_DIR)
+    if custom_dir and len(sys.argv) != 2:
+        os.startfile(custom_dir)
 
     try:
         directory = os.path.dirname(os.path.abspath(__file__))
@@ -161,11 +160,9 @@ def main():
 
     
 if __name__ == "__main__":
-    main()
-
-print(f"""
+    print(f"""
 =========================================================================================================
-                        Script Execution Complete
+                        Script Execution Starting...
 ---------------------------------------------------------------------------------------------------------
                 Free Public Version - Limited Features/Support
                             (C) Prem-ium
@@ -177,18 +174,16 @@ Upgrading to Gold Sponsorship unlocks exclusive features, including:
 - Automated cash transfer/withdrawal tools for Fidelity, Chase, and more.
 - WellsTrade & Robinhood automation support.
 
-Join here: https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
+Join: https://github.com/login?return_to=%2Fsponsors%2FPrem-ium%2Fsponsorships%3Ftier_id%3D308205
 
 ---------------------------------------------------------------------------------------------------------
-Related: Check out my new project, **TaxMerge**.
-
-A powerful app that consolidates multiple 1099-PDF tax forms into a single CSV file.  
-If you have accounts across multiple brokerages, this tool will save you (or your accountant)
-the hassle of managing multiple tax forms.
-
-Check it out: https://github.com/Prem-ium/Tax-Merge  
+Related: Check out my new project, TaxMerge. A powerful app that consolidates multiple 1099-PDF tax forms
+into a single CSV file. This tool is designed to simplify the process of tax reporting for stock traders
+with multiple brokerage accounts.
+Check it out here: https://github.com/Prem-ium/Tax-Merge  
 ---------------------------------------------------------------------------------------------------------
 Thank you for your support!
-=========================================================================================================""")
+=========================================================================================================\n\n\n""")
+    main()
 
 
