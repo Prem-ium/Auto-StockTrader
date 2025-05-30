@@ -189,50 +189,89 @@ By adhering to these guidelines, you help maintain the quality and consistency o
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
 ---
-## Acknowledgments / Final Remarks 💬
+## End Notes & Extras 🧩
+<details open>
+<summary><strong>End Notes & Extras 🧩</strong></summary>
 
-I sincerely thank [my sponsors](https://github.com/sponsors/Prem-ium), [donors](https://www.buymeacoffee.com/prem.ium), and [project contributors](https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors). Your support is invaluable, allowing me to continue creating exciting projects like this. Each one of you plays a crucial role, and I am deeply grateful for your contributions. If you find this project valuable, please consider leaving a :star2:, [donating](https://github.com/sponsors/Prem-ium), or [contributing](https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors).
+        
+### 🙏 Acknowledgments
 
-### Other Projects
+I'd like to sincerly thank my amazing:
+- [⭐ Sponsors](https://github.com/sponsors/Prem-ium)
+- ☕ [Donors](https://www.buymeacoffee.com/prem.ium)
+- 🛠 [Contributors](https://github.com/Prem-ium/Auto-StockTrader/graphs/contributors)
 
-- **TaxMerge – 1099 Tax Document Consolidator:**  
-  I’ve developed a 1099 Tax Consolidation script that merges multiple tax PDFs from various brokerages into a single CSV, summarizing all the important tax information (proceeds, costs, gains, interest earned, etc.).  
-  - Includes **data analysis** and **visualization** features for easy review of your 1099 tax returns.  
-  - Perfect for individuals with multiple brokerage accounts, helping them avoid paying the usual tax document fees (typically $50-$100 per document).  
-  - Comes with a **CSV/PDF viewer** to cross-check and ensure accuracy.  
-  - **Available now for purchase**! Check it out on [GitHub](https://github.com/Prem-ium/Tax-Merge).<details open><summary>🎥 Demo Video</summary>Check out the demo video below to see how it works:<video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls="controls" style="max-width: 100%; height: auto;">Your browser does not support video tags.<a href="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95">View the video</a></video></details>
+Your support is invaluable, allowing me to continue creating exciting projects like this. Each one of you plays a crucial role, and I am deeply grateful for your contributions.
+If you found this project helpful, please consider:
+- Leaving a ⭐  
+- [Becoming a Sponsor](https://github.com/sponsors/Prem-ium)
+- Sharing the project with others
 
-### Speed Considerations:
-
-- Adjust the `SET_SPEED` environment variable to control test execution speed on faster computers.
-- Use 'Reference' instead of 'Log' in Selenium IDE for faster performance.
-- Enable 'Best performance' mode in Laptop Battery settings to boost execution speed.
-- Keep the browser’s automation tab focused for potential speed enhancements.
-
+---
+### Featured Project(s)
 <details>
-  <summary>🎯 Stream Deck</summary>
-  
-  <p>For those with an Elgato Stream Deck, here’s my current setup:</p>
-  <img src="https://github.com/user-attachments/assets/ea4f71a8-183f-402a-91e5-2c1c5f7b3e3b" alt="Stream Deck Setup">
-  
-  <table>
-    <tr><th>Action</th><th>Type</th><th>Command</th></tr>
-    <tr><td>Run</td><td>Hotkey</td><td><code>Ctrl + R</code></td></tr>
-    <tr><td>Stop</td><td>Hotkey</td><td><code>Ctrl + .</code></td></tr>
-    <tr><td>Pause</td><td>Hotkey</td><td><code>Ctrl + P</code></td></tr>
-    <tr><td>QuickStart</td><td>Open</td><td><code>cmd.exe /c ""C:\Users\Frost\Desktop\RSA-QuickStart.bat""</code></td></tr>
-    <tr><td>Save</td><td>Hotkey</td><td><code>Ctrl + S</code></td></tr>
-    <tr><td>Switch Windows</td><td>Hotkey</td><td><code>Alt + Tab</code></td></tr>
-    <tr><td>Open Tests</td><td>Hotkey</td><td><code>Ctrl + 1</code></td></tr>
-    <tr><td>Open Test Suites</td><td>Hotkey</td><td><code>Ctrl + 2</code></td></tr>
-    <tr><td>Start Brave</td><td>Powershell</td><td><code>Start-Process "AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe" -ArgumentList "--new-window", "--app=chrome-extension://mooikfkahbdckldjjndioackbalphokd/index.html"</code></td></tr>
-    <tr><td>Start Edge</td><td>Powershell</td><td><code>start msedge --app="chrome-extension://ajdpfmkffanmkhejnopjppegokpogffp/index.html"</code></td></tr>
-  </table>
-  <hr>
+<summary>📦 TaxMerge</summary>
+
+A powerful tool for merging 1099 tax PDFs from multiple brokerages into one clean CSV.
+
+**Highlights:**
+- 📊 Auto-analysis + visualization of proceeds, gains, interest, and more  
+- 🧾 Built-in CSV + PDF viewer for accuracy checks  
+- 💰 Helps avoid $50–$100 document fees  
+- 🔒 One-time purchase via [GitHub](https://github.com/Prem-ium/Tax-Merge)  
+<details open>
+<summary>🎥 Demo Video</summary>
+
+<video src="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95" controls style="max-width: 100%; height: auto;">
+Your browser does not support video tags.
+<a href="https://github.com/user-attachments/assets/d87c5c93-c09c-4c41-a1c3-a0d248784b95">View the video</a>
+</video>
+
 </details>
 
+</details>
 
-### ⚠️ DISCLAIMER ⚠️
-- I am not a financial advisor, nor am I affiliated with any brokerage mentioned in this repository. 
-- You may use this tool at your own risk. I am not responsible for any financial loss, account restriction, or any other damage that may occur with the use of this tool. This project is provided "as is" and without warranty of any kind. 
-- By using this repository, the user accepts all the risks and agrees to hold the developer(s) harmless from any claims, damages, or losses arising from the use of the project.
+---
+
+### ⚡ Speed Tips (for Selenium IDE users)
+
+- Adjust `SET_SPEED` for faster test execution  
+- Use **Reference** instead of **Log** to improve performance  
+- Turn on **Best Performance** mode in your battery settings  
+- Keep the automation tab in focus for smoother execution  
+
+---
+
+<details>
+<summary>🧰 Stream Deck Setup (Optional)</summary>
+
+Here's my custom Stream Deck profile:
+
+<img src="https://github.com/user-attachments/assets/ea4f71a8-183f-402a-91e5-2c1c5f7b3e3b" alt="Stream Deck Setup">
+
+| Action            | Type       | Command |
+|-------------------|------------|---------|
+| Run               | Hotkey     | `Ctrl + R` |
+| Stop              | Hotkey     | `Ctrl + .` |
+| Pause             | Hotkey     | `Ctrl + P` |
+| QuickStart        | Open       | `cmd.exe /c "RSA-QuickStart.bat"` |
+| Save              | Hotkey     | `Ctrl + S` |
+| Switch Windows    | Hotkey     | `Alt + Tab` |
+| Open Tests        | Hotkey     | `Ctrl + 1` |
+| Open Test Suites  | Hotkey     | `Ctrl + 2` |
+| Start Brave       | Powershell | `Start-Process ... brave.exe` |
+| Start Edge        | Powershell | `start msedge --app=...` |
+
+</details>
+
+---
+
+<details open>
+<summary>⚠️ Disclaimer</summary>
+
+- I am **not** a financial advisor, and this project is **not** affiliated with any brokerage.
+- Use this tool **at your own risk** — I’m not liable for financial loss, account bans, or other damages.
+- This project is provided “as is,” without warranty. By using it, you agree to assume all responsibility.
+
+</details>
+</details>
