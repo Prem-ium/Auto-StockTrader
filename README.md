@@ -189,9 +189,7 @@ By adhering to these guidelines, you help maintain the quality and consistency o
 This repository follows the [BSD 3-Clause “New” or “Revised” License.](https://github.com/Prem-ium/Auto-StockTrader/blob/main/LICENSE)
 
 ---
-## End Notes & Extras 🧩
-<details open>
-<summary><strong>End Notes & Extras 🧩</strong></summary>
+<details open><summary><h2><strong>End Notes & Extras 🧩</strong></h2></summary>
 
         
 ### 🙏 Acknowledgments
